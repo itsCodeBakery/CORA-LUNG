@@ -1,0 +1,61 @@
+gate_b:
+  role: problem_validation
+  population: four_permanent_development_cases
+
+primary_contrast:
+  control: pixel_dropout_matched_50
+  omission: component_natural_50
+  statistic: control_R_at_1_minus_omission_R_at_1
+
+evaluation:
+  prediction_probability_threshold: 0.5
+  prediction_connectivity: 26
+  prediction_size_removal: false
+  component_score: mean_probability
+  reference_min_volume_ml: 0.1
+  admissible_match_iou: 0.10
+  matching: maximum_cardinality_then_maximum_total_iou
+  primary_froc_budget_fp_per_patient: 1.0
+  secondary_froc_budgets: [0.5, 2.0, 4.0]
+  sensitivity_matching:
+    - any_overlap
+    - iou_ge_0.25
+
+decision:
+  meaningful_macro_delta_r_at_1: 0.05
+  minimum_nonnegative_case_differences: 3
+  minimum_strictly_positive_case_differences: 2
+
+  PASS:
+    - macro_delta_r_at_1 >= 0.05
+    - nonnegative_case_differences >= 3
+    - strictly_positive_case_differences >= 2
+
+  BORDERLINE:
+    - macro_delta_r_at_1 > 0
+    - PASS_not_fully_satisfied
+
+  NO_GO:
+    - macro_delta_r_at_1 <= 0
+
+supporting_metrics:
+  - dice_at_0p5
+  - iou_at_0p5
+  - fp_components_at_0p5
+  - fp_volume_ml_at_0p5
+  - any_overlap_recall
+  - iou_0p25_recall
+  - pooled_component_recall
+
+supporting_metrics_override_primary_gate: false
+
+complementary_contrast:
+  reference: complete
+  omission: component_fixed_50
+  role: supporting_only
+
+scientific_scope:
+  replay_effect_tested: false
+  replay_gate: C
+  independent_generalization_claim: prohibited
+  block08a_checkpoints_eligible: false

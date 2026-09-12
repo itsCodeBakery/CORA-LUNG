@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-09-12T07:41:35Z",
-  "completed_block": "08D",
+  "generated_at_utc": "2026-09-12T07:44:48Z",
+  "completed_block": "08D-LOCK",
   "self_included": false,
   "files": [
     {
@@ -40,8 +40,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 3564,
-      "sha256": "578ba6f82ed610e253c3989dfea71bcb3fa898b85ae0af234671e13a77a30785"
+      "bytes": 3706,
+      "sha256": "ede511e8f1509b0d252b8fc64c755aee9f954f9fd64d94c7087be3c11a1633ed"
     },
     {
       "path": "README.md",
@@ -82,6 +82,11 @@
       "path": "configs/experiment_pilot.yaml",
       "bytes": 512,
       "sha256": "e9f8ab5a71dce9d4a6b071a42cad740cb1af1915717ac9e37ee3fc7621db8370"
+    },
+    {
+      "path": "configs/gate_b_decision_rule.yaml",
+      "bytes": 1488,
+      "sha256": "a265cf3f33e094c0abd8e0aa188525b5fb5b2778af6946bcb6d68f89156d289b"
     },
     {
       "path": "configs/gate_b_problem_validation.yaml",
@@ -494,6 +499,11 @@
       "sha256": "dfad5b1cf5281ba78676367a9ce45fd29f91b5c8443da7af78339d645ba190b7"
     },
     {
+      "path": "experiments/audits/block08d_gate_b_decision_lock.json",
+      "bytes": 2814,
+      "sha256": "531eb39d975206312e22e7762ba3f1dd1d66ca7899f713bbb5c34ff0ec08cf05"
+    },
+    {
       "path": "experiments/registry.csv",
       "bytes": 102,
       "sha256": "e6ca868d5995d945d50fdaa6a7dd221f07d0da1f2a93e685af1df738e38b7509"
@@ -757,6 +767,11 @@
       "path": "scripts/code_blocks/block08d_corrected_gate_b_fits_v1_2.py",
       "bytes": 71155,
       "sha256": "514bc3b512b232205bebe7b50e83773515d62f5263e1e08ff4138ba374982fa2"
+    },
+    {
+      "path": "scripts/code_blocks/block08d_lock_gate_b_decision_rule.py",
+      "bytes": 25151,
+      "sha256": "1069bb3ed924ee0baa2a9026178680656a88743139a5107020ca113815725360"
     },
     {
       "path": "scripts/resume_project.py",

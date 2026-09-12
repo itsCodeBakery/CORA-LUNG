@@ -1,0 +1,81 @@
+{
+  "project": "CORA-Lung",
+  "block": "08D-LOCK",
+  "status": "LOCKED_BEFORE_DENSE_OUTCOMES",
+  "locked_at_utc": "2026-09-12T07:44:48Z",
+  "parent_commit": "23e2ec082dfad911a69964f1c97bbc9ad3749539",
+  "gate": "B",
+  "purpose": "Problem validation: determine whether whole-component annotation omission produces a lesion-recovery deficit beyond equal-count random-pixel sparsity.",
+  "evaluation_population": "four_permanent_development_cases",
+  "development_cases": [
+    "coronacases_004",
+    "coronacases_008",
+    "radiopaedia_14_85914_0",
+    "radiopaedia_27_86410_0"
+  ],
+  "eligible_components_per_case": {
+    "coronacases_004": 8,
+    "coronacases_008": 33,
+    "radiopaedia_14_85914_0": 28,
+    "radiopaedia_27_86410_0": 13
+  },
+  "total_eligible_components": 82,
+  "precision_resolution": {
+    "macro_recall_step_if_one_additional_component_recovered_per_case": 0.06698509823509824,
+    "locked_practical_margin": 0.05,
+    "margin_fraction_of_one_component_each_case_step": 0.7464346745378282
+  },
+  "primary_contrast": {
+    "control": "pixel_dropout_matched_50",
+    "omission": "component_natural_50",
+    "effect_definition": "R@1(control) - R@1(omission)"
+  },
+  "component_evaluation": {
+    "native_grid": true,
+    "prediction_mask_threshold": 0.5,
+    "prediction_connectivity": 26,
+    "prediction_size_removal": false,
+    "candidate_score": "mean_probability_within_fixed_prediction_component",
+    "eligible_reference_min_volume_ml": 0.1,
+    "primary_matching_iou": 0.1,
+    "matching": "maximum-cardinality one-to-one, maximum-total-IoU tie break",
+    "primary_froc_budget_fp_per_patient": 1.0,
+    "secondary_froc_budgets": [
+      0.5,
+      2.0,
+      4.0
+    ],
+    "sensitivity_matching": [
+      "any_overlap",
+      "iou_ge_0.25"
+    ]
+  },
+  "primary_gate_rule": {
+    "pass": {
+      "macro_delta_r_at_1_min": 0.05,
+      "case_level_nonnegative_count_min": 3,
+      "case_level_strict_positive_count_min": 2
+    },
+    "borderline": "macro_delta_r_at_1 > 0 but one or more PASS requirements are not satisfied",
+    "no_go": "macro_delta_r_at_1 <= 0"
+  },
+  "supporting_metrics": [
+    "Dice_at_probability_0.5",
+    "IoU_at_probability_0.5",
+    "FP_components_at_probability_0.5",
+    "FP_volume_ml_at_probability_0.5",
+    "any_overlap_component_recall",
+    "IoU_0.25_component_recall",
+    "pooled_eligible_component_recall"
+  ],
+  "supporting_metrics_can_override_primary_gate": false,
+  "complementary_contrast": {
+    "reference": "complete",
+    "omission": "component_fixed_50",
+    "role": "supporting_only_not_primary_gate"
+  },
+  "dense_outcomes_opened_at_lock_time": false,
+  "block08a_models_eligible": false,
+  "replay_signal_evaluated_here": false,
+  "note": "Gate B validates the benchmark premise only. Replay efficacy is tested separately at Gate C."
+}
