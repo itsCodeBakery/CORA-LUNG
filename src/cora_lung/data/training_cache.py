@@ -1,6 +1,7 @@
-"""Firewall for CORA-Lung model-fitting cache."""
+"""Dense-label firewall for CORA-Lung training cache v1.1."""
 
 from pathlib import Path
+
 import numpy as np
 import pandas as pd
 
@@ -15,12 +16,14 @@ ALLOWED_IMAGE_KEYS = {
     "hu_window",
 }
 
+
 ALLOWED_ANNOTATION_KEYS = {
     "supervision_voxel_zyx",
     "supervision_label",
     "fg_membership_voxel_zyx",
     "fg_membership_group_id",
 }
+
 
 ALLOWED_MANIFEST_COLUMNS = {
     "case_id",
@@ -32,9 +35,16 @@ ALLOWED_MANIFEST_COLUMNS = {
     "annotation_file",
     "image_semantic_sha256",
     "annotation_semantic_sha256",
-    "source_annotation_semantic_sha256",
+    "original_condition_native_semantic_sha256",
+    "parent_v1_annotation_semantic_sha256",
+    "candidate_condition",
+    "candidate_native_semantic_sha256",
+    "candidate_v1_annotation_semantic_sha256",
+    "construction_policy",
+    "equalization_target_unique_fg",
     "preprocess_version",
 }
+
 
 FORBIDDEN_TOKENS = {
     "infection_mask",
@@ -48,59 +58,75 @@ FORBIDDEN_TOKENS = {
 }
 
 
-def _forbidden(text):
-    text = str(text).lower()
+def _reject_forbidden(value):
+
+    text = str(value).lower()
 
     for token in FORBIDDEN_TOKENS:
+
         if token in text:
+
             raise RuntimeError(
                 f"Forbidden trainer token: {token}"
             )
 
 
 def validate_training_cache(root):
+
     root = Path(root)
 
     manifest = pd.read_csv(
         root / "manifest.csv"
     )
 
-    if set(manifest.columns) != ALLOWED_MANIFEST_COLUMNS:
+    if (
+        set(manifest.columns)
+        != ALLOWED_MANIFEST_COLUMNS
+    ):
+
         raise RuntimeError(
-            "Unexpected model-fitting manifest schema."
+            "Unexpected v1.1 training-cache manifest schema."
         )
 
-    for col in manifest.columns:
-        _forbidden(col)
+    for column in manifest.columns:
+
+        _reject_forbidden(
+            column
+        )
 
     for _, row in manifest.iterrows():
+
+        _reject_forbidden(
+            row["image_file"]
+        )
+
+        _reject_forbidden(
+            row["annotation_file"]
+        )
+
         image_path = (
             root
             / row["image_file"]
         )
 
-        ann_path = (
+        annotation_path = (
             root
             / row["annotation_file"]
-        )
-
-        _forbidden(
-            row["image_file"]
-        )
-
-        _forbidden(
-            row["annotation_file"]
         )
 
         with np.load(
             image_path,
             allow_pickle=False,
         ) as data:
-            if set(
-                data.files
-            ) != ALLOWED_IMAGE_KEYS:
+
+            if (
+                set(data.files)
+                != ALLOWED_IMAGE_KEYS
+            ):
+
                 raise RuntimeError(
-                    f"Unsafe image cache keys: {image_path}"
+                    f"Unsafe CT cache keys: "
+                    f"{image_path}"
                 )
 
             ct = np.asarray(
@@ -108,19 +134,24 @@ def validate_training_cache(root):
             )
 
             if ct.ndim != 3:
+
                 raise RuntimeError(
-                    "Training CT must be 3-D."
+                    "Cached CT must be 3-D."
                 )
 
         with np.load(
-            ann_path,
+            annotation_path,
             allow_pickle=False,
         ) as data:
-            if set(
-                data.files
-            ) != ALLOWED_ANNOTATION_KEYS:
+
+            if (
+                set(data.files)
+                != ALLOWED_ANNOTATION_KEYS
+            ):
+
                 raise RuntimeError(
-                    f"Unsafe annotation cache keys: {ann_path}"
+                    f"Unsafe annotation keys: "
+                    f"{annotation_path}"
                 )
 
             coords = np.asarray(
@@ -139,40 +170,79 @@ def validate_training_cache(root):
                 data["fg_membership_group_id"]
             )
 
-            if coords.shape != (
+        if (
+            coords.shape
+            != (
                 len(labels),
                 3,
-            ):
-                raise RuntimeError(
-                    "Invalid supervision coordinate shape."
-                )
+            )
+        ):
 
-            if fg_coords.shape != (
+            raise RuntimeError(
+                "Invalid direct-supervision coordinate shape."
+            )
+
+        if (
+            fg_coords.shape
+            != (
                 len(fg_groups),
                 3,
-            ):
-                raise RuntimeError(
-                    "Invalid FG membership coordinate shape."
-                )
+            )
+        ):
 
-            if not set(
-                np.unique(
-                    labels
-                )
-            ).issubset(
-                {0, 1}
-            ):
-                raise RuntimeError(
-                    "Training labels must be sparse binary labels."
-                )
+            raise RuntimeError(
+                "Invalid FG-membership coordinate shape."
+            )
 
-            if np.any(
-                fg_groups
-                <= 0
-            ):
-                raise RuntimeError(
-                    "Replay FG group IDs must be positive."
-                )
+        if not set(
+            np.unique(
+                labels
+            )
+        ).issubset(
+            {
+                0,
+                1,
+            }
+        ):
+
+            raise RuntimeError(
+                "Only sparse FG/BG labels are permitted."
+            )
+
+        if np.any(
+            fg_groups <= 0
+        ):
+
+            raise RuntimeError(
+                "Foreground group IDs must be positive."
+            )
+
+        fg_direct = {
+            tuple(
+                int(x)
+                for x in coord
+            )
+            for coord in coords[
+                labels == 1
+            ]
+        }
+
+        fg_membership_support = {
+            tuple(
+                int(x)
+                for x in coord
+            )
+            for coord in fg_coords
+        }
+
+        if (
+            fg_direct
+            != fg_membership_support
+        ):
+
+            raise RuntimeError(
+                "Direct FG and replay-membership support differ."
+            )
 
     return {
         "manifest_rows":

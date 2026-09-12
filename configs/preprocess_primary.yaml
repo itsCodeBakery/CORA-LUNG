@@ -1,5 +1,6 @@
 preprocessing:
-  version: "1.0"
+  version: "1.1"
+  parent_version: "1.0"
 
 geometry:
   internal_array_order: [z, y, x]
@@ -18,21 +19,43 @@ crop:
   dense_masks_used: false
   scribbles_used: false
   ct_only: true
-  body_threshold_hu: -600.0
-  lung_air_threshold_hu: -320.0
-  minimum_lung_air_component_ml: 50.0
-  minimum_total_lung_air_ml: 150.0
   physical_margin_mm: 15.0
-  fallback: body_envelope
 
-sparse_collision_policy:
-  same_class_spatial_collision: merge_for_direct_supervision
+collision_policy:
+  same_class_spatial_collision: merge_to_unique_training_voxel
   foreground_multi_group_collision: preserve_all_group_memberships
   foreground_background_collision: hard_failure
-  out_of_volume_coordinate: hard_failure
-  out_of_crop_coordinate: hard_failure
   group_loss: hard_failure
 
-causal_budget_audit:
-  evaluate_after_training_grid_transfer: true
-  do_not_silently_rebalance: true
+post_transfer_causal_equalization:
+  enabled: true
+  seed: 20260912
+
+  component_natural:
+    action: unchanged
+
+  random_pixel_control:
+    target: transferred_natural_unique_foreground_voxel_count
+    candidate_pool: transferred_component_complete_unique_foreground_support
+    preserve_all_complete_foreground_groups: true
+    modify_only_if_raw_pair_mismatched: true
+
+  fixed_budget_pair:
+    target: minimum_unique_foreground_capacity_of_transferred_pair
+    preserve_each_conditions_foreground_groups: true
+    modify_only_larger_side: true
+
+  background:
+    action: unchanged
+    require_coordinate_identity_with_parent_cache: true
+
+firewall:
+  dense_masks_in_training_cache: prohibited
+  dense_component_information: prohibited
+  unknown_voxels_materialized_as_background: false
+
+scientific_status:
+  correction_made_before_model_training: true
+  source_weak_labels_modified: false
+  development_split_modified: false
+  final_outer_folds_modified: false
