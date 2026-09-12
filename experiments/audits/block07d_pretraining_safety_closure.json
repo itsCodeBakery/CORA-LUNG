@@ -1,0 +1,29 @@
+{
+  "project": "CORA-Lung",
+  "block": "07D",
+  "status": "PASS",
+  "generated_at_utc": "2026-09-12T06:23:06Z",
+  "scientific_training_performed": false,
+  "optimizer_steps_performed": 0,
+  "native_header_geometry": {
+    "files_audited": 80,
+    "ct_headers": 20,
+    "dense_mask_headers": 60,
+    "dense_mask_arrays_read": 0,
+    "max_zoom_affine_relative_error": 1.5838808247903838e-16,
+    "relative_tolerance": 1e-06,
+    "paired_ct_mask_voxel_volume": "PASS"
+  },
+  "trainer_boundary_firewall": {
+    "status": "PASS",
+    "dense_file_sha256_denylist_count": 60,
+    "runtime_cache_samples_checked": 20,
+    "runtime_patch_batches_checked": 20,
+    "injected_dense_key_rejected": true,
+    "real_dense_sha256_rejected": true,
+    "strict_cache_sample_allowlist": true,
+    "strict_patch_batch_allowlist": true
+  },
+  "gate_b": "NOT_RUN",
+  "pilot_training_authorized": false
+}
