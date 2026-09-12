@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-09-12T05:22:21Z",
+  "generated_at_utc": "2026-09-12T05:29:49Z",
   "completed_block": "05",
-  "corrective_block": "05D",
+  "last_attempted_block": "06",
   "files": [
     {
       "path": ".gitignore",
@@ -30,8 +30,8 @@
     },
     {
       "path": ".pytest_cache/v/cache/nodeids",
-      "bytes": 428,
-      "sha256": "5c5b2e94e5b6bfefcf881a256597a77f6f46dee7f58c9dd4aab576cc883b6990"
+      "bytes": 797,
+      "sha256": "a4bbac9f949d6ac3a85b58f2622ec5916b81cea2fb2750d82681c3a91f2ad132"
     },
     {
       "path": "LICENSE",
@@ -40,8 +40,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 2350,
-      "sha256": "874a4e300c37b8512e694c59080dbbad62283e840e361429809ad9cb62c93c2c"
+      "bytes": 2476,
+      "sha256": "46412efd72c5a4d5f77adbaa51a6191a5b80dc6164ca633437e9f27694ba1610"
     },
     {
       "path": "README.md",
@@ -50,8 +50,8 @@
     },
     {
       "path": "REPOSITORY_MANIFEST.json",
-      "bytes": 20801,
-      "sha256": "253899bbd73b609c57a84bdb0b1cc7190d6be8f22cd3e685bacc0bf9abb804bb"
+      "bytes": 21750,
+      "sha256": "ed69149f610c1f2a50f7fca00baeb25b28fcfa627f001e9801b7013a1e602d6a"
     },
     {
       "path": "app/api/.gitkeep",
@@ -82,6 +82,11 @@
       "path": "configs/model_cora.yaml",
       "bytes": 332,
       "sha256": "ef3299d8c4adaa66bc53ec311af1ffc56784ee827646061195fd336535efb0e3"
+    },
+    {
+      "path": "configs/preprocess_primary.yaml",
+      "bytes": 1067,
+      "sha256": "87616a21a68f6e3cb927281d9e59d166ed7216d539ab6876501c60cbd6b200e9"
     },
     {
       "path": "configs/splits_primary.yaml",
@@ -157,6 +162,26 @@
       "path": "data/manifests/primary_source_group_component_summary.csv",
       "bytes": 883,
       "sha256": "c67c677c165732829a27ef41afbbf286880c4f9a18b83d2de13da8326def6ed1"
+    },
+    {
+      "path": "data/manifests/training_cache_file_hashes.csv",
+      "bytes": 34991,
+      "sha256": "339bb36c5dd193c9f21c41caa929d7ade28a80c4b945838a2ff215baf0f448f3"
+    },
+    {
+      "path": "data/manifests/training_grid_budget_equivalence.csv",
+      "bytes": 2984,
+      "sha256": "4c762d20e25c53647e54ecdfcae7c19dc33b8868d3067a43555a40d7ac9de57d"
+    },
+    {
+      "path": "data/manifests/training_grid_case_summary.csv",
+      "bytes": 4432,
+      "sha256": "0590873e4b11bf754f575bc4fe47972b733f513be5d55f997d80d00687223755"
+    },
+    {
+      "path": "data/manifests/training_grid_sparse_transfer_summary.csv",
+      "bytes": 120892,
+      "sha256": "2e60533f2212e23319837898952db19bd18bde9f973c559c39f5f67077ac0b72"
     },
     {
       "path": "data/manifests/weak_label_artifact_semantic_hashes.csv",
@@ -264,6 +289,11 @@
       "sha256": "7eb381941a629ec31df592ee87c4cbf10228c467861674cb08b79e81d447602f"
     },
     {
+      "path": "experiments/audits/block06_training_grid_cache.json",
+      "bytes": 1608,
+      "sha256": "e3772a4169b8a4ab08783c5ac5236300d808a7bf80557fd086203c8cc579228a"
+    },
+    {
       "path": "experiments/registry.csv",
       "bytes": 102,
       "sha256": "e6ca868d5995d945d50fdaa6a7dd221f07d0da1f2a93e685af1df738e38b7509"
@@ -322,6 +352,26 @@
       "path": "figures/audit/fig05_weak_supervision_annotation_budget.png",
       "bytes": 711913,
       "sha256": "201ee4184cd67ee3f500359243275fd3e5d13c726732468f3b623c7b9011a1e8"
+    },
+    {
+      "path": "figures/audit/fig06_image_only_training_crop_efficiency.pdf",
+      "bytes": 23583,
+      "sha256": "1ec3d1c64fd7dae2124a096089189e0c4fa8ec58b5ba321d84b09ee63827b8c6"
+    },
+    {
+      "path": "figures/audit/fig06_image_only_training_crop_efficiency.png",
+      "bytes": 742372,
+      "sha256": "c7db50c702e4c466a8f10bc269735875840b07a07c50279190fbf7376334aa5a"
+    },
+    {
+      "path": "figures/audit/fig07_sparse_label_transfer_retention.pdf",
+      "bytes": 23148,
+      "sha256": "b833de2d1b809454f9d51b0b535186813137ea4780263010a3d9a7f5d1325e99"
+    },
+    {
+      "path": "figures/audit/fig07_sparse_label_transfer_retention.png",
+      "bytes": 769857,
+      "sha256": "a43abf756f01cde9fbd15f805c46c7d4abbcbc47428b4adb4ee556ddd1711319"
     },
     {
       "path": "notebooks/00_environment_and_provenance.ipynb",
@@ -404,6 +454,11 @@
       "sha256": "4089a05651365937549780d9ae9f0b33b337ba8932ad273984f73df7a55b8090"
     },
     {
+      "path": "scripts/code_blocks/block06_build_training_cache.py",
+      "bytes": 84626,
+      "sha256": "84dfee919b9ad08777e141a0ca56281ae0d0ad1db6d981e930a6c6df47a61a22"
+    },
+    {
       "path": "scripts/resume_project.py",
       "bytes": 673,
       "sha256": "4ff28985d05c37f7b896c40c8265ea86cc52f936ff7b5ce36edb05d74d7519ae"
@@ -434,9 +489,19 @@
       "sha256": "b43543f430f2879abf6b77e3586226fce8f0653e5223293728eebae77765d048"
     },
     {
+      "path": "src/cora_lung/data/__pycache__/preprocess.cpython-312.pyc",
+      "bytes": 3476,
+      "sha256": "10c1509e13f13b8627889c9d3047166ca0fc0eb527eea64be2a4631f683ba9d0"
+    },
+    {
       "path": "src/cora_lung/data/__pycache__/scribbles.cpython-312.pyc",
       "bytes": 2133,
       "sha256": "be19801d22c710df3730bb39f1c2debe00d02cc895df3edf236ffa3d84f51a0b"
+    },
+    {
+      "path": "src/cora_lung/data/__pycache__/training_cache.cpython-312.pyc",
+      "bytes": 4464,
+      "sha256": "3668d045b39ee40902e8352008f8825954a0012e682edb3a5ffdb6134ba57e1a"
     },
     {
       "path": "src/cora_lung/data/firewall.py",
@@ -450,8 +515,8 @@
     },
     {
       "path": "src/cora_lung/data/preprocess.py",
-      "bytes": 38,
-      "sha256": "fcf87ef5df4a02fe5d94c65253d070d993cf83c262f9b5c8c21e604dede673d6"
+      "bytes": 2327,
+      "sha256": "d5fe978888a39d87d81d91104e35d63bb536bb204ae8683a3f8b93d74906e0ea"
     },
     {
       "path": "src/cora_lung/data/regions.py",
@@ -467,6 +532,11 @@
       "path": "src/cora_lung/data/splits.py",
       "bytes": 38,
       "sha256": "8b9ace254f31b63689f3d9d0c09c54e36682896e22ce9550d92f8af5601f55de"
+    },
+    {
+      "path": "src/cora_lung/data/training_cache.py",
+      "bytes": 4331,
+      "sha256": "33077ce5d19e79e2ee2b2c29b258bef4a372e31a7e124a5da54d41dd17ad57ed"
     },
     {
       "path": "src/cora_lung/engine/__init__.py",
@@ -599,9 +669,19 @@
       "sha256": "166afb3116aa9ecbe14e666f052c9bad8df51b8bc2ae8607a8e46b98dd744240"
     },
     {
+      "path": "tests/__pycache__/test_physical_geometry.cpython-312-pytest-8.4.2.pyc",
+      "bytes": 7911,
+      "sha256": "f1f0344efeb53d88ae32bd73bb1f091ddaddecd7607250facaafd18c57d454fc"
+    },
+    {
       "path": "tests/__pycache__/test_scribble_budget.cpython-312-pytest-8.4.2.pyc",
       "bytes": 5429,
       "sha256": "8e4278f4d5d1566c3e4bdba3c1f4dc097780502d623ac89fbd954d24a6cb8bba"
+    },
+    {
+      "path": "tests/__pycache__/test_training_cache_firewall.cpython-312-pytest-8.4.2.pyc",
+      "bytes": 3697,
+      "sha256": "ad1848e25b61aa1261d95fac271e20cbeece694e5ba08a05d683346070c39d04"
     },
     {
       "path": "tests/test_component_matching.py",
@@ -625,8 +705,8 @@
     },
     {
       "path": "tests/test_physical_geometry.py",
-      "bytes": 223,
-      "sha256": "f12aad29334e2a5ded48b8b8cfe2c0043f7e81e86e7e774f0ce52fda3aa3e056"
+      "bytes": 2248,
+      "sha256": "12da055c6de1e62095d6aef46765863f113dd3f04463b41bc93d8a6ecb14c856"
     },
     {
       "path": "tests/test_scribble_budget.py",
@@ -637,6 +717,11 @@
       "path": "tests/test_split_leakage.py",
       "bytes": 223,
       "sha256": "1f6a8b0b521f7519d830e51ada53e09862c5aed3027c0317e9cf023e75ffbaa9"
+    },
+    {
+      "path": "tests/test_training_cache_firewall.py",
+      "bytes": 2245,
+      "sha256": "788b0c964aa90fde7659ff12a40884abed19cca09623c096f8cc42f5f0e2f3f5"
     }
   ]
 }

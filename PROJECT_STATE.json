@@ -5,7 +5,7 @@
   "workflow_version": "1.0",
   "last_completed_block": "05",
   "last_completed_block_name": "deterministic_component_aware_weak_label_generator",
-  "current_stage": "native_weak_labels_generated_and_firewall_verified",
+  "current_stage": "training_grid_cache_requires_review",
   "current_gate": "POST_GATE_A_PRE_GATE_B",
   "gate_a": "PASS",
   "gate_b": "NOT_RUN",
@@ -15,9 +15,9 @@
   "gate_f": "NOT_RUN",
   "dense_label_firewall": "PASS",
   "primary_dataset_audit": "NOT_RUN",
-  "next_action": "Code Block 06: construct the firewall-safe resampled CT and weak-label training cache with physical-coordinate transfer, collision auditing, and storage/RAM profiling.",
-  "updated_at_utc": "2026-09-12T05:22:21Z",
-  "last_attempted_block": "05",
+  "next_action": "Audit Block 06 output before Gate-B pilot training.",
+  "updated_at_utc": "2026-09-12T05:29:49Z",
+  "last_attempted_block": "06",
   "primary_dataset_discovery": "PASS",
   "primary_dataset_pairing": "PASS",
   "primary_dataset_geometry_headers": "PASS",
@@ -45,5 +45,14 @@
   "weak_annotation_artifacts": 260,
   "weak_label_allocator": "exact_capacity_aware_cyclic_v1.1",
   "allocator_regression_repair": "PASS",
-  "all_coverage_matched_controls": "PASS"
+  "all_coverage_matched_controls": "PASS",
+  "training_grid_cache": "REVIEW_REQUIRED_PRIMARY_CAUSAL_BUDGET",
+  "preprocess_version": "1.0",
+  "training_grid_spacing_zyx_mm": [
+    3.0,
+    1.5,
+    1.5
+  ],
+  "training_cache_firewall": "PASS",
+  "primary_50_post_transfer_budget": "REVIEW_REQUIRED"
 }

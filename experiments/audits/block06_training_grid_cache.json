@@ -1,0 +1,57 @@
+{
+  "project": "CORA-Lung",
+  "block": "06",
+  "block_name": "firewall_safe_training_grid_cache",
+  "generated_at_utc": "2026-09-12T05:29:49Z",
+  "status": "REVIEW_REQUIRED_PRIMARY_CAUSAL_BUDGET",
+  "preprocess_version": "1.0",
+  "target_spacing_zyx_mm": [
+    3.0,
+    1.5,
+    1.5
+  ],
+  "ct_cases": 20,
+  "sparse_artifacts": 260,
+  "cache": {
+    "files": 281,
+    "bytes": 134070343,
+    "human_size": "127.86 MB"
+  },
+  "crop": {
+    "dense_masks_used": false,
+    "scribbles_used": false,
+    "median_retained_volume_fraction": 0.8885418949521513,
+    "method_counts": {
+      "internal_air_lung_bbox": 10,
+      "body_envelope_fallback": 10
+    }
+  },
+  "geometry": {
+    "all_260_transferred": true,
+    "fg_bg_conflicts": 0,
+    "out_of_full_volume_conditions": 0,
+    "out_of_crop_conditions": 0,
+    "group_loss_conditions": 0,
+    "group_survival": true,
+    "nearest_voxel_half_diagonal_mm": 1.8371173070873836,
+    "max_observed_roundtrip_error_mm": 1.8300114215431869,
+    "roundtrip_bound_pass": true
+  },
+  "collision_statistics": {
+    "total_same_class_merges": 32804,
+    "median_fg_voxel_retention": 0.6756756756756757,
+    "median_bg_voxel_retention": 0.583050847457627
+  },
+  "paired_background_after_transfer": true,
+  "training_grid_budget_equivalence": {
+    "natural_pixel_all_60": false,
+    "fixed_pair_all_60": false,
+    "natural_pixel_mismatch_count": 50,
+    "fixed_pair_mismatch_count": 53,
+    "primary_50_natural_pixel": false,
+    "primary_50_fixed_pair": false
+  },
+  "training_cache_firewall": "PASS",
+  "dense_masks_used": false,
+  "model_training_performed": false
+}
