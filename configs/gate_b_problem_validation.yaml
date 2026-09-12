@@ -1,0 +1,53 @@
+experiment:
+  name: gate_b_problem_validation
+  purpose: component_omission_vs_equal_count_pixel_sparsity
+  evaluation_population: permanent_development_only
+  final_outer_cv_access: prohibited
+
+conditions:
+  - complete
+  - pixel_dropout_matched_50
+  - component_natural_50
+  - complete_fixed_50
+  - component_fixed_50
+
+decisive_pairs:
+  primary:
+    control: pixel_dropout_matched_50
+    omission: component_natural_50
+  secondary_fixed:
+    control: complete_fixed_50
+    omission: component_fixed_50
+
+fit:
+  seed: 17
+  epochs: 30
+  microbatches_per_epoch: 100
+  batch_size: 1
+  gradient_accumulation: 2
+  patch_zyx: [48, 128, 128]
+  optimizer: AdamW
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  amp: true
+  augmentation: none
+  checkpoint_selection: final_epoch_only
+
+model:
+  family: CORALungResidualUNet
+  widths: [16, 32, 64, 128]
+  embedding_dimension: 64
+
+loss:
+  partial_bce_weight: 1.0
+  partial_dice_weight: 1.0
+  unknown_label: -1
+
+firewall:
+  trainer_boundary_guard_every_microbatch: true
+  dense_mask_access_during_fit: prohibited
+  dense_checksum_denylist: required
+
+interpretation:
+  gate_b_is_development_problem_validation: true
+  independent_patient_generalization_claim: prohibited
