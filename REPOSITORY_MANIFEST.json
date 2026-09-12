@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-09-12T04:37:53Z",
-  "completed_block": "02",
+  "generated_at_utc": "2026-09-12T04:43:57Z",
+  "completed_block": "03",
   "files": [
     {
       "path": ".gitignore",
@@ -14,8 +14,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 1061,
-      "sha256": "01d05187a7eba96e440d9e6b95712d72b807d75e0b42f5c5460409ae70b54c1d"
+      "bytes": 1337,
+      "sha256": "898c8630f8a87189b521d4ec3efae5beeb6e78dc0a5c5df060454d0435ee9385"
     },
     {
       "path": "README.md",
@@ -24,8 +24,8 @@
     },
     {
       "path": "REPOSITORY_MANIFEST.json",
-      "bytes": 11893,
-      "sha256": "40f2db55892cc47faa82814fd9e02b58bcf333140af16258b611f60ec0bdd187"
+      "bytes": 13150,
+      "sha256": "bbfcb411d2d5e6e73c4dc6aaa28eef8587e9d227636e3e03bc90d32be8961b29"
     },
     {
       "path": "app/api/.gitkeep",
@@ -68,9 +68,29 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "data/manifests/primary_case_component_summary.csv",
+      "bytes": 3412,
+      "sha256": "4b4dec26ea3df10e181ef1e4a332ad288d124d92c726f7fc2ff6ce285eb04a00"
+    },
+    {
       "path": "data/manifests/primary_case_pairs.csv",
       "bytes": 4235,
       "sha256": "452a26d9cc492ad69c878601ee9ae188106bcc983c5fe53c63b9212e8e9cfb75"
+    },
+    {
+      "path": "data/manifests/primary_component_features_26conn_ge0p1ml.csv",
+      "bytes": 90249,
+      "sha256": "298b130949d7e0ff0d67d6fb53e50469e9abb20e2e8800b5b65294d2c3b4f08d"
+    },
+    {
+      "path": "data/manifests/primary_component_sensitivity.csv",
+      "bytes": 8927,
+      "sha256": "1a454e71b7ed867f100f1e4b0864fc1ec94257cfd648c99ef3a656768c68d052"
+    },
+    {
+      "path": "data/manifests/primary_component_sensitivity_summary.csv",
+      "bytes": 333,
+      "sha256": "2d227f96de8606fe47933e6b487615e2caa9f661c75c37a7c3a7e0520e9fc0dd"
     },
     {
       "path": "data/manifests/primary_dataset_inventory.csv",
@@ -91,6 +111,16 @@
       "path": "data/manifests/primary_geometry_headers.csv",
       "bytes": 3031,
       "sha256": "21d28452ac9106f95dd313b65ae93feb453cac71cc9bddd71d5430b0ad18136b"
+    },
+    {
+      "path": "data/manifests/primary_infection_mask_qc.csv",
+      "bytes": 3132,
+      "sha256": "52c8e88f8871ca14d2b5c8e7fc5ba025e8786d8faddceb657a5a043f2278d0b7"
+    },
+    {
+      "path": "data/manifests/primary_source_group_component_summary.csv",
+      "bytes": 883,
+      "sha256": "c67c677c165732829a27ef41afbbf286880c4f9a18b83d2de13da8326def6ed1"
     },
     {
       "path": "data/splits/.gitkeep",
@@ -133,6 +163,11 @@
       "sha256": "19ee88180a2e8f52ecbb68bbfd0ab269038be2ba581ee80f723870aa0cfa271f"
     },
     {
+      "path": "experiments/audits/block03_gate_a_component_viability.json",
+      "bytes": 2723,
+      "sha256": "255028b5d6731c0c2c0751a82464a6f32dacbd6ec2dacf3687358c37d2a23254"
+    },
+    {
       "path": "experiments/registry.csv",
       "bytes": 102,
       "sha256": "e6ca868d5995d945d50fdaa6a7dd221f07d0da1f2a93e685af1df738e38b7509"
@@ -141,6 +176,36 @@
       "path": "figures/.gitkeep",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "figures/audit/fig01_native_grid_eligible_component_burden.pdf",
+      "bytes": 23908,
+      "sha256": "8388af9f0cc9464ff729351d4a9b5cef3626dbb2e2c5470a720b7c610f0a4d58"
+    },
+    {
+      "path": "figures/audit/fig01_native_grid_eligible_component_burden.png",
+      "bytes": 775016,
+      "sha256": "2f39e6628417d3a729ff81bf51c89fa51d45f83c96061d2ec1e92657a58742a5"
+    },
+    {
+      "path": "figures/audit/fig02_eligible_component_volume_distribution.pdf",
+      "bytes": 21580,
+      "sha256": "b15a26dbb9e92e4742ede3b44b5fcda849a6ef8282666253be428921989cdbbf"
+    },
+    {
+      "path": "figures/audit/fig02_eligible_component_volume_distribution.png",
+      "bytes": 365748,
+      "sha256": "a558c541e2244d7891efe204832bd534e54443dac6a85d864b0fb068f2fb65ba"
+    },
+    {
+      "path": "figures/audit/fig03_component_definition_sensitivity.pdf",
+      "bytes": 20833,
+      "sha256": "adab0471966484ef1c09a15264686ce7c5b1492bb236cd40355c70277f22a42b"
+    },
+    {
+      "path": "figures/audit/fig03_component_definition_sensitivity.png",
+      "bytes": 469460,
+      "sha256": "31e031e5272036b6334514e0cda855069d9bf193a0313bb42a6bb0f85aa4c0c4"
     },
     {
       "path": "notebooks/00_environment_and_provenance.ipynb",
