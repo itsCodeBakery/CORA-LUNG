@@ -1,0 +1,5 @@
+condition,foreground_exposures,background_exposures,positive_label_fraction_seen,constant_probability_minimizer_under_current_BCE_plus_Dice,minimum_constant_sparse_loss
+complete,183731,137940,0.5711767613493289,0.666,1.0874628757169658
+component_fixed_50,156353,137141,0.5327298002684893,0.63,1.1334282708601204
+component_natural_50,89750,137224,0.3954197397058694,0.494,1.2514624196172666
+pixel_dropout_matched_50,88205,138968,0.38827237391767505,0.487,1.2556060250657475

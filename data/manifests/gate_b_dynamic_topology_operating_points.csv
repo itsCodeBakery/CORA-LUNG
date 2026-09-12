@@ -1,0 +1,17 @@
+condition,fp_budget,selected_voxel_threshold,actual_fp_per_patient,macro_recall,pooled_recall,true_positives,eligible_references,mean_prediction_components
+complete,0.5,1.000001,0.0,0.0,0.0,0,82,0.0
+complete,1.0,1.000001,0.0,0.0,0.0,0,82,0.0
+complete,2.0,1.000001,0.0,0.0,0.0,0,82,0.0
+complete,4.0,1.000001,0.0,0.0,0.0,0,82,0.0
+pixel_dropout_matched_50,0.5,1.000001,0.0,0.0,0.0,0,82,0.0
+pixel_dropout_matched_50,1.0,1.000001,0.0,0.0,0.0,0,82,0.0
+pixel_dropout_matched_50,2.0,1.000001,0.0,0.0,0.0,0,82,0.0
+pixel_dropout_matched_50,4.0,1.000001,0.0,0.0,0.0,0,82,0.0
+component_natural_50,0.5,1.000001,0.0,0.0,0.0,0,82,0.0
+component_natural_50,1.0,1.000001,0.0,0.0,0.0,0,82,0.0
+component_natural_50,2.0,1.000001,0.0,0.0,0.0,0,82,0.0
+component_natural_50,4.0,1.000001,0.0,0.0,0.0,0,82,0.0
+component_fixed_50,0.5,1.000001,0.0,0.0,0.0,0,82,0.0
+component_fixed_50,1.0,1.000001,0.0,0.0,0.0,0,82,0.0
+component_fixed_50,2.0,1.000001,0.0,0.0,0.0,0,82,0.0
+component_fixed_50,4.0,1.000001,0.0,0.0,0.0,0,82,0.0
