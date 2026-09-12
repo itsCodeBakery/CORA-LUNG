@@ -1,0 +1,55 @@
+{
+  "project": "CORA-Lung",
+  "block": "07",
+  "corrective_block": "07C-R1",
+  "status": "PASS",
+  "generated_at_utc": "2026-09-12T06:18:13Z",
+  "scientific_training_performed": false,
+  "optimizer_steps_performed": 0,
+  "precision_correction": {
+    "initial_value_error": 5.960464477539063e-08,
+    "initial_gradient_error": 0.0,
+    "root_cause": "target.float() forced float32 BCE during float64 audit",
+    "correction": "target inherits logits dtype",
+    "tolerance_relaxed": false
+  },
+  "patch_sampler": {
+    "patch_zyx": [
+      48,
+      128,
+      128
+    ],
+    "audited_patches": 120,
+    "patches_with_labels": 120,
+    "patches_with_foreground": 112
+  },
+  "loss_contract": {
+    "query_value_equivalence": "PASS",
+    "max_value_abs_error": 2.220446049250313e-16,
+    "query_gradient_equivalence": "PASS",
+    "max_gradient_abs_error": 0.0
+  },
+  "model": {
+    "family": "residual_3d_unet",
+    "base_channels": 16,
+    "embedding_dim": 64,
+    "parameters": 1707121
+  },
+  "gpu_profile": {
+    "device": "cuda",
+    "amp": true,
+    "peak_allocated_gb": 0.8793845176696777,
+    "peak_reserved_gb": 1.216796875,
+    "forward_backward_seconds": 1.9975375150006585,
+    "memory_limit_gb": 14.5,
+    "memory_gate": "PASS",
+    "optimizer_step": false
+  },
+  "checkpointing": {
+    "atomic_checkpoint": "PASS",
+    "registry": "PASS",
+    "primary_checkpoint": "final_epoch",
+    "dense_validation_selection": false
+  },
+  "training_authorized": false
+}

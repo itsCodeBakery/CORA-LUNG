@@ -1,0 +1,2 @@
+device,patch_z,patch_y,patch_x,base_channels,embedding_dim,parameters,amp_enabled,peak_allocated_gb,peak_reserved_gb,forward_backward_seconds,loss,optimizer_step_performed,memory_gate_pass
+cuda,48,128,128,16,64,1707121,True,0.8793845176696777,1.216796875,1.9975375150006585,0.8324158787727356,False,True
