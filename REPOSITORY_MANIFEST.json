@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-09-12T04:43:57Z",
-  "completed_block": "03",
+  "generated_at_utc": "2026-09-12T04:50:48Z",
+  "completed_block": "04",
   "files": [
     {
       "path": ".gitignore",
@@ -14,8 +14,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 1337,
-      "sha256": "898c8630f8a87189b521d4ec3efae5beeb6e78dc0a5c5df060454d0435ee9385"
+      "bytes": 1944,
+      "sha256": "2bb9c21f0934eb80e3558c2ac62f1d3082990365e0142689fd59e9aaed8b372c"
     },
     {
       "path": "README.md",
@@ -24,8 +24,8 @@
     },
     {
       "path": "REPOSITORY_MANIFEST.json",
-      "bytes": 13150,
-      "sha256": "bbfcb411d2d5e6e73c4dc6aaa28eef8587e9d227636e3e03bc90d32be8961b29"
+      "bytes": 15643,
+      "sha256": "03b76b5253bc01da54281ce1ac7c1257f169efb0f0f76fd1501333a93a53e608"
     },
     {
       "path": "app/api/.gitkeep",
@@ -56,6 +56,11 @@
       "path": "configs/model_cora.yaml",
       "bytes": 332,
       "sha256": "ef3299d8c4adaa66bc53ec311af1ffc56784ee827646061195fd336535efb0e3"
+    },
+    {
+      "path": "configs/splits_primary.yaml",
+      "bytes": 987,
+      "sha256": "f85e0c8835bb33c3aaa59ab36ebc6683b150c91e11ecd878372902c578dcc7bf"
     },
     {
       "path": "data/README.md",
@@ -128,6 +133,26 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "data/splits/primary_outer_folds.json",
+      "bytes": 1554,
+      "sha256": "377afb3f63a594f4a7fb89497dd75de8bf4e838b63f08153afc75c2392b080d5"
+    },
+    {
+      "path": "data/splits/primary_source_group_registry.csv",
+      "bytes": 1534,
+      "sha256": "d00064d23a3d59eaef716243925bebd997096b336491d276256452e7c1c200e3"
+    },
+    {
+      "path": "data/splits/primary_split_audit.csv",
+      "bytes": 172,
+      "sha256": "7c68befdba2043bc40e2eda3842a9af99fc74cdb1b108faa62a6fb5e71a43a66"
+    },
+    {
+      "path": "data/splits/primary_volume_split_registry.csv",
+      "bytes": 6117,
+      "sha256": "9143d7fccbadced8a761428eb9c588873bea7e27e3bc46b1398c0473616961c3"
+    },
+    {
       "path": "docs/figure_policy.md",
       "bytes": 505,
       "sha256": "330f7521a3f5c2f174dcee6472d7a8fd8d5679d637724ae1f9a9886df01e2f84"
@@ -141,6 +166,11 @@
       "path": "docs/reproducibility.md",
       "bytes": 400,
       "sha256": "7ada064c6698994a6496b536fe70f22c9e0467e072f470e52f429e7903b13750"
+    },
+    {
+      "path": "docs/split_policy.md",
+      "bytes": 2351,
+      "sha256": "0112b9f0a02a715ea313c6cd5fd83a65467ccb8bfa6e40eb2df1279afa327448"
     },
     {
       "path": "docs/supervision_contract.md",
@@ -166,6 +196,11 @@
       "path": "experiments/audits/block03_gate_a_component_viability.json",
       "bytes": 2723,
       "sha256": "255028b5d6731c0c2c0751a82464a6f32dacbd6ec2dacf3687358c37d2a23254"
+    },
+    {
+      "path": "experiments/audits/block04_split_freeze.json",
+      "bytes": 2692,
+      "sha256": "10aed47efdd459ce9b4c3937175a6653155fd0a45d2e98a26edee290d1350cb6"
     },
     {
       "path": "experiments/registry.csv",
@@ -206,6 +241,16 @@
       "path": "figures/audit/fig03_component_definition_sensitivity.png",
       "bytes": 469460,
       "sha256": "31e031e5272036b6334514e0cda855069d9bf193a0313bb42a6bb0f85aa4c0c4"
+    },
+    {
+      "path": "figures/audit/fig04_frozen_split_component_distribution.pdf",
+      "bytes": 22434,
+      "sha256": "291ad1c03daef9b66377e6261c0146ba2806047454c167e3be2a0dcb85c0afe6"
+    },
+    {
+      "path": "figures/audit/fig04_frozen_split_component_distribution.png",
+      "bytes": 474661,
+      "sha256": "d81ed982a0f7ec056441e56a874d4d25e0b70e5e1998619efdb158c4a63a956f"
     },
     {
       "path": "notebooks/00_environment_and_provenance.ipynb",

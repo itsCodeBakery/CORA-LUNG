@@ -1,0 +1,96 @@
+{
+  "project": "CORA-Lung",
+  "block": "04",
+  "block_name": "freeze_source_group_safe_primary_splits",
+  "generated_at_utc": "2026-09-12T04:50:48Z",
+  "gate_a": {
+    "status": "PASS",
+    "rationale": "Manual scientific review after Block 03: the primary 26-connectivity/0.1-mL definition yields 304 conservative eligible components across 18 multifocal source groups; the 0.5-mL sensitivity retains 193 components across 18 multifocal source groups, and component counts are stable across 6/18/26 connectivity.",
+    "primary_conservative_components": 304,
+    "primary_multifocal_source_groups": 18,
+    "strict_0p5ml_components": 193,
+    "strict_0p5ml_multifocal_groups": 18
+  },
+  "split": {
+    "seed": 1701,
+    "frozen": true,
+    "independence_unit": "source_subject_key",
+    "observed_volumes": 20,
+    "conservative_source_groups": 18,
+    "development": {
+      "source_groups": [
+        "coronacases_004",
+        "coronacases_008",
+        "radiopaedia_case_14",
+        "radiopaedia_case_27"
+      ],
+      "volumes": [
+        "coronacases_004",
+        "coronacases_008",
+        "radiopaedia_14_85914_0",
+        "radiopaedia_27_86410_0"
+      ]
+    },
+    "outer_folds": {
+      "0": {
+        "source_groups": [
+          "coronacases_002",
+          "coronacases_005",
+          "radiopaedia_case_29"
+        ],
+        "volumes": [
+          "coronacases_002",
+          "coronacases_005",
+          "radiopaedia_29_86490_1",
+          "radiopaedia_29_86491_1"
+        ]
+      },
+      "1": {
+        "source_groups": [
+          "coronacases_010",
+          "radiopaedia_case_10",
+          "radiopaedia_case_4"
+        ],
+        "volumes": [
+          "coronacases_010",
+          "radiopaedia_10_85902_1",
+          "radiopaedia_10_85902_3",
+          "radiopaedia_4_85506_1"
+        ]
+      },
+      "2": {
+        "source_groups": [
+          "coronacases_006",
+          "coronacases_007",
+          "radiopaedia_case_36",
+          "radiopaedia_case_7"
+        ],
+        "volumes": [
+          "coronacases_006",
+          "coronacases_007",
+          "radiopaedia_36_86526_0",
+          "radiopaedia_7_85703_0"
+        ]
+      },
+      "3": {
+        "source_groups": [
+          "coronacases_001",
+          "coronacases_003",
+          "coronacases_009",
+          "radiopaedia_case_40"
+        ],
+        "volumes": [
+          "coronacases_001",
+          "coronacases_003",
+          "coronacases_009",
+          "radiopaedia_40_86625_0"
+        ]
+      }
+    },
+    "used_dense_labels_for_allocation": false,
+    "post_freeze_dense_audit_only": true
+  },
+  "training_performed": false,
+  "scribbles_generated": false,
+  "test_outcomes_seen": false
+}

@@ -1,0 +1,72 @@
+{
+  "split_seed": 1701,
+  "independence_unit": "source_subject_key",
+  "development_groups": [
+    "coronacases_004",
+    "coronacases_008",
+    "radiopaedia_case_14",
+    "radiopaedia_case_27"
+  ],
+  "development_volumes": [
+    "coronacases_004",
+    "coronacases_008",
+    "radiopaedia_14_85914_0",
+    "radiopaedia_27_86410_0"
+  ],
+  "outer_folds": {
+    "0": {
+      "source_groups": [
+        "coronacases_002",
+        "coronacases_005",
+        "radiopaedia_case_29"
+      ],
+      "volumes": [
+        "coronacases_002",
+        "coronacases_005",
+        "radiopaedia_29_86490_1",
+        "radiopaedia_29_86491_1"
+      ]
+    },
+    "1": {
+      "source_groups": [
+        "coronacases_010",
+        "radiopaedia_case_10",
+        "radiopaedia_case_4"
+      ],
+      "volumes": [
+        "coronacases_010",
+        "radiopaedia_10_85902_1",
+        "radiopaedia_10_85902_3",
+        "radiopaedia_4_85506_1"
+      ]
+    },
+    "2": {
+      "source_groups": [
+        "coronacases_006",
+        "coronacases_007",
+        "radiopaedia_case_36",
+        "radiopaedia_case_7"
+      ],
+      "volumes": [
+        "coronacases_006",
+        "coronacases_007",
+        "radiopaedia_36_86526_0",
+        "radiopaedia_7_85703_0"
+      ]
+    },
+    "3": {
+      "source_groups": [
+        "coronacases_001",
+        "coronacases_003",
+        "coronacases_009",
+        "radiopaedia_case_40"
+      ],
+      "volumes": [
+        "coronacases_001",
+        "coronacases_003",
+        "coronacases_009",
+        "radiopaedia_40_86625_0"
+      ]
+    }
+  }
+}

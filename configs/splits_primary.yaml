@@ -1,0 +1,40 @@
+split:
+  version: 1
+  frozen: true
+  frozen_at_utc: "2026-09-12T04:50:48Z"
+  seed: 1701
+
+independence:
+  unit: source_subject_key
+  observed_volumes: 20
+  conservative_source_groups: 18
+  repeated_source_groups: 2
+
+development:
+  source_groups: 4
+  volumes: 4
+  selection:
+    provenance_stratified: true
+    coronacases_singleton_groups: 2
+    radiopaedia_singleton_groups: 2
+    dense_label_information_used: false
+
+final_outer_cv:
+  folds: 4
+  total_volumes: 16
+  total_source_groups: 14
+  target_test_volumes_per_fold: 4
+  whole_source_group_assignment: true
+  dense_label_information_used_for_allocation: false
+
+analysis:
+  patient_independence_proxy: source_subject_key
+  repeated_series_never_split: true
+  bootstrap_cluster_unit: source_subject_key
+  repeated_volume_metrics:
+    aggregate_within_source_group_before_macro_patient_analysis
+
+policy:
+  redraw_after_outcome_inspection: prohibited
+  redraw_after_component_audit: prohibited
+  final_test_model_selection: prohibited
