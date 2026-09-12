@@ -1,0 +1,39 @@
+{
+  "project": "CORA-Lung",
+  "block": "08E-PREDICTION-FREEZE",
+  "status": "FROZEN_BEFORE_DENSE_OUTCOMES",
+  "generated_at_utc": "2026-09-12T07:55:39Z",
+  "evaluator_lock_commit": "4ce60b321a54418c86b92e340dd46ec5acd7eefb",
+  "prediction_count": 16,
+  "conditions": [
+    "complete",
+    "pixel_dropout_matched_50",
+    "component_natural_50",
+    "component_fixed_50"
+  ],
+  "development_cases": [
+    "coronacases_004",
+    "coronacases_008",
+    "radiopaedia_14_85914_0",
+    "radiopaedia_27_86410_0"
+  ],
+  "dense_mask_arrays_accessed": 0,
+  "prediction_hashes": {
+    "complete/coronacases_004": "68bf2526e795d96b0e98c2b0cd4225b230a03839533477c791e4860ece7149ff",
+    "complete/coronacases_008": "599b0774b2c334610a78d252d97024470939757a6ad19c08a11532ce4f455289",
+    "complete/radiopaedia_14_85914_0": "f53ffd766d7bcf32edc800497dc492571996730b973b6518700e82140819e0d8",
+    "complete/radiopaedia_27_86410_0": "eebd05fd2f8778964fb18aec92a57c6d8a023e3e281b4ae77e06f21e9e5a24f3",
+    "pixel_dropout_matched_50/coronacases_004": "04b203eb3fb79187e6cd61c33ab617dfad6a1bbdd283dd2993a99dba88390a03",
+    "pixel_dropout_matched_50/coronacases_008": "815bf57ad3b1ed58e063a5baed072334a2fb4a86d501e2535e56c09f5ac05028",
+    "pixel_dropout_matched_50/radiopaedia_14_85914_0": "4a6f2e93935251e94fa1edd390e3f5024cb7086e58d5e25de44e4744d349d778",
+    "pixel_dropout_matched_50/radiopaedia_27_86410_0": "41e02160eb2ffff9444eae52265c51214373a03b09dbbcd40eb9395266deadb8",
+    "component_natural_50/coronacases_004": "d0c04f6df10b9e496ba8421d4c9da68155a449a671c28de2f0d61d62b8ba507a",
+    "component_natural_50/coronacases_008": "db7258014033485f860a9e549cef02db639de75e4184e6369b2ff551e72e5376",
+    "component_natural_50/radiopaedia_14_85914_0": "c3ac07ba8c91c43a280e5ea6af9363648f739b838884baede9f6a0172c622b06",
+    "component_natural_50/radiopaedia_27_86410_0": "1aa2326d354202994b3080fc0b167521a2c596b40356f1f20d5866d449fba90c",
+    "component_fixed_50/coronacases_004": "5e64f26e65808a3a42a10b3702cb5afa6eb23ae92cd1a6d0b6acc73f11e474e3",
+    "component_fixed_50/coronacases_008": "afd8ec5b258afacc838c5666c27a5651fc6435411000efd115cf3e155ebee09f",
+    "component_fixed_50/radiopaedia_14_85914_0": "9f7ab44bd38a46c453200fd9ba808afbe8e3faf835fb2c177dc0809aeedf2014",
+    "component_fixed_50/radiopaedia_27_86410_0": "72fdaf7be73a7626940288bd7863e398fa52edfcddd13d93eab6db2f43026166"
+  }
+}

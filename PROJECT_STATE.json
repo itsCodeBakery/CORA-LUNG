@@ -5,7 +5,7 @@
   "workflow_version": "1.0",
   "last_completed_block": "08D-LOCK",
   "last_completed_block_name": "gate_b_decision_rule_lock",
-  "current_stage": "gate_b_evaluator_locked_predictions_pending",
+  "current_stage": "gate_b_predictions_frozen_dense_outcomes_ready",
   "current_gate": "B",
   "gate_a": "PASS",
   "gate_b": "IN_PROGRESS",
@@ -16,7 +16,7 @@
   "dense_label_firewall": "PASS",
   "primary_dataset_audit": "NOT_RUN",
   "next_action": "Run Block 08E frozen-checkpoint dense development evaluation and apply the locked Gate-B rule.",
-  "updated_at_utc": "2026-09-12T07:51:34Z",
+  "updated_at_utc": "2026-09-12T07:55:39Z",
   "last_attempted_block": "08E",
   "primary_dataset_discovery": "PASS",
   "primary_dataset_pairing": "PASS",
@@ -85,5 +85,7 @@
   "gate_b_case_nonnegative_min": 3,
   "gate_b_case_positive_min": 2,
   "gate_b_dense_evaluator": "LOCKED",
-  "gate_b_inference_protocol": "LOCKED"
+  "gate_b_inference_protocol": "LOCKED",
+  "gate_b_predictions": "FROZEN",
+  "gate_b_prediction_count": 16
 }
