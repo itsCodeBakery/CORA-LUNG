@@ -1,6 +1,7 @@
 {
-  "generated_at_utc": "2026-09-12T07:44:48Z",
-  "completed_block": "08D-LOCK",
+  "generated_at_utc": "2026-09-12T07:57:37Z",
+  "completed_block": "08E",
+  "gate_b_decision": "NO_GO",
   "self_included": false,
   "files": [
     {
@@ -30,8 +31,8 @@
     },
     {
       "path": ".pytest_cache/v/cache/nodeids",
-      "bytes": 2621,
-      "sha256": "a9b1bf75c9ee745ac4bcc188a606558183b56bfd5016becceea4c84b3d81d02c"
+      "bytes": 2992,
+      "sha256": "b892a08e60f3ae3f6848ddfeafc174dc7970e4eedeacc9ae309d4db76e174ea0"
     },
     {
       "path": "LICENSE",
@@ -40,8 +41,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 3706,
-      "sha256": "ede511e8f1509b0d252b8fc64c755aee9f954f9fd64d94c7087be3c11a1633ed"
+      "bytes": 4069,
+      "sha256": "5b1c51ab2ffb8fc152eb3e79324be716f04668ff7aa0822a0f0cca3f7d0fc323"
     },
     {
       "path": "README.md",
@@ -89,6 +90,11 @@
       "sha256": "a265cf3f33e094c0abd8e0aa188525b5fb5b2778af6946bcb6d68f89156d289b"
     },
     {
+      "path": "configs/gate_b_dense_evaluation.yaml",
+      "bytes": 1658,
+      "sha256": "d88222899e566e47023096c80ca4068dccfb7c5bbcb1c375a408032a5a933e0f"
+    },
+    {
       "path": "configs/gate_b_problem_validation.yaml",
       "bytes": 1656,
       "sha256": "374ca89444c11ec2cc8cf8c57dcadbe1200c88cc957980cec534fdb2ef1c717c"
@@ -124,9 +130,29 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "data/manifests/gate_b_case_metrics.csv",
+      "bytes": 2621,
+      "sha256": "03a067840c52caeaf208a4e53946a8bcbe20437a710f83c021faf44c86a2a84f"
+    },
+    {
+      "path": "data/manifests/gate_b_condition_summary.csv",
+      "bytes": 965,
+      "sha256": "63a42eeb12901189cde61f8fa60cc9295813fd67b3986fcb728e694a24df97ce"
+    },
+    {
       "path": "data/manifests/gate_b_development_prefit_budget_audit.csv",
       "bytes": 351,
       "sha256": "1cf95ae7a521ae0dd5b2cfa0012a7d10df457397b02ebadab70decf809d776db"
+    },
+    {
+      "path": "data/manifests/gate_b_froc_curve.csv",
+      "bytes": 5673,
+      "sha256": "4602ca4148335ec034fa97dc3583d7a5719be083fa8f580e7aa48d772d9e8dd3"
+    },
+    {
+      "path": "data/manifests/gate_b_froc_operating_points.csv",
+      "bytes": 1111,
+      "sha256": "0561260efcd36ccd4674ab6a773cd4991bb7393a128fe5f12b6ddfe6d109420f"
     },
     {
       "path": "data/manifests/gate_b_harness_gpu_profile.csv",
@@ -137,6 +163,16 @@
       "path": "data/manifests/gate_b_harness_patch_sampler_audit.csv",
       "bytes": 7478,
       "sha256": "49beae1ebb1d1802de4e25b282d6e0b31026b66645d27678b0ab018022dbccfb"
+    },
+    {
+      "path": "data/manifests/gate_b_prediction_candidates.csv",
+      "bytes": 2905897,
+      "sha256": "44fb25e4c31e1caf66cf4b7157084fe30985250facf091d5e8d35c360a291d91"
+    },
+    {
+      "path": "data/manifests/gate_b_primary_case_differences.csv",
+      "bytes": 367,
+      "sha256": "b1538ce28acdeba8746181ec4b7347d91a320b1aaddd998920952271d04d6562"
     },
     {
       "path": "data/manifests/gate_b_query_holdout_equivalence.csv",
@@ -152,6 +188,11 @@
       "path": "data/manifests/gate_b_v1_2_patch_sampling_realization.csv",
       "bytes": 189,
       "sha256": "926680e5a3e1a3269da68e1f37f9e0e0875d1411d8d08e12df0ef4e8875cb0b6"
+    },
+    {
+      "path": "data/manifests/gate_b_v1_2_prediction_freeze.csv",
+      "bytes": 3721,
+      "sha256": "2aa48b8cb4a98ecd5ae5c3edcd7aefe895674e0b568f4b4a552f72708732cba5"
     },
     {
       "path": "data/manifests/gate_b_v1_2_prefit_audit.csv",
@@ -504,6 +545,16 @@
       "sha256": "531eb39d975206312e22e7762ba3f1dd1d66ca7899f713bbb5c34ff0ec08cf05"
     },
     {
+      "path": "experiments/audits/block08e_gate_b_dense_evaluation.json",
+      "bytes": 1246,
+      "sha256": "cfd615e6a49afd822e862854b7bf4f553f465ae9b15764f71e5ab809684bc0f6"
+    },
+    {
+      "path": "experiments/audits/block08e_prediction_freeze.json",
+      "bytes": 2383,
+      "sha256": "862df641ed33bf5ba5b6d062b944a042c126632b43a462f0a48fea3fe30ff614"
+    },
+    {
       "path": "experiments/registry.csv",
       "bytes": 102,
       "sha256": "e6ca868d5995d945d50fdaa6a7dd221f07d0da1f2a93e685af1df738e38b7509"
@@ -644,6 +695,36 @@
       "sha256": "330d63eda7dac0fc22231c9352d4630d95d43122339857305fd19d743b108022"
     },
     {
+      "path": "figures/results/fig14_gate_b_development_froc.pdf",
+      "bytes": 24803,
+      "sha256": "9678d13d04542c15d48d5cd9a53a118f09a84c1936bf18917ee47b4afcf55d3e"
+    },
+    {
+      "path": "figures/results/fig14_gate_b_development_froc.png",
+      "bytes": 392522,
+      "sha256": "c04553991c823536dccebb8aa235c548a098aceeba73634c1cc9cfa2eb6a7a18"
+    },
+    {
+      "path": "figures/results/fig15_gate_b_case_level_r_at_1.pdf",
+      "bytes": 29241,
+      "sha256": "52534dcb1d54240a97f7af50a0a20458135b2c66eaca85fa65fde7649e9d845e"
+    },
+    {
+      "path": "figures/results/fig15_gate_b_case_level_r_at_1.png",
+      "bytes": 525577,
+      "sha256": "47adcdfc5d4307cf7fcf90a57eac00318e90b15afbea531d606e78dfa9d8f14d"
+    },
+    {
+      "path": "figures/results/fig16_gate_b_primary_contrast.pdf",
+      "bytes": 19601,
+      "sha256": "41a3142c433ca53673b08357ab5d367c6e5cc661905bdac095b8ae73bf6d11e9"
+    },
+    {
+      "path": "figures/results/fig16_gate_b_primary_contrast.png",
+      "bytes": 262968,
+      "sha256": "330d759b45b5f9aa5570dcb5df83c59985735bb3d09dc798c083bad81c47a73a"
+    },
+    {
       "path": "notebooks/00_environment_and_provenance.ipynb",
       "bytes": 562,
       "sha256": "73a5ebdae0c279eb0384c9faf9f35fc7c1ea80f231b5a00b9895b916d0aaddc3"
@@ -772,6 +853,11 @@
       "path": "scripts/code_blocks/block08d_lock_gate_b_decision_rule.py",
       "bytes": 25151,
       "sha256": "1069bb3ed924ee0baa2a9026178680656a88743139a5107020ca113815725360"
+    },
+    {
+      "path": "scripts/code_blocks/block08e_gate_b_dense_evaluation.py",
+      "bytes": 103365,
+      "sha256": "a63dd1f2b09b360c67caec621a90b62d172bb6b869b81bd0eeb2c0de298d265d"
     },
     {
       "path": "scripts/resume_project.py",
@@ -944,6 +1030,21 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "src/cora_lung/eval/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 153,
+      "sha256": "8ce96cc2e125f306d2ea441938af4d09fe77b7abd1321e6876108bb3e8cd6145"
+    },
+    {
+      "path": "src/cora_lung/eval/__pycache__/gate_b.cpython-312.pyc",
+      "bytes": 17250,
+      "sha256": "9a2cedd3b7ae7614718500003fd9165d5c1e6422bece2196d12e5cc27d52ec5f"
+    },
+    {
+      "path": "src/cora_lung/eval/__pycache__/inference.cpython-312.pyc",
+      "bytes": 7315,
+      "sha256": "11dc85a9632461afa273ae56edeff9d23c6b8ce14dba7187d5c547f3c373823a"
+    },
+    {
       "path": "src/cora_lung/eval/calibration.py",
       "bytes": 30,
       "sha256": "3d0df09cc92f4aa81bf6d0f3aac0b79fc5df753bb02328c8a4b1735ebdf49996"
@@ -957,6 +1058,16 @@
       "path": "src/cora_lung/eval/froc.py",
       "bytes": 35,
       "sha256": "fa57530b89039e0e1c49476b224c3b21e0beb45d6ca74856d495b4819f85fe88"
+    },
+    {
+      "path": "src/cora_lung/eval/gate_b.py",
+      "bytes": 21274,
+      "sha256": "eff041c488052e2d53d98d5ba6357e0d16c5c2df3f5d9bed9da12c7f635c41c9"
+    },
+    {
+      "path": "src/cora_lung/eval/inference.py",
+      "bytes": 8022,
+      "sha256": "271ee08adffa123cb16e8cd7adb5839fc4edc8fd045ce2900c7be3f0f866974a"
     },
     {
       "path": "src/cora_lung/eval/statistics.py",
@@ -1079,6 +1190,11 @@
       "sha256": "166afb3116aa9ecbe14e666f052c9bad8df51b8bc2ae8607a8e46b98dd744240"
     },
     {
+      "path": "tests/__pycache__/test_gate_b_dense_evaluator.cpython-312-pytest-8.4.2.pyc",
+      "bytes": 6181,
+      "sha256": "0abe84b21d2bddba3e158aa8e572c8c73f25da7d704d74c0a12411948d2696dc"
+    },
+    {
       "path": "tests/__pycache__/test_gate_b_sampling_protocol.cpython-312-pytest-8.4.2.pyc",
       "bytes": 4266,
       "sha256": "f02ed142969e024e827b88f11922ff86079751e3ab0cff115a71f6b18ac01737"
@@ -1142,6 +1258,11 @@
       "path": "tests/test_firewall.py",
       "bytes": 1765,
       "sha256": "726a678b1ee44e5d5818c1ae76840ad4f39b98519e8bd45a4be1ec7da40a4f92"
+    },
+    {
+      "path": "tests/test_gate_b_dense_evaluator.py",
+      "bytes": 2395,
+      "sha256": "bb21ed71b39c945f329c2932288b792a4e822bd8c72ab39a663404d6f184dc68"
     },
     {
       "path": "tests/test_gate_b_sampling_protocol.py",

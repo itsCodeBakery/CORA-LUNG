@@ -1,0 +1,17 @@
+condition,fp_budget,selected_score_threshold,actual_fp_per_patient,macro_recall,pooled_recall,true_positives,eligible_references
+complete,0.5,inf,0.0,0.0,0.0,0,82
+complete,1.0,inf,0.0,0.0,0.0,0,82
+complete,2.0,inf,0.0,0.0,0.0,0,82
+complete,4.0,0.821068286895752,3.75,0.007575757575757576,0.012195121951219513,1,82
+pixel_dropout_matched_50,0.5,inf,0.0,0.0,0.0,0,82
+pixel_dropout_matched_50,1.0,inf,0.0,0.0,0.0,0,82
+pixel_dropout_matched_50,2.0,inf,0.0,0.0,0.0,0,82
+pixel_dropout_matched_50,4.0,0.8030917644500732,2.5,0.007575757575757576,0.012195121951219513,1,82
+component_natural_50,0.5,0.807009220123291,0.5,0.04739010989010989,0.036585365853658534,3,82
+component_natural_50,1.0,0.807009220123291,0.5,0.04739010989010989,0.036585365853658534,3,82
+component_natural_50,2.0,0.807009220123291,0.5,0.04739010989010989,0.036585365853658534,3,82
+component_natural_50,4.0,0.807009220123291,0.5,0.04739010989010989,0.036585365853658534,3,82
+component_fixed_50,0.5,inf,0.0,0.0,0.0,0,82
+component_fixed_50,1.0,inf,0.0,0.0,0.0,0,82
+component_fixed_50,2.0,inf,0.0,0.0,0.0,0,82
+component_fixed_50,4.0,inf,0.0,0.0,0.0,0,82
