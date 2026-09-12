@@ -1,0 +1,40 @@
+weak_label_generator:
+  version: "1.0"
+  seed: 20260912
+
+component_definition:
+  connectivity: 26
+  minimum_volume_ml: 0.1
+
+foreground:
+  interior_erosion_mm: 1.0
+  base_stroke_voxels_per_observed_group: 20
+  maximum_allowed_path_voxels: 256
+  path_source: 3d_skeleton_approximate_diameter
+  skeleton_failure_fallback: connected_random_walk
+
+background:
+  safety_band_mm: 3.0
+  budget_rule: equal_to_complete_foreground_voxel_count
+  reuse_identical_realization_across_paired_conditions: true
+
+coverage:
+  levels: [1.00, 0.75, 0.50, 0.25]
+  mechanism: uniform_nested_component_omission
+  retained_count_rule: max_1_ceil_rho_times_K
+
+matched_controls:
+  natural_component_omission: true
+  random_pixel_dropout:
+    exact_foreground_voxel_match: true
+    keep_at_least_one_voxel_per_component: true
+  fixed_pixel_component_omission:
+    redistribute_foreground_voxels_over_retained_groups: true
+    preserve_contiguous_group_tracks: true
+    lower_shared_budget_if_capacity_insufficient: true
+
+export:
+  coordinate_system: native_nifti_voxel_ijk_plus_world_xyz_mm
+  unknown_voxels_materialized: false
+  dense_masks_exported: false
+  dense_component_ids_exported: false

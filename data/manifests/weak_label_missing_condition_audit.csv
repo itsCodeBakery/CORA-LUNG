@@ -1,0 +1,3 @@
+case_id,condition,coverage_token,mathematically_infeasible_pixel_control,justification
+coronacases_003,component_fixed_25,25,False,
+coronacases_003,complete_fixed_25,25,False,

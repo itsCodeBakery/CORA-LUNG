@@ -1,0 +1,57 @@
+{
+  "project": "CORA-Lung",
+  "block": "05",
+  "resume_block": "05B",
+  "block_name": "deterministic_component_aware_weak_label_generator",
+  "generated_at_utc": "2026-09-12T05:13:37Z",
+  "status": "FAIL",
+  "generator": {
+    "version": "1.0",
+    "seed": 20260912,
+    "coverage_tokens": [
+      75,
+      50,
+      25
+    ],
+    "primary_gate_b_coverage": 50
+  },
+  "export": {
+    "cases": 20,
+    "annotation_artifacts": 258,
+    "theoretical_maximum_artifacts": 260,
+    "missing_artifacts": 2,
+    "patient_sparse_arrays_committed": false,
+    "dense_masks_exported": false,
+    "unknown_voxels_materialized_as_negative": false
+  },
+  "firewall": {
+    "runtime_validation": "PASS",
+    "pytest": "PASS",
+    "pytest_src_layout_fix": "pytest.ini",
+    "semantic_hash_validation": "PASS"
+  },
+  "paired_background": {
+    "identical_counts": true,
+    "identical_coordinates": true
+  },
+  "primary_50_percent_gate_b_contract": {
+    "all_conditions_present": true,
+    "natural_vs_pixel_exact": true,
+    "component_fixed_vs_complete_fixed_exact": true
+  },
+  "nested_component_coverage": true,
+  "optional_infeasible_pixel_controls": [],
+  "fixed_budget_reductions": 17,
+  "generation_time_counters": {
+    "total_skeleton_fallbacks": 19,
+    "total_background_fallbacks": 0,
+    "pixel_control_infeasible": 0,
+    "fixed_budget_infeasible": 1
+  },
+  "source_capture": "PASS",
+  "training_performed": false,
+  "mandatory_failure_reasons": [
+    "coronacases_003: missing component_fixed_25",
+    "coronacases_003: missing complete_fixed_25"
+  ]
+}
