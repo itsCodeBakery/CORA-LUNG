@@ -1,5 +1,5 @@
 weak_label_generator:
-  version: "1.0"
+  version: "1.1"
   seed: 20260912
 
 component_definition:
@@ -38,3 +38,11 @@ export:
   unknown_voxels_materialized: false
   dense_masks_exported: false
   dense_component_ids_exported: false
+
+
+allocator:
+  version: "1.1"
+  strategy: exact_capacity_aware_cyclic
+  arbitrary_iteration_limit: false
+  behavior_change: feasible_allocations_no_longer_aborted_by_safety_counter
+  regression_case: coronacases_003_component_fixed_25

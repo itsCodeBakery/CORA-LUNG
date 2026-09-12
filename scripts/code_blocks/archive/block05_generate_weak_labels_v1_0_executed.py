@@ -101,7 +101,7 @@ REPO = WORK / GITHUB_REPO
 
 EXPECTED_DATASET_SLUG = "covid19-ct-scans"
 
-GENERATOR_VERSION = "1.1"
+GENERATOR_VERSION = "1.0"
 GENERATOR_SEED = 20260912
 
 COMPONENT_CONNECTIVITY = 26
@@ -654,12 +654,11 @@ def allocate_budget(
     rng,
 ):
     """
-    Exact capacity-aware cyclic budget allocator.
+    Allocate an exact number of labelled voxels over observed groups.
 
-    Version 1.1 correction:
-    preserves the original shuffled cyclic allocation order while removing
-    the arbitrary safety-counter termination that could reject feasible
-    allocations when many groups had already reached capacity.
+    Each group receives >=1 voxel when feasible.
+    Additional voxels are distributed deterministically in shuffled
+    round-robin order until the requested total or capacity is reached.
     """
     group_ids = sorted(
         capacities.keys()
@@ -706,21 +705,31 @@ def allocate_budget(
 
     rng.shuffle(order)
 
+    cursor = 0
+    safety = 0
+
     while remaining > 0:
-        progressed = False
+        g = int(
+            order[
+                cursor % len(order)
+            ]
+        )
 
-        for g_raw in order:
-            g = int(g_raw)
+        if (
+            allocation[g]
+            < capacities[g]
+        ):
+            allocation[g] += 1
+            remaining -= 1
 
-            if remaining == 0:
-                break
+        cursor += 1
+        safety += 1
 
-            if allocation[g] < capacities[g]:
-                allocation[g] += 1
-                remaining -= 1
-                progressed = True
-
-        if not progressed:
+        if safety > (
+            total_capacity
+            * 4
+            + 1000
+        ):
             return {}, False
 
     return allocation, True

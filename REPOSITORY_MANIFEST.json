@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-09-12T05:13:37Z",
-  "completed_block": "04",
-  "last_attempted_block": "05",
+  "generated_at_utc": "2026-09-12T05:22:21Z",
+  "completed_block": "05",
+  "corrective_block": "05D",
   "files": [
     {
       "path": ".gitignore",
@@ -30,8 +30,8 @@
     },
     {
       "path": ".pytest_cache/v/cache/nodeids",
-      "bytes": 197,
-      "sha256": "c2629cc500b0e4adb885d2df7b33770c556faeddcf63d1c13e330e4a11b18119"
+      "bytes": 428,
+      "sha256": "5c5b2e94e5b6bfefcf881a256597a77f6f46dee7f58c9dd4aab576cc883b6990"
     },
     {
       "path": "LICENSE",
@@ -40,8 +40,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 2097,
-      "sha256": "bdd5b5b42b54d7bfee13baf1d012018034a475e8ed9e5e0f70d319c999e3da5b"
+      "bytes": 2350,
+      "sha256": "874a4e300c37b8512e694c59080dbbad62283e840e361429809ad9cb62c93c2c"
     },
     {
       "path": "README.md",
@@ -50,8 +50,8 @@
     },
     {
       "path": "REPOSITORY_MANIFEST.json",
-      "bytes": 17229,
-      "sha256": "1100eb6961741fae283c5abdbe8a40c1c3f2e746f91a37043cc63eb3bdfd3b9f"
+      "bytes": 20801,
+      "sha256": "253899bbd73b609c57a84bdb0b1cc7190d6be8f22cd3e685bacc0bf9abb804bb"
     },
     {
       "path": "app/api/.gitkeep",
@@ -90,8 +90,8 @@
     },
     {
       "path": "configs/weak_labels_primary.yaml",
-      "bytes": 1167,
-      "sha256": "363572b14d020fcf0418c63c2e08ce9a30bd913f661992db31a910cb172b398d"
+      "bytes": 1402,
+      "sha256": "b4fe7e11ff723a769bb6352d15adaf98dd2611877580ccaa8351130b86f9a766"
     },
     {
       "path": "data/README.md",
@@ -160,23 +160,23 @@
     },
     {
       "path": "data/manifests/weak_label_artifact_semantic_hashes.csv",
-      "bytes": 43093,
-      "sha256": "0e6bc08af82b625455f7c8f207600fee9a07e0753aa05c48c23572cb62d8e48c"
+      "bytes": 43413,
+      "sha256": "b24d982e3fb7d1730284e523eef9c86bfc1d9aaa424e9ae8d5b456f175bada97"
     },
     {
       "path": "data/manifests/weak_label_condition_summary.csv",
-      "bytes": 832,
-      "sha256": "e64454ed4310fcd102cad8f23e5310e84778338309ec54a71e8a24b1f4356104"
+      "bytes": 779,
+      "sha256": "2efde91e6a6175da78b7c1b1785ffb426922ba09b76d68ed1230066aa49c2410"
     },
     {
       "path": "data/manifests/weak_label_generation_summary.csv",
-      "bytes": 41269,
-      "sha256": "51aea7a414d5fca5e6ab4f8b69088c61556b6337eb54930982890a3238ec50c8"
+      "bytes": 39441,
+      "sha256": "be6b06a718418b0680ae7292d4a7d8e5c80bef973c07a3619751a4041c14e3df"
     },
     {
       "path": "data/manifests/weak_label_missing_condition_audit.csv",
-      "bytes": 176,
-      "sha256": "19806316f8c1fdbfa78f570504992cc8d8ea6fa549714d87bb476c1325c89366"
+      "bytes": 87,
+      "sha256": "9a3504be2b7873a67fadafcb95eb41b47979af7a324776e605fc50649b432360"
     },
     {
       "path": "data/splits/.gitkeep",
@@ -230,8 +230,8 @@
     },
     {
       "path": "docs/weak_label_protocol.md",
-      "bytes": 3951,
-      "sha256": "68b661342ba0e07d8f8b0b33d535e38bfbdfd4b3c766ed65fbfed89634457d42"
+      "bytes": 5378,
+      "sha256": "4f6046bcdace814c090dc2f22f951b4c28dedd1aa45834b4dc0ddc8f7073a10e"
     },
     {
       "path": "environment/kaggle_pip_freeze.txt",
@@ -260,8 +260,8 @@
     },
     {
       "path": "experiments/audits/block05_weak_label_generator.json",
-      "bytes": 1554,
-      "sha256": "85ebcfba4e4b7dbc70ef583ee94f4e5c361ea4ca504692e4111f7ec2e47f9cbc"
+      "bytes": 1485,
+      "sha256": "7eb381941a629ec31df592ee87c4cbf10228c467861674cb08b79e81d447602f"
     },
     {
       "path": "experiments/registry.csv",
@@ -315,13 +315,13 @@
     },
     {
       "path": "figures/audit/fig05_weak_supervision_annotation_budget.pdf",
-      "bytes": 24174,
-      "sha256": "5db56e69dd033f907f4a00686959fec3a99232d185d202c6597135c8b224f386"
+      "bytes": 24179,
+      "sha256": "80ba7b7a53d6c414e367f5105f651f2112cbb84ff44b48039b1545145cbe47b0"
     },
     {
       "path": "figures/audit/fig05_weak_supervision_annotation_budget.png",
-      "bytes": 715313,
-      "sha256": "e1feb284ddd46bb254f9d7e9b90751e03d3c3b6d7b252d6a57352ac2c8919cfb"
+      "bytes": 711913,
+      "sha256": "201ee4184cd67ee3f500359243275fd3e5d13c726732468f3b623c7b9011a1e8"
     },
     {
       "path": "notebooks/00_environment_and_provenance.ipynb",
@@ -389,9 +389,19 @@
       "sha256": "bb7828f3bdc24bf59f08c1eb7786114a213d36f04e7a9a43e3799a80e7ef85b0"
     },
     {
-      "path": "scripts/code_blocks/block05_generate_weak_labels.py",
+      "path": "scripts/code_blocks/archive/block05_generate_weak_labels_v1_0_executed.py",
       "bytes": 105773,
       "sha256": "2b44286ec44cd66e64a8994f2662d186f134a00780f8e43c0c8fea1e6814cf19"
+    },
+    {
+      "path": "scripts/code_blocks/block05_generate_weak_labels.py",
+      "bytes": 105713,
+      "sha256": "9162b094381a52ec41402190a4185aa295858995210df1fc6c01994cb060e91b"
+    },
+    {
+      "path": "scripts/code_blocks/block05d_allocator_repair.py",
+      "bytes": 78582,
+      "sha256": "4089a05651365937549780d9ae9f0b33b337ba8932ad273984f73df7a55b8090"
     },
     {
       "path": "scripts/resume_project.py",
@@ -424,6 +434,11 @@
       "sha256": "b43543f430f2879abf6b77e3586226fce8f0653e5223293728eebae77765d048"
     },
     {
+      "path": "src/cora_lung/data/__pycache__/scribbles.cpython-312.pyc",
+      "bytes": 2133,
+      "sha256": "be19801d22c710df3730bb39f1c2debe00d02cc895df3edf236ffa3d84f51a0b"
+    },
+    {
       "path": "src/cora_lung/data/firewall.py",
       "bytes": 4683,
       "sha256": "f3935a474fa5eed75033e7fb2e6db02d9dccc8836170cf9f284b7c8be70aafec"
@@ -445,8 +460,8 @@
     },
     {
       "path": "src/cora_lung/data/scribbles.py",
-      "bytes": 34,
-      "sha256": "e165c5d395ca317bdecb39f336e4ab45b021510b49e9040983f1e6b2a8960f07"
+      "bytes": 1640,
+      "sha256": "f620ddb3ebcb8a87c1959921e86e7fbf36bb3047b79c1af0891fcba610e11101"
     },
     {
       "path": "src/cora_lung/data/splits.py",
@@ -584,6 +599,11 @@
       "sha256": "166afb3116aa9ecbe14e666f052c9bad8df51b8bc2ae8607a8e46b98dd744240"
     },
     {
+      "path": "tests/__pycache__/test_scribble_budget.cpython-312-pytest-8.4.2.pyc",
+      "bytes": 5429,
+      "sha256": "8e4278f4d5d1566c3e4bdba3c1f4dc097780502d623ac89fbd954d24a6cb8bba"
+    },
+    {
       "path": "tests/test_component_matching.py",
       "bytes": 215,
       "sha256": "2e74fec40946dee999035c62b421be8f25c646f9914bca92838a100dc3f232b1"
@@ -607,6 +627,11 @@
       "path": "tests/test_physical_geometry.py",
       "bytes": 223,
       "sha256": "f12aad29334e2a5ded48b8b8cfe2c0043f7e81e86e7e774f0ce52fda3aa3e056"
+    },
+    {
+      "path": "tests/test_scribble_budget.py",
+      "bytes": 1206,
+      "sha256": "b6dc203ca06a71c832cabef01fe838f8ebdb02e2bf7fae2458b338673e3ace55"
     },
     {
       "path": "tests/test_split_leakage.py",

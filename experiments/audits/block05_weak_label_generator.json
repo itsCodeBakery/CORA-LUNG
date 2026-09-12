@@ -1,57 +1,45 @@
 {
   "project": "CORA-Lung",
   "block": "05",
-  "resume_block": "05B",
-  "block_name": "deterministic_component_aware_weak_label_generator",
-  "generated_at_utc": "2026-09-12T05:13:37Z",
-  "status": "FAIL",
+  "corrective_block": "05D",
+  "generated_at_utc": "2026-09-12T05:22:21Z",
+  "status": "PASS",
   "generator": {
-    "version": "1.0",
+    "version": "1.1",
     "seed": 20260912,
-    "coverage_tokens": [
-      75,
-      50,
-      25
-    ],
-    "primary_gate_b_coverage": 50
+    "allocator": "exact_capacity_aware_cyclic",
+    "allocator_regression_case": "coronacases_003/component_fixed_25"
   },
-  "export": {
-    "cases": 20,
-    "annotation_artifacts": 258,
-    "theoretical_maximum_artifacts": 260,
-    "missing_artifacts": 2,
-    "patient_sparse_arrays_committed": false,
-    "dense_masks_exported": false,
-    "unknown_voxels_materialized_as_negative": false
+  "repair": {
+    "model_training_occurred_before_repair": false,
+    "pre_repair_artifacts": 258,
+    "artifacts_regenerated": 0,
+    "existing_artifacts_modified": 0,
+    "new_artifacts_created": 2,
+    "post_repair_artifacts": 260,
+    "root_cause": "v1.0 arbitrary allocator safety limit aborted a mathematically feasible allocation",
+    "diagnosed_target_budget": 376,
+    "diagnosed_retained_capacity": 376,
+    "v1_0_safety_limit": 2504,
+    "v1_0_abort_iteration": 2505,
+    "v1_0_remaining_voxels_at_abort": 5
   },
-  "firewall": {
-    "runtime_validation": "PASS",
-    "pytest": "PASS",
-    "pytest_src_layout_fix": "pytest.ini",
-    "semantic_hash_validation": "PASS"
+  "scientific_contract": {
+    "complete_condition_matrix": "PASS_260_OF_260",
+    "natural_pixel_exact_pairs": "PASS_60_OF_60",
+    "fixed_budget_exact_pairs": "PASS_60_OF_60",
+    "background_coordinate_identity": "PASS",
+    "nested_component_missingness": "PASS",
+    "foreground_group_contract": "PASS",
+    "semantic_hash_validation": "PASS",
+    "dense_label_firewall": "PASS"
   },
-  "paired_background": {
-    "identical_counts": true,
-    "identical_coordinates": true
+  "diagnostics": {
+    "skeleton_fallbacks": 19,
+    "background_sampling_fallbacks": 0,
+    "fixed_budget_reductions": 18
   },
-  "primary_50_percent_gate_b_contract": {
-    "all_conditions_present": true,
-    "natural_vs_pixel_exact": true,
-    "component_fixed_vs_complete_fixed_exact": true
-  },
-  "nested_component_coverage": true,
-  "optional_infeasible_pixel_controls": [],
-  "fixed_budget_reductions": 17,
-  "generation_time_counters": {
-    "total_skeleton_fallbacks": 19,
-    "total_background_fallbacks": 0,
-    "pixel_control_infeasible": 0,
-    "fixed_budget_infeasible": 1
-  },
-  "source_capture": "PASS",
   "training_performed": false,
-  "mandatory_failure_reasons": [
-    "coronacases_003: missing component_fixed_25",
-    "coronacases_003: missing complete_fixed_25"
-  ]
+  "dense_masks_exported": false,
+  "unknown_voxels_materialized_as_background": false
 }

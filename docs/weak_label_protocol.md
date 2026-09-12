@@ -2,7 +2,7 @@
 
 ## Status
 
-**Generator version:** 1.0
+**Generator version:** 1.1
 
 **Generator seed:** 20260912
 
@@ -139,7 +139,7 @@ They are reproducible using:
 
 Generator audit status:
 
-**FAIL**
+**PASS**
 
 Primary 50% component/pixel budget match:
 
@@ -152,3 +152,37 @@ Primary 50% fixed component/complete budget match:
 Identical paired background coordinates:
 
 **PASS**
+
+
+## Generator v1.1 allocator correction
+
+Before any model training, the Block-05 audit detected an implementation-only failure in
+`coronacases_003` at the secondary 25% fixed-pixel condition.
+
+The retained ten groups had exactly **376 voxels** of allowed connected-path capacity, and
+the requested shared budget was also **376 voxels**. The comparison was therefore
+mathematically feasible.
+
+Generator v1.0 used a round-robin allocator with an arbitrary iteration safety threshold.
+For this case it stopped at iteration 2505 when the safety threshold was 2504, with five
+valid allocations still remaining.
+
+Generator v1.1 removes the arbitrary iteration cutoff. It preserves the same deterministic
+shuffled cyclic group visitation order and terminates only when:
+
+1. the exact requested budget is allocated; or
+2. a complete pass makes no progress, indicating true infeasibility.
+
+The original executed v1.0 generator is preserved under
+`scripts/code_blocks/archive/`.
+
+No model had been trained when this correction was made.
+
+After correction:
+
+- all **260/260** expected weak-supervision artifacts are present;
+- all **60/60** natural-component vs random-pixel budget pairs match exactly;
+- all **60/60** component-fixed vs complete-fixed budget pairs match exactly;
+- all paired background coordinate realizations are identical;
+- 25%, 50%, and 75% component missingness remains nested;
+- the dense-label firewall passes.
