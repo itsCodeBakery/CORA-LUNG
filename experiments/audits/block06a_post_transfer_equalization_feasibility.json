@@ -1,0 +1,33 @@
+{
+  "project": "CORA-Lung",
+  "block": "06A",
+  "audit_name": "post_transfer_causal_matching_feasibility",
+  "generated_at_utc": "2026-09-12T05:37:20Z",
+  "dense_masks_accessed": false,
+  "cache_modified": false,
+  "model_training_performed": false,
+  "background_coordinate_identity": true,
+  "natural_pixel": {
+    "existing_exact_pairs": 10,
+    "total_pairs": 60,
+    "constructively_feasible_pairs": 60,
+    "primary_50_feasible": true,
+    "proposed_candidate_pool": "transferred component-complete unique foreground voxels",
+    "proposed_target": "transferred natural-component-omission unique foreground count"
+  },
+  "fixed_budget": {
+    "existing_exact_pairs": 7,
+    "total_pairs": 60,
+    "constructively_feasible_pairs": 60,
+    "primary_50_feasible": true,
+    "proposed_target": "minimum transferred unique-FG capacity of component-fixed and complete-fixed pair"
+  },
+  "group_preservation": {
+    "algorithm": "deterministic greedy group cover followed by exact unique-voxel fill",
+    "minimum_pixel_target_margin": 0.0,
+    "minimum_component_target_margin": 1.0,
+    "minimum_complete_target_margin": 0.0
+  },
+  "overall_feasible": true,
+  "scientific_decision": "POST_TRANSFER_EQUALIZATION_FEASIBLE"
+}

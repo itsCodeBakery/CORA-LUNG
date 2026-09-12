@@ -5,7 +5,7 @@
   "workflow_version": "1.0",
   "last_completed_block": "05",
   "last_completed_block_name": "deterministic_component_aware_weak_label_generator",
-  "current_stage": "training_grid_cache_requires_review",
+  "current_stage": "post_transfer_causal_equalization_feasibility_verified",
   "current_gate": "POST_GATE_A_PRE_GATE_B",
   "gate_a": "PASS",
   "gate_b": "NOT_RUN",
@@ -15,9 +15,9 @@
   "gate_f": "NOT_RUN",
   "dense_label_firewall": "PASS",
   "primary_dataset_audit": "NOT_RUN",
-  "next_action": "Audit Block 06 output before Gate-B pilot training.",
-  "updated_at_utc": "2026-09-12T05:29:49Z",
-  "last_attempted_block": "06",
+  "next_action": "Code Block 06B: implement deterministic post-transfer unique-voxel causal equalization and freeze preprocessing/cache v1.1.",
+  "updated_at_utc": "2026-09-12T05:37:20Z",
+  "last_attempted_block": "06A",
   "primary_dataset_discovery": "PASS",
   "primary_dataset_pairing": "PASS",
   "primary_dataset_geometry_headers": "PASS",
@@ -54,5 +54,7 @@
     1.5
   ],
   "training_cache_firewall": "PASS",
-  "primary_50_post_transfer_budget": "REVIEW_REQUIRED"
+  "primary_50_post_transfer_budget": "REVIEW_REQUIRED",
+  "post_transfer_equalization_feasibility": "PASS",
+  "primary_50_equalization_feasibility": "PASS"
 }

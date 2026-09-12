@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-09-12T05:29:49Z",
+  "generated_at_utc": "2026-09-12T05:37:20Z",
   "completed_block": "05",
-  "last_attempted_block": "06",
+  "last_attempted_block": "06A",
   "files": [
     {
       "path": ".gitignore",
@@ -40,8 +40,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 2476,
-      "sha256": "46412efd72c5a4d5f77adbaa51a6191a5b80dc6164ca633437e9f27694ba1610"
+      "bytes": 2669,
+      "sha256": "46b3cebf72d1834bb28cb58fa60c361c45391e77b9f86d6124b8922b7fffecc4"
     },
     {
       "path": "README.md",
@@ -50,8 +50,8 @@
     },
     {
       "path": "REPOSITORY_MANIFEST.json",
-      "bytes": 21750,
-      "sha256": "ed69149f610c1f2a50f7fca00baeb25b28fcfa627f001e9801b7013a1e602d6a"
+      "bytes": 24954,
+      "sha256": "73d39b14a253dbc615747f9f8e24da3efddcefd3fb690b5bc2771c3364e1f56b"
     },
     {
       "path": "app/api/.gitkeep",
@@ -179,6 +179,16 @@
       "sha256": "0590873e4b11bf754f575bc4fe47972b733f513be5d55f997d80d00687223755"
     },
     {
+      "path": "data/manifests/training_grid_fixed_equalization_feasibility.csv",
+      "bytes": 5414,
+      "sha256": "2f9a4a56167ce8e59ca083b44bba5a9b778e48d3729015f007d8288e1d194e43"
+    },
+    {
+      "path": "data/manifests/training_grid_pixel_equalization_feasibility.csv",
+      "bytes": 3809,
+      "sha256": "306465b6f5870e91229529046df557bca16d0bb988b7841b72b697a6ca895548"
+    },
+    {
       "path": "data/manifests/training_grid_sparse_transfer_summary.csv",
       "bytes": 120892,
       "sha256": "2e60533f2212e23319837898952db19bd18bde9f973c559c39f5f67077ac0b72"
@@ -292,6 +302,11 @@
       "path": "experiments/audits/block06_training_grid_cache.json",
       "bytes": 1608,
       "sha256": "e3772a4169b8a4ab08783c5ac5236300d808a7bf80557fd086203c8cc579228a"
+    },
+    {
+      "path": "experiments/audits/block06a_post_transfer_equalization_feasibility.json",
+      "bytes": 1224,
+      "sha256": "5a6afce62a56f11afb6d9ccfd7b860dc169ab77d478ae837add556aafac063d9"
     },
     {
       "path": "experiments/registry.csv",
@@ -457,6 +472,11 @@
       "path": "scripts/code_blocks/block06_build_training_cache.py",
       "bytes": 84626,
       "sha256": "84dfee919b9ad08777e141a0ca56281ae0d0ad1db6d981e930a6c6df47a61a22"
+    },
+    {
+      "path": "scripts/code_blocks/block06a_post_transfer_equalization_feasibility.py",
+      "bytes": 41960,
+      "sha256": "2e02bcb6961eea327c692a8d0c4ebc569f9a3b8468044e0f906ee34df61863f8"
     },
     {
       "path": "scripts/resume_project.py",
