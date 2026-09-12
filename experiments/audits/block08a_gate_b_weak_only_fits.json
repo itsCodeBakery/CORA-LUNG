@@ -1,0 +1,50 @@
+{
+  "project": "CORA-Lung",
+  "block": "08A",
+  "status": "PASS",
+  "completed_at_utc": "2026-09-12T06:54:16Z",
+  "gate": "B",
+  "stage": "WEAK_ONLY_FITS_COMPLETE_DENSE_EVAL_PENDING",
+  "development_cases": [
+    "coronacases_004",
+    "coronacases_008",
+    "radiopaedia_14_85914_0",
+    "radiopaedia_27_86410_0"
+  ],
+  "final_outer_cv_cases_used": 0,
+  "dense_mask_arrays_accessed": 0,
+  "conditions": [
+    "complete",
+    "pixel_dropout_matched_50",
+    "component_natural_50",
+    "complete_fixed_50",
+    "component_fixed_50"
+  ],
+  "primary_pair": [
+    "pixel_dropout_matched_50",
+    "component_natural_50"
+  ],
+  "fixed_pair": [
+    "complete_fixed_50",
+    "component_fixed_50"
+  ],
+  "seed": 17,
+  "epochs": 30,
+  "microbatches_per_epoch": 100,
+  "accumulation_steps": 2,
+  "optimizer_steps_per_condition": 1500,
+  "total_optimizer_steps": 7500,
+  "checkpoint_policy": "FINAL_EPOCH_ONLY",
+  "trainer_boundary_firewall": "ENFORCED_EVERY_MICROBATCH",
+  "final_model_hashes": {
+    "complete": "93b36250f1dbd43d3b6fa08246ef23189200dd73610be6f51fd271b4c0f3189e",
+    "pixel_dropout_matched_50": "dea5a8af0cfd2bf9e55bb084e1e27034e4ff07f3d57b71fd892a1ba75fa1d3e2",
+    "component_natural_50": "7fa31a0d6a2671349ae9b93fbd8789dbdee9fee21512f4504cb2dd58ddaa9d94",
+    "complete_fixed_50": "06916099f51ebc9204c8e69ecfebd895c0a41f456608509783e8a9edb4321d91",
+    "component_fixed_50": "03c7e3ce9653b652d93898fd1f8eabfe9e820fd644ef92d70394f7ec0e62cd39"
+  },
+  "gate_b_decision": "NOT_YET_SCORED",
+  "dense_development_evaluation": "BLOCK_08B_ONLY",
+  "replay_model": "NOT_IMPLEMENTED",
+  "independent_generalization_claim": false
+}

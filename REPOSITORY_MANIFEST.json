@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-09-12T06:23:06Z",
-  "completed_block": "07D",
+  "generated_at_utc": "2026-09-12T06:54:16Z",
+  "completed_block": "08A",
   "self_included": false,
   "files": [
     {
@@ -40,8 +40,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 3053,
-      "sha256": "66cba14faf5c5ce043fdd670d56062cf791232668bdeed6001ec2f118fc9feac"
+      "bytes": 3144,
+      "sha256": "62130938b7cd91949f121dae236fcd89cb57baddce55ced31187c15a97653cc4"
     },
     {
       "path": "README.md",
@@ -84,6 +84,11 @@
       "sha256": "e9f8ab5a71dce9d4a6b071a42cad740cb1af1915717ac9e37ee3fc7621db8370"
     },
     {
+      "path": "configs/gate_b_problem_validation.yaml",
+      "bytes": 1206,
+      "sha256": "85b5a0e0791d4059edc1abdfd6a4f45e0f09ceeb34ef4a4e02c9b448a20a4343"
+    },
+    {
       "path": "configs/model_cora.yaml",
       "bytes": 332,
       "sha256": "ef3299d8c4adaa66bc53ec311af1ffc56784ee827646061195fd336535efb0e3"
@@ -114,6 +119,11 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "data/manifests/gate_b_development_prefit_budget_audit.csv",
+      "bytes": 351,
+      "sha256": "1cf95ae7a521ae0dd5b2cfa0012a7d10df457397b02ebadab70decf809d776db"
+    },
+    {
       "path": "data/manifests/gate_b_harness_gpu_profile.csv",
       "bytes": 304,
       "sha256": "f373ffd57ede3e4636c85d716237c104ccaebb853ba2555192042cea4f3f98ab"
@@ -127,6 +137,16 @@
       "path": "data/manifests/gate_b_query_holdout_equivalence.csv",
       "bytes": 314,
       "sha256": "43f3f28502ce98a50853e7fb37f325c4e17cd5cfa85c9f2aa272a4dc4863f9cb"
+    },
+    {
+      "path": "data/manifests/gate_b_weak_only_epoch_log.csv",
+      "bytes": 29788,
+      "sha256": "c10fe7e584f168c43f72f2ed1c9744a6b29e630bafb9508377a48d3cfe073282"
+    },
+    {
+      "path": "data/manifests/gate_b_weak_only_fit_summary.csv",
+      "bytes": 2889,
+      "sha256": "8b37d8826db185526b964767139d1c9cc6e3df484d095d331a06a4c7a56308e6"
     },
     {
       "path": "data/manifests/native_header_voxel_volume_consistency.csv",
@@ -404,6 +424,16 @@
       "sha256": "c7aac80dad512c43a602432f18b6003a9efe579eb7b43bd6be454a34e7335286"
     },
     {
+      "path": "experiments/audits/block08a_gate_b_training_authorization.json",
+      "bytes": 915,
+      "sha256": "ba7c83eb7efcf9fda7289b34dedbf0bb909cbf8275bc336f796582d43b7af51f"
+    },
+    {
+      "path": "experiments/audits/block08a_gate_b_weak_only_fits.json",
+      "bytes": 1632,
+      "sha256": "9615eb7936d5ebb013df2c51cb136d6c8d05dd3d18e46e6a24ef450f6bd84f0a"
+    },
+    {
       "path": "experiments/registry.csv",
       "bytes": 102,
       "sha256": "e6ca868d5995d945d50fdaa6a7dd221f07d0da1f2a93e685af1df738e38b7509"
@@ -514,6 +544,16 @@
       "sha256": "d6aa5086ca264b7a45ac7d0959a517b67ae9dd731a25b3015276e210526718f7"
     },
     {
+      "path": "figures/audit/fig11_gate_b_weak_only_training_curves.pdf",
+      "bytes": 28980,
+      "sha256": "400998d7c2f662a3395386e0da2984973c444b8734aade31319401707cf28d23"
+    },
+    {
+      "path": "figures/audit/fig11_gate_b_weak_only_training_curves.png",
+      "bytes": 888044,
+      "sha256": "e3af922639a319fc022eb3e855e9caa5bca6382da6d6e9dadbd6bf006303cf9f"
+    },
+    {
       "path": "notebooks/00_environment_and_provenance.ipynb",
       "bytes": 562,
       "sha256": "73a5ebdae0c279eb0384c9faf9f35fc7c1ea80f231b5a00b9895b916d0aaddc3"
@@ -622,6 +662,11 @@
       "path": "scripts/code_blocks/block07d_pretraining_safety_closure.py",
       "bytes": 47588,
       "sha256": "7a6b734853a6ad0bda71b867b0f7b68e23785a03167fc5f13bf0b0013c74ca47"
+    },
+    {
+      "path": "scripts/code_blocks/block08a_gate_b_weak_only_fits.py",
+      "bytes": 59303,
+      "sha256": "23911ee068c5efb75e427b7cce19e153a8cd234b3b578c9ebf987894dc1e1d6c"
     },
     {
       "path": "scripts/resume_project.py",
