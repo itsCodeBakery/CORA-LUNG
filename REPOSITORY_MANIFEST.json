@@ -1,0 +1,370 @@
+{
+  "generated_at_utc": "2026-09-12T04:35:06Z",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 701,
+      "sha256": "9315dab4fadfdd945a5369f6b073620a9677911561107fbed7a990b3f11efb64"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4344,
+      "sha256": "d3d0da31d1e03beca40f093f67545fbcf0e46b39bdb8720779f53a4b72b41c99"
+    },
+    {
+      "path": "PROJECT_STATE.json",
+      "bytes": 779,
+      "sha256": "43f923952e63ef27a673e624c617291c305d62a2a1720f6d7686ce12c24bc9b0"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1077,
+      "sha256": "85e3e046762b58e8ff052d783c4bc4887b87f7c8d37cbc70b33f75631c80d395"
+    },
+    {
+      "path": "scripts/resume_project.py",
+      "bytes": 673,
+      "sha256": "4ff28985d05c37f7b896c40c8265ea86cc52f936ff7b5ce36edb05d74d7519ae"
+    },
+    {
+      "path": "experiments/registry.csv",
+      "bytes": 102,
+      "sha256": "e6ca868d5995d945d50fdaa6a7dd221f07d0da1f2a93e685af1df738e38b7509"
+    },
+    {
+      "path": "figures/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/test_group_holdout.py",
+      "bytes": 233,
+      "sha256": "9e29433005ee8ac041c5c7592d1e424e635dbecd3bf34f5bf4eb995aea1e5774"
+    },
+    {
+      "path": "tests/test_loss_masks.py",
+      "bytes": 228,
+      "sha256": "9c2e33de49c99cd31d36de2297ba251adc919bb7418921141e4bcb908f90d4c8"
+    },
+    {
+      "path": "tests/test_firewall.py",
+      "bytes": 221,
+      "sha256": "2713e94ede6004ca77cd1d6b44c8839934a3573bcebc199206ee0c106c7abb70"
+    },
+    {
+      "path": "tests/test_physical_geometry.py",
+      "bytes": 223,
+      "sha256": "f12aad29334e2a5ded48b8b8cfe2c0043f7e81e86e7e774f0ce52fda3aa3e056"
+    },
+    {
+      "path": "tests/test_split_leakage.py",
+      "bytes": 223,
+      "sha256": "1f6a8b0b521f7519d830e51ada53e09862c5aed3027c0317e9cf023e75ffbaa9"
+    },
+    {
+      "path": "tests/test_component_matching.py",
+      "bytes": 215,
+      "sha256": "2e74fec40946dee999035c62b421be8f25c646f9914bca92838a100dc3f232b1"
+    },
+    {
+      "path": "notebooks/05_infer_and_match_components.ipynb",
+      "bytes": 572,
+      "sha256": "0edb4ecc2c88c6502939eb7218367635fcb286aeb60caed2f5eae9165511a483"
+    },
+    {
+      "path": "notebooks/06_statistics_tables_figures.ipynb",
+      "bytes": 578,
+      "sha256": "a60162149eaca6cd7f6f95e611d145d94eadef3b9fdca3cc4afebb4db2ffef43"
+    },
+    {
+      "path": "notebooks/01_data_viability_and_preprocess.ipynb",
+      "bytes": 568,
+      "sha256": "20f2b739251ee095bf853ecf211e8fdce2f26f5d7641b7bcfb3c098d2ec90967"
+    },
+    {
+      "path": "notebooks/00_environment_and_provenance.ipynb",
+      "bytes": 562,
+      "sha256": "73a5ebdae0c279eb0384c9faf9f35fc7c1ea80f231b5a00b9895b916d0aaddc3"
+    },
+    {
+      "path": "notebooks/03_train_partial_baselines.ipynb",
+      "bytes": 574,
+      "sha256": "05d6bcecfcd795368f29dea2f71acf6cf9db07bcf0a2fc21eb530209aa0b4274"
+    },
+    {
+      "path": "notebooks/04_train_cora_lung.ipynb",
+      "bytes": 554,
+      "sha256": "074d30633627163bde5fca096a36f2dcf0b6780092078aea35505a7ba1c14cd6"
+    },
+    {
+      "path": "notebooks/02_generate_weak_labels_and_firewall.ipynb",
+      "bytes": 572,
+      "sha256": "a18b8bcfa43a99cd46221592b967c6d9b321f5c794d2d3bc81d560a83945b3cf"
+    },
+    {
+      "path": "notebooks/07_mosmed_locked_validation.ipynb",
+      "bytes": 569,
+      "sha256": "bde713f65029c62af23b45cc0e2225453ee9e35fd5c8fb4de2f83f3ba3419687"
+    },
+    {
+      "path": "environment/latest_runtime.json",
+      "bytes": 242,
+      "sha256": "0e431e18748caa5fed052330397a11c2f4b6ee2ff56a982b8afaf1f6adee4252"
+    },
+    {
+      "path": "environment/kaggle_pip_freeze.txt",
+      "bytes": 18522,
+      "sha256": "ecdc6ea75835d585a669d3fd8397479fd7d53844d3c8c86a2c6c5e1d57883657"
+    },
+    {
+      "path": "data/README.md",
+      "bytes": 319,
+      "sha256": "b97f5be1b2998e81846781f60cc296b66d5f57d679d19c27c94fe5d9910519b2"
+    },
+    {
+      "path": "docs/supervision_contract.md",
+      "bytes": 547,
+      "sha256": "3091b8acdd42438a69c74073047fd60f48e9128f6766f6a0a4b7cef916671be2"
+    },
+    {
+      "path": "docs/reproducibility.md",
+      "bytes": 400,
+      "sha256": "7ada064c6698994a6496b536fe70f22c9e0467e072f470e52f429e7903b13750"
+    },
+    {
+      "path": "docs/figure_policy.md",
+      "bytes": 505,
+      "sha256": "330f7521a3f5c2f174dcee6472d7a8fd8d5679d637724ae1f9a9886df01e2f84"
+    },
+    {
+      "path": "docs/practical_application_plan.md",
+      "bytes": 446,
+      "sha256": "4a6f503961782531c01ee731443302a8c146acc22641a4052f5173b9d9a4d990"
+    },
+    {
+      "path": "configs/experiment_pilot.yaml",
+      "bytes": 512,
+      "sha256": "e9f8ab5a71dce9d4a6b071a42cad740cb1af1915717ac9e37ee3fc7621db8370"
+    },
+    {
+      "path": "configs/model_cora.yaml",
+      "bytes": 332,
+      "sha256": "ef3299d8c4adaa66bc53ec311af1ffc56784ee827646061195fd336535efb0e3"
+    },
+    {
+      "path": "configs/experiment_final.yaml",
+      "bytes": 360,
+      "sha256": "70b752a451955605dec5999e1be1835f1eb1590e481c0118233fc5e632d42965"
+    },
+    {
+      "path": "configs/data_primary.yaml",
+      "bytes": 420,
+      "sha256": "aa10da8d17772bc7a03fb49aed87a148bebb745794cf4d7f2d8c5aec50eb97a2"
+    },
+    {
+      "path": "app/api/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/ui/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/splits/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/manifests/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/cora_lung/__init__.py",
+      "bytes": 22,
+      "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+    },
+    {
+      "path": "src/cora_lung/utils/config.py",
+      "bytes": 31,
+      "sha256": "8314bc42749725a89e852af32ce46fe3260a201faa9226a5db28ed30a6457933"
+    },
+    {
+      "path": "src/cora_lung/utils/provenance.py",
+      "bytes": 52,
+      "sha256": "89eb538bc977dca2b68a8b9c88329571a49ff4aed25231b646779cee4e657ad1"
+    },
+    {
+      "path": "src/cora_lung/utils/logging.py",
+      "bytes": 37,
+      "sha256": "c2c3d05be4f0ec525ed014410e92e7b808223011caf2ae60bf5d1ea2ec8fe0db"
+    },
+    {
+      "path": "src/cora_lung/utils/seed.py",
+      "bytes": 27,
+      "sha256": "ddc67c233cbd883f75a5914b616f18005dfa2953055437e1462e77900302057b"
+    },
+    {
+      "path": "src/cora_lung/utils/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/cora_lung/eval/statistics.py",
+      "bytes": 42,
+      "sha256": "201fa2c552638af15b30b08430210af65cddecd7b9d1ddd60aed361055385c46"
+    },
+    {
+      "path": "src/cora_lung/eval/calibration.py",
+      "bytes": 30,
+      "sha256": "3d0df09cc92f4aa81bf6d0f3aac0b79fc5df753bb02328c8a4b1735ebdf49996"
+    },
+    {
+      "path": "src/cora_lung/eval/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/cora_lung/eval/surface.py",
+      "bytes": 44,
+      "sha256": "473766b1275daa359ea200549fbab3febfbccb1d6dfefa4deafaad4c182627e4"
+    },
+    {
+      "path": "src/cora_lung/eval/froc.py",
+      "bytes": 35,
+      "sha256": "fa57530b89039e0e1c49476b224c3b21e0beb45d6ca74856d495b4819f85fe88"
+    },
+    {
+      "path": "src/cora_lung/eval/components.py",
+      "bytes": 45,
+      "sha256": "cfc91b3032ac5d732a4c39c4ac5350002a82be345c58fb17cc26aa25493c0844"
+    },
+    {
+      "path": "src/cora_lung/engine/train.py",
+      "bytes": 23,
+      "sha256": "b55f0b75bf8beadfd148c2a41c61159f687e81c348903f10fb082ca6f742c248"
+    },
+    {
+      "path": "src/cora_lung/engine/checkpoint.py",
+      "bytes": 29,
+      "sha256": "11ba71b6f3c9a6ffec69b33d120be8a7f5f06e08da5d53b3139bec535ea72bf1"
+    },
+    {
+      "path": "src/cora_lung/engine/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/cora_lung/engine/infer.py",
+      "bytes": 39,
+      "sha256": "2bd453105d7b05113fae455158a4b281e9c1d9cbf6b199663a2118c8d4590c07"
+    },
+    {
+      "path": "src/cora_lung/data/regions.py",
+      "bytes": 39,
+      "sha256": "1c5398c2a22d6397191be91b0e1c62c4fe7dabcb69609954556048aa44fca7a8"
+    },
+    {
+      "path": "src/cora_lung/data/splits.py",
+      "bytes": 38,
+      "sha256": "8b9ace254f31b63689f3d9d0c09c54e36682896e22ce9550d92f8af5601f55de"
+    },
+    {
+      "path": "src/cora_lung/data/preprocess.py",
+      "bytes": 38,
+      "sha256": "fcf87ef5df4a02fe5d94c65253d070d993cf83c262f9b5c8c21e604dede673d6"
+    },
+    {
+      "path": "src/cora_lung/data/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/cora_lung/data/scribbles.py",
+      "bytes": 34,
+      "sha256": "e165c5d395ca317bdecb39f336e4ab45b021510b49e9040983f1e6b2a8960f07"
+    },
+    {
+      "path": "src/cora_lung/data/firewall.py",
+      "bytes": 40,
+      "sha256": "29b7fd29be4ae66ffc5e28ab05dd3821795138ba4f3cf46ab6300c858e715ff0"
+    },
+    {
+      "path": "src/cora_lung/data/io.py",
+      "bytes": 48,
+      "sha256": "26e1f6e5c7b6e4eb82db002d9dd5451926794091bae80bbbaa1edc6815d86860"
+    },
+    {
+      "path": "src/cora_lung/models/cora_lung.py",
+      "bytes": 34,
+      "sha256": "b8474588f8ace7354ce59068b194b34d903ac10e8430d84cd98cec75b303dfc5"
+    },
+    {
+      "path": "src/cora_lung/models/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/cora_lung/models/region_graph.py",
+      "bytes": 47,
+      "sha256": "9073fdaa5bde314af723ce7987bde1560e067beeb3487fd762ac13b110f9a7e7"
+    },
+    {
+      "path": "src/cora_lung/models/backbone3d.py",
+      "bytes": 47,
+      "sha256": "9c085668259abcf85a6bf5debf0f2a53158889a0346f3624a3a94c554e67b116"
+    },
+    {
+      "path": "src/cora_lung/models/prototypes.py",
+      "bytes": 39,
+      "sha256": "a865b6d74ed9d969af1c5368530a10c7ba5a7235ff9f1bd686810fdc763df3bd"
+    },
+    {
+      "path": "src/cora_lung/losses/replay.py",
+      "bytes": 43,
+      "sha256": "e9e1030900c88ee9274d291f3b01a24885fa6ef144195f3974c51efdf3c68fda"
+    },
+    {
+      "path": "src/cora_lung/losses/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/cora_lung/losses/ranking.py",
+      "bytes": 45,
+      "sha256": "8b348fd22792ef22b01b400c4096379f4ac6c85a17e98017e883434b14bf89fe"
+    },
+    {
+      "path": "src/cora_lung/losses/partial.py",
+      "bytes": 41,
+      "sha256": "508f219cae39759a88b6a96eb2ad3b3e7fb4c73081567aad6e2060d6ef1515f6"
+    },
+    {
+      "path": "src/cora_lung/losses/consistency.py",
+      "bytes": 39,
+      "sha256": "78f6b64fcfdc677959c69ab73e5bb1e72d59460bfe95c1ce9fb04049e92bb647"
+    },
+    {
+      "path": "outputs/tables/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "outputs/predictions/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "outputs/logs/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "outputs/metrics/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

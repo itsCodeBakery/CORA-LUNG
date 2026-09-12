@@ -1,0 +1,18 @@
+experiment:
+  name: cora_lung_final
+  status: LOCK_ONLY_AFTER_GATES_A_B_C_PASS
+
+training:
+  epochs: 75
+  seeds: [17, 29, 43]
+
+evaluation:
+  fixed_threshold: 0.5
+  primary_fp_components_per_patient: 1.0
+  component_match_iou: 0.10
+  component_connectivity: 26
+  minimum_reference_volume_ml: 0.1
+
+statistics:
+  bootstrap_samples: 10000
+  bootstrap_unit: patient

@@ -1,0 +1,22 @@
+project:
+  name: CORA-Lung
+
+dataset:
+  name: COVID-19_CT_Lung_and_Infection_Segmentation
+  role: primary
+  expected_cases: 20
+
+geometry:
+  array_order: [z, y, x]
+  target_spacing_mm: [3.0, 1.5, 1.5]
+  component_connectivity: 26
+  minimum_component_volume_ml: 0.1
+
+intensity:
+  hu_window: [-1000, 400]
+  normalized_range: [-1.0, 1.0]
+
+splits:
+  permanent_development_cases: 4
+  final_outer_folds: 4
+  seeds: [17, 29, 43]

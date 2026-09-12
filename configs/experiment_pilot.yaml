@@ -1,0 +1,27 @@
+experiment:
+  name: cora_lung_pilot
+  seed: 17
+  stage: pilot
+
+weak_supervision:
+  coverage: 0.50
+  omission: uniform
+  fixed_positive_pixel_budget: true
+
+training:
+  epochs: 30
+  microbatches_per_epoch: 100
+  batch_size: 1
+  gradient_accumulation: 2
+  warmup_epochs: 10
+  optimizer: adamw
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  amp: true
+
+pilot_models:
+  - complete_partial_loss
+  - component_dropout_partial_loss
+  - matched_random_pixel_dropout
+  - ordinary_contrastive
+  - minimal_component_replay

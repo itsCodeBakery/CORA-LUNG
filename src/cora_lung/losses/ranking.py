@@ -1,0 +1,1 @@
+"""Explicit-background ranking objective."""

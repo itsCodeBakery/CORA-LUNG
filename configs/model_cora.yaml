@@ -1,0 +1,18 @@
+model:
+  name: cora_lung
+
+backbone:
+  architecture: residual_unet3d_anisotropic
+  base_channels: 16
+  embedding_dim: 64
+
+component_replay:
+  enabled: true
+  replay_probability: 0.75
+  temperature: 0.1
+
+optional_extensions:
+  region_graph: false
+  prototype_basis: false
+  background_ranking: false
+  region_voxel_consistency: false
