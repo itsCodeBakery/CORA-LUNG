@@ -1,0 +1,60 @@
+{
+  "project": "CORA-Lung",
+  "block": "02",
+  "generated_at_utc": "2026-09-12T04:37:53Z",
+  "dataset": {
+    "role": "primary",
+    "expected_kaggle_slug": "covid19-ct-scans",
+    "runtime_mount_name": "covid19-ct-scans",
+    "metadata_file": "metadata.csv",
+    "expected_case_count": 20,
+    "metadata_rows": 20,
+    "unique_case_ids": 20,
+    "total_files": 81,
+    "nifti_files": 80,
+    "total_bytes": 7910518772
+  },
+  "role_counts": {
+    "ct_scan": 20,
+    "infection_mask": 20,
+    "lung_and_infection_mask": 20,
+    "lung_mask": 20,
+    "other": 1
+  },
+  "pairing": {
+    "complete_cases": 20,
+    "pairing_errors": 0
+  },
+  "source_subject_audit": {
+    "derived_source_subject_groups": 18,
+    "repeated_source_groups": {
+      "radiopaedia_case_10": 2,
+      "radiopaedia_case_29": 2
+    },
+    "status": "REVIEW_REQUIRED",
+    "warning": "Filename-derived source grouping is not verified patient identity. Repeated groups must remain in the same split unless provenance establishes independence."
+  },
+  "geometry": {
+    "pairs_checked": 20,
+    "full_geometry_matches": 20,
+    "failures": []
+  },
+  "hashing": {
+    "algorithm": "SHA-256",
+    "files_hashed": 81,
+    "bytes_hashed": 7910518772
+  },
+  "checks": {
+    "metadata_has_expected_rows": true,
+    "metadata_columns_complete": true,
+    "all_metadata_files_resolved": true,
+    "unique_case_ids_expected": true,
+    "ct_count_expected": true,
+    "infection_mask_count_expected": true,
+    "lung_mask_count_expected": true,
+    "combined_mask_count_expected": true,
+    "ct_infection_geometry_valid": true
+  },
+  "dataset_discovery_status": "PASS",
+  "gate_a": "NOT_RUN"
+}

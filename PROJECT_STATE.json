@@ -3,9 +3,9 @@
   "title": "CORA-Lung: Component-Omission Replay for Incomplete Scribble-Supervised Lung Lesion Segmentation",
   "repository": "https://github.com/itsCodeBakery/CORA-LUNG",
   "workflow_version": "1.0",
-  "last_completed_block": "01",
-  "last_completed_block_name": "github_repository_bootstrap",
-  "current_stage": "repository_initialized",
+  "last_completed_block": "02",
+  "last_completed_block_name": "primary_dataset_discovery_and_provenance",
+  "current_stage": "primary_dataset_provenance_frozen",
   "current_gate": "PRE_GATE_A",
   "gate_a": "NOT_RUN",
   "gate_b": "NOT_RUN",
@@ -15,6 +15,11 @@
   "gate_f": "NOT_RUN",
   "dense_label_firewall": "NOT_BUILT",
   "primary_dataset_audit": "NOT_RUN",
-  "next_action": "Code Block 02: discover attached Kaggle primary dataset and create immutable provenance manifest.",
-  "updated_at_utc": "2026-09-12T04:35:06Z"
+  "next_action": "Code Block 03: native-grid infection-mask label audit, physical 3-D component viability analysis under 6/18/26 connectivity and 0/0.1/0.5 mL thresholds.",
+  "updated_at_utc": "2026-09-12T04:37:53Z",
+  "last_attempted_block": "02",
+  "primary_dataset_discovery": "PASS",
+  "primary_dataset_pairing": "PASS",
+  "primary_dataset_geometry_headers": "PASS",
+  "primary_subject_identity": "REVIEW_REQUIRED"
 }
