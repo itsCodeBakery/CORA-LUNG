@@ -1,0 +1,61 @@
+gate_b_dense_evaluation:
+  version: "1.0"
+  population: permanent_development_only
+  outcomes_opened_before_this_lock: false
+
+checkpoint:
+  policy: final_epoch_only
+  conditions:
+    - complete
+    - pixel_dropout_matched_50
+    - component_natural_50
+    - component_fixed_50
+
+inference:
+  image_only: true
+  patch_zyx: [48, 128, 128]
+  overlap: 0.50
+  blending: gaussian_logit_blending
+  gaussian_sigma_scale: 0.125
+  amp: true
+  test_time_augmentation: false
+
+native_grid_restoration:
+  interpolation: linear_probability
+  outside_image_crop_probability: 0.0
+
+prediction_components:
+  base_probability_threshold: 0.50
+  connectivity: 26
+  size_removal: false
+  candidate_score: mean_probability_within_fixed_component
+
+references:
+  connectivity: 26
+  minimum_volume_ml: 0.10
+
+matching:
+  primary_iou: 0.10
+  algorithm: maximum_cardinality_then_maximum_total_iou
+  small_reference_predictions_after_eligible_matching: neutral_not_fp
+
+froc:
+  operating_threshold_scope: single_common_threshold_across_four_patients_per_model
+  primary_sensitivity: macro_patient_component_recall
+  supporting_sensitivity: pooled_component_recall
+  budgets_fp_per_patient: [0.5, 1.0, 2.0, 4.0]
+  operating_point_selection:
+    - maximize_macro_patient_recall
+    - maximize_pooled_component_recall
+    - minimize_fp_per_patient
+    - maximize_candidate_score_threshold
+
+primary_gate:
+  control: pixel_dropout_matched_50
+  omission: component_natural_50
+  statistic: control_macro_R_at_1_minus_omission_macro_R_at_1
+  pass_margin: 0.05
+  minimum_nonnegative_case_differences: 3
+  minimum_strictly_positive_case_differences: 2
+
+supporting_metrics_override_primary_gate: false
