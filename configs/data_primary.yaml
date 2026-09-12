@@ -13,8 +13,19 @@ geometry:
   minimum_component_volume_ml: 0.1
 
 intensity:
-  hu_window: [-1000, 400]
   normalized_range: [-1.0, 1.0]
+  common_declared_window_hu: [-1250, 250]
+
+  source_encodings:
+    Coronacases:
+      encoding: raw_hu
+      clip_hu: [-1250, 250]
+
+    Radiopaedia:
+      encoding: documented_prewindowed_0_255
+      represented_hu_window: [-1250, 250]
+      source_range: [0, 255]
+      hu_clipping: prohibited
 
 splits:
   permanent_development_cases: 4

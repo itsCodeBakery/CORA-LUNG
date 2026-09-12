@@ -171,8 +171,8 @@ def deterministic_patch_origin(
     *,
     seed,
     sample_index,
-    foreground_probability=0.60,
-    background_probability=0.20,
+    foreground_probability=0.50,
+    background_probability=0.25,
 ):
     volume_shape = np.asarray(
         volume_shape,

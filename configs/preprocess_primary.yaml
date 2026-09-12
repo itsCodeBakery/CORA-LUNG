@@ -1,6 +1,7 @@
 preprocessing:
-  version: "1.1"
-  parent_version: "1.0"
+  version: "1.2"
+  parent_version: "1.1"
+  correction_reason: "mixed documented primary-cohort intensity encodings"
 
 geometry:
   internal_array_order: [z, y, x]
@@ -11,15 +12,38 @@ geometry:
   sparse_coordinate_transfer: physical_world_coordinate_nearest_voxel
 
 intensity:
-  hu_clip: [-1000, 400]
-  output_range: [-1.0, 1.0]
-  cache_dtype: float16
+  normalized_range: [-1.0, 1.0]
+  common_declared_window_hu: [-1250, 250]
+
+  provenance_rule:
+    assignment: frozen_source_origin_registry
+    infer_encoding_from_extrema: false
+
+  coronacases:
+    encoding: raw_hu
+    operation: clip_then_resample_then_normalize
+    clip_hu: [-1250, 250]
+    normalization: "2*(x+1250)/1500 - 1"
+    outside_resample_value: -1250
+
+  radiopaedia:
+    encoding: documented_prewindowed_0_255
+    represented_hu_window: [-1250, 250]
+    apply_hu_clipping: false
+    operation: resample_then_normalize
+    source_range: [0, 255]
+    normalization: "2*x/255 - 1"
+    outside_resample_value: 0
 
 crop:
   dense_masks_used: false
   scribbles_used: false
   ct_only: true
+  intensity_space: common_normalized_minus1_plus1
   physical_margin_mm: 15.0
+  body_threshold_hu_equivalent: -600
+  lung_air_threshold_hu_equivalent: -320
+  failed_lung_extraction_fallback: body_bounding_box
 
 collision_policy:
   same_class_spatial_collision: merge_to_unique_training_voxel
@@ -28,26 +52,11 @@ collision_policy:
   group_loss: hard_failure
 
 post_transfer_causal_equalization:
-  enabled: true
-  seed: 20260912
-
-  component_natural:
-    action: unchanged
-
-  random_pixel_control:
-    target: transferred_natural_unique_foreground_voxel_count
-    candidate_pool: transferred_component_complete_unique_foreground_support
-    preserve_all_complete_foreground_groups: true
-    modify_only_if_raw_pair_mismatched: true
-
-  fixed_budget_pair:
-    target: minimum_unique_foreground_capacity_of_transferred_pair
-    preserve_each_conditions_foreground_groups: true
-    modify_only_larger_side: true
-
-  background:
-    action: unchanged
-    require_coordinate_identity_with_parent_cache: true
+  inherited_from_v1_1: true
+  sparse_full_grid_coordinates_regenerated: false
+  sparse_full_grid_coordinates_preserved_exactly: true
+  crop_coordinates_rebased_only: true
+  background: unchanged
 
 firewall:
   dense_masks_in_training_cache: prohibited
@@ -55,7 +64,7 @@ firewall:
   unknown_voxels_materialized_as_background: false
 
 scientific_status:
-  correction_made_before_model_training: true
-  source_weak_labels_modified: false
+  block08a_models: invalidated_before_dense_evaluation
+  dense_gate_b_outcomes_opened: false
   development_split_modified: false
   final_outer_folds_modified: false

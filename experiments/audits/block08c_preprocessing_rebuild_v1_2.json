@@ -1,0 +1,58 @@
+{
+  "project": "CORA-Lung",
+  "block": "08C",
+  "status": "PASS",
+  "generated_at_utc": "2026-09-12T07:06:36Z",
+  "reason": "CT-only pre-outcome QC confirmed mixed intensity encodings and material mismatch with uniform v1.1 preprocessing.",
+  "dense_development_outcomes_opened": false,
+  "dense_mask_arrays_accessed": 0,
+  "block08a_models": {
+    "commit": "412d746db72aeb5062adb7393d2f1f0c5cd3245d",
+    "status": "INVALIDATED_BEFORE_DENSE_EVALUATION",
+    "historical_optimizer_steps": 7500,
+    "eligible_for_gate_b_scoring": false
+  },
+  "preprocessing_v1_2": {
+    "coronacases": "raw_hu_clip_-1250_250_then_normalize",
+    "radiopaedia": "documented_prewindowed_0_255_direct_normalization",
+    "common_output_range": [
+      -1,
+      1
+    ],
+    "target_spacing_zyx_mm": [
+      3.0,
+      1.5,
+      1.5
+    ],
+    "image_only_crop": true,
+    "crop_space": "common_normalized_intensity",
+    "crop_margin_mm": 15.0,
+    "cases": 20,
+    "annotations": 260,
+    "sparse_points_lost": 0,
+    "membership_points_lost": 0,
+    "max_resampled_affine_difference": 0.0,
+    "max_spacing_difference": 0.0,
+    "crop_changed_cases": 10,
+    "crop_method_counts": {
+      "normalized_internal_air_lung_bbox": 20
+    }
+  },
+  "sampling_protocol": {
+    "foreground": 0.5,
+    "background": 0.25,
+    "uniform_crop": 0.25
+  },
+  "gate_b_screening": {
+    "seed": 17,
+    "epochs": 30,
+    "microbatches_per_epoch": 100,
+    "conditions": [
+      "complete",
+      "pixel_dropout_matched_50",
+      "component_natural_50",
+      "component_fixed_50"
+    ],
+    "dense_evaluation": "NOT_RUN"
+  }
+}

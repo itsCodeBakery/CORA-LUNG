@@ -1,36 +1,49 @@
 experiment:
-  name: gate_b_problem_validation
+  name: gate_b_problem_validation_v1_2
   purpose: component_omission_vs_equal_count_pixel_sparsity
   evaluation_population: permanent_development_only
   final_outer_cv_access: prohibited
+  previous_gate_b_fit_commit: "412d746db72a"
+  previous_gate_b_fit_status: invalidated_before_dense_evaluation
+
+data:
+  training_cache_version: "1.2"
+  intensity_preprocessing_version: "1.2"
 
 conditions:
   - complete
   - pixel_dropout_matched_50
   - component_natural_50
-  - complete_fixed_50
   - component_fixed_50
 
-decisive_pairs:
-  primary:
+benchmark_contrasts:
+  structure_of_removal:
     control: pixel_dropout_matched_50
     omission: component_natural_50
-  secondary_fixed:
-    control: complete_fixed_50
+    unique_positive_voxel_budget: matched
+
+  fixed_budget_omission:
+    reference: complete
     omission: component_fixed_50
+    interpretation: separate_non_equal_budget_contrast
+
+patch_sampling:
+  patient_sampling: uniform
+  foreground_stroke_probability: 0.50
+  background_stroke_probability: 0.25
+  uniform_crop_probability: 0.25
+  dense_foreground_oversampling: prohibited
 
 fit:
-  seed: 17
+  screening_seed: 17
   epochs: 30
   microbatches_per_epoch: 100
   batch_size: 1
   gradient_accumulation: 2
-  patch_zyx: [48, 128, 128]
   optimizer: AdamW
   learning_rate: 0.0003
   weight_decay: 0.0001
   amp: true
-  augmentation: none
   checkpoint_selection: final_epoch_only
 
 model:
@@ -48,6 +61,6 @@ firewall:
   dense_mask_access_during_fit: prohibited
   dense_checksum_denylist: required
 
-interpretation:
-  gate_b_is_development_problem_validation: true
-  independent_patient_generalization_claim: prohibited
+gate_b:
+  dense_development_evaluation_allowed_only_after_fit_freeze: true
+  independent_generalization_claim: prohibited
