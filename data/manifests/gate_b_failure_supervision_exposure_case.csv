@@ -1,0 +1,17 @@
+condition,case_id,source_origin,patches,labelled_voxels_seen,foreground_voxels_seen,background_voxels_seen,zero_label_patches,foreground_centered,background_centered,uniform_crop,available_fg_groups,seen_fg_groups,seen_group_fraction,group_presence_events
+complete,coronacases_004,Coronacases,750,36812,29413,7399,0,369,194,187,8,8,1.0,3777
+complete,coronacases_008,Coronacases,750,123030,70198,52832,0,361,187,202,33,33,1.0,9707
+complete,radiopaedia_14_85914_0,Radiopaedia,750,105116,54904,50212,0,388,166,196,28,28,1.0,7016
+complete,radiopaedia_27_86410_0,Radiopaedia,750,56713,29216,27497,6,355,201,194,13,13,1.0,2927
+pixel_dropout_matched_50,coronacases_004,Coronacases,750,21969,14467,7502,0,369,194,187,8,8,1.0,3726
+pixel_dropout_matched_50,coronacases_008,Coronacases,750,88225,35086,53139,0,361,187,202,33,33,1.0,9678
+pixel_dropout_matched_50,radiopaedia_14_85914_0,Radiopaedia,750,72522,21635,50887,0,388,166,196,28,28,1.0,6968
+pixel_dropout_matched_50,radiopaedia_27_86410_0,Radiopaedia,750,44457,17017,27440,6,355,201,194,13,13,1.0,3002
+component_natural_50,coronacases_004,Coronacases,750,21079,13481,7598,0,369,194,187,4,4,1.0,1706
+component_natural_50,coronacases_008,Coronacases,750,86384,34075,52309,0,361,187,202,17,17,1.0,4814
+component_natural_50,radiopaedia_14_85914_0,Radiopaedia,750,71333,21763,49570,0,388,166,196,14,14,1.0,3453
+component_natural_50,radiopaedia_27_86410_0,Radiopaedia,750,48178,20431,27747,19,355,201,194,7,7,1.0,2024
+component_fixed_50,coronacases_004,Coronacases,750,21079,13481,7598,0,369,194,187,4,4,1.0,1706
+component_fixed_50,coronacases_008,Coronacases,750,104552,54079,50473,0,361,187,202,17,17,1.0,4927
+component_fixed_50,radiopaedia_14_85914_0,Radiopaedia,750,104807,53106,51701,0,388,166,196,14,14,1.0,3647
+component_fixed_50,radiopaedia_27_86410_0,Radiopaedia,750,63056,35687,27369,13,355,201,194,7,7,1.0,1994

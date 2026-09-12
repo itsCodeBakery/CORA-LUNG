@@ -1,7 +1,8 @@
 {
-  "generated_at_utc": "2026-09-12T07:57:37Z",
-  "completed_block": "08E",
-  "gate_b_decision": "NO_GO",
+  "generated_at_utc": "2026-09-12T08:17:52Z",
+  "completed_block": "08F",
+  "gate_b": "NO_GO",
+  "gate_c": "NOT_RUN",
   "self_included": false,
   "files": [
     {
@@ -41,8 +42,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 4069,
-      "sha256": "5b1c51ab2ffb8fc152eb3e79324be716f04668ff7aa0822a0f0cca3f7d0fc323"
+      "bytes": 4424,
+      "sha256": "852f72d30d22887f83f4afb66d8a40bf0286f04d09bad4e7d100f6c302f23a11"
     },
     {
       "path": "README.md",
@@ -143,6 +144,51 @@
       "path": "data/manifests/gate_b_development_prefit_budget_audit.csv",
       "bytes": 351,
       "sha256": "1cf95ae7a521ae0dd5b2cfa0012a7d10df457397b02ebadab70decf809d776db"
+    },
+    {
+      "path": "data/manifests/gate_b_failure_best_diagnostic_threshold.csv",
+      "bytes": 713,
+      "sha256": "f8edaf54551cd6af8be9a1025151bce800400fe5342975a18e16afba08457883"
+    },
+    {
+      "path": "data/manifests/gate_b_failure_output_case_audit.csv",
+      "bytes": 5471,
+      "sha256": "42c353b415c9c70aba0f2a04054db1223b84ff257e72e4788705bc858d91aac3"
+    },
+    {
+      "path": "data/manifests/gate_b_failure_output_summary.csv",
+      "bytes": 1135,
+      "sha256": "d79783a1f0f2d46f592285af1a92267e075492eac9011d72bead829f78144355"
+    },
+    {
+      "path": "data/manifests/gate_b_failure_source_primary_r_at_1.csv",
+      "bytes": 180,
+      "sha256": "78eea40a48d8a86b997e11cef55835ad72b95cc23101e2923db4f62cd6997e76"
+    },
+    {
+      "path": "data/manifests/gate_b_failure_source_threshold_0p5.csv",
+      "bytes": 932,
+      "sha256": "e68e8352f1bed1ffa990ddad720b627bfcd9f406864441962ea202b86233f11a"
+    },
+    {
+      "path": "data/manifests/gate_b_failure_supervision_exposure_case.csv",
+      "bytes": 1862,
+      "sha256": "2930716d47a2be64083917110f7037e40fd1e9a76566eb8585092a4e28b4546d"
+    },
+    {
+      "path": "data/manifests/gate_b_failure_supervision_exposure_summary.csv",
+      "bytes": 890,
+      "sha256": "123d40516328ff0b4e7e3f24c720167cbea423a7b73ce58aef3fa242ce95f333"
+    },
+    {
+      "path": "data/manifests/gate_b_failure_threshold_case_audit.csv",
+      "bytes": 46659,
+      "sha256": "8c9f620bdf8339ac9d0bad4e63c32ef458ae5955f00b945f1526ac7c4fa33e82"
+    },
+    {
+      "path": "data/manifests/gate_b_failure_threshold_summary.csv",
+      "bytes": 10250,
+      "sha256": "14160d843ead1bdcfe48519df6418a31e23804731afa6ac1ff5e0da01e811f86"
     },
     {
       "path": "data/manifests/gate_b_froc_curve.csv",
@@ -415,6 +461,11 @@
       "sha256": "330f7521a3f5c2f174dcee6472d7a8fd8d5679d637724ae1f9a9886df01e2f84"
     },
     {
+      "path": "docs/gate_b_failure_mechanism_audit.md",
+      "bytes": 1217,
+      "sha256": "db3687bec9cebcdf9f2818e6a720b2121cc67b897af4a020bfcb85ce2f54ad68"
+    },
+    {
       "path": "docs/gate_b_pilot_harness_protocol.md",
       "bytes": 777,
       "sha256": "f36e71f3a03e06bb621edc33bc35265331776b73cf288512408e3caa6e00ca55"
@@ -555,6 +606,11 @@
       "sha256": "862df641ed33bf5ba5b6d062b944a042c126632b43a462f0a48fea3fe30ff614"
     },
     {
+      "path": "experiments/audits/block08f_gate_b_failure_mechanism_audit.json",
+      "bytes": 4351,
+      "sha256": "f3caa52cbb4f631b4e7aa567e97cc94d7561301c07a3e112f5ed73e478290cd7"
+    },
+    {
       "path": "experiments/registry.csv",
       "bytes": 102,
       "sha256": "e6ca868d5995d945d50fdaa6a7dd221f07d0da1f2a93e685af1df738e38b7509"
@@ -693,6 +749,86 @@
       "path": "figures/audit/fig13_gate_b_v1_2_training_curves.png",
       "bytes": 834636,
       "sha256": "330d63eda7dac0fc22231c9352d4630d95d43122339857305fd19d743b108022"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig17_fragmentation_vs_threshold.pdf",
+      "bytes": 28220,
+      "sha256": "fb7bfad800ab760ad81ec37ab40451fafa6877833fe35af00d0a59008cacbbcd"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig17_fragmentation_vs_threshold.png",
+      "bytes": 650145,
+      "sha256": "51fe4f07a80de93d19626a556487040f81dfea55a921638b95534e1d6d8732c8"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig18_dice_vs_threshold.pdf",
+      "bytes": 28165,
+      "sha256": "0787eeda731470e7e46553ea8d1e84d5296a2719326b3b72192db8f3963b7ad2"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig18_dice_vs_threshold.png",
+      "bytes": 656593,
+      "sha256": "b6476dcd22ae2d929a4c2007f4b89aeafe9cc62ca5b2aeb517277c6f64b85605"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig19_probability_separation.pdf",
+      "bytes": 23271,
+      "sha256": "6d4302c8135cabd2003fc71716926ad16c715e2b5108f20cda3e263931a33a16"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig19_probability_separation.png",
+      "bytes": 404233,
+      "sha256": "0112911109f26663bcc939fc957bdb8a7e171cb9e99ea7ffbc5e03786f39049b"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig20_sparse_supervision_exposure.pdf",
+      "bytes": 17753,
+      "sha256": "7d21fdfbfcf65a9f8a0cc55da31e3ef7813602343458c22fa8cb4b54bb4a0a4e"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig20_sparse_supervision_exposure.png",
+      "bytes": 464405,
+      "sha256": "44b033fb8bbb57c2da7d5f4208ac14c17382fc1f181dd2bfdfc7987d3b24dab0"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig_gate_b_failure_overlay_coronacases_004.pdf",
+      "bytes": 5076045,
+      "sha256": "23a3aa2828205c66fbf3a16e5e01b45a5996afffc994a6dc8fd8020a9702323f"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig_gate_b_failure_overlay_coronacases_004.png",
+      "bytes": 5908454,
+      "sha256": "abc6820cae2cb18d6b500a69f7a700a3a15b10e287f913e53482c820ff4276d0"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig_gate_b_failure_overlay_coronacases_008.pdf",
+      "bytes": 5109899,
+      "sha256": "a3d80203af58fc848079ff2ebace3f13006dbfe41580cddaf6a2e76b13789535"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig_gate_b_failure_overlay_coronacases_008.png",
+      "bytes": 6284240,
+      "sha256": "0db73dc9d91826561c0f8d906dc465908b71892d37fa0a8212fce5994cbaedd4"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig_gate_b_failure_overlay_radiopaedia_14_85914_0.pdf",
+      "bytes": 5797057,
+      "sha256": "52bf3cc141207ec68b2276a5a4e376c632b75481401b98dcbda4910469e0f9e5"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig_gate_b_failure_overlay_radiopaedia_14_85914_0.png",
+      "bytes": 17453046,
+      "sha256": "7678869abcf9a6529e18e52d7dbee4c418207a3a41a47f3e44568e4a0b0548d0"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig_gate_b_failure_overlay_radiopaedia_27_86410_0.pdf",
+      "bytes": 9076598,
+      "sha256": "e63af268ceab76bcd56d2b95918829208906dc2defcac5079da7b5af651a3075"
+    },
+    {
+      "path": "figures/diagnostics/gate_b_failure/fig_gate_b_failure_overlay_radiopaedia_27_86410_0.png",
+      "bytes": 25590718,
+      "sha256": "ef7791d43acc357475529f5792145b83c9291b0e50f7682f645f725802ce8ce3"
     },
     {
       "path": "figures/results/fig14_gate_b_development_froc.pdf",
@@ -858,6 +994,11 @@
       "path": "scripts/code_blocks/block08e_gate_b_dense_evaluation.py",
       "bytes": 103365,
       "sha256": "a63dd1f2b09b360c67caec621a90b62d172bb6b869b81bd0eeb2c0de298d265d"
+    },
+    {
+      "path": "scripts/code_blocks/block08f_gate_b_failure_mechanism_audit.py",
+      "bytes": 101325,
+      "sha256": "547b63995cd5e00a64294dbe2e6c947d31f41e05b6b67aa3b992f49116c9713f"
     },
     {
       "path": "scripts/resume_project.py",

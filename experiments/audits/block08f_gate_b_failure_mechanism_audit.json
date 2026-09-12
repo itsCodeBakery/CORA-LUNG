@@ -1,0 +1,113 @@
+{
+  "project": "CORA-Lung",
+  "block": "08F",
+  "status": "PASS",
+  "generated_at_utc": "2026-09-12T08:17:52Z",
+  "purpose": "development-only mechanism audit after locked Gate-B NO-GO",
+  "gate_b_before_audit": "NO_GO",
+  "gate_b_after_audit": "NO_GO",
+  "gate_b_decision_modified": false,
+  "gate_c": "NOT_RUN",
+  "optimizer_steps_in_block08f": 0,
+  "models_retrained": false,
+  "checkpoints_reselected": false,
+  "predictions_regenerated": false,
+  "development_dense_cases_used": 4,
+  "final_outer_cv_cases_used": 0,
+  "thresholds_diagnostic_only": [
+    0.10000000149011612,
+    0.20000000298023224,
+    0.30000001192092896,
+    0.4000000059604645,
+    0.5,
+    0.6000000238418579,
+    0.699999988079071,
+    0.800000011920929,
+    0.8999999761581421
+  ],
+  "fixed_threshold_reproduction": {
+    "status": "PASS",
+    "maximum_absolute_error": 3.637978807091713e-12
+  },
+  "fragmentation_ratio_at_0p5": {
+    "complete": 47.98740842490842,
+    "pixel_dropout_matched_50": 351.0363802863803,
+    "component_natural_50": 23.198853230103232,
+    "component_fixed_50": 128.00479728604728
+  },
+  "mechanism_flags": {
+    "severe_fragmentation_heuristic_definition": "mean predicted-component/reference-component ratio >= 10 at threshold 0.5",
+    "severe_fragmentation_conditions": [
+      "complete",
+      "pixel_dropout_matched_50",
+      "component_natural_50",
+      "component_fixed_50"
+    ],
+    "threshold_sensitivity_heuristic_definition": "best diagnostic macro Dice improves by >=0.05 over threshold 0.5 and best threshold differs from 0.5 by >=0.10",
+    "threshold_sensitive_conditions": [
+      "complete",
+      "pixel_dropout_matched_50",
+      "component_natural_50",
+      "component_fixed_50"
+    ],
+    "regularization_like_pattern_definition": "natural omission has higher Dice, fewer components, and lower FP volume than both complete and matched-pixel conditions at threshold 0.5",
+    "regularization_like_pattern": true,
+    "baseline_pathology_flag": true,
+    "implementation_defect_proven": false,
+    "root_cause_status": "SCIENTIFIC_REVIEW_REQUIRED"
+  },
+  "best_diagnostic_thresholds": {
+    "complete": {
+      "threshold": 0.8999999761581421,
+      "macro_dice": 0.2293138609920832,
+      "improvement_vs_0p5": 0.17645644575682945
+    },
+    "pixel_dropout_matched_50": {
+      "threshold": 0.8999999761581421,
+      "macro_dice": 0.2526608360508852,
+      "improvement_vs_0p5": 0.17530324666422054
+    },
+    "component_natural_50": {
+      "threshold": 0.8999999761581421,
+      "macro_dice": 0.2379108805178265,
+      "improvement_vs_0p5": 0.06518115966174454
+    },
+    "component_fixed_50": {
+      "threshold": 0.8999999761581421,
+      "macro_dice": 0.28183844798379976,
+      "improvement_vs_0p5": 0.21816679335589284
+    }
+  },
+  "output_separation": {
+    "complete": {
+      "mean_sampled_auc": 0.8963680445125,
+      "mean_lesion_probability": 0.8519364297389984,
+      "mean_background_probability": 0.2877280116081238,
+      "mean_probability_separation": 0.5642084181308746
+    },
+    "component_fixed_50": {
+      "mean_sampled_auc": 0.8753087201875,
+      "mean_lesion_probability": 0.7954750508069992,
+      "mean_background_probability": 0.2655298262834549,
+      "mean_probability_separation": 0.5299452245235443
+    },
+    "component_natural_50": {
+      "mean_sampled_auc": 0.9140641147874999,
+      "mean_lesion_probability": 0.7191789150238037,
+      "mean_background_probability": 0.10643796809017658,
+      "mean_probability_separation": 0.6127409469336271
+    },
+    "pixel_dropout_matched_50": {
+      "mean_sampled_auc": 0.8516272788875,
+      "mean_lesion_probability": 0.7757148593664169,
+      "mean_background_probability": 0.29357801750302315,
+      "mean_probability_separation": 0.4821368418633938
+    }
+  },
+  "source_primary_deltas": {
+    "Coronacases": 0.0,
+    "Radiopaedia": -0.09478021978021975
+  },
+  "scientific_conclusion": "The locked Gate-B NO-GO result is unchanged. This diagnostic audit may identify baseline pathologies or regularization-like behavior, but it does not itself establish an implementation defect or authorize protocol modification.",
+  "next_action": "Scientific review of Block 08F. Do not retrain, alter Gate B, implement CORA replay, or access final outer-CV outcomes until a specific defect or new protocol hypothesis is justified and frozen."
+}
