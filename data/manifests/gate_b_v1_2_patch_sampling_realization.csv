@@ -1,0 +1,5 @@
+condition,foreground_centered,background_centered,uniform_crop
+complete,1473,748,779
+component_fixed_50,1473,748,779
+component_natural_50,1473,748,779
+pixel_dropout_matched_50,1473,748,779
