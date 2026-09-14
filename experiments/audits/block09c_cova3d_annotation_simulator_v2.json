@@ -1,0 +1,61 @@
+{
+  "project": "COVA-3D",
+  "block": "09C",
+  "status": "PASS",
+  "generated_at_utc": "2026-09-14T08:48:54Z",
+  "parent_commit": "79be23b114004c704241977f7312717e3edf3c7f",
+  "simulator_version": "2.0-native-candidate",
+  "purpose": "implement three annotation geometries and freeze exact common native-space six-cell feasibility",
+  "cases": 20,
+  "conditions_per_case": 6,
+  "candidate_artifacts": 120,
+  "native_six_cell_feasible_cases": 20,
+  "native_budget": {
+    "minimum": 20,
+    "median": 81.5,
+    "maximum": 400,
+    "total_per_factorial_cell": 2619,
+    "development_total_per_cell": 702,
+    "final_total_per_cell": 1917,
+    "cases_reduced_from_maximum": 6
+  },
+  "causal_matching": {
+    "same_fg_count_across_six_cells": true,
+    "same_bg_coordinates_across_six_cells": true,
+    "same_component_set_across_geometry_within_coverage": true,
+    "same_component_quota_across_geometry_within_coverage": true,
+    "nested_50_in_100": true
+  },
+  "geometry": {
+    "coherent_connected": true,
+    "dispersed_separated": true,
+    "fragmented_separated": true,
+    "mean_nearest_neighbor_mm": {
+      "coherent": 0.760841897782362,
+      "dispersed": 9.834283505058197,
+      "fragmented": 1.0463212166696163
+    }
+  },
+  "firewall": {
+    "ct_arrays_accessed": 0,
+    "dense_lesion_arrays_accessed": 20,
+    "dense_lung_arrays_accessed": 20,
+    "dense_masks_used_only_offline_for_annotation_generation": true,
+    "prediction_arrays_accessed": 0,
+    "checkpoints_accessed": 0,
+    "development_model_outcomes_accessed": 0,
+    "final_model_outcomes_accessed": 0,
+    "final_outer_cv_dense_masks_used_for_annotation_generation": 16
+  },
+  "trainer_eligibility": {
+    "native_candidates_trainer_eligible": false,
+    "reason": "training-grid collision/equalization audit is mandatory before sparse artifacts may enter trainer cache",
+    "next_block": "09D"
+  },
+  "new_training_performed": false,
+  "optimizer_steps": 0,
+  "factorial_training_authorized": false,
+  "method_development_authorized": false,
+  "source_capture": "PASS",
+  "next_action": "Map all native sparse candidates through corrected v1.2 training geometry, detect geometry-specific voxel collapse, and freeze B_i_train before any training."
+}

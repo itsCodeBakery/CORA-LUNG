@@ -1,0 +1,49 @@
+project: COVA-3D
+simulator_version: 2.0-native-candidate
+status: NATIVE_CANDIDATE_FROZEN
+protocol_version: '1.0'
+source_dataset: COVID19_CT_Seg_20
+component_definition:
+  connectivity: 26
+  minimum_volume_ml: 0.1
+coverage:
+  levels:
+  - 0.5
+  - 1.0
+  low_coverage_count: ceil(0.5*K)
+  selection: uniform seeded permutation
+  selection_seed: 20260914
+  nesting: C50 subset of C100
+native_budget:
+  symbol: B_i_native
+  maximum_quota_per_selected_component: 20
+  minimum_quota_per_selected_component: 3
+  selection: largest feasible integer budget common to all six native-space cells
+  same_total_fg_all_six: true
+  same_component_quota_across_geometries_within_coverage: true
+geometry:
+  candidate_pool: largest connected component after 1mm physical erosion when >=20
+    voxels; otherwise full lesion-component fallback
+  coherent: deterministic 26-connected compact interior growth from maximum-distance
+    interior seed
+  dispersed: deterministic physical farthest-point sampling from the same candidate
+    pool
+  fragmented: 2–3 spatially separated compact connected fragments initialized by physical
+    farthest-point seeds
+background:
+  candidate: lung voxels outside 3mm physical lesion band
+  count: B_i_native
+  selection: deterministic uniform sample without replacement
+  identical_across_six_cells: true
+firewall:
+  dense_masks_used_offline_for_annotation_generation: true
+  candidate_artifacts_contain_dense_masks: false
+  candidate_artifacts_trainer_eligible: false
+  final_outer_cv_model_outcomes_accessed: false
+mandatory_next_stage:
+  block: 09D
+  purpose: training-grid transfer, collision audit, and freeze B_i_train before any
+    training
+  native_budget_can_be_reduced: true
+  reduction_basis: transfer uniqueness / causal matching only; never model performance
+frozen_at_utc: '2026-09-14T08:48:54Z'
