@@ -1,9 +1,11 @@
 {
-  "generated_at_utc": "2026-09-14T08:33:40Z",
-  "completed_block": "09A",
+  "generated_at_utc": "2026-09-14T08:38:47Z",
+  "completed_block": "09B",
   "active_track": "COVA3D",
   "cora_gate_b": "NO_GO",
   "cova3d_protocol": "FROZEN",
+  "primary_structural_feasibility": "PASS",
+  "coordinate_geometry_feasibility": "PENDING_09C",
   "self_included": false,
   "files": [
     {
@@ -28,13 +30,13 @@
     },
     {
       "path": ".pytest_cache/v/cache/nodeids",
-      "bytes": 253,
-      "sha256": "6008872796fa22f8fd7016e7bba03dd59da617b6620f75fbcaf36bb0fda2078e"
+      "bytes": 596,
+      "sha256": "7b692b83e3a1d140a54d8b0c40ecf01edbb48b9bd940969244cd23a3bcf41ab6"
     },
     {
       "path": "COVA3D_STATE.json",
-      "bytes": 1755,
-      "sha256": "e1bf9d5719491216e2860080eab42600372e1c309084078993248c618feb9013"
+      "bytes": 2537,
+      "sha256": "b90a3e867dfdf3a23cc90dfd7bc1e234fc63f7cc8a2cc55cd07c09136ed6d9cf"
     },
     {
       "path": "LICENSE",
@@ -43,8 +45,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 5191,
-      "sha256": "5e6b48122604b81ce88a9b42ae52c568f11645d4c791f1fe2241262f0cc21308"
+      "bytes": 5527,
+      "sha256": "731054bfe19f8ed40c06c4cc480f56601206c5c240cb24e6348db4377233f6d6"
     },
     {
       "path": "README.md",
@@ -70,6 +72,11 @@
       "path": "configs/cova3d_protocol_v1_0.yaml",
       "bytes": 7887,
       "sha256": "50bfbe77e5cc307a59652fdb8c766da5fc0ebcd268f3d4f011e3e760604a82dc"
+    },
+    {
+      "path": "configs/cova3d_secondary_dataset_candidate_v1_0.yaml",
+      "bytes": 1220,
+      "sha256": "a1d535a7cc712f68f81d971faa47de07618148f98ece8c9a1dc20490f78bab38"
     },
     {
       "path": "configs/data_primary.yaml",
@@ -137,9 +144,24 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "data/manifests/cova3d_dataset_register_v1_0.csv",
+      "bytes": 1052,
+      "sha256": "41362e6995ac50e97c9df98a48144a36b16f4a9926ec75f95eb283f4b11b4cf0"
+    },
+    {
       "path": "data/manifests/cova3d_factorial_register_v1_0.csv",
       "bytes": 2219,
       "sha256": "54bcfac43fecfda1a44b2f3b4c3b393bd50d5cc3c9f30089c8c8713c78fb6cd6"
+    },
+    {
+      "path": "data/manifests/cova3d_primary_factorial_role_summary_v1_0.csv",
+      "bytes": 299,
+      "sha256": "5db7f9efc6f96a0c2386217e60d5cd403bc8ac919c51e70fa3177ff780ee1c1c"
+    },
+    {
+      "path": "data/manifests/cova3d_primary_factorial_structural_feasibility_v1_0.csv",
+      "bytes": 2678,
+      "sha256": "9c568f3077e98aa2f26a4d89eefb37318a612cd7d4dff17b86a9190d7a82442f"
     },
     {
       "path": "data/manifests/gate_b_case_metrics.csv",
@@ -502,6 +524,11 @@
       "sha256": "28e4ff5fabb1f0ba6c9ab28735308f52092e538de405352745217b7a62ac01f5"
     },
     {
+      "path": "docs/cova3d_dataset_feasibility_v1_0.md",
+      "bytes": 2792,
+      "sha256": "0504a64003409eeb24e430dd3d685085e1add0c394aab96866ff0f03e7a5b32f"
+    },
+    {
       "path": "docs/cova3d_prospective_protocol_v1_0.md",
       "bytes": 8951,
       "sha256": "f030fda71ace13577712e8b475c3200683f71817f477ca7ed88887307212e696"
@@ -675,6 +702,11 @@
       "path": "experiments/audits/block09a_cova3d_protocol_freeze.json",
       "bytes": 2742,
       "sha256": "5359c5d1a77711e370a5007a7aede8a0df2268dc61daf471e340f0ad210d79ce"
+    },
+    {
+      "path": "experiments/audits/block09b_cova3d_dataset_feasibility.json",
+      "bytes": 2168,
+      "sha256": "b85be00fa6ea689adc65c7853f27cafa83b5e4412b0f974a92a70c6f2e2cae40"
     },
     {
       "path": "experiments/registry.csv",
@@ -1107,6 +1139,11 @@
       "sha256": "3a5c7df862a210669cd52cf6d4b19deaa0aaecb949daf2e0a39f384d9b9bf10a"
     },
     {
+      "path": "scripts/code_blocks/block09b_cova3d_dataset_feasibility.py",
+      "bytes": 52832,
+      "sha256": "050d05637cf0b8fdac5c86c8121166532647572220df71afed70c99cd7ceb303"
+    },
+    {
       "path": "scripts/resume_project.py",
       "bytes": 673,
       "sha256": "4ff28985d05c37f7b896c40c8265ea86cc52f936ff7b5ce36edb05d74d7519ae"
@@ -1327,6 +1364,11 @@
       "sha256": "ddc67c233cbd883f75a5914b616f18005dfa2953055437e1462e77900302057b"
     },
     {
+      "path": "tests/__pycache__/test_cova3d_dataset_feasibility.cpython-312-pytest-8.4.2.pyc",
+      "bytes": 12249,
+      "sha256": "0c5580f965905f0b801f058f90ffe30e580a34f57bac13c5df00316be45d9fe4"
+    },
+    {
       "path": "tests/__pycache__/test_cova3d_protocol_registry.cpython-312-pytest-8.4.2.pyc",
       "bytes": 8812,
       "sha256": "4bfdd6a77ae5e12e3e36c0b0636c86e1c8b58d25a74d09793229b9c31dd9f1a0"
@@ -1340,6 +1382,11 @@
       "path": "tests/test_component_matching.py",
       "bytes": 215,
       "sha256": "2e74fec40946dee999035c62b421be8f25c646f9914bca92838a100dc3f232b1"
+    },
+    {
+      "path": "tests/test_cova3d_dataset_feasibility.py",
+      "bytes": 2366,
+      "sha256": "e1f94690329fa9875ef7c3ce377fbb5f6fb0c4d32d03ff3d597e99dec878ac2e"
     },
     {
       "path": "tests/test_cova3d_protocol_registry.py",

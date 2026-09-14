@@ -1,0 +1,28 @@
+dataset_id: MSD_Task03_Liver
+official_name: Medical Segmentation Decathlon Task03 Liver — Liver Tumours
+selection_status: PRIORITY_CANDIDATE_PENDING_LOCAL_AUDIT
+scientific_role: cross-organ replication of coverage x annotation-geometry effects
+  in another multifocal tumour segmentation domain
+official_url: https://medicaldecathlon.com/
+official_download_url: https://medicaldecathlon.com/dataaws/
+modality: Portal venous phase CT
+target: Liver and tumour
+official_total_volumes: 201
+official_training_volumes: 131
+official_testing_volumes: 70
+license: CC-BY-SA 4.0
+canonical_acquisition_policy: Prefer original MSD NIfTI source. Do not make a pre-normalized
+  NPY conversion the canonical dataset.
+pre_inclusion_requirements:
+- original geometry/header audit
+- label semantics audit
+- tumour component count with 26-connectivity
+- physical volume threshold audit
+- multifocal prevalence audit
+- 50pct/100pct structural feasibility
+- COVA geometry feasibility
+- source_subject independence audit
+important_constraint: Published dataset size/description does not prove multifocal
+  factorial suitability. No cross-organ claim is allowed until the local component
+  audit passes.
+frozen_at_utc: '2026-09-14T08:38:47Z'

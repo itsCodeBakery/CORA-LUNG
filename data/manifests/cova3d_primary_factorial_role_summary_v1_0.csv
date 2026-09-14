@@ -1,0 +1,3 @@
+role,volumes,source_groups,eligible_components,selected_components_50,selected_components_100,mean_realized_coverage_50,max_coverage_discretization_abs
+final_outer_cv,16,14,226,117,226,0.5314101811194835,0.16666666666666663
+permanent_development,4,4,82,42,82,0.5134032634032634,0.038461538461538436
