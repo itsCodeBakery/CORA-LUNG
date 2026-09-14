@@ -1,0 +1,71 @@
+{
+  "project": "COVA-3D",
+  "block": "09A",
+  "status": "PASS",
+  "generated_at_utc": "2026-09-14T08:33:40Z",
+  "parent_commit": "e8ee13f3270e6813350c3058292b0375f3eeedd5",
+  "purpose": "prospective protocol freeze and predecessor-track closure",
+  "working_title": "COVA-3D: Coverage–Coherence Trade-offs in Fixed-Budget Sparse Supervision for 3-D Multi-Lesion Segmentation",
+  "protocol_version": "1.0",
+  "research_question": "Under an equal sparse-annotation budget, how do lesion-instance coverage and within-instance annotation coherence independently and jointly affect 3-D multi-lesion segmentation performance and recovery of unannotated lesions?",
+  "factorial_design": {
+    "coverage_levels": [
+      0.5,
+      1.0
+    ],
+    "geometry_levels": [
+      "coherent",
+      "dispersed",
+      "fragmented"
+    ],
+    "cells": [
+      "C50_COH",
+      "C50_DIS",
+      "C50_FRG",
+      "C100_COH",
+      "C100_DIS",
+      "C100_FRG"
+    ],
+    "cell_count": 6
+  },
+  "causal_matching": {
+    "same_positive_budget_all_cells": true,
+    "same_background_all_cells": true,
+    "same_selected_components_across_geometry_within_coverage": true,
+    "same_per_component_quota_across_geometry_within_coverage": true,
+    "nested_50pct_in_100pct": true
+  },
+  "primary_endpoint": "macro_patient_lesion_recall_at_1_fp_per_patient",
+  "primary_interaction_directional": false,
+  "dynamic_topology_froc": true,
+  "new_training_performed": false,
+  "optimizer_steps": 0,
+  "ct_arrays_accessed": 0,
+  "dense_lesion_arrays_accessed": 0,
+  "dense_lung_arrays_accessed": 0,
+  "development_outcomes_accessed": 0,
+  "final_outer_cv_outcomes_accessed": 0,
+  "factorial_training_authorized": false,
+  "method_development_authorized": false,
+  "cora_lineage": {
+    "gate_a": "PASS",
+    "gate_b": "NO_GO",
+    "gate_c": "NOT_RUN",
+    "status": "CLOSED_AFTER_GATE_B_NO_GO",
+    "historical_optimizer_steps": 13500,
+    "result_modified": false
+  },
+  "artifacts": {
+    "config": "configs/cova3d_protocol_v1_0.yaml",
+    "config_sha256": "50bfbe77e5cc307a59652fdb8c766da5fc0ebcd268f3d4f011e3e760604a82dc",
+    "registry": "data/manifests/cova3d_factorial_register_v1_0.csv",
+    "registry_sha256": "54bcfac43fecfda1a44b2f3b4c3b393bd50d5cc3c9f30089c8c8713c78fb6cd6",
+    "prospective_protocol": "docs/cova3d_prospective_protocol_v1_0.md",
+    "prospective_protocol_sha256": "f030fda71ace13577712e8b475c3200683f71817f477ca7ed88887307212e696",
+    "closure_document": "docs/cora_track_closure.md",
+    "closure_document_sha256": "28e4ff5fabb1f0ba6c9ab28735308f52092e538de405352745217b7a62ac01f5"
+  },
+  "source_capture": "PASS",
+  "next_block": "09B",
+  "next_action": "Audit dataset suitability and exact factorial-budget feasibility. Do not train."
+}

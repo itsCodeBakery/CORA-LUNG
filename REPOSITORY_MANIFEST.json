@@ -1,8 +1,9 @@
 {
-  "generated_at_utc": "2026-09-12T08:39:46Z",
-  "completed_block": "08G",
-  "gate_b": "NO_GO",
-  "gate_c": "NOT_RUN",
+  "generated_at_utc": "2026-09-14T08:33:40Z",
+  "completed_block": "09A",
+  "active_track": "COVA3D",
+  "cora_gate_b": "NO_GO",
+  "cova3d_protocol": "FROZEN",
   "self_included": false,
   "files": [
     {
@@ -26,14 +27,14 @@
       "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
     },
     {
-      "path": ".pytest_cache/v/cache/lastfailed",
-      "bytes": 2,
-      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      "path": ".pytest_cache/v/cache/nodeids",
+      "bytes": 253,
+      "sha256": "6008872796fa22f8fd7016e7bba03dd59da617b6620f75fbcaf36bb0fda2078e"
     },
     {
-      "path": ".pytest_cache/v/cache/nodeids",
-      "bytes": 2992,
-      "sha256": "b892a08e60f3ae3f6848ddfeafc174dc7970e4eedeacc9ae309d4db76e174ea0"
+      "path": "COVA3D_STATE.json",
+      "bytes": 1755,
+      "sha256": "e1bf9d5719491216e2860080eab42600372e1c309084078993248c618feb9013"
     },
     {
       "path": "LICENSE",
@@ -42,8 +43,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 4677,
-      "sha256": "9d6a716810ca2a790d78a068800d0c14b96a3539a5a00f2737546659dcbd1094"
+      "bytes": 5191,
+      "sha256": "5e6b48122604b81ce88a9b42ae52c568f11645d4c791f1fe2241262f0cc21308"
     },
     {
       "path": "README.md",
@@ -64,6 +65,11 @@
       "path": "configs/archive/preprocess_primary_v1_0.yaml",
       "bytes": 1067,
       "sha256": "87616a21a68f6e3cb927281d9e59d166ed7216d539ab6876501c60cbd6b200e9"
+    },
+    {
+      "path": "configs/cova3d_protocol_v1_0.yaml",
+      "bytes": 7887,
+      "sha256": "50bfbe77e5cc307a59652fdb8c766da5fc0ebcd268f3d4f011e3e760604a82dc"
     },
     {
       "path": "configs/data_primary.yaml",
@@ -129,6 +135,11 @@
       "path": "data/manifests/.gitkeep",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/manifests/cova3d_factorial_register_v1_0.csv",
+      "bytes": 2219,
+      "sha256": "54bcfac43fecfda1a44b2f3b4c3b393bd50d5cc3c9f30089c8c8713c78fb6cd6"
     },
     {
       "path": "data/manifests/gate_b_case_metrics.csv",
@@ -486,6 +497,16 @@
       "sha256": "9143d7fccbadced8a761428eb9c588873bea7e27e3bc46b1398c0473616961c3"
     },
     {
+      "path": "docs/cora_track_closure.md",
+      "bytes": 974,
+      "sha256": "28e4ff5fabb1f0ba6c9ab28735308f52092e538de405352745217b7a62ac01f5"
+    },
+    {
+      "path": "docs/cova3d_prospective_protocol_v1_0.md",
+      "bytes": 8951,
+      "sha256": "f030fda71ace13577712e8b475c3200683f71817f477ca7ed88887307212e696"
+    },
+    {
       "path": "docs/figure_policy.md",
       "bytes": 505,
       "sha256": "330f7521a3f5c2f174dcee6472d7a8fd8d5679d637724ae1f9a9886df01e2f84"
@@ -649,6 +670,11 @@
       "path": "experiments/audits/block08g_dynamic_topology_froc_diagnostic.json",
       "bytes": 1473,
       "sha256": "d451f5e90370667aa5ceb2b5b4e78b6d9d9ce29784bf9ae593599e19f00f0430"
+    },
+    {
+      "path": "experiments/audits/block09a_cova3d_protocol_freeze.json",
+      "bytes": 2742,
+      "sha256": "5359c5d1a77711e370a5007a7aede8a0df2268dc61daf471e340f0ad210d79ce"
     },
     {
       "path": "experiments/registry.csv",
@@ -1071,6 +1097,16 @@
       "sha256": "547b63995cd5e00a64294dbe2e6c947d31f41e05b6b67aa3b992f49116c9713f"
     },
     {
+      "path": "scripts/code_blocks/block08g_dynamic_topology_froc_diagnostic.py",
+      "bytes": 52718,
+      "sha256": "083f376869d28d970fa465303ef51756721c2d82dfe6d3741b4cabf74da7a956"
+    },
+    {
+      "path": "scripts/code_blocks/block09a_cova3d_protocol_freeze.py",
+      "bytes": 59366,
+      "sha256": "3a5c7df862a210669cd52cf6d4b19deaa0aaecb949daf2e0a39f384d9b9bf10a"
+    },
+    {
       "path": "scripts/resume_project.py",
       "bytes": 673,
       "sha256": "4ff28985d05c37f7b896c40c8265ea86cc52f936ff7b5ce36edb05d74d7519ae"
@@ -1081,49 +1117,9 @@
       "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
     },
     {
-      "path": "src/cora_lung/__pycache__/__init__.cpython-312.pyc",
-      "bytes": 174,
-      "sha256": "aa88b9fade26ea2a430a99141d8bc90c07e925809ffb592f57f47f072c5bdbf3"
-    },
-    {
       "path": "src/cora_lung/data/__init__.py",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "src/cora_lung/data/__pycache__/__init__.cpython-312.pyc",
-      "bytes": 153,
-      "sha256": "cbae2476befc18fba34f731df3179f82c714b69ea12e4c32ad9a0d01ae2eccab"
-    },
-    {
-      "path": "src/cora_lung/data/__pycache__/equalization.cpython-312.pyc",
-      "bytes": 4658,
-      "sha256": "4c4cf2dcd269fe11ed6bb23d24d9dbbafed667de1cd3025aadbc6c2dc2593de1"
-    },
-    {
-      "path": "src/cora_lung/data/__pycache__/firewall.cpython-312.pyc",
-      "bytes": 6177,
-      "sha256": "b43543f430f2879abf6b77e3586226fce8f0653e5223293728eebae77765d048"
-    },
-    {
-      "path": "src/cora_lung/data/__pycache__/pilot_dataset.cpython-312.pyc",
-      "bytes": 11671,
-      "sha256": "29bf05d2ac72cb044fb45db8bae1a7714004c5264489c8d3b0660ee8e199dd19"
-    },
-    {
-      "path": "src/cora_lung/data/__pycache__/preprocess.cpython-312.pyc",
-      "bytes": 3476,
-      "sha256": "10c1509e13f13b8627889c9d3047166ca0fc0eb527eea64be2a4631f683ba9d0"
-    },
-    {
-      "path": "src/cora_lung/data/__pycache__/scribbles.cpython-312.pyc",
-      "bytes": 2133,
-      "sha256": "be19801d22c710df3730bb39f1c2debe00d02cc895df3edf236ffa3d84f51a0b"
-    },
-    {
-      "path": "src/cora_lung/data/__pycache__/training_cache.cpython-312.pyc",
-      "bytes": 5532,
-      "sha256": "feb6e753c2679ed6bc66c05444fad830275ef34f19714a5b4e02eb275a98d1b6"
     },
     {
       "path": "src/cora_lung/data/equalization.py",
@@ -1176,31 +1172,6 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "src/cora_lung/engine/__pycache__/__init__.cpython-312.pyc",
-      "bytes": 155,
-      "sha256": "39786f538004f5b26b0d1fbdf631af16f994b4e0ca57ffac8227b9b70128c339"
-    },
-    {
-      "path": "src/cora_lung/engine/__pycache__/checkpointing.cpython-312.pyc",
-      "bytes": 3454,
-      "sha256": "40f383c9ea766c9d7574a012cd52ce09fffb97a04531283c54ec57a9041fc8db"
-    },
-    {
-      "path": "src/cora_lung/engine/__pycache__/pilot_contract.cpython-312.pyc",
-      "bytes": 1453,
-      "sha256": "df3a03edf4702362db437dda93f9098178ee886c71d77f59a9a12deb67a977d4"
-    },
-    {
-      "path": "src/cora_lung/engine/__pycache__/registry.cpython-312.pyc",
-      "bytes": 3456,
-      "sha256": "87cd8ec62127d4545ea60b3f0c5fcb0b409115f10d3c7b9a64a1625f34052e35"
-    },
-    {
-      "path": "src/cora_lung/engine/__pycache__/trainer_firewall.cpython-312.pyc",
-      "bytes": 10033,
-      "sha256": "91d2cdf1f86bbb9156220f05fca96fa9b506e4829594d3551dc894efbdbf0fac"
-    },
-    {
       "path": "src/cora_lung/engine/checkpoint.py",
       "bytes": 29,
       "sha256": "11ba71b6f3c9a6ffec69b33d120be8a7f5f06e08da5d53b3139bec535ea72bf1"
@@ -1239,21 +1210,6 @@
       "path": "src/cora_lung/eval/__init__.py",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "src/cora_lung/eval/__pycache__/__init__.cpython-312.pyc",
-      "bytes": 153,
-      "sha256": "8ce96cc2e125f306d2ea441938af4d09fe77b7abd1321e6876108bb3e8cd6145"
-    },
-    {
-      "path": "src/cora_lung/eval/__pycache__/gate_b.cpython-312.pyc",
-      "bytes": 17250,
-      "sha256": "9a2cedd3b7ae7614718500003fd9165d5c1e6422bece2196d12e5cc27d52ec5f"
-    },
-    {
-      "path": "src/cora_lung/eval/__pycache__/inference.cpython-312.pyc",
-      "bytes": 7315,
-      "sha256": "11dc85a9632461afa273ae56edeff9d23c6b8ce14dba7187d5c547f3c373823a"
     },
     {
       "path": "src/cora_lung/eval/calibration.py",
@@ -1296,16 +1252,6 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "src/cora_lung/losses/__pycache__/__init__.cpython-312.pyc",
-      "bytes": 155,
-      "sha256": "f3ff3d813a467d88d9bb794f6df9ea5abda567df9ad0108d95d77a72d804f4f9"
-    },
-    {
-      "path": "src/cora_lung/losses/__pycache__/partial.cpython-312.pyc",
-      "bytes": 4512,
-      "sha256": "94f9a45346723d7133afcb7e0983f792f39901bca4a32001123cb8f44b1d456a"
-    },
-    {
       "path": "src/cora_lung/losses/consistency.py",
       "bytes": 39,
       "sha256": "78f6b64fcfdc677959c69ab73e5bb1e72d59460bfe95c1ce9fb04049e92bb647"
@@ -1329,16 +1275,6 @@
       "path": "src/cora_lung/models/__init__.py",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "src/cora_lung/models/__pycache__/__init__.cpython-312.pyc",
-      "bytes": 155,
-      "sha256": "621fc75267d2a18bc0b319ac3a575a135299a8c659d4c321c6c4add377a87f7a"
-    },
-    {
-      "path": "src/cora_lung/models/__pycache__/resunet3d.cpython-312.pyc",
-      "bytes": 7988,
-      "sha256": "1cb4662a6e9663ac70483ff1069d9188728c02a226fedc40b14be32530934a02"
     },
     {
       "path": "src/cora_lung/models/backbone3d.py",
@@ -1391,69 +1327,9 @@
       "sha256": "ddc67c233cbd883f75a5914b616f18005dfa2953055437e1462e77900302057b"
     },
     {
-      "path": "tests/__pycache__/test_checkpoint_resume.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 2380,
-      "sha256": "dd92d1a0bb05c59e05a58dedf4618e1018b063d317c57b6b4bb7f60513e167ed"
-    },
-    {
-      "path": "tests/__pycache__/test_firewall.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 5046,
-      "sha256": "166afb3116aa9ecbe14e666f052c9bad8df51b8bc2ae8607a8e46b98dd744240"
-    },
-    {
-      "path": "tests/__pycache__/test_gate_b_dense_evaluator.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 6181,
-      "sha256": "0abe84b21d2bddba3e158aa8e572c8c73f25da7d704d74c0a12411948d2696dc"
-    },
-    {
-      "path": "tests/__pycache__/test_gate_b_sampling_protocol.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 4266,
-      "sha256": "f02ed142969e024e827b88f11922ff86079751e3ab0cff115a71f6b18ac01737"
-    },
-    {
-      "path": "tests/__pycache__/test_partial_losses.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 12959,
-      "sha256": "7a061f05fd5894bbc45e0e375f7b8d5ef31130044b2623d7ddb7ba980b66569b"
-    },
-    {
-      "path": "tests/__pycache__/test_patch_sampler.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 6771,
-      "sha256": "9a65f5c9cdd927cbf72d7a5ad633039295032370b748fc14669ef526124a47b4"
-    },
-    {
-      "path": "tests/__pycache__/test_physical_geometry.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 7911,
-      "sha256": "f1f0344efeb53d88ae32bd73bb1f091ddaddecd7607250facaafd18c57d454fc"
-    },
-    {
-      "path": "tests/__pycache__/test_pilot_training_contract.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 4421,
-      "sha256": "37a2fcf4c4c615fc37745dcfab96301c48588b6ebcf41df64ee4888aeeded8db"
-    },
-    {
-      "path": "tests/__pycache__/test_resunet3d.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 4667,
-      "sha256": "2ed841ec011e1da10a84292948431e0b10928951b28b74d6af59610ea9bf25ba"
-    },
-    {
-      "path": "tests/__pycache__/test_scribble_budget.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 5429,
-      "sha256": "8e4278f4d5d1566c3e4bdba3c1f4dc097780502d623ac89fbd954d24a6cb8bba"
-    },
-    {
-      "path": "tests/__pycache__/test_trainer_boundary_firewall.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 6495,
-      "sha256": "8ba46b3d349aa97339db748733e21f46288e847b29453eb1e9c7eef31f4089f6"
-    },
-    {
-      "path": "tests/__pycache__/test_training_cache_firewall.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 4489,
-      "sha256": "631fb17d74cc7d4bd1dc709b17d306c85b3427722a3caf2a823e5a6703f0a01f"
-    },
-    {
-      "path": "tests/__pycache__/test_training_grid_equalization.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 4363,
-      "sha256": "e9905da0dc865c92a60ef6806aec0c4feaf99ab79e14ca651d4df70fe9f84873"
+      "path": "tests/__pycache__/test_cova3d_protocol_registry.cpython-312-pytest-8.4.2.pyc",
+      "bytes": 8812,
+      "sha256": "4bfdd6a77ae5e12e3e36c0b0636c86e1c8b58d25a74d09793229b9c31dd9f1a0"
     },
     {
       "path": "tests/test_checkpoint_resume.py",
@@ -1464,6 +1340,11 @@
       "path": "tests/test_component_matching.py",
       "bytes": 215,
       "sha256": "2e74fec40946dee999035c62b421be8f25c646f9914bca92838a100dc3f232b1"
+    },
+    {
+      "path": "tests/test_cova3d_protocol_registry.py",
+      "bytes": 1816,
+      "sha256": "0e7a402313452eb7ee04c54b72327a7b7404dccc87b9c6fb3f6d712634aebe9f"
     },
     {
       "path": "tests/test_firewall.py",

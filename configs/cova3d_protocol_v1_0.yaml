@@ -1,0 +1,197 @@
+project:
+  track_id: COVA3D
+  working_title: 'COVA-3D: Coverage–Coherence Trade-offs in Fixed-Budget Sparse Supervision
+    for 3-D Multi-Lesion Segmentation'
+  protocol_version: '1.0'
+  status: PROSPECTIVE_FROZEN
+  parent_repository: itsCodeBakery/CORA-LUNG
+  parent_commit: e8ee13f3270e6813350c3058292b0375f3eeedd5
+  cora_predecessor_status: CLOSED_AFTER_GATE_B_NO_GO
+research_question: Under an equal sparse-annotation budget, how do lesion-instance
+  coverage and within-instance annotation coherence independently and jointly affect
+  3-D multi-lesion segmentation performance and recovery of unannotated lesions?
+scope:
+  task: 3D_multi_lesion_segmentation
+  supervision: fixed_budget_sparse_foreground_and_background
+  primary_scientific_goal: estimate independent and joint effects of lesion-instance
+    coverage and within-instance annotation geometry
+  new_method_development: PROHIBITED_UNTIL_FACTORIAL_SIGNAL_REVIEW
+factors:
+  coverage:
+    levels:
+    - 0.5
+    - 1.0
+    definition: fraction of eligible lesion components receiving at least one foreground
+      annotation
+    count_rule: 100pct uses all eligible components; 50pct uses ceil(0.5*K_i), minimum
+      1
+    nesting: 50pct_selected_components_must_be_subset_of_100pct
+    selection: uniform_seeded_without_replacement
+    selection_master_seed: 20260914
+  geometry:
+    levels:
+    - coherent
+    - dispersed
+    - fragmented
+    coherent: connected interior stroke/path within each selected component; exact
+      coordinate algorithm frozen in Block 09C
+    dispersed: spatially separated points within each selected component using deterministic
+      farthest-point-style allocation; exact algorithm frozen in Block 09C
+    fragmented: multiple spatially separated pieces derived from an interior path
+      while preserving the same per-component positive quota; exact algorithm frozen
+      in Block 09C
+causal_matching:
+  within_case_total_positive_budget: EXACTLY_EQUAL_ACROSS_ALL_SIX_CELLS
+  budget_symbol: B_i
+  budget_value_status: TO_BE_FROZEN_PRETRAINING_AFTER_09B_09C_FEASIBILITY
+  budget_selection_rule: largest_common_feasible_unique_positive_count across all
+    six cells for that case, determined before any COVA training or COVA outcome inspection
+  same_selected_component_set_within_coverage_across_geometries: true
+  same_per_component_positive_quota_within_coverage_across_geometries: true
+  same_background_coordinates_across_all_six_cells: true
+  same_background_positive_negative_balance_policy: true
+  same_image_preprocessing: true
+  same_crop: true
+  same_training_schedule_within_model_seed: true
+  same_architecture_within_factorial_experiment: true
+  same_optimizer_within_factorial_experiment: true
+  same_augmentation_realization_within_paired_model_seed: true
+eligibility:
+  reference_connectivity: 26
+  reference_component_minimum_volume_ml: 0.1
+  minimum_components_for_primary_factorial_case: 2
+  reason: a 50pct versus 100pct coverage comparison requires at least two eligible
+    lesion components
+primary_endpoint:
+  name: macro_patient_lesion_recall_at_1_fp_per_patient
+  short_name: R@1
+  fp_budget_per_patient: 1.0
+  eligible_reference_minimum_volume_ml: 0.1
+  reference_connectivity: 26
+  prediction_connectivity: 26
+  matching_iou: 0.1
+  matching: maximum_cardinality_then_maximum_total_iou
+  prediction_size_filtering: false
+  small_reference_policy: predictions matched only to references below 0.1mL are neutral
+    rather than false positives
+  froc_topology: recompute_prediction_components_at_each_voxel_probability_threshold
+  voxel_probability_thresholds:
+  - 0.05
+  - 0.1
+  - 0.15
+  - 0.2
+  - 0.25
+  - 0.3
+  - 0.35
+  - 0.4
+  - 0.45
+  - 0.5
+  - 0.55
+  - 0.6
+  - 0.65
+  - 0.7
+  - 0.75
+  - 0.8
+  - 0.85
+  - 0.9
+  - 0.95
+  - 0.975
+  - 0.99
+  - 0.995
+  - 1.000001
+secondary_endpoints:
+- R_at_0p5_FP_per_patient
+- R_at_2_FP_per_patient
+- R_at_4_FP_per_patient
+- Dice
+- IoU
+- any_overlap_lesion_recall
+- IoU_0p25_lesion_recall
+- false_positive_volume_ml
+- prediction_component_count
+- component_to_reference_fragmentation_ratio
+- lesion_size_stratified_recall
+primary_estimands:
+  coverage_effect_within_geometry: R(100%,g) - R(50%,g) for each geometry g
+  geometry_effect_disperse_vs_coherent_within_coverage: R(c,dispersed) - R(c,coherent)
+  geometry_effect_fragmented_vs_coherent_within_coverage: R(c,fragmented) - R(c,coherent)
+  interaction_disperse: '[R(100%,dispersed)-R(100%,coherent)] - [R(50%,dispersed)-R(50%,coherent)]'
+  interaction_fragmented: '[R(100%,fragmented)-R(100%,coherent)] - [R(50%,fragmented)-R(50%,coherent)]'
+  interaction_direction: TWO_SIDED_NO_DIRECTIONAL_HYPOTHESIS
+hypotheses:
+  primary_null: coverage and within-instance annotation geometry do not interact with
+    respect to lesion-recovery performance
+  primary_alternative: at least one geometry contrast changes as lesion-instance coverage
+    changes
+  directional_claim_predeclared: false
+  reason: the predecessor pilot motivated the question after observing an unexpected
+    ordering; the new prospective study therefore uses a non-directional interaction
+    hypothesis
+development_stage:
+  existing_permanent_development_volumes: 4
+  existing_final_outer_cv_volumes: 16
+  development_model_seeds: &id001
+  - 17
+  factorial_training_authorized: false
+  baseline_sanity_gate_required: true
+  baseline_sanity_gate_block: 09E
+  factorial_fit_after_sanity_gate: Block_10
+  interaction_signal_review_margin: 0.05
+  interaction_case_consistency_min: 3
+  interaction_signal_definition: absolute interaction contrast >=0.05 in macro R@1
+    and same-sign case-level interaction in at least 3 of 4 development cases
+  note: development signal is a method-development trigger only; it is not confirmatory
+    evidence
+final_stage:
+  model_seeds: &id002
+  - 17
+  - 29
+  - 43
+  current_primary_final_outer_cv_status: SEALED
+  additional_dataset_required: true
+  external_or_second_dataset_required_for_general_claim: true
+  cluster_unit: source_subject_key
+  bootstrap_replicates: 10000
+  bootstrap_seed: 20260914
+  interaction_reporting: paired effect estimates with 95% cluster-bootstrap confidence
+    intervals
+  multiple_interaction_contrasts: 2
+  multiple_comparison_policy: Holm_correction_for_two_primary_interaction_contrasts
+baseline_policy:
+  current_cora_custom_unet_can_be_primary_baseline: false
+  strong_3d_baseline_required: true
+  target_family: 3D_nnU_Net_family_sparse_supervision_baseline
+  exact_implementation_status: TO_BE_FROZEN_IN_BLOCK_09E_BEFORE_FACTORIAL_OUTCOMES
+  dense_masks_allowed_for_training: false
+  sparse_partial_loss_required: true
+  baseline_must_pass_fragmentation_and_recovery_sanity_gate: true
+firewall:
+  dense_masks_allowed_in_annotation_generator: true
+  dense_masks_allowed_in_training_cache: false
+  dense_masks_allowed_in_optimizer_batch: false
+  final_outer_cv_dense_outcomes_before_final_protocol: false
+  existing_dense_checksum_denylist_reused: true
+seeds:
+  component_selection_master_seed: 20260914
+  development_model_seeds: *id001
+  final_model_seeds: *id002
+  bootstrap_seed: 20260914
+stop_go:
+  before_factorial_training:
+  - 09B_dataset_suitability_PASS
+  - 09C_annotation_simulator_PASS
+  - 09D_exact_causal_matching_QA_PASS
+  - 09E_strong_baseline_sanity_PASS
+  if_no_meaningful_factorial_effect: stop method development; report characterization
+    result or retire track
+  if_main_effect_without_interaction: method development may target the supported
+    main effect, but interaction-specific method claims are prohibited
+  if_reproducible_interaction: new adaptive method may be designed only after interaction
+    result is frozen and reviewed
+prohibited_actions_before_authorization:
+- COVA3D_factorial_training
+- COVA3D_method_training
+- final_outer_cv_outcome_access
+- checkpoint_selection_using_dense_final_labels
+- changing_factor_levels_after_COVA3D_outcomes
+- changing_B_i_based_on_model_performance
