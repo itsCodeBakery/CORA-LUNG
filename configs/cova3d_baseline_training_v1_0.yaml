@@ -1,0 +1,252 @@
+project: COVA-3D
+block: 09E-LOCK
+baseline_id: COVA3D_NNUNET_STYLE_PARTIAL_V1
+effective_protocol: COVA3D_1.0+A1+A1.1+A1.2
+status: PROSPECTIVELY_FROZEN_BEFORE_FIRST_COVA_OPTIMIZER_STEP
+scientific_role: Strong architecture-controlled sparse-supervision baseline for testing
+  the frozen coverage-by-geometry factorial design.
+literature_rationale:
+  baseline_family: 3-D nnU-Net-style
+  sparse_learning: partial loss on labelled voxels only
+  reference_1: 'Gotkowski et al., Revisiting 3D Medical Scribble Supervision: Benchmarking
+    Beyond Cardiac Segmentation, MICCAI 2025.'
+  reference_2: nnU-Net ignore-label / partial-loss sparse supervision.
+architecture:
+  class: COVA3DNNUNetStyle
+  input_channels: 1
+  output_channels: 1
+  features:
+  - 32
+  - 64
+  - 128
+  - 256
+  - 320
+  encoder_kernels:
+  - - 1
+    - 3
+    - 3
+  - - 3
+    - 3
+    - 3
+  - - 3
+    - 3
+    - 3
+  - - 3
+    - 3
+    - 3
+  - - 3
+    - 3
+    - 3
+  downsample_strides:
+  - - 1
+    - 2
+    - 2
+  - - 2
+    - 2
+    - 2
+  - - 2
+    - 2
+    - 2
+  - - 2
+    - 2
+    - 2
+  convolutions_per_stage: 2
+  normalization: InstanceNorm3d_affine
+  activation: LeakyReLU_0.01
+  upsampling: ConvTranspose3d
+  skip_connections: concatenation
+  deep_supervision: false
+  deep_supervision_reason: Avoid scale-dependent remapping of extremely sparse labels
+    and keep the factorial annotation intervention identical at the optimized output
+    scale.
+  dropout: false
+  weight_initialization: KaimingNormal_leaky_relu
+patch:
+  shape_zyx:
+  - 48
+  - 128
+  - 128
+  microbatch_size: 1
+  accumulation_steps: 2
+  effective_batch_in_optimizer_updates: 2
+sampling:
+  patient_sampling: uniform
+  foreground_center_probability: 0.5
+  background_center_probability: 0.25
+  uniform_crop_probability: 0.25
+  condition_specific_sampling_rule: false
+  same_patient_schedule_across_conditions: true
+augmentation:
+  paired_across_conditions: true
+  spatial:
+    flip_x_probability: 0.5
+    flip_y_probability: 0.5
+    flip_z_probability: 0.0
+    rotation: false
+    elastic: false
+    zoom: false
+  intensity:
+    scale_uniform:
+    - 0.9
+    - 1.1
+    shift_uniform:
+    - -0.1
+    - 0.1
+    gaussian_noise_sigma_uniform:
+    - 0.0
+    - 0.03
+    clip_after_augmentation:
+    - -1.0
+    - 1.0
+paired_randomization:
+  model_initialization: derived from seed + outer_fold; CONDITION EXCLUDED
+  patient_schedule: derived from seed + outer_fold + epoch; CONDITION EXCLUDED
+  augmentation: derived from seed + outer_fold + epoch + microbatch_index; CONDITION
+    EXCLUDED
+  purpose: Reduce nuisance Monte-Carlo variation between paired factorial conditions.
+loss:
+  unknown_label: -1
+  labelled_voxels_only: true
+  partial_BCE_weight: 1.0
+  partial_Dice_weight: 1.0
+  total: partial_BCE + partial_Dice
+  pseudo_labels: false
+  dense_training_labels: false
+  consistency_loss: false
+  replay_loss: false
+  teacher_student: false
+optimizer:
+  name: AdamW
+  learning_rate: 0.0003
+  betas:
+  - 0.9
+  - 0.999
+  weight_decay: 0.0001
+  gradient_clip_l2_norm: 12.0
+learning_rate_schedule:
+  name: linear_warmup_plus_cosine
+  warmup_optimizer_steps: 100
+  base_learning_rate: 0.0003
+  minimum_learning_rate: 3.0e-06
+  schedule_scope: optimizer_step
+precision:
+  AMP: true
+  dtype: float16
+checkpoint:
+  selection: FINAL_EPOCH_ONLY
+  early_stopping: false
+  performance_based_selection: false
+sanity_run:
+  authorized_after_this_lock: true
+  factorial_cell: C100_COH
+  seed: 17
+  fit_cases:
+  - coronacases_004
+  - coronacases_008
+  - radiopaedia_14_85914_0
+  - radiopaedia_27_86410_0
+  fit_case_role: permanent_development
+  dense_labels_during_fit: false
+  epochs: 20
+  microbatches_per_epoch: 100
+  microbatches_per_case_per_epoch: 25
+  accumulation_steps: 2
+  optimizer_steps: 1000
+  checkpoint: FINAL_EPOCH_ONLY
+  dense_development_evaluation_after_fit: true
+  checkpoint_reuse_in_final_experiment: false
+  model_reinitialized_for_final_experiment: true
+sanity_gate:
+  purpose: Implementation sanity only; not hyperparameter optimization and not model
+    selection.
+  finite_loss_and_probabilities: true
+  last_3_epoch_mean_loss_div_first_3_epoch_mean_loss_max: 0.95
+  zero_label_microbatch_fraction_max: 0.3
+  dense_dev_probability_separation: mean predicted probability inside dense lesion
+    mask > mean probability outside lesion mask
+  development_cases_with_positive_separation_min: 3
+  minimum_prediction_probability_std_per_case: 0.001
+  failure_action: STOP. Audit implementation only. Architecture, loss, optimizer or
+    thresholds may not be changed without a new prospective protocol amendment.
+  pass_action: Authorize frozen factorial fitting. Do not modify training or annotation
+    settings.
+final_factorial_training:
+  authorized_now: false
+  authorization_dependency: SANITY_GATE_PASS
+  conditions:
+  - C50_COH
+  - C50_DIS
+  - C50_FRG
+  - C100_COH
+  - C100_DIS
+  - C100_FRG
+  outer_folds: 4
+  seeds:
+  - 17
+  - 29
+  - 43
+  models_total: 72
+  training_cases_per_outer_fold: 12
+  heldout_cases_per_outer_fold: 4
+  epochs: 40
+  microbatches_per_epoch: 120
+  microbatches_per_train_case_per_epoch: 10
+  accumulation_steps: 2
+  optimizer_steps_per_run: 2400
+  checkpoint: FINAL_EPOCH_ONLY
+  reinitialize_every_run: true
+  dense_labels_during_fit: false
+  heldout_dense_outcomes_open_during_fit: false
+  outcome_release_rule: All final factorial models/predictions must be frozen before
+    final dense outcomes are evaluated.
+inference:
+  sliding_window_patch_zyx:
+  - 48
+  - 128
+  - 128
+  overlap: 0.5
+  window_weighting: gaussian
+  test_time_augmentation: false
+  probability_output: sigmoid
+primary_evaluation:
+  threshold_grid:
+  - 0.05
+  - 0.1
+  - 0.15
+  - 0.2
+  - 0.25
+  - 0.3
+  - 0.35
+  - 0.4
+  - 0.45
+  - 0.5
+  - 0.55
+  - 0.6
+  - 0.65
+  - 0.7
+  - 0.75
+  - 0.8
+  - 0.85
+  - 0.9
+  - 0.95
+  - 0.975
+  - 0.99
+  - 0.995
+  - 1.000001
+  prediction_connectivity: 26
+  prediction_size_filter: false
+  reference_minimum_component_volume_ml: 0.1
+  component_match: IoU
+  match_IoU_threshold: 0.1
+  primary_metric: macro_patient_R_at_1_FP
+  primary_FP_budget: 1.0
+  topology_recomputed_at_every_probability_threshold: true
+firewall:
+  dense_masks_allowed_during_fit: false
+  dense_dev_masks_allowed_after_sanity_fit: true
+  final_dense_masks_allowed_before_all_final_predictions_frozen: false
+training_authorization_after_lock:
+  sanity_training: true
+  factorial_training: false
+  final_outcome_evaluation: false
+frozen_at_utc: '2026-09-20T09:13:47Z'
