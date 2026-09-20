@@ -62,3 +62,10 @@ outputs/tables/*
 Thumbs.db
 .vscode/
 .idea/
+
+# COVA-3D sparse-only scientific candidates — intentionally versioned.
+# These files contain coordinates/labels only; no CT or dense masks.
+!data/cova3d_native_candidates_v1_0/
+!data/cova3d_native_candidates_v1_0/**/*.npz
+!data/cova3d_training_grid_candidates_v1_0/
+!data/cova3d_training_grid_candidates_v1_0/**/*.npz

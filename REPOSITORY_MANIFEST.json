@@ -1,37 +1,19 @@
 {
-  "generated_at_utc": "2026-09-14T08:48:54Z",
+  "generated_at_utc": "2026-09-20T07:32:02Z",
   "completed_block": "09C",
+  "engineering_repair": "09C-R",
   "active_track": "COVA3D",
   "cora_gate_b": "NO_GO",
   "cova3d_native_geometry_feasibility": "PASS",
+  "cova3d_native_sparse_artifacts_persisted": true,
   "cova3d_trainer_grid_feasibility": "PENDING_09D",
   "factorial_training_authorized": false,
   "self_included": false,
   "files": [
     {
       "path": ".gitignore",
-      "bytes": 701,
-      "sha256": "9315dab4fadfdd945a5369f6b073620a9677911561107fbed7a990b3f11efb64"
-    },
-    {
-      "path": ".pytest_cache/.gitignore",
-      "bytes": 37,
-      "sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd"
-    },
-    {
-      "path": ".pytest_cache/CACHEDIR.TAG",
-      "bytes": 191,
-      "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4"
-    },
-    {
-      "path": ".pytest_cache/README.md",
-      "bytes": 302,
-      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
-    },
-    {
-      "path": ".pytest_cache/v/cache/nodeids",
-      "bytes": 1073,
-      "sha256": "300e5cd89f7048ddf5af5054a506c9052634774086b190ca566ef8b0a9cd3a7e"
+      "bytes": 1023,
+      "sha256": "a908b7235743d016c46728ae8cae23af1c72f6b6d8686cba4a51f91f15c54b20"
     },
     {
       "path": "COVA3D_STATE.json",
@@ -1344,6 +1326,11 @@
       "sha256": "1b559d65c3e41eb09e961b8e2ad599b1d466801c0c6e28d4b0d7413942c1c2ac"
     },
     {
+      "path": "experiments/audits/block09c_runtime_artifact_restore.json",
+      "bytes": 1106,
+      "sha256": "070a13b4f5459d024b4125ef91e096173537f9301be4bae6932904292e39be50"
+    },
+    {
       "path": "experiments/registry.csv",
       "bytes": 102,
       "sha256": "e6ca868d5995d945d50fdaa6a7dd221f07d0da1f2a93e685af1df738e38b7509"
@@ -1794,9 +1781,24 @@
       "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
     },
     {
+      "path": "src/cora_lung/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 174,
+      "sha256": "a57900c4261e1e5486c904674fe34cc5a70e34d1e8d8d8b2395c87537f4e3626"
+    },
+    {
       "path": "src/cora_lung/data/__init__.py",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/cora_lung/data/__pycache__/__init__.cpython-312.pyc",
+      "bytes": 153,
+      "sha256": "3f095f46666132dc4a2844e5cde79724702157c9a1a13a1e730bca3b63286f13"
+    },
+    {
+      "path": "src/cora_lung/data/__pycache__/preprocess.cpython-312.pyc",
+      "bytes": 3476,
+      "sha256": "b8ae1e625893184f34ceba974c08c72ef941850d42e5db28ef09f9ed7999c881"
     },
     {
       "path": "src/cora_lung/data/equalization.py",
@@ -2002,21 +2004,6 @@
       "path": "src/cora_lung/utils/seed.py",
       "bytes": 27,
       "sha256": "ddc67c233cbd883f75a5914b616f18005dfa2953055437e1462e77900302057b"
-    },
-    {
-      "path": "tests/__pycache__/test_cova3d_annotation_simulator_v2.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 18281,
-      "sha256": "4d6304eb60623787019ad703fa8280bed639963b2dddfe5eb98c00e6249e6bcb"
-    },
-    {
-      "path": "tests/__pycache__/test_cova3d_dataset_feasibility.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 12249,
-      "sha256": "0c5580f965905f0b801f058f90ffe30e580a34f57bac13c5df00316be45d9fe4"
-    },
-    {
-      "path": "tests/__pycache__/test_cova3d_protocol_registry.cpython-312-pytest-8.4.2.pyc",
-      "bytes": 8812,
-      "sha256": "4bfdd6a77ae5e12e3e36c0b0636c86e1c8b58d25a74d09793229b9c31dd9f1a0"
     },
     {
       "path": "tests/test_checkpoint_resume.py",
