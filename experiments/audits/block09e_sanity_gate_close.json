@@ -1,0 +1,52 @@
+{
+  "project": "COVA-3D",
+  "block": "09E-SANITY-EVAL",
+  "status": "SANITY_GATE_PASS",
+  "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2+A1.3+N1+N2",
+  "model_sha256": "fce56f781cbd4ffd3e733cccb04c81f3b5bb2a664aceed4b8c0688e06ac4891c",
+  "condition": "C100_COH",
+  "seed": 17,
+  "training_subcriteria": {
+    "finite_training": true,
+    "first3_mean_loss": 1.1267042817796271,
+    "last3_mean_loss": 0.040640517530028265,
+    "loss_ratio": 0.0360702610145731,
+    "loss_ratio_max": 0.95,
+    "loss_ratio_pass": true,
+    "zero_label_fraction": 0.0075,
+    "zero_label_max": 0.3,
+    "zero_label_pass": true
+  },
+  "prediction_subcriteria": {
+    "finite_probabilities": true,
+    "prediction_std_min": 0.001,
+    "prediction_std_cases_passing": 4,
+    "prediction_std_pass": true
+  },
+  "dense_development_separation": {
+    "cases_evaluated": 4,
+    "positive_cases": 4,
+    "minimum_required": 3,
+    "pass": true
+  },
+  "overall_gate_pass": true,
+  "firewall": {
+    "development_infection_masks_accessed": 4,
+    "development_lung_masks_accessed": 0,
+    "final_outer_cv_dense_masks_accessed": 0,
+    "optimizer_steps": 0,
+    "training_performed": false,
+    "threshold_search": false,
+    "Dice_computed": false,
+    "IoU_computed": false,
+    "FROC_computed": false
+  },
+  "authorization": {
+    "factorial_fitting": true,
+    "method_development": false,
+    "final_outer_cv_dense_outcomes": false
+  },
+  "next_block": "10A-FACTORIAL-PREFLIGHT",
+  "generated_at_utc": "2026-09-20T11:31:03Z",
+  "source_capture": "PASS"
+}
