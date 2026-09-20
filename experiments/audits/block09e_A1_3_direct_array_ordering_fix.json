@@ -1,0 +1,35 @@
+{
+  "project": "COVA-3D",
+  "block": "09E-GEOM-OP-REPAIR-FINALIZE",
+  "status": "PASS",
+  "defect": "A1_3_DIRECT_ARRAY_ORDERING_BUG_ONLY",
+  "root_cause": "Failed-attempt A1.3 reconstructed FG and BG semantics correctly but omitted the original 09D-B2 global lexicographic sort of supervision_voxel_zyx and supervision_label.",
+  "original_B2_order": "np.lexsort((x, y, z))",
+  "development_pre_fix": {
+    "artifacts": 24,
+    "raw_direct_arrays_exact": 0,
+    "membership_arrays_exact": 24,
+    "FG_semantic_equal": 24,
+    "BG_semantic_equal": 24,
+    "canonical_full_arrays_equal": 24
+  },
+  "fix": {
+    "scientific_annotation_changed": false,
+    "representation_order_only": true,
+    "v1_3_artifacts_canonicalized": 120,
+    "development_exact_arrays_after_fix": 24
+  },
+  "R2": {
+    "retraining_required": false,
+    "final_model_sha256": "fce56f781cbd4ffd3e733cccb04c81f3b5bb2a664aceed4b8c0688e06ac4891c"
+  },
+  "firewall": {
+    "CT_arrays_accessed": 0,
+    "dense_masks_accessed": 0,
+    "predictions_accessed": 0,
+    "model_checkpoint_accessed": 0,
+    "optimizer_steps": 0,
+    "final_outer_cv_outcomes_accessed": 0
+  },
+  "generated_at_utc": "2026-09-20T10:53:55Z"
+}

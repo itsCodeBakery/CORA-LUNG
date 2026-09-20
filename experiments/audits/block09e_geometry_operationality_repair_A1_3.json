@@ -1,0 +1,70 @@
+{
+  "project": "COVA-3D",
+  "block": "09E-GEOM-OP-REPAIR",
+  "finalization_block": "09E-GEOM-OP-REPAIR-FINALIZE",
+  "amendment": "A1.3_OPERATIONAL_GEOMETRY_NEUTRALIZATION",
+  "parent_commit": "8dc72d01db2fbcfd7ea1387fe6e9ef5d4adabc22",
+  "protocol_before": "COVA3D_1.0+A1+A1.1+A1.2+N1+N2",
+  "protocol_after": "COVA3D_1.0+A1+A1.1+A1.2+A1.3+N1+N2",
+  "status": "PASS",
+  "trigger": {
+    "A1_2_DIS_FRG_aliases": 8,
+    "quota2_DIS_FRG_aliases": 0,
+    "unique_promoted_physical_components": 8,
+    "all_promoted_components_final_outer_cv": true
+  },
+  "operational_classes": {
+    "geometry_operational": 272,
+    "resolution_neutral": 28,
+    "alias_promoted_neutral": 8,
+    "total_geometry_neutral": 36
+  },
+  "causal_matching_preserved": {
+    "selected_component_sets": true,
+    "per_component_quotas": true,
+    "FG_budgets": true,
+    "background": true
+  },
+  "post_repair_operationality": {
+    "operational_component_aliases": 0,
+    "neutral_identity_failures": 0,
+    "operational_topology_failures": 0,
+    "informative_whole_case_aliases": 0,
+    "neutral_only_case_coverages": 2,
+    "neutral_only_identity_failures": 0,
+    "strict_pass": true
+  },
+  "R2_compatibility": {
+    "development_artifacts_checked": 24,
+    "exact_sparse_arrays_unchanged": 24,
+    "annotation_semantic_hashes_unchanged": 24,
+    "R2_retraining_required": false,
+    "R2_model_sha256": "fce56f781cbd4ffd3e733cccb04c81f3b5bb2a664aceed4b8c0688e06ac4891c"
+  },
+  "ordering_fix": {
+    "required": true,
+    "scientific_change": false,
+    "audit_file": "experiments/audits/block09e_A1_3_direct_array_ordering_fix.json"
+  },
+  "firewall": {
+    "CT_arrays_accessed": 0,
+    "dense_lesion_masks_accessed": 0,
+    "dense_lung_masks_accessed": 0,
+    "predictions_accessed": 0,
+    "model_checkpoints_accessed": 0,
+    "optimizer_steps": 0,
+    "final_outer_cv_segmentation_outcomes_accessed": 0
+  },
+  "authorization": {
+    "dense_sanity_evaluation": true,
+    "factorial_training": false,
+    "method_development": false,
+    "final_outer_cv_outcomes": false
+  },
+  "next_block": "09E-SANITY-EVAL",
+  "generated_at_utc": "2026-09-20T10:53:55Z",
+  "source_capture": {
+    "failed_A1_3_block": "PASS",
+    "finalization_block": "PASS"
+  }
+}

@@ -69,3 +69,7 @@ Thumbs.db
 !data/cova3d_native_candidates_v1_0/**/*.npz
 !data/cova3d_training_grid_candidates_v1_0/
 !data/cova3d_training_grid_candidates_v1_0/**/*.npz
+
+# COVA-3D A1.3 frozen sparse trainer artifacts
+!data/cova3d_training_grid_candidates_v1_3/
+!data/cova3d_training_grid_candidates_v1_3/**/*.npz

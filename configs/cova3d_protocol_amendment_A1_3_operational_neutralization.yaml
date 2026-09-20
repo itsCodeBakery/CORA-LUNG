@@ -1,0 +1,55 @@
+project: COVA-3D
+amendment_id: A1.3_OPERATIONAL_GEOMETRY_NEUTRALIZATION
+status: PROSPECTIVELY_FROZEN_BEFORE_DENSE_OUTCOME_OPENING
+trigger_block: 09E-GEOM-OP-DIAG
+trigger_commit: 8dc72d01db2fbcfd7ea1387fe6e9ef5d4adabc22
+protocol_before: COVA3D_1.0+A1+A1.1+A1.2+N1+N2
+protocol_after: COVA3D_1.0+A1+A1.1+A1.2+A1.3+N1+N2
+trigger_evidence:
+  resolvable_COH_equals_DIS: 0
+  resolvable_COH_equals_FRG: 0
+  resolvable_DIS_equals_FRG: 8
+  quota2_DIS_equals_FRG: 0
+  alias_quota: 3
+  alias_rows: 8
+  unique_alias_physical_components: 8
+  all_aliases_final_outer_cv: true
+  dense_outcomes_opened: false
+classification_rule:
+  GLOBAL_RESOLUTION_NEUTRAL: A1.2 GLOBAL_RESOLUTION_LIMITED component. No geometry
+    claim.
+  GLOBAL_OPERATIONALLY_NEUTRAL_ALIAS: Previously geometry-resolvable physical component
+    with at least one exact pairwise geometry-coordinate alias at any selected coverage.
+    It is neutralized globally across all coverages where selected.
+  GLOBAL_GEOMETRY_OPERATIONAL: Previously geometry-resolvable physical component with
+    no pairwise geometry-coordinate alias in any selected coverage.
+neutralization_rule:
+  coverage_selection_changed: false
+  per_component_quota_changed: false
+  patient_FG_budget_changed: false
+  background_changed: false
+  promoted_component_geometry_claim: false
+  same_neutral_bank_across_geometry: true
+  same_ordered_bank_across_coverage: true
+  coverage_specific_coordinates: PREFIX_OF_SAME_BANK
+  bank_candidate_source: Union of already validated sparse coordinates belonging to
+    the same physical component across all six A1.2 cells.
+  bank_forbidden_coordinates: Any coordinate used by another lesion component in any
+    A1.2 cell for the same case, plus common background.
+  bank_order: Ascending physical distance to pooled same-component coordinate centroid,
+    then z/y/x lexicographic tie-break.
+whole_case_alias_rule:
+  geometry_informative_case_coverage: At least one GLOBAL_GEOMETRY_OPERATIONAL component
+    selected.
+  informative_case_coverage_alias_allowed: false
+  zero_operational_component_case_coverage_alias_allowed: true
+  reason: A case-coverage containing only geometry-neutral lesions has no geometry
+    claim by construction.
+R2_compatibility_requirement:
+  all_promoted_components_must_be_final_outer_cv: true
+  all_24_development_artifacts_must_be_semantically_unchanged: true
+  R2_retraining_if_requirement_passes: false
+factorial_training_authorized: false
+dense_sanity_evaluation_authorized: false
+final_outer_cv_outcomes_authorized: false
+frozen_at_utc: '2026-09-20T10:43:59Z'

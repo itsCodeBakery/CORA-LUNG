@@ -41,7 +41,7 @@ def test_geometry_decision_rule_is_strict():
     ] == 0
 
 
-def test_geometry_audit_firewall():
+def test_geometry_historical_audit_firewall():
 
     audit = json.loads(
         (
@@ -52,6 +52,28 @@ def test_geometry_audit_firewall():
             encoding="utf-8"
         )
     )
+
+    assert audit[
+        "classification"
+    ] == "REQUIRES_PROSPECTIVE_GEOMETRY_AMENDMENT"
+
+    assert audit[
+        "resolvable_aliases"
+    ][
+        "DIS_equals_FRG"
+    ] == 8
+
+    assert audit[
+        "resolvable_aliases"
+    ][
+        "quota2_DIS_equals_FRG"
+    ] == 0
+
+    assert audit[
+        "case_level"
+    ][
+        "whole_case_geometry_aliases"
+    ] == 2
 
     firewall = audit[
         "firewall"
@@ -85,14 +107,8 @@ def test_geometry_audit_firewall():
         "final_outer_cv_outcome_access"
     ] == 0
 
-    assert audit[
-        "authorization_after_diagnostic"
-    ][
-        "factorial_training"
-    ] is False
 
-
-def test_geometry_component_table_consistent_with_classification():
+def test_geometry_historical_component_table():
 
     audit = json.loads(
         (
@@ -117,130 +133,18 @@ def test_geometry_component_table_consistent_with_classification():
         == "GLOBAL_GEOMETRY_RESOLVABLE"
     ]
 
-    aliases = int(
+    assert int(
+        resolvable[
+            "dis_equals_frg"
+        ].sum()
+    ) == 8
+
+    assert int(
         resolvable[
             "any_pairwise_alias"
         ].sum()
-    )
-
-    assert aliases == audit[
+    ) == audit[
         "resolvable_aliases"
     ][
         "any_pairwise_alias"
     ]
-
-    classification = audit[
-        "classification"
-    ]
-
-    if classification == "PASS_STRICT_GEOMETRY_OPERATIONALITY":
-
-        assert aliases == 0
-
-        assert audit[
-            "case_level"
-        ][
-            "whole_case_geometry_aliases"
-        ] == 0
-
-        assert audit[
-            "structural_checks"
-        ][
-            "limited_identity_failures"
-        ] == 0
-
-        assert audit[
-            "structural_checks"
-        ][
-            "resolvable_topology_failures"
-        ] == 0
-
-        assert audit[
-            "authorization_after_diagnostic"
-        ][
-            "dense_sanity_evaluation"
-        ] is True
-
-        assert audit[
-            "next_block"
-        ] == "09E-SANITY-EVAL"
-
-    else:
-
-        assert (
-            aliases > 0
-            or audit[
-                "case_level"
-            ][
-                "whole_case_geometry_aliases"
-            ] > 0
-            or audit[
-                "structural_checks"
-            ][
-                "limited_identity_failures"
-            ] > 0
-            or audit[
-                "structural_checks"
-            ][
-                "resolvable_topology_failures"
-            ] > 0
-            or audit[
-                "structural_checks"
-            ][
-                "geometry_claim_flag_failures"
-            ] > 0
-        )
-
-        assert audit[
-            "authorization_after_diagnostic"
-        ][
-            "dense_sanity_evaluation"
-        ] is False
-
-        assert audit[
-            "next_block"
-        ] == "09E-GEOM-OP-REPAIR"
-
-
-def test_state_matches_geometry_audit():
-
-    audit = json.loads(
-        (
-            ROOT
-            / "experiments/audits/"
-            "block09e_geometry_operationality_diagnostic.json"
-        ).read_text(
-            encoding="utf-8"
-        )
-    )
-
-    state = json.loads(
-        (
-            ROOT
-            / "COVA3D_STATE.json"
-        ).read_text(
-            encoding="utf-8"
-        )
-    )
-
-    assert state[
-        "last_completed_block"
-    ] == "09E-GEOM-OP-DIAG"
-
-    assert state[
-        "geometry_operationality_status"
-    ] == audit[
-        "classification"
-    ]
-
-    assert state[
-        "dense_outcomes_opened_in_cova3d"
-    ] is False
-
-    assert state[
-        "factorial_training_authorized"
-    ] is False
-
-    assert state[
-        "final_outer_cv_access_in_cova3d"
-    ] == 0

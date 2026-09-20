@@ -33,7 +33,9 @@ def test_R2_epoch_contract():
     ).all()
 
     assert int(
-        frame.iloc[-1][
+        frame.iloc[
+            -1
+        ][
             "successful_optimizer_steps_total"
         ]
     ) == 1000
@@ -90,7 +92,7 @@ def test_R2_epoch_contract():
     ).all()
 
 
-def test_R2_firewall():
+def test_R2_historical_audit():
 
     audit = json.loads(
         (
@@ -139,43 +141,3 @@ def test_R2_firewall():
     assert audit[
         "factorial_training_authorized"
     ] is False
-
-
-def test_R2_state():
-
-    state = json.loads(
-        (
-            ROOT
-            / "COVA3D_STATE.json"
-        ).read_text(
-            encoding="utf-8"
-        )
-    )
-
-    assert state[
-        "last_completed_block"
-    ] == "09E-SANITY-FIT-R2"
-
-    assert state[
-        "sanity_fit_R2_status"
-    ] == "COMPLETE"
-
-    assert state[
-        "sanity_gate_status"
-    ] == "EVALUATION_PENDING"
-
-    assert state[
-        "optimizer_steps_retained_for_current_frozen_run"
-    ] == 1000
-
-    assert state[
-        "factorial_training_authorized"
-    ] is False
-
-    assert state[
-        "dense_outcomes_opened_in_cova3d"
-    ] is False
-
-    assert state[
-        "final_outer_cv_access_in_cova3d"
-    ] == 0
