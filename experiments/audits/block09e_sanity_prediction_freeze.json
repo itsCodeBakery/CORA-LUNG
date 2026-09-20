@@ -1,0 +1,12 @@
+{
+  "status": "PREDICTIONS_AND_OUTCOME_RULE_FROZEN",
+  "git_parent": "fa70f4db7d23406192506eae1b7d2ebbea68520e",
+  "prediction_count": 4,
+  "prediction_SHA_verified": true,
+  "prediction_std_cases_passing": 4,
+  "dense_masks_opened": false,
+  "final_outer_cv_access": 0,
+  "optimizer_steps": 0,
+  "training": false,
+  "generated_at_utc": "2026-09-20T11:31:03Z"
+}

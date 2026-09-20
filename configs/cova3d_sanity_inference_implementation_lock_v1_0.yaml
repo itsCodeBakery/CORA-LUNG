@@ -1,0 +1,21 @@
+project: COVA-3D
+status: FROZEN_BEFORE_DENSE_SANITY_OUTCOME
+model_sha256: fce56f781cbd4ffd3e733cccb04c81f3b5bb2a664aceed4b8c0688e06ac4891c
+condition: C100_COH
+seed: 17
+inference:
+  patch_zyx:
+  - 48
+  - 128
+  - 128
+  overlap: 0.5
+  weighting: gaussian
+  gaussian_sigma_scale: 0.125
+  blend_domain: logits
+  probability: sigmoid_after_merged_logits
+  TTA: false
+prediction_count: 4
+prediction_std_threshold: 0.001
+prediction_std_cases_passing: 4
+dense_masks_opened: false
+frozen_at_utc: '2026-09-20T11:31:03Z'

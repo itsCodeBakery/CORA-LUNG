@@ -1,0 +1,41 @@
+project: COVA-3D
+status: FROZEN_BEFORE_FIRST_DENSE_SANITY_MASK_ACCESS
+development_cases:
+- coronacases_004
+- coronacases_008
+- radiopaedia_14_85914_0
+- radiopaedia_27_86410_0
+dense_reference: infection_mask only
+mask_preprocessing:
+  native_geometry: Use original dataset infection mask corresponding to the frozen
+    development case.
+  canonicalization: nibabel.as_closest_canonical
+  resampling: nibabel.processing.resample_to_output
+  target_spacing_xyz_mm:
+  - 1.5
+  - 1.5
+  - 3.0
+  interpolation_order: 0
+  constant_value: 0
+  foreground_definition: resampled mask > 0
+  transpose: XYZ to ZYX
+  crop: Use frozen crop_origin and crop_shape from cova3d_training_grid_geometry_v1_2.csv
+per_case_statistic:
+  inside: mean frozen predicted probability where dense lesion mask == 1
+  outside: mean frozen predicted probability where dense lesion mask == 0 within same
+    crop
+  positive_separation: inside_mean > outside_mean
+gate:
+  finite_training_and_probabilities: true
+  loss_ratio_max: 0.95
+  zero_label_fraction_max: 0.3
+  prediction_std_min_each_case: 0.001
+  positive_separation_cases_min: 3
+explicitly_forbidden:
+- Dice
+- IoU
+- FROC
+- threshold search
+- performance model selection
+- final outer-CV dense masks
+frozen_at_utc: '2026-09-20T11:31:03Z'

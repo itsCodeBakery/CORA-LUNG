@@ -24,8 +24,8 @@
   "method_development_authorized": false,
   "final_outer_cv_outcomes_authorized": false,
   "current_stage": "A1_3_OPERATIONAL_GEOMETRY_PASS_DENSE_SANITY_PENDING",
-  "last_completed_block": "09E-GEOM-OP-REPAIR",
-  "next_block": "09E-SANITY-EVAL",
+  "last_completed_block": "09E-SANITY-EVAL-PRED-FREEZE",
+  "next_block": "09E-SANITY-EVAL-OUTCOME",
   "next_action": "Evaluate the frozen R2 checkpoint once using only the four permanent-development dense lesion masks under the locked sanity gate. Final outer-CV outcomes remain sealed.",
   "protocol_config_sha256": "50bfbe77e5cc307a59652fdb8c766da5fc0ebcd268f3d4f011e3e760604a82dc",
   "factorial_registry_sha256": "54bcfac43fecfda1a44b2f3b4c3b393bd50d5cc3c9f30089c8c8713c78fb6cd6",
@@ -46,7 +46,7 @@
   "development_selected_components_nominal_50": 42,
   "secondary_dataset_candidate": "MSD_Task03_Liver",
   "secondary_dataset_status": "PRIORITY_CANDIDATE_PENDING_LOCAL_AUDIT",
-  "updated_at_utc": "2026-09-20T10:53:55Z",
+  "updated_at_utc": "2026-09-20T11:31:03Z",
   "annotation_simulator_version": "2.0-native-candidate",
   "native_annotation_geometry_feasibility": "PASS",
   "native_six_cell_feasible_cases": 20,
@@ -188,5 +188,8 @@
   "A1_3_R2_compatibility": "PASS",
   "trainer_grid_candidate_version": "v1.3",
   "trainer_grid_candidate_artifacts": 120,
-  "sanity_fit_R2_retraining_required_after_A1_3": false
+  "sanity_fit_R2_retraining_required_after_A1_3": false,
+  "sanity_prediction_freeze_status": "PASS",
+  "sanity_prediction_std_subcriterion": "PASS",
+  "sanity_prediction_std_cases_passing": 4
 }
