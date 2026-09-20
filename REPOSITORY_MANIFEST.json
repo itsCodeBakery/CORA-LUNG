@@ -1,11 +1,13 @@
 {
-  "generated_at_utc": "2026-09-20T08:33:08Z",
-  "completed_block": "09D-A3-LOCK",
+  "generated_at_utc": "2026-09-20T08:55:24Z",
+  "completed_block": "09D-B2",
   "active_track": "COVA3D",
   "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2",
-  "neutral_anchor_bank_amendment": "FROZEN",
-  "neutral_bank_aggregate_feasibility": "PASS_20_OF_20",
-  "final_coordinate_grid_feasibility": "PENDING_09D_B2",
+  "annotation_methodology_structurally_ready": true,
+  "coordinate_level_feasibility": "PASS_20_OF_20",
+  "neutral_anchor_banks": 28,
+  "final_sparse_trainer_candidates": 120,
+  "train_budget": "FROZEN",
   "factorial_training_authorized": false,
   "self_included": false,
   "files": [
@@ -16,8 +18,8 @@
     },
     {
       "path": "COVA3D_STATE.json",
-      "bytes": 3969,
-      "sha256": "5f8f8cd05e2727bccea994395ace181b5be91364df0162f3eb75f883530c56c3"
+      "bytes": 4725,
+      "sha256": "8c12847aa5ccb7fb8e2aef3213dd28e952f65c7689315842ae2185d40a18d449"
     },
     {
       "path": "LICENSE",
@@ -26,8 +28,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 6231,
-      "sha256": "fc5d7c361287a0b847dd75b9a68e31e85684e4dbd37005c6ebeeffc478ca0183"
+      "bytes": 6519,
+      "sha256": "e3b76f82d5c23e6b096f57c5de49ae1d2e00c334dc55b3c08b7090640cfeade0"
     },
     {
       "path": "README.md",
@@ -78,6 +80,11 @@
       "path": "configs/cova3d_secondary_dataset_candidate_v1_0.yaml",
       "bytes": 1220,
       "sha256": "a1d535a7cc712f68f81d971faa47de07618148f98ece8c9a1dc20490f78bab38"
+    },
+    {
+      "path": "configs/cova3d_training_grid_transfer_v1_2.yaml",
+      "bytes": 1334,
+      "sha256": "7cfa2b01de0edcf5da0d6040f194174bd1d97a7a91155246d31c2b168e87f444"
     },
     {
       "path": "configs/data_primary.yaml",
@@ -740,6 +747,746 @@
       "sha256": "e05af7c29893d52284d1836a23b8e5e35b48c23d030fe5b1437a7ab228ab0904"
     },
     {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_001/component_0004.npz",
+      "bytes": 1558,
+      "sha256": "06266ff7c461950d6c157b2737ed6e8ca6df0c4d1b7f516be5a5f82aed292023"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_001/component_0009.npz",
+      "bytes": 1510,
+      "sha256": "f4632d5ab5618ae8a6aa3a5afe4d0225dd64ed0d0f525b87970cf725f7917074"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_001/component_0017.npz",
+      "bytes": 1571,
+      "sha256": "34b6c447bb47cc89a33a4ca9dd072fd21c6cd1d415ba030a9dde4d1879987065"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_001/component_0044.npz",
+      "bytes": 2352,
+      "sha256": "2e92f27cbd3170680e15c341aee97ba3121228bebd7d7e1f29b7fdb9cd74a38f"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_002/component_0011.npz",
+      "bytes": 1551,
+      "sha256": "d4f3d72a356eca36407a588fb12b0422561908990916c14a2489ab91b4404fe2"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_002/component_0027.npz",
+      "bytes": 1388,
+      "sha256": "d64ab78c6e71fce9f9821e0c5ba6385b1a6b2d7b41e6856d209f807b005fa90f"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_003/component_0004.npz",
+      "bytes": 1501,
+      "sha256": "134f9ace0f53ede7bee7ec1831fd2de2385e10659b01272649e94fd216f98e86"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_003/component_0013.npz",
+      "bytes": 1447,
+      "sha256": "78660630f6e671d653b128e91879a5bb35b4f81ed14b90a97795f49d3fc1991b"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_003/component_0016.npz",
+      "bytes": 1432,
+      "sha256": "67ed282311c08ff10820608f8ed8fea7cd266d31d5d1c177650ee8da14af0912"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_003/component_0039.npz",
+      "bytes": 1509,
+      "sha256": "e27a2937c7bc13f9f305111cdfd73b21d7116513ed9cb4f57afc4dc6b40c5c01"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_004/component_0004.npz",
+      "bytes": 1930,
+      "sha256": "deffd34eeb663676b59b60faeba5669cc3a90de76706b989fec6ba2cd0daf560"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_004/component_0009.npz",
+      "bytes": 2271,
+      "sha256": "67432a8491104f7cc1c69ca18c2f31f357050dbe551a41481c9f1b04c7f9a34c"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_005/component_0003.npz",
+      "bytes": 2085,
+      "sha256": "7b80f4bab20e9cdd5b0fe7afa465b90c24dccd31ddcf6ea3a1107d2a9e32d5a6"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_007/component_0001.npz",
+      "bytes": 1977,
+      "sha256": "54f0e5557bc0b90961adb3b9b1168cbb449f2786d6c763ad8ea1b5e2a8b08c6b"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_008/component_0004.npz",
+      "bytes": 1604,
+      "sha256": "2d1135d7e92be36731fbbcb5ab25e1608535be04c70c126e92da895e4d11cd3a"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_008/component_0033.npz",
+      "bytes": 1506,
+      "sha256": "2f18a44c94c76f5211087fd809ef8c7d3e3bcdae159b36b7f16a9838b997fa3f"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_008/component_0040.npz",
+      "bytes": 2230,
+      "sha256": "44aabe861a1fa4da836e80fa1ae02fc3eb5b266bed36a4fc930c217acec35184"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/coronacases_009/component_0006.npz",
+      "bytes": 1672,
+      "sha256": "8f52ca106808bbf9b00c9252d9fea02250072d5b22e9c7482395633ace354004"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/radiopaedia_14_85914_0/component_0024.npz",
+      "bytes": 1635,
+      "sha256": "814d0b84d6c44cc35fad78519c7d257d61ee1f361dc3462edaee2d6a18c8f4a6"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/radiopaedia_29_86490_1/component_0001.npz",
+      "bytes": 1187,
+      "sha256": "7408fa6ef7880665f88d8b223e134676635f5db554926206400f9075544304fb"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/radiopaedia_29_86490_1/component_0002.npz",
+      "bytes": 1320,
+      "sha256": "b30962385b037ea410e825ed47fd51ee13c65ed342a5433f107523e5244a5715"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/radiopaedia_36_86526_0/component_0019.npz",
+      "bytes": 1214,
+      "sha256": "caadd66a055e590b64e98288dec258e6ac44aeafcaa882a00e1fd33f6fefc3ee"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/radiopaedia_40_86625_0/component_0006.npz",
+      "bytes": 1209,
+      "sha256": "66e8cc55ee0dfd65d5aed3da87170ef35e0082109499b0da858b2479160828f3"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/radiopaedia_40_86625_0/component_0009.npz",
+      "bytes": 1229,
+      "sha256": "34883e7d73aba71d778d338c8574d1aabf35b03987f454db24c5a90dbfde6b7d"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/radiopaedia_4_85506_1/component_0017.npz",
+      "bytes": 1277,
+      "sha256": "00b9de1be520e3cfe1216ccdba2cdd9e946280ac8a85c0298b3a96650e1f9244"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/radiopaedia_4_85506_1/component_0024.npz",
+      "bytes": 1199,
+      "sha256": "76dbfc58db5603e9d87bb20f1015021b23750628a671b8fb84c0f1573e618579"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/radiopaedia_4_85506_1/component_0026.npz",
+      "bytes": 1532,
+      "sha256": "03a8e40f0f4bc1f15948be602d7bc337decf312624dbf2d1333a4c41561e7b58"
+    },
+    {
+      "path": "data/cova3d_neutral_anchor_banks_v1_0/radiopaedia_4_85506_1/component_0027.npz",
+      "bytes": 1447,
+      "sha256": "2c65728c9e68574f317148dd4d1632eca02795392fdc80541bb3087c221d7da3"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_001/C100_COH.npz",
+      "bytes": 2986,
+      "sha256": "a68baf960e06d941b70a885b7503f581a142b3a19b267a881208fb69e77f1e6c"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_001/C100_DIS.npz",
+      "bytes": 3153,
+      "sha256": "b4a88e3cf853f35b5416c4fbb690b3c3e01f021c0924305b3b11d0b11d189a32"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_001/C100_FRG.npz",
+      "bytes": 3151,
+      "sha256": "5a2f5220e11925d1ff8270ecacfcba41ab39373b738d86d4c93332949a3b0e6d"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_001/C50_COH.npz",
+      "bytes": 2818,
+      "sha256": "e087d088a175f7a6192625406c05bbcebcfdc017334e35f6fa6b9ee97ba76151"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_001/C50_DIS.npz",
+      "bytes": 3040,
+      "sha256": "c83b60cf18020f5e7fc80e33aa6cf1596fd292ee81cf8f161a345681d72320a9"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_001/C50_FRG.npz",
+      "bytes": 2931,
+      "sha256": "d033a8fffc1e897e2bf9666c00c2b9b003186e60d45956617097674b215ed2d3"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_002/C100_COH.npz",
+      "bytes": 2548,
+      "sha256": "ce7b74990ea0ae4063e890f987457dda591b79a37e5c4421fd8946e44a843c89"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_002/C100_DIS.npz",
+      "bytes": 2785,
+      "sha256": "6da189475894b58fd69423597d2d7c1948069d935db6f72ddf92f3e43b47908a"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_002/C100_FRG.npz",
+      "bytes": 2679,
+      "sha256": "57b11ee408a5ef84b0039f9e7d1ae348b1d61995d7c7a791a3abce6a6823cdaf"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_002/C50_COH.npz",
+      "bytes": 2452,
+      "sha256": "ecf884578e7a8464597ae55c74aea1ba4a7e91544e49fbd068ed0c0b18a866c7"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_002/C50_DIS.npz",
+      "bytes": 2689,
+      "sha256": "521ac033e4492f2348988f55787dc26689d1ce7fa3f6adc7150cbbe8c883392b"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_002/C50_FRG.npz",
+      "bytes": 2521,
+      "sha256": "abdb7ed8833acda2229447ced6dbeeddebdd2e4aea28de06a9038e33ed2c5b48"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_003/C100_COH.npz",
+      "bytes": 3680,
+      "sha256": "f67b5976854ee8a43d3a3cca2d36990ed2043e7e7ef91b7101cfc80a88c39db2"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_003/C100_DIS.npz",
+      "bytes": 4047,
+      "sha256": "ba2e5316077276058f1886f46b358b69455741b2b6a164b96b73a416ec1a7bdf"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_003/C100_FRG.npz",
+      "bytes": 3867,
+      "sha256": "40e7f026435d2a68da26b24e621e635a2bd356b0c99ce7419ff7ba7077a8821d"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_003/C50_COH.npz",
+      "bytes": 3526,
+      "sha256": "a340acb268cddecdfed7eb9007d00d048c8e3f25199dfd79f28b84a83dfbec44"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_003/C50_DIS.npz",
+      "bytes": 3838,
+      "sha256": "652cb10e6d08ff6fb337f1aa342d8e4160dcf9583eeb0e08d2fecedda840b908"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_003/C50_FRG.npz",
+      "bytes": 3637,
+      "sha256": "75a29fead4b6c42e548745292e3d634e13dc908cf128b015963d97a46640bd39"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_004/C100_COH.npz",
+      "bytes": 1787,
+      "sha256": "a255ab60a3bdc69697599574c42a397e17de774da5c7d436a19a73f05e2245d4"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_004/C100_DIS.npz",
+      "bytes": 1843,
+      "sha256": "cfda6ec9d1529e7e2f22358cc61a91355bfe2ccc26ff810ed93ce6e6b3b39525"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_004/C100_FRG.npz",
+      "bytes": 1825,
+      "sha256": "feb1df80dd14b72fc506f48bbdd7f401fab218b4a46e7d8ff8f67299ba0bf5ea"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_004/C50_COH.npz",
+      "bytes": 1743,
+      "sha256": "5239c447b0a41da0e2a6f475b013dfa5094233711ade28dd969c1faacb9b125f"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_004/C50_DIS.npz",
+      "bytes": 1779,
+      "sha256": "09fc86bd98922d054a5680f03af90fe939d1699d0518d2baa818e32066170e28"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_004/C50_FRG.npz",
+      "bytes": 1749,
+      "sha256": "a41d121c4d053ae0eecfd05daf15110da24e2627eb5d0f3c89e5b6f782a4726f"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_005/C100_COH.npz",
+      "bytes": 1374,
+      "sha256": "956d7b2e653edbe343e44314ec57d120242db89ef1ed9cdbaa8d507b143d4c80"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_005/C100_DIS.npz",
+      "bytes": 1422,
+      "sha256": "a9804c124f8ec4d2cc32f7f74012ed5aa099b17088bae43ccbfe18abb1cfcaa2"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_005/C100_FRG.npz",
+      "bytes": 1386,
+      "sha256": "8e743c6956ce88fa188472e5baf7296fa08214fc5d7f6a1ac28b587865739353"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_005/C50_COH.npz",
+      "bytes": 1359,
+      "sha256": "6581f029041808f29007e375fd5b14937c6c0b700ad670e5792b2c3e3a232e5a"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_005/C50_DIS.npz",
+      "bytes": 1395,
+      "sha256": "f6c4ab099b01da6ded2e04af43f1a7447c2384f37f0e9fb0afa577d25969d708"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_005/C50_FRG.npz",
+      "bytes": 1370,
+      "sha256": "ca7cb61e7b5d4dcbe41290aa5cb342cbf7e38a392384fbe937059e76a8fc5f35"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_006/C100_COH.npz",
+      "bytes": 1050,
+      "sha256": "e9f2edf0a9da2f379743796c435733768e44efc20e7303772c53ec2419b00bcd"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_006/C100_DIS.npz",
+      "bytes": 1107,
+      "sha256": "ee98e1b6c62e76a64c10245b842d1774a4e59ed0f9e59d8d8ce9d2665085acc7"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_006/C100_FRG.npz",
+      "bytes": 1091,
+      "sha256": "dcbfc0782d3140fff7508dfb04643196d1e1bbd6c4d6514992e4d3bba09cd1e3"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_006/C50_COH.npz",
+      "bytes": 1045,
+      "sha256": "57138a091ad00125cbdba147fbedf7c096bee5357caff3c94ee8134d7577ba88"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_006/C50_DIS.npz",
+      "bytes": 1086,
+      "sha256": "a9f31a3616ebb0703828e234612380c3d69f620e00636cbe15c41dd0e2f1a964"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_006/C50_FRG.npz",
+      "bytes": 1060,
+      "sha256": "21bb408efe773eb77bf1383728b8cb39a09b54b9d5e7f8be9d7f2cfb81a18d84"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_007/C100_COH.npz",
+      "bytes": 1437,
+      "sha256": "b7eee728c7aeea7d23c655e04d9c833cfce8004ac575ae2ac8d73d86e9641284"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_007/C100_DIS.npz",
+      "bytes": 1534,
+      "sha256": "a6e934c6eb7ef1c266b8c7012f21f6b4d7510692202ee3dfccf0b53b1a5456dc"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_007/C100_FRG.npz",
+      "bytes": 1497,
+      "sha256": "353fa16bf87c1bfd6d5a50dfede16ed074212f6a7e689685047a2e9726b587f8"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_007/C50_COH.npz",
+      "bytes": 1404,
+      "sha256": "f92259f6ab0f7c5f8fa1e796555e5a1fbb0381d19234554823ddd80169e19a7a"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_007/C50_DIS.npz",
+      "bytes": 1520,
+      "sha256": "042a4d9e68d0c6e13fb69e34cf096294dc1847966066e333c247a10cf6ccb524"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_007/C50_FRG.npz",
+      "bytes": 1444,
+      "sha256": "8914bb16c39e4d9d82e766d9c88f0236c42e27274bb9b848f0c90dfb0e6c0e21"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_008/C100_COH.npz",
+      "bytes": 3155,
+      "sha256": "c84153a47d58f72ea6351839a388a1e8e95eb422eea0806777c854e401bc4735"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_008/C100_DIS.npz",
+      "bytes": 3301,
+      "sha256": "f79c1aade5eb8a4746a38f09fe20463f9413f70ea187d4edf20d34916c4ee17a"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_008/C100_FRG.npz",
+      "bytes": 3277,
+      "sha256": "d7178f8dda150598ac1d53f0a8dbd993199492410120e3ce5d9b034158c8f66b"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_008/C50_COH.npz",
+      "bytes": 3011,
+      "sha256": "dfd153f228ceb73cb909696d7479593e99062d926670a1099ef85f93f9cfd9fb"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_008/C50_DIS.npz",
+      "bytes": 3143,
+      "sha256": "dd1a06bbb08516d1ca5d8a69a55abc6098992abc3172c78a670c54a89a14cf3b"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_008/C50_FRG.npz",
+      "bytes": 3056,
+      "sha256": "f02472977cb54db4efa4901a59a68ca9b2c323012111ca19c9f7568faa88b1d9"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_009/C100_COH.npz",
+      "bytes": 1479,
+      "sha256": "f332f6382d1d52d7c49ff290a9face71bbf7d6d810d209ebf7a615259a0926ce"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_009/C100_DIS.npz",
+      "bytes": 1529,
+      "sha256": "ede23f0e2fefe2270ab1624679ee51d9fa1f4eb2fb6f902b8534eb453b0cced3"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_009/C100_FRG.npz",
+      "bytes": 1527,
+      "sha256": "c846912da9c6aa3265560eddb875de768374c37496ea4cf1c4fe5866ce4e5a2d"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_009/C50_COH.npz",
+      "bytes": 1457,
+      "sha256": "b052da69a3633ff3c35d6c65c8c07424362fa36a2108ab4ec1ac8ea555cde8a1"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_009/C50_DIS.npz",
+      "bytes": 1485,
+      "sha256": "2efc98d25c720d18e59f97717d1e094b6932013000bbd9622343f9d28525d444"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_009/C50_FRG.npz",
+      "bytes": 1477,
+      "sha256": "17f5d76d0e4dbd7712197fd039a300887edf3b77a3a399cafebe24cb66d263ec"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_010/C100_COH.npz",
+      "bytes": 1196,
+      "sha256": "aa714960288514a62ca8ac724621a55f247d4aa9c30afe8708377fabf4f5ab81"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_010/C100_DIS.npz",
+      "bytes": 1247,
+      "sha256": "229f43686fa38cdc9d4e1f40574e8fff2b79716d5091fd062d16c0b53c6f8338"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_010/C100_FRG.npz",
+      "bytes": 1231,
+      "sha256": "9e6ca04633cfce01fbb5e391af2a8a40ddc02b9eccf4081713d2e88b6f463925"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_010/C50_COH.npz",
+      "bytes": 1161,
+      "sha256": "27dbb4fc8599b31a3f3d5a6bf81df48cfe0c069e534ba991a85fa65faabf093c"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_010/C50_DIS.npz",
+      "bytes": 1241,
+      "sha256": "d1cdc18a15370a636c75b7a00b19361aa6be78004c7f0d13e64f21015056ef5d"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/coronacases_010/C50_FRG.npz",
+      "bytes": 1192,
+      "sha256": "87be630e2d219517ae05d50fb0d686d8d76c4b5e9c7934000b363fc73ff607eb"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_10_85902_1/C100_COH.npz",
+      "bytes": 968,
+      "sha256": "e81b9ec430d6ed4c5629658c33c8c8124b4a99e5bf1eac6d852dae7f6bf7a111"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_10_85902_1/C100_DIS.npz",
+      "bytes": 983,
+      "sha256": "f96c0644b1b34fdd6f6eab95b02f5312380cdeeab5d4b0cbfbad0fc33291c762"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_10_85902_1/C100_FRG.npz",
+      "bytes": 982,
+      "sha256": "ca9bb3396d0dff47e92f52c856ee501c1862c99cf3fca983909f6c57689e9cdb"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_10_85902_1/C50_COH.npz",
+      "bytes": 957,
+      "sha256": "af3dd3db5a2f79cd0ae158e4279f710356c8cf077365a2d41e2af90995456ee0"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_10_85902_1/C50_DIS.npz",
+      "bytes": 966,
+      "sha256": "855874efa4feb98632da374ea33008a415bfba33b5b7c9791bf15c701e541279"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_10_85902_1/C50_FRG.npz",
+      "bytes": 962,
+      "sha256": "04ab0cddb567f84307b723dc451fc9cfdd06e0f1624bd56cac7e58f4f4e5bf10"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_10_85902_3/C100_COH.npz",
+      "bytes": 1015,
+      "sha256": "0367b61bda2d2aaacde15bcb98d00fb2588f86b6131589dd9a50128cdaece340"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_10_85902_3/C100_DIS.npz",
+      "bytes": 1048,
+      "sha256": "8397fcb27d4f01b357fe8db9ec611735ffffc97b87e86c141d6258a9a109e504"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_10_85902_3/C100_FRG.npz",
+      "bytes": 1045,
+      "sha256": "d47db5093545f973fb556bb4f37edcda73b289a735bfcc7a658554dde5dbeaed"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_10_85902_3/C50_COH.npz",
+      "bytes": 1001,
+      "sha256": "f879b91598aa4066794b665986b375a66198e8e13938e3fafc385b75b380a60b"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_10_85902_3/C50_DIS.npz",
+      "bytes": 1049,
+      "sha256": "96d4dde56d89164a2d186ccee1efe9c50a82cb554c167561497fd3b72dfbccb7"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_10_85902_3/C50_FRG.npz",
+      "bytes": 1022,
+      "sha256": "ca43d74a5d6046511c71b97837b94fdcbb048bd16270f3b20af93a53aca11c39"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_14_85914_0/C100_COH.npz",
+      "bytes": 2735,
+      "sha256": "06404d49229517399d090226e4f17ca69d1f8fde477268887c488ba0a5761f28"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_14_85914_0/C100_DIS.npz",
+      "bytes": 2993,
+      "sha256": "b685dab4264ec5837d1bd0ac99563c42715463f5df66a879200b78c73b718b36"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_14_85914_0/C100_FRG.npz",
+      "bytes": 2855,
+      "sha256": "65ce6606ccea37213e0c62dca46691a473a1d53a4a106886f1b783d452e3d6d4"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_14_85914_0/C50_COH.npz",
+      "bytes": 2625,
+      "sha256": "89f4f47d8e3a166366da7221f3e401c502b8bfc4a0373536439f5198c1bc7890"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_14_85914_0/C50_DIS.npz",
+      "bytes": 2882,
+      "sha256": "2f1ff343a11018f9473093c2b6a84299001faede9710e5c3832bc4845fc18581"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_14_85914_0/C50_FRG.npz",
+      "bytes": 2670,
+      "sha256": "5677e43169799c23c31094c98807ad8381d5e3d6293bb9996105894774f8974f"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_27_86410_0/C100_COH.npz",
+      "bytes": 1600,
+      "sha256": "91b706335750b533ce86f5493c138e6f7c7777ac5710293d07f8a7bae3312e03"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_27_86410_0/C100_DIS.npz",
+      "bytes": 1719,
+      "sha256": "9a9425950ae54d48d2f76b45dcad0135cc5b509700b6509ffd2c618b0a23eb1d"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_27_86410_0/C100_FRG.npz",
+      "bytes": 1688,
+      "sha256": "ce32aadff066b8fcd9236da3a4cb37896386a3bf22e9bca2b5091965cd3d5a0e"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_27_86410_0/C50_COH.npz",
+      "bytes": 1559,
+      "sha256": "08b4862b0f06dda8e5c7eb3c366f9ee200aeb3d95106bd6e2ec7e10386dbfb1b"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_27_86410_0/C50_DIS.npz",
+      "bytes": 1625,
+      "sha256": "273e76866c97d7083e197b9732505247ece725a249b257d3e0f99239c27706b2"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_27_86410_0/C50_FRG.npz",
+      "bytes": 1593,
+      "sha256": "6b8dbb0849776001f7413f4e9d73d121f38108ccc0838bd53f8be393acc93d17"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_29_86490_1/C100_COH.npz",
+      "bytes": 1165,
+      "sha256": "6c1113b6a604d9eca4412b37a27f70b425d79eedb8290bae65485daa46112ecc"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_29_86490_1/C100_DIS.npz",
+      "bytes": 1165,
+      "sha256": "6c1113b6a604d9eca4412b37a27f70b425d79eedb8290bae65485daa46112ecc"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_29_86490_1/C100_FRG.npz",
+      "bytes": 1165,
+      "sha256": "6c1113b6a604d9eca4412b37a27f70b425d79eedb8290bae65485daa46112ecc"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_29_86490_1/C50_COH.npz",
+      "bytes": 1151,
+      "sha256": "d1e583837e38193c451cc6b0fc974d7adc0e2b284948355937f0be2c804726a0"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_29_86490_1/C50_DIS.npz",
+      "bytes": 1151,
+      "sha256": "d1e583837e38193c451cc6b0fc974d7adc0e2b284948355937f0be2c804726a0"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_29_86490_1/C50_FRG.npz",
+      "bytes": 1151,
+      "sha256": "d1e583837e38193c451cc6b0fc974d7adc0e2b284948355937f0be2c804726a0"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_29_86491_1/C100_COH.npz",
+      "bytes": 1089,
+      "sha256": "00a81a56cbe6bdeb5a9228402583932a4048a95c662ddc4b035f93765143c96d"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_29_86491_1/C100_DIS.npz",
+      "bytes": 1126,
+      "sha256": "29004ca3773800b1b883e9da62123ea6cf1fe4c62678acce3421a7e049aa401d"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_29_86491_1/C100_FRG.npz",
+      "bytes": 1107,
+      "sha256": "03abc08e69f9be916e15f5bc98060b95e68e258de88a05ffce7749b72e1e2fcc"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_29_86491_1/C50_COH.npz",
+      "bytes": 1074,
+      "sha256": "ab0a33e516cbffd71bd6e0269e76f283680bd53122a9fb40ec1b51cba1a3ae78"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_29_86491_1/C50_DIS.npz",
+      "bytes": 1113,
+      "sha256": "3dfc658d56935e03188edb4d9d9be1928a2d47c4bbc385de239b0fdbc31ba48c"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_29_86491_1/C50_FRG.npz",
+      "bytes": 1096,
+      "sha256": "6cda1eaabeca62fe38e3a7dab87e38792aa063f72150cb2e0c83a2c7cef3baac"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_36_86526_0/C100_COH.npz",
+      "bytes": 2235,
+      "sha256": "89475dfb7ed5019d112805794ad67f65d0a83371032d410ed8708b8442d92485"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_36_86526_0/C100_DIS.npz",
+      "bytes": 2440,
+      "sha256": "21f7beb7255783ebdf13911d4956e2d9932466a7b77875ba21192140d8798213"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_36_86526_0/C100_FRG.npz",
+      "bytes": 2402,
+      "sha256": "26c06fbc17ad6875003056051def6b4cc50af69d4dbdad364245cc31fca0088e"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_36_86526_0/C50_COH.npz",
+      "bytes": 2135,
+      "sha256": "59b1fdded16d404ba494d6ae20b11fabfe1750b5c7bb94c67078483f3ec09d3c"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_36_86526_0/C50_DIS.npz",
+      "bytes": 2340,
+      "sha256": "b024b6e49682d6955c076faaef77dc8703958c19ba55fc7e532f9d3b3113686d"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_36_86526_0/C50_FRG.npz",
+      "bytes": 2230,
+      "sha256": "574424f3ff60b0fd7592b2cbd65931fba59597a4aebb7759253a4cf7eef84451"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_40_86625_0/C100_COH.npz",
+      "bytes": 1542,
+      "sha256": "21521422f61d688342f60f0a462d2382c1d53e0da7721a06d08797a55865504c"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_40_86625_0/C100_DIS.npz",
+      "bytes": 1603,
+      "sha256": "54dd3abe07dcb6f1ef20f1457d6af7684da2ca7f97343c405f8a0ee42061c97c"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_40_86625_0/C100_FRG.npz",
+      "bytes": 1600,
+      "sha256": "33fbf69939c1088f6ee4c2a62fd68d99a7c04f8d56576281f06ca365be0f4357"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_40_86625_0/C50_COH.npz",
+      "bytes": 1488,
+      "sha256": "e85a500bb7ec0bad3c1b038a412aa2e575dc03a83212511868279314173d8456"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_40_86625_0/C50_DIS.npz",
+      "bytes": 1552,
+      "sha256": "c7bc7b0196864fe3e57f5e7fe4667669ef3fd5b5457fe582b4be1a3cbadf3456"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_40_86625_0/C50_FRG.npz",
+      "bytes": 1511,
+      "sha256": "b8645e940ccbafa0140e9aa99b0315b7e06f0bee18b79a63f4225062adbf8e7e"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_4_85506_1/C100_COH.npz",
+      "bytes": 2890,
+      "sha256": "bf6647e128500de5d06b1e17f0c23b496daabeb2905830bd378ddce9306c78bf"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_4_85506_1/C100_DIS.npz",
+      "bytes": 3136,
+      "sha256": "5ab15386de5d0cf26682179ebdf10cce349941f916042ebbbb519b479beaf1f3"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_4_85506_1/C100_FRG.npz",
+      "bytes": 3026,
+      "sha256": "a0a881c0892de4d2f761efe35217d8e0ac67fe1d0b3d149610b43b46f8691f25"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_4_85506_1/C50_COH.npz",
+      "bytes": 2765,
+      "sha256": "75262c2210d456d8014998567338066d0dcbced44e07f116212a7aabe98e126d"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_4_85506_1/C50_DIS.npz",
+      "bytes": 2932,
+      "sha256": "d374e201377c7af2bd7d78d103198b896ce23c2a89dc84e938fe1f492d6d7eeb"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_4_85506_1/C50_FRG.npz",
+      "bytes": 2816,
+      "sha256": "783ebcc686d5f884875c1492b122116849f86d30fbe8332af44445b65298c50e"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_7_85703_0/C100_COH.npz",
+      "bytes": 1140,
+      "sha256": "b9df50a9949eae3bfe043c8b26ebc9b3d72ce6b20db1148673a38f1b46ba0abd"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_7_85703_0/C100_DIS.npz",
+      "bytes": 1204,
+      "sha256": "6450ba01600f9ae1942a111c55dcf9565e8f3bc6d7bbb05c3aec20c049cf2c8d"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_7_85703_0/C100_FRG.npz",
+      "bytes": 1179,
+      "sha256": "1006001f1ea54ce5f762e3e8d79ed3ed62763b485a12853c3ae29835f78a6be7"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_7_85703_0/C50_COH.npz",
+      "bytes": 1125,
+      "sha256": "c92062818182186257989604ba4dd63f59001d022a239328d3b61ac1541d1310"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_7_85703_0/C50_DIS.npz",
+      "bytes": 1188,
+      "sha256": "8c3874b6e88bf0e1cabe66aeece3faec2b6fdb0a54b276bee6368801fb7d6837"
+    },
+    {
+      "path": "data/cova3d_training_grid_candidates_v1_2/radiopaedia_7_85703_0/C50_FRG.npz",
+      "bytes": 1143,
+      "sha256": "4ad8ed41d7f377f6cd6f49ed39a107d126d47c55ac971400d5ef24bf7401b030"
+    },
+    {
       "path": "data/manifests/.gitkeep",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -780,6 +1527,11 @@
       "sha256": "d1e159e2dfcbaad41185042e0aed7433ecdc46524ea94af97bac7a2942006765"
     },
     {
+      "path": "data/manifests/cova3d_neutral_anchor_bank_manifest_v1_0.csv",
+      "bytes": 9013,
+      "sha256": "5fb5b7d9c07cd9b1a9bf24466752329cdb1d2d9627e2d33fdfae99dfd99a8365"
+    },
+    {
       "path": "data/manifests/cova3d_primary_factorial_role_summary_v1_0.csv",
       "bytes": 299,
       "sha256": "5db7f9efc6f96a0c2386217e60d5cd403bc8ac919c51e70fa3177ff780ee1c1c"
@@ -793,6 +1545,36 @@
       "path": "data/manifests/cova3d_resolution_limited_neutral_bank_capacity_v1_0.csv",
       "bytes": 1690,
       "sha256": "488c3bb37a6182947ec77642c88cb6158075878d0db382b750289b6024a1f034"
+    },
+    {
+      "path": "data/manifests/cova3d_training_grid_budget_v1_2.csv",
+      "bytes": 3386,
+      "sha256": "437d4ff4573efdb999e8c08d35978242150141188004ce3e24df5201399a27f8"
+    },
+    {
+      "path": "data/manifests/cova3d_training_grid_candidate_artifact_manifest_v1_2.csv",
+      "bytes": 30489,
+      "sha256": "7815bf8d73d9a218aaf3648a86dd7787c03e1425dd55c9bd1ae4625ae5dc95b1"
+    },
+    {
+      "path": "data/manifests/cova3d_training_grid_component_audit_v1_2.csv",
+      "bytes": 277792,
+      "sha256": "f7d1765cd08fcf2b989d40624d8329d9404092fb9b1f1048f59697251262930a"
+    },
+    {
+      "path": "data/manifests/cova3d_training_grid_condition_manifest_v1_2.csv",
+      "bytes": 54885,
+      "sha256": "ba7ce81f2b44b968d22b1ad6fefad13d50673ff11b871d2c3d96fb84f55e4403"
+    },
+    {
+      "path": "data/manifests/cova3d_training_grid_geometry_v1_2.csv",
+      "bytes": 2840,
+      "sha256": "5dcb98e62f4aae62061957ae517860e8890317ba27e2d3a99a652163a69c2af6"
+    },
+    {
+      "path": "data/manifests/cova3d_training_grid_raw_transfer_audit_v1_2.csv",
+      "bytes": 16638,
+      "sha256": "ac30425651838448c57229cc0fe2cd3e832a00062f04bbe91ed620d08d680ded"
     },
     {
       "path": "data/manifests/gate_b_case_metrics.csv",
@@ -1185,6 +1967,11 @@
       "sha256": "bc3ea3675e536b243fe8590a139bc3cdaec21b96323384c6d1efe5260fefaa29"
     },
     {
+      "path": "docs/cova3d_training_grid_transfer_v1_2.md",
+      "bytes": 1844,
+      "sha256": "99b2d88ff8133c33a2e39bd688bcde6de4d8f01f21b04dbcb2ee53f6248c16cd"
+    },
+    {
       "path": "docs/figure_policy.md",
       "bytes": 505,
       "sha256": "330f7521a3f5c2f174dcee6472d7a8fd8d5679d637724ae1f9a9886df01e2f84"
@@ -1393,6 +2180,11 @@
       "path": "experiments/audits/block09d_a_resolution_aware_amendment.json",
       "bytes": 1451,
       "sha256": "0dd63a953b0c2196543c32a23610067c2adda0543a644760258f6b967a80dce9"
+    },
+    {
+      "path": "experiments/audits/block09d_b2_final_coordinate_grid.json",
+      "bytes": 2577,
+      "sha256": "3c484cdfe496e6f334c5b00a5ed3e04193b4847cc8ae27c6ee7b52ed1d73e293"
     },
     {
       "path": "experiments/audits/block09d_b_neutral_bank_diagnostic/case_neutral_bank_feasibility.csv",
@@ -1860,6 +2652,11 @@
       "sha256": "5ac3e972c50c83b664f7a34b9beb25a8c4222e1c0d92ad2e2ba5d2cfaa904e20"
     },
     {
+      "path": "scripts/code_blocks/block09d_b2_final_coordinate_grid.py",
+      "bytes": 169974,
+      "sha256": "8663f41b9a4be75f35803d254d04cae1b8e5737f3963a0d4beb5944e16b79272"
+    },
+    {
       "path": "scripts/resume_project.py",
       "bytes": 673,
       "sha256": "4ff28985d05c37f7b896c40c8265ea86cc52f936ff7b5ce36edb05d74d7519ae"
@@ -2103,6 +2900,11 @@
       "path": "tests/test_cova3d_dataset_feasibility.py",
       "bytes": 2366,
       "sha256": "e1f94690329fa9875ef7c3ce377fbb5f6fb0c4d32d03ff3d597e99dec878ac2e"
+    },
+    {
+      "path": "tests/test_cova3d_final_coordinate_grid_v1_2.py",
+      "bytes": 5423,
+      "sha256": "0aa15fb4cf2a579cc54eed145cdb045e059ab5f5a66ee00d65eb69eea1d153dd"
     },
     {
       "path": "tests/test_cova3d_protocol_registry.py",
