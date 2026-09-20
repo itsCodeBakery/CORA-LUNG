@@ -1,0 +1,53 @@
+project: COVA-3D
+parent_amendment: A1_RESOLUTION_AWARE_GEOMETRY
+amendment_id: A1_1_CROSS_COVERAGE_STABLE_RESOLUTION_CLASS
+effective_protocol: COVA3D_1.0+A1+A1.1
+status: PROSPECTIVELY_FROZEN_BEFORE_COVA_TRAINING
+reason: Resolution classification must not itself vary with the coverage factor because
+  doing so would make geometry-treatment availability coverage dependent and could
+  confound the primary coverage-by-geometry interaction.
+observed_preoutcome_diagnostic:
+  C50_resolution_limited_rows: 20
+  C100_resolution_limited_rows: 18
+  cross_coverage_discordant_components: 10
+  global_resolution_limited_components: 28
+  cases_with_global_resolution_limitation: 13
+  coverage_lost_components: 0
+  median_global_limited_volume_ml: 0.1646213147342505
+global_classification_rule:
+  scope: case-component, invariant across coverage levels
+  GLOBAL_GEOMETRY_RESOLVABLE: geometry-resolvable in every available coverage realization
+    for that case-component
+  GLOBAL_RESOLUTION_LIMITED: resolution-limited in at least one available coverage
+    realization
+  COVERAGE_LOST: coverage-lost in any available realization; hard stop
+annotation_rule:
+  GLOBAL_GEOMETRY_RESOLVABLE:
+    minimum_quota: 2
+    geometry_manipulation: true
+  GLOBAL_RESOLUTION_LIMITED:
+    quota: 1
+    geometry_manipulation: false
+    anchor_reuse: same anchor across every geometry and coverage cell in which the
+      component is selected
+    anchor_source_in_09D_B: physical lesion component mapped to the frozen training
+      grid, independent of condition-specific sparse candidate realization
+    anchor_selection: mapped component voxel nearest the native physical component
+      centroid; deterministic lexicographic tie-break
+preserved_constraints:
+  C50_component_selection: unchanged
+  C100_component_selection: unchanged
+  C50_nested_in_C100: true
+  selected_lesions_dropped: false
+  same_component_set_across_geometry: true
+  same_per_component_quota_across_geometry: true
+  equal_total_FG_across_six_cells: true
+  identical_BG_across_six_cells: true
+  primary_endpoint_changed: false
+outcome_independence:
+  model_predictions_used: false
+  model_checkpoints_used: false
+  segmentation_metrics_used: false
+  optimizer_steps_before_freeze: 0
+next_block: 09D-B
+frozen_at_utc: '2026-09-20T08:16:58Z'

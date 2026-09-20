@@ -1,0 +1,43 @@
+{
+  "project": "COVA-3D",
+  "block": "09D-A2-LOCK",
+  "status": "PASS",
+  "generated_at_utc": "2026-09-20T08:16:58Z",
+  "parent_commit": "6d194763fe9bdb4bad8be701f925fd3c4cb71a24",
+  "parent_amendment": "A1_RESOLUTION_AWARE_GEOMETRY",
+  "amendment_id": "A1_1_CROSS_COVERAGE_STABLE_RESOLUTION_CLASS",
+  "effective_protocol": "COVA3D_1.0+A1+A1.1",
+  "diagnostic": {
+    "unique_components": 308,
+    "C50_limited_rows": 20,
+    "C100_limited_rows": 18,
+    "cross_coverage_discordant_components": 10,
+    "global_resolution_limited_components": 28,
+    "global_resolution_limited_cases": 13,
+    "coverage_lost_components": 0,
+    "median_global_limited_volume_ml": 0.1646213147342505
+  },
+  "frozen_rule": {
+    "classification_scope": "case-component",
+    "coverage_invariant": true,
+    "limited_if_any_available_coverage_is_limited": true,
+    "limited_quota": 1,
+    "limited_anchor_shared_across_geometry": true,
+    "limited_anchor_shared_across_coverage": true,
+    "limited_anchor_source": "physical lesion component",
+    "geometry_resolvable_minimum_quota": 2
+  },
+  "firewall": {
+    "ct_arrays_accessed": 0,
+    "dense_mask_arrays_accessed": 0,
+    "prediction_arrays_accessed": 0,
+    "checkpoint_arrays_accessed": 0,
+    "model_outcomes_accessed": 0,
+    "optimizer_steps": 0
+  },
+  "factorial_training_authorized": false,
+  "global_class_manifest": "data/manifests/cova3d_global_resolution_class_v1_0.csv",
+  "global_class_manifest_sha256": "6aa00e9f3c9eee4aaea51742e050b7234d6c9673e770d1a2a59415832a05e027",
+  "next_block": "09D-B",
+  "source_capture": "PASS"
+}
