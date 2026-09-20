@@ -1,24 +1,23 @@
 {
-  "generated_at_utc": "2026-09-20T07:32:02Z",
-  "completed_block": "09C",
-  "engineering_repair": "09C-R",
+  "generated_at_utc": "2026-09-20T08:33:08Z",
+  "completed_block": "09D-A3-LOCK",
   "active_track": "COVA3D",
-  "cora_gate_b": "NO_GO",
-  "cova3d_native_geometry_feasibility": "PASS",
-  "cova3d_native_sparse_artifacts_persisted": true,
-  "cova3d_trainer_grid_feasibility": "PENDING_09D",
+  "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2",
+  "neutral_anchor_bank_amendment": "FROZEN",
+  "neutral_bank_aggregate_feasibility": "PASS_20_OF_20",
+  "final_coordinate_grid_feasibility": "PENDING_09D_B2",
   "factorial_training_authorized": false,
   "self_included": false,
   "files": [
     {
       "path": ".gitignore",
-      "bytes": 1023,
-      "sha256": "a908b7235743d016c46728ae8cae23af1c72f6b6d8686cba4a51f91f15c54b20"
+      "bytes": 1022,
+      "sha256": "50c7e58259e4549f19e9ba90390783d377dd6e8911be2e5723c301c383ac6072"
     },
     {
       "path": "COVA3D_STATE.json",
-      "bytes": 3066,
-      "sha256": "31691db1d65906957573f40902d79e1a28a65974dc9115971499186745a9f3e8"
+      "bytes": 3969,
+      "sha256": "5f8f8cd05e2727bccea994395ace181b5be91364df0162f3eb75f883530c56c3"
     },
     {
       "path": "LICENSE",
@@ -27,8 +26,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 5711,
-      "sha256": "ef729a4a4c0fd7283995c3d5848b041f0fe734cdf8d65a3bc693e4dd0fd58ff8"
+      "bytes": 6231,
+      "sha256": "fc5d7c361287a0b847dd75b9a68e31e85684e4dbd37005c6ebeeffc478ca0183"
     },
     {
       "path": "README.md",
@@ -59,6 +58,21 @@
       "path": "configs/cova3d_protocol_v1_0.yaml",
       "bytes": 7887,
       "sha256": "50bfbe77e5cc307a59652fdb8c766da5fc0ebcd268f3d4f011e3e760604a82dc"
+    },
+    {
+      "path": "configs/cova3d_resolution_aware_amendment_A1.yaml",
+      "bytes": 3265,
+      "sha256": "c1f54a5966f6980e43fb3f6a34b9ec06aece943d208d758f0b7de072a93b6fc1"
+    },
+    {
+      "path": "configs/cova3d_resolution_aware_amendment_A1_1.yaml",
+      "bytes": 2287,
+      "sha256": "c3df7bc415d3599a930fa47b846f00115b808e6761c62984e8c1f8d36356407c"
+    },
+    {
+      "path": "configs/cova3d_resolution_aware_amendment_A1_2.yaml",
+      "bytes": 3443,
+      "sha256": "3c428cbcc6ce12938946956a006fa094a69cda0b3946f4bfc08ccf76370311c1"
     },
     {
       "path": "configs/cova3d_secondary_dataset_candidate_v1_0.yaml",
@@ -741,6 +755,11 @@
       "sha256": "54bcfac43fecfda1a44b2f3b4c3b393bd50d5cc3c9f30089c8c8713c78fb6cd6"
     },
     {
+      "path": "data/manifests/cova3d_global_resolution_class_v1_0.csv",
+      "bytes": 40726,
+      "sha256": "6aa00e9f3c9eee4aaea51742e050b7234d6c9673e770d1a2a59415832a05e027"
+    },
+    {
       "path": "data/manifests/cova3d_native_budget_v1_0.csv",
       "bytes": 2640,
       "sha256": "d99a3d6926c84320be5577505c7226ee12d8f8823de1b462ea90ede68a13652b"
@@ -769,6 +788,11 @@
       "path": "data/manifests/cova3d_primary_factorial_structural_feasibility_v1_0.csv",
       "bytes": 2678,
       "sha256": "9c568f3077e98aa2f26a4d89eefb37318a612cd7d4dff17b86a9190d7a82442f"
+    },
+    {
+      "path": "data/manifests/cova3d_resolution_limited_neutral_bank_capacity_v1_0.csv",
+      "bytes": 1690,
+      "sha256": "488c3bb37a6182947ec77642c88cb6158075878d0db382b750289b6024a1f034"
     },
     {
       "path": "data/manifests/gate_b_case_metrics.csv",
@@ -1146,6 +1170,21 @@
       "sha256": "f030fda71ace13577712e8b475c3200683f71817f477ca7ed88887307212e696"
     },
     {
+      "path": "docs/cova3d_protocol_amendment_A1_1_cross_coverage_stability.md",
+      "bytes": 1602,
+      "sha256": "3c508c06c906984d1622560f534abb0b124480cea25882d4c1b150346d7dbcce"
+    },
+    {
+      "path": "docs/cova3d_protocol_amendment_A1_2_neutral_anchor_banks.md",
+      "bytes": 2605,
+      "sha256": "fc9e58b3c5789b1ef0731b0f2708218bd0bc4135decb31f569cb1fb8a01c94b7"
+    },
+    {
+      "path": "docs/cova3d_protocol_amendment_A1_resolution_aware_geometry.md",
+      "bytes": 2323,
+      "sha256": "bc3ea3675e536b243fe8590a139bc3cdaec21b96323384c6d1efe5260fefaa29"
+    },
+    {
       "path": "docs/figure_policy.md",
       "bytes": 505,
       "sha256": "330f7521a3f5c2f174dcee6472d7a8fd8d5679d637724ae1f9a9886df01e2f84"
@@ -1329,6 +1368,41 @@
       "path": "experiments/audits/block09c_runtime_artifact_restore.json",
       "bytes": 1106,
       "sha256": "070a13b4f5459d024b4125ef91e096173537f9301be4bae6932904292e39be50"
+    },
+    {
+      "path": "experiments/audits/block09d_a2_cross_coverage_stability.json",
+      "bytes": 1578,
+      "sha256": "41922d9a8ab6fc5a575df4b6ab60191c56785c4abdd40b93bb9a0a6a98ca4a2f"
+    },
+    {
+      "path": "experiments/audits/block09d_a3_neutral_anchor_bank_amendment.json",
+      "bytes": 1605,
+      "sha256": "07c0d289abf45d729851f156ebd8573a344cec0ab1dfcd1800d02521ac9288a0"
+    },
+    {
+      "path": "experiments/audits/block09d_a_diagnostics/case_training_grid_feasibility.csv",
+      "bytes": 2321,
+      "sha256": "2f8c2903bfa3bba34514d12eb9d3c96a2f83c15271ec2ea523dfac427fc81541"
+    },
+    {
+      "path": "experiments/audits/block09d_a_diagnostics/component_training_grid_feasibility.csv",
+      "bytes": 55350,
+      "sha256": "55199c1c0d754b5209926ba3f3ac06c08e72de895feb6723b47f3a2948d7dd18"
+    },
+    {
+      "path": "experiments/audits/block09d_a_resolution_aware_amendment.json",
+      "bytes": 1451,
+      "sha256": "0dd63a953b0c2196543c32a23610067c2adda0543a644760258f6b967a80dce9"
+    },
+    {
+      "path": "experiments/audits/block09d_b_neutral_bank_diagnostic/case_neutral_bank_feasibility.csv",
+      "bytes": 1794,
+      "sha256": "a11c3ed1d320e4aeba10d5d5e31880195c87fa37913220d49fd26c7c747f685e"
+    },
+    {
+      "path": "experiments/audits/block09d_b_neutral_bank_diagnostic/limited_component_physical_capacity.csv",
+      "bytes": 1690,
+      "sha256": "488c3bb37a6182947ec77642c88cb6158075878d0db382b750289b6024a1f034"
     },
     {
       "path": "experiments/registry.csv",
@@ -1771,6 +1845,21 @@
       "sha256": "094f40b4466d0032b65c1b99daf2808283a49a5d26066d7486548db35c3c478d"
     },
     {
+      "path": "scripts/code_blocks/block09d_a2_lock_cross_coverage_stability.py",
+      "bytes": 36798,
+      "sha256": "8d314a5cd28215ece197bcf2ad222279ae5dc4377fec730c8157163f83df4f48"
+    },
+    {
+      "path": "scripts/code_blocks/block09d_a3_lock_neutral_anchor_bank.py",
+      "bytes": 44313,
+      "sha256": "222a81fe7caf26c044390bc04927f5276fb14678ef423c3cb9d1730bfe7fe36a"
+    },
+    {
+      "path": "scripts/code_blocks/block09d_a_lock_resolution_aware_amendment.py",
+      "bytes": 37602,
+      "sha256": "5ac3e972c50c83b664f7a34b9beb25a8c4222e1c0d92ad2e2ba5d2cfaa904e20"
+    },
+    {
       "path": "scripts/resume_project.py",
       "bytes": 673,
       "sha256": "4ff28985d05c37f7b896c40c8265ea86cc52f936ff7b5ce36edb05d74d7519ae"
@@ -1781,24 +1870,9 @@
       "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
     },
     {
-      "path": "src/cora_lung/__pycache__/__init__.cpython-312.pyc",
-      "bytes": 174,
-      "sha256": "a57900c4261e1e5486c904674fe34cc5a70e34d1e8d8d8b2395c87537f4e3626"
-    },
-    {
       "path": "src/cora_lung/data/__init__.py",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "src/cora_lung/data/__pycache__/__init__.cpython-312.pyc",
-      "bytes": 153,
-      "sha256": "3f095f46666132dc4a2844e5cde79724702157c9a1a13a1e730bca3b63286f13"
-    },
-    {
-      "path": "src/cora_lung/data/__pycache__/preprocess.cpython-312.pyc",
-      "bytes": 3476,
-      "sha256": "b8ae1e625893184f34ceba974c08c72ef941850d42e5db28ef09f9ed7999c881"
     },
     {
       "path": "src/cora_lung/data/equalization.py",
@@ -2014,6 +2088,11 @@
       "path": "tests/test_component_matching.py",
       "bytes": 215,
       "sha256": "2e74fec40946dee999035c62b421be8f25c646f9914bca92838a100dc3f232b1"
+    },
+    {
+      "path": "tests/test_cova3d_amendment_a1_2.py",
+      "bytes": 2066,
+      "sha256": "17869414e554682fb85762321f458efba000d9d8ba46c6770db8380b80a1ac08"
     },
     {
       "path": "tests/test_cova3d_annotation_simulator_v2.py",

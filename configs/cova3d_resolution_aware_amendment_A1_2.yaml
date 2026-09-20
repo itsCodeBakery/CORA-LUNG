@@ -1,0 +1,83 @@
+project: COVA-3D
+parent_protocol: COVA3D_1.0+A1+A1.1
+amendment_id: A1_2_GEOMETRY_NEUTRAL_PHYSICAL_ANCHOR_BANK
+effective_protocol: COVA3D_1.0+A1+A1.1+A1.2
+status: PROSPECTIVELY_FROZEN_BEFORE_COVA_TRAINING
+trigger:
+  failed_block: 09D-B
+  failure_case: radiopaedia_29_86490_1
+  failure_type: FIXED_LIMITED_QUOTA_PREVENTED_EQUAL_COVERAGE_BUDGET
+  C50_fixed_quota_capacity: 1
+  C100_fixed_quota_minimum: 2
+diagnostic_evidence:
+  cases_tested: 20
+  aggregate_feasible_cases: 20
+  globally_resolution_limited_components: 28
+  cases_with_limited_components: 13
+  physical_support_min_voxels: 17
+  physical_support_median_voxels: 39.0
+  physical_support_max_voxels: 101
+  limited_components_with_support_ge_2: 28
+  model_outcomes_used: false
+  optimizer_steps: 0
+supersedes_only: A1.1 rule that GLOBAL_RESOLUTION_LIMITED quota is fixed at exactly
+  one voxel
+unchanged_from_A1_1:
+  global_resolution_class: coverage-invariant
+  coverage_selection: unchanged
+  geometry_claim_for_limited_lesions: false
+  geometry_manipulation_for_resolvable_lesions: true
+  primary_endpoint: macro patient lesion recall at <=1 FP/patient
+  primary_endpoint_changed: false
+GLOBAL_RESOLUTION_LIMITED:
+  minimum_quota: 1
+  maximum_quota: mapped physical lesion support capacity
+  geometry_manipulation: false
+  representation: geometry-neutral deterministic physical anchor bank
+  bank_source: all unique training-grid voxels occupied by the physical native lesion
+    component
+  bank_order: ascending Euclidean world-space distance from the native physical lesion-component
+    centroid; ties resolved lexicographically by crop-grid z, y, x
+  condition_use: for assigned quota q, use the first q voxels of the same frozen ordered
+    bank
+  shared_across_geometry: true
+  shared_across_coverage: same ordered bank; coverage-specific quota may use different
+    nested prefix lengths
+  cross_coverage_prefix_property: true
+  geometry_claim_allowed: false
+GLOBAL_GEOMETRY_RESOLVABLE:
+  minimum_quota: 2
+  maximum_quota: minimum geometry-preserving capacity across COH, DIS and FRG for
+    that coverage realization
+  geometry_manipulation: true
+budget_allocation:
+  target: largest exact common B_i_train feasible across all six cells
+  upper_bound:
+  - native frozen B_i
+  - C50 total component capacity
+  - C100 total component capacity
+  - mapped common BG capacity
+  lower_bound: maximum of the C50 and C100 sums of component-specific minimum quotas
+  candidate_search: descending from upper bound to lower bound
+  component_allocation: initialize every component at its frozen minimum; distribute
+    remaining quota one voxel per component in frozen selected-component order while
+    capacity remains
+  allocation_outcome_adaptive: false
+  model_outcomes_used: false
+coordinate_level_requirements_for_09D_B2:
+  cross_component_FG_collision: forbidden
+  FG_BG_collision: forbidden
+  same_total_FG_across_six: true
+  same_BG_coordinates_across_six: true
+  same_component_set_across_geometry: true
+  same_component_quota_across_geometry: true
+  C50_component_set_nested_in_C100: true
+  limited_bank_prefix_nested_across_coverage: true
+  resolvable_geometry_preservation: true
+  selected_lesions_dropped: false
+failure_policy: If exact coordinate-level construction fails for any case, stop. Do
+  not alter A1.2 based on model outcomes.
+factorial_training_authorized: false
+method_development_authorized: false
+next_block: 09D-B2
+frozen_at_utc: '2026-09-20T08:33:08Z'

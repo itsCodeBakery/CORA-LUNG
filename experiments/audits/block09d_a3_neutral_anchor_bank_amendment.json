@@ -1,0 +1,49 @@
+{
+  "project": "COVA-3D",
+  "block": "09D-A3-LOCK",
+  "status": "PASS",
+  "generated_at_utc": "2026-09-20T08:33:08Z",
+  "parent_commit": "8690900f10d4f0fa17ad047abf16b4d392932d5a",
+  "parent_protocol": "COVA3D_1.0+A1+A1.1",
+  "amendment_id": "A1_2_GEOMETRY_NEUTRAL_PHYSICAL_ANCHOR_BANK",
+  "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2",
+  "failed_09D_B": {
+    "committed": false,
+    "failure_case": "radiopaedia_29_86490_1",
+    "failure_reason": "FIXED_QUOTA_1_PREVENTED_COMMON_C50_C100_BUDGET"
+  },
+  "neutral_bank_diagnostic": {
+    "cases": 20,
+    "aggregate_feasible_cases": 20,
+    "limited_components": 28,
+    "limited_cases": 13,
+    "support_min": 17,
+    "support_median": 39.0,
+    "support_max": 101,
+    "support_ge2": 28,
+    "radiopaedia_29_86490_1_common_minimum": 2,
+    "radiopaedia_29_86490_1_common_maximum": 20
+  },
+  "frozen_rule": {
+    "limited_minimum_quota": 1,
+    "limited_capacity": "mapped_physical_component_support",
+    "limited_geometry_manipulation": false,
+    "same_ordered_bank_across_geometry": true,
+    "same_ordered_bank_across_coverage": true,
+    "coverage_uses_nested_bank_prefix": true,
+    "resolvable_minimum_quota": 2,
+    "final_coordinate_level_feasibility": "PENDING_09D_B2"
+  },
+  "firewall": {
+    "CT_arrays_accessed_in_this_lock": 0,
+    "dense_masks_accessed_in_this_lock": 0,
+    "predictions_accessed": 0,
+    "checkpoints_accessed": 0,
+    "model_outcomes_accessed": 0,
+    "optimizer_steps": 0
+  },
+  "factorial_training_authorized": false,
+  "method_development_authorized": false,
+  "next_block": "09D-B2",
+  "source_capture": "PASS"
+}
