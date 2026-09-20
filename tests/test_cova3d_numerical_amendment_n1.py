@@ -1,5 +1,4 @@
 from pathlib import Path
-import json
 
 import yaml
 
@@ -7,9 +6,9 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def test_n1_is_frozen():
+def load_n1():
 
-    cfg = yaml.safe_load(
+    return yaml.safe_load(
         (
             ROOT
             / "configs/"
@@ -19,11 +18,37 @@ def test_n1_is_frozen():
         )
     )
 
+
+def test_n1_is_frozen():
+
+    cfg = load_n1()
+
     assert (
         cfg[
             "status"
         ]
         == "PROSPECTIVELY_FROZEN_BEFORE_FIRST_SUCCESSFUL_COVA_OPTIMIZER_STEP"
+    )
+
+    assert (
+        cfg[
+            "amendment_id"
+        ]
+        == "N1_FP16_STABLE_LOSS_SCALING"
+    )
+
+    assert (
+        cfg[
+            "protocol_before"
+        ]
+        == "COVA3D_1.0+A1+A1.1+A1.2"
+    )
+
+    assert (
+        cfg[
+            "protocol_after"
+        ]
+        == "COVA3D_1.0+A1+A1.1+A1.2+N1"
     )
 
     assert (
@@ -55,6 +80,15 @@ def test_n1_is_frozen():
 
     assert (
         cfg[
+            "amp_policy"
+        ][
+            "gradient_clip_only_after_finite_unscale"
+        ]
+        is True
+    )
+
+    assert (
+        cfg[
             "scientifically_unchanged"
         ][
             "successful_sanity_optimizer_step_target"
@@ -70,55 +104,62 @@ def test_n1_is_frozen():
     )
 
 
-def test_state_after_n1():
+def test_n1_historical_provenance_is_immutable():
 
-    state = json.loads(
-        (
-            ROOT
-            / "COVA3D_STATE.json"
-        ).read_text(
-            encoding="utf-8"
-        )
-    )
+    """Validate the historical N1 artifact, not mutable CURRENT project state."""
+
+    cfg = load_n1()
 
     assert (
-        state[
-            "last_completed_block"
+        cfg[
+            "diagnostic"
+        ][
+            "diagnosis"
         ]
-        == "09E-N1-LOCK"
+        == "TRANSIENT_FP16_LOSS_SCALE_OVERFLOW"
     )
 
     assert (
-        state[
-            "numerical_amendment"
+        cfg[
+            "diagnostic"
+        ][
+            "largest_observed_finite_scale"
         ]
-        == "N1"
+        == 4096.0
     )
 
     assert (
-        state[
-            "optimizer_steps_in_cova3d"
-        ]
-        == 0
-    )
-
-    assert (
-        state[
-            "sanity_training_authorized"
+        cfg[
+            "diagnostic"
+        ][
+            "scale_1_finite"
         ]
         is True
     )
 
     assert (
-        state[
-            "factorial_training_authorized"
+        cfg[
+            "scientifically_unchanged"
+        ][
+            "architecture"
         ]
-        is False
+        is True
     )
 
     assert (
-        state[
-            "dense_outcomes_opened_in_cova3d"
+        cfg[
+            "scientifically_unchanged"
+        ][
+            "loss"
         ]
-        is False
+        is True
+    )
+
+    assert (
+        cfg[
+            "scientifically_unchanged"
+        ][
+            "annotation_protocol"
+        ]
+        is True
     )

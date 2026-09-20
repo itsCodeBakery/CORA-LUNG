@@ -1,0 +1,43 @@
+{
+  "project": "COVA-3D",
+  "block": "09E-N2-LOCK",
+  "status": "PASS",
+  "amendment": "N2_FP32_SPARSE_DICE_ARITHMETIC",
+  "parent_commit": "b51e3667b543350adfa7a49271653052b8f29d93",
+  "protocol_after": "COVA3D_1.0+A1+A1.1+A1.2+N1+N2",
+  "R1_successful_updates_executed": 233,
+  "R1_successful_updates_retained": 0,
+  "R1_dense_outcomes_accessed": false,
+  "legacy_Dice_scale1_finite": false,
+  "N2_Dice_scale1_finite": true,
+  "N2_Dice_scale4096_finite": true,
+  "root_event": {
+    "microbatch_index": 66,
+    "case_id": "radiopaedia_27_86410_0",
+    "labelled": 2,
+    "foreground": 0,
+    "background": 2,
+    "dice_denominator_fp16": 1.1920928955078125e-06,
+    "dice_denominator_fp32": 1.1896668183908332e-06,
+    "reciprocal_fp16_finite": false,
+    "reciprocal_fp32": 840571.5,
+    "reciprocal_fp32_finite": true
+  },
+  "network_forward_dtype": "AMP_FP16",
+  "Dice_arithmetic_dtype": "FP32",
+  "Dice_formula_changed": false,
+  "Dice_epsilon_changed": false,
+  "BCE_changed": false,
+  "factorial_training_authorized": false,
+  "next_block": "09E-SANITY-FIT-R2",
+  "generated_at_utc": "2026-09-20T10:02:11Z",
+  "source_capture": "PASS",
+  "regression_suite_final_status": "PASS_AFTER_HISTORICAL_N1_TEST_SCOPE_FIX",
+  "regression_test_scope_fix": {
+    "scientific_protocol_changed": false,
+    "N1_policy_changed": false,
+    "N2_policy_changed": false,
+    "reason": "Historical N1 regression test asserted mutable current project state. The repaired test validates immutable N1 configuration and provenance instead.",
+    "finalized_at_utc": "2026-09-20T10:11:05Z"
+  }
+}

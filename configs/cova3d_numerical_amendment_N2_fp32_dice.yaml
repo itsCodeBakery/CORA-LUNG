@@ -1,0 +1,92 @@
+project: COVA-3D
+amendment_id: N2_FP32_SPARSE_DICE_ARITHMETIC
+status: PROSPECTIVELY_FROZEN_BEFORE_CLEAN_SANITY_RESTART_R2
+parent_commit: b51e3667b543350adfa7a49271653052b8f29d93
+baseline_id: COVA3D_NNUNET_STYLE_PARTIAL_V1
+protocol_before: COVA3D_1.0+A1+A1.1+A1.2+N1
+protocol_after: COVA3D_1.0+A1+A1.1+A1.2+N1+N2
+trigger:
+  run: 09E-SANITY-FIT-R1
+  failed_epoch_1based: 5
+  failed_pair_index: 33
+  failed_microbatches:
+  - 66
+  - 67
+  amp_scale_at_failure: 1.0
+  successful_optimizer_updates_executed: 233
+  epoch_boundary_updates_persisted: 200
+  incomplete_epoch_updates: 33
+  updates_retained_for_scientific_run: 0
+  dense_outcomes_accessed: false
+  final_outer_cv_access: 0
+exact_state_diagnosis:
+  AMP_original_combined: NONFINITE_GRADIENTS
+  AMP_original_BCE: FINITE_GRADIENTS
+  AMP_original_Dice: NONFINITE_GRADIENTS
+  AMP_forward_FP32_loss_combined: FINITE_GRADIENTS
+  AMP_forward_FP32_loss_BCE: FINITE_GRADIENTS
+  AMP_forward_FP32_loss_Dice: FINITE_GRADIENTS
+  full_FP32_combined: FINITE_GRADIENTS
+  full_FP32_BCE: FINITE_GRADIENTS
+  full_FP32_Dice: FINITE_GRADIENTS
+  diagnosis: FP16_SPARSE_DICE_ARITHMETIC_INSTABILITY
+root_event:
+  microbatch_index: 66
+  case_id: radiopaedia_27_86410_0
+  labelled: 2
+  foreground: 0
+  background: 2
+  dice_denominator_fp16: 1.1920928955078125e-06
+  dice_denominator_fp32: 1.1896668183908332e-06
+  reciprocal_fp16_finite: false
+  reciprocal_fp32: 840571.5
+  reciprocal_fp32_finite: true
+N2_policy:
+  network_forward_autocast: true
+  network_forward_dtype: float16
+  partial_BCE: UNCHANGED
+  partial_Dice_formula: UNCHANGED
+  partial_Dice_epsilon: 1.0e-06
+  partial_Dice_arithmetic_dtype: float32
+  partial_Dice_autocast: false
+  BCE_weight: 1.0
+  Dice_weight: 1.0
+  combined_objective: partial_BCE + partial_Dice_fp32
+  N1_remains_active: true
+  N1_initial_scale: 4096.0
+  N1_minimum_scale: 1.0
+  N1_same_pair_retry: true
+scientifically_unchanged:
+  annotation_protocol: true
+  coverage_factor: true
+  geometry_factor: true
+  network_architecture: true
+  network_parameter_count: true
+  loss_equation: true
+  loss_weights: true
+  Dice_epsilon: true
+  optimizer: true
+  learning_rate: true
+  learning_rate_schedule: true
+  weight_decay: true
+  gradient_clip: true
+  patch_size: true
+  sampling_schedule: true
+  augmentation: true
+  epochs: true
+  microbatches_per_epoch: true
+  successful_optimizer_step_target: 1000
+  checkpoint_rule: true
+  final_factorial_protocol: true
+restart_policy:
+  R1_weights_reused: false
+  R1_optimizer_state_reused: false
+  R1_scaler_state_reused: false
+  R1_updates_retained: 0
+  restart: ORIGINAL_FROZEN_INITIALIZATION
+  next_run: 09E-SANITY-FIT-R2
+factorial_training_authorized: false
+dense_sanity_evaluation_authorized: false
+final_outer_cv_outcomes_authorized: false
+next_block: 09E-SANITY-FIT-R2
+frozen_at_utc: '2026-09-20T10:02:11Z'

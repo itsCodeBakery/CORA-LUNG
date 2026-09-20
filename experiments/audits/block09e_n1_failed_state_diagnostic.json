@@ -1,0 +1,49 @@
+{
+  "project": "COVA-3D",
+  "block": "09E-N1-FAIL-DIAG",
+  "status": "DIAGNOSIS_COMPLETE",
+  "repository_modified_during_diagnostic": false,
+  "optimizer_steps_during_diagnostic": 0,
+  "dense_masks_accessed": 0,
+  "final_outer_cv_access": 0,
+  "failure_location": {
+    "epoch_1based": 5,
+    "pair_index": 33,
+    "microbatches": [
+      66,
+      67
+    ],
+    "successful_updates_before_failure": 233,
+    "persisted_successful_updates": 200,
+    "incomplete_epoch_updates": 33,
+    "amp_scale": 1.0,
+    "pair_foreground_labels": 29,
+    "pair_background_labels": 29
+  },
+  "precision_loss_matrix": {
+    "AMP_original_combined": "NONFINITE",
+    "AMP_original_BCE": "FINITE",
+    "AMP_original_Dice": "NONFINITE",
+    "AMP_forward_FP32_loss_combined": "FINITE",
+    "AMP_forward_FP32_loss_BCE": "FINITE",
+    "AMP_forward_FP32_loss_Dice": "FINITE",
+    "FULL_FP32_combined": "FINITE",
+    "FULL_FP32_BCE": "FINITE",
+    "FULL_FP32_Dice": "FINITE"
+  },
+  "root_event": {
+    "microbatch_index": 66,
+    "case_id": "radiopaedia_27_86410_0",
+    "labelled": 2,
+    "foreground": 0,
+    "background": 2,
+    "dice_denominator_fp16": 1.1920928955078125e-06,
+    "dice_denominator_fp32": 1.1896668183908332e-06,
+    "reciprocal_fp16_finite": false,
+    "reciprocal_fp32": 840571.5,
+    "reciprocal_fp32_finite": true
+  },
+  "diagnosis": "FP16_DICE_ARITHMETIC_INSTABILITY",
+  "conclusion": "Sparse Dice arithmetic must be executed in FP32. The network forward may remain AMP FP16.",
+  "created_at_utc": "2026-09-20T10:02:11Z"
+}

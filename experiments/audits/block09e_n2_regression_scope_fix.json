@@ -1,0 +1,33 @@
+{
+  "project": "COVA-3D",
+  "block": "09E-N2-FINALIZE",
+  "status": "PASS",
+  "parent_commit": "b51e3667b543350adfa7a49271653052b8f29d93",
+  "root_cause_of_original_regression_failure": "Historical N1 test incorrectly required mutable current project state to remain at N1 after N2.",
+  "pre_fix_N1_return_code": 1,
+  "pre_fix_failure_test": "test_state_after_n1",
+  "repair": "Replace current-state assertions with immutable N1 configuration/provenance assertions.",
+  "scientific_changes": 0,
+  "model_changes": 0,
+  "loss_changes": 0,
+  "annotation_changes": 0,
+  "optimizer_changes": 0,
+  "optimizer_steps": 0,
+  "dense_masks_accessed": 0,
+  "final_outer_cv_access": 0,
+  "combined_regression_suite": "PASS",
+  "direct_N2_smoke_test": {
+    "observed_dtype": "torch.float32",
+    "observed_value": 0.06337910890579224,
+    "reference_value": 0.06337910890579224,
+    "absolute_difference": 0.0,
+    "gradient_finite": true
+  },
+  "source_capture": {
+    "N2": "PASS",
+    "test_diagnostic": "PASS",
+    "finalization": "PASS"
+  },
+  "next_block": "09E-SANITY-FIT-R2",
+  "generated_at_utc": "2026-09-20T10:11:05Z"
+}

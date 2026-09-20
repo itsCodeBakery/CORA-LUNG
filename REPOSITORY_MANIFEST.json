@@ -1,13 +1,18 @@
 {
-  "generated_at_utc": "2026-09-20T09:38:01Z",
-  "completed_block": "09E-N1-LOCK",
+  "generated_at_utc": "2026-09-20T10:11:05Z",
+  "completed_block": "09E-N2-LOCK",
+  "finalization_block": "09E-N2-FINALIZE",
   "active_track": "COVA3D",
-  "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2+N1",
-  "numerical_amendment": "N1",
-  "amp_initial_scale": 4096.0,
-  "sanity_training_authorized": true,
-  "sanity_gate": "NOT_RUN",
-  "cova_optimizer_steps": 0,
+  "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2+N1+N2",
+  "numerical_amendments": [
+    "N1",
+    "N2"
+  ],
+  "N2_status": "FROZEN_AND_REGRESSION_VERIFIED",
+  "N2_regression_suite": "PASS",
+  "R1_successful_updates_executed": 233,
+  "R1_updates_retained": 0,
+  "clean_R2_retained_optimizer_steps": 0,
   "dense_outcomes_opened": false,
   "factorial_training_authorized": false,
   "self_included": false,
@@ -19,8 +24,8 @@
     },
     {
       "path": "COVA3D_STATE.json",
-      "bytes": 5963,
-      "sha256": "a981bfcf3c7c8572fded2c0f8cd02bcb131b756e9ae752b4e53c6499bc41e445"
+      "bytes": 6666,
+      "sha256": "aa1fa075081d7515f104770eef7ef82066bd99bc227d8c8868054cd30bf677f0"
     },
     {
       "path": "LICENSE",
@@ -29,8 +34,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 6629,
-      "sha256": "50285a3439137719886dd9a6d356be5ff2b8ca7dd18709831ba2288a05fb07f7"
+      "bytes": 6815,
+      "sha256": "185100929cf218fdfca388e95bcc4f4eb8a14066c574f3d138193a5305817f4a"
     },
     {
       "path": "README.md",
@@ -66,6 +71,11 @@
       "path": "configs/cova3d_numerical_amendment_N1_amp.yaml",
       "bytes": 2806,
       "sha256": "0407929a818bcd9a5e7d4836855d8bb4e316c6a7865284906a564f769bf85b28"
+    },
+    {
+      "path": "configs/cova3d_numerical_amendment_N2_fp32_dice.yaml",
+      "bytes": 2812,
+      "sha256": "a015192ebe0e17c4f707a16aa66c60dbe6f7ed62e9f7cda862ac94c4611acf6d"
     },
     {
       "path": "configs/cova3d_protocol_v1_0.yaml",
@@ -1503,6 +1513,11 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "data/manifests/cova3d_N2_exact_failed_state_validation.csv",
+      "bytes": 581,
+      "sha256": "51c7d098b32bf34072042c10c226f5293624fcd811ff9aca9194a7e0a3ba49a4"
+    },
+    {
       "path": "data/manifests/cova3d_amp_N1_lock_probe.csv",
       "bytes": 187,
       "sha256": "eafa58b5c52cd7d0972313d2c00db0a69183bd5828184cbc5da7efd5c1ff06d5"
@@ -1978,6 +1993,11 @@
       "sha256": "b6556d0954176d9de18da4a701f4d8e86aa7398bfd593db21af1c0956910b3b8"
     },
     {
+      "path": "docs/cova3d_numerical_amendment_N2_fp32_dice.md",
+      "bytes": 1894,
+      "sha256": "fc801afe4e43ea85a5c682ea07eff2afa4a19c6a207972ed5b710e5651d40e65"
+    },
+    {
       "path": "docs/cova3d_prospective_protocol_v1_0.md",
       "bytes": 8951,
       "sha256": "f030fda71ace13577712e8b475c3200683f71817f477ca7ed88887307212e696"
@@ -2233,9 +2253,24 @@
       "sha256": "a6c11f2f51c54af708652d176ce8044bf0db1ae0542089c1626dfdd633d5a70b"
     },
     {
+      "path": "experiments/audits/block09e_n1_failed_state_diagnostic.json",
+      "bytes": 1526,
+      "sha256": "0e66edb6a6fc7214c76bfec47515e38e0d8071a1cb13da56aa2aeff2973f00af"
+    },
+    {
       "path": "experiments/audits/block09e_n1_lock_amp_numerics.json",
       "bytes": 711,
       "sha256": "1924856b33d8fa8239c396ec7f572fcfc3c9bcdd3b1a78bbb932c9a56971c7f0"
+    },
+    {
+      "path": "experiments/audits/block09e_n2_lock_fp32_dice.json",
+      "bytes": 1580,
+      "sha256": "9c3fd726f481e36115305dc7603206722239d435ec2c2b64f59b5112f455a0d0"
+    },
+    {
+      "path": "experiments/audits/block09e_n2_regression_scope_fix.json",
+      "bytes": 1119,
+      "sha256": "a4cead624df654253adc577431a8547b5e1c612a2f1fc5625eb5e7740a100194"
     },
     {
       "path": "experiments/audits/block09e_sanity_amp_diagnostic.json",
@@ -2713,6 +2748,21 @@
       "sha256": "0441045895069d8459d84b346452679735f38b53ae4a00455c4dfd119dcc823b"
     },
     {
+      "path": "scripts/code_blocks/block09e_n2_finalize.py",
+      "bytes": 35380,
+      "sha256": "94e6c4619c9ba277dbca02a650eb19752dcfd840140dfc062ad3f542fd13eebb"
+    },
+    {
+      "path": "scripts/code_blocks/block09e_n2_lock_fp32_sparse_dice.py",
+      "bytes": 66918,
+      "sha256": "8262f9816ae81dbc9dd3fcedee71af3e8748481d43ee95484ccead60677a2f74"
+    },
+    {
+      "path": "scripts/code_blocks/block09e_n2_test_diag.py",
+      "bytes": 5762,
+      "sha256": "345fb2855265f5584dbbf1a6fb56826dc996a059ddb981858c234055ace5de3b"
+    },
+    {
       "path": "scripts/resume_project.py",
       "bytes": 673,
       "sha256": "4ff28985d05c37f7b896c40c8265ea86cc52f936ff7b5ce36edb05d74d7519ae"
@@ -2864,8 +2914,8 @@
     },
     {
       "path": "src/cora_lung/losses/partial.py",
-      "bytes": 3892,
-      "sha256": "3bee3689b6a36c169a0332df7e19d4d7fa3dc8bc8b2dea47400f99696720f0b9"
+      "bytes": 5684,
+      "sha256": "07d97dae2da2e79272a1985e626e4d1d8698296161a45f03e219c06b84816a60"
     },
     {
       "path": "src/cora_lung/losses/ranking.py",
@@ -2974,8 +3024,13 @@
     },
     {
       "path": "tests/test_cova3d_numerical_amendment_n1.py",
-      "bytes": 1927,
-      "sha256": "50e483155971b7814e497ee62d57c4d4f60266dd60b3dd24407e21e887c0364b"
+      "bytes": 2620,
+      "sha256": "a040d198a75ccb23f0ec5f35f7ae0ef1307e81a4d95af9c4ba05f16d0493804c"
+    },
+    {
+      "path": "tests/test_cova3d_numerical_amendment_n2.py",
+      "bytes": 3631,
+      "sha256": "cff8f0b68aa74c62a421567d54091ae865b080ee4a9022d6bd77e872807c7f50"
     },
     {
       "path": "tests/test_cova3d_protocol_registry.py",

@@ -257,3 +257,97 @@ def query_holdout_segmentation_loss(
         "total":
             total,
     }
+
+def partial_dice_fp32(
+    logits,
+    target,
+    eps=1e-6,
+):
+    """Sparse Dice loss with explicit FP32 arithmetic.
+
+    This preserves the exact sparse Dice equation and epsilon while avoiding
+    FP16 reciprocal overflow for very small denominators.
+
+    The cast remains differentiable, so gradients propagate back through the
+    mixed-precision model forward.
+    """
+
+    mask = labelled_mask(
+        target
+    )
+
+    if not torch.any(mask):
+        return (
+            logits.float().sum()
+            * 0.0
+        )
+
+    # Explicitly disable autocast for the numerically sensitive Dice
+    # arithmetic. The network forward may still have produced FP16 logits.
+    with torch.autocast(
+        device_type=logits.device.type,
+        enabled=False,
+    ):
+
+        logits_fp32 = logits.float()
+
+        p = torch.sigmoid(
+            logits_fp32[
+                mask
+            ]
+        )
+
+        y = target[
+            mask
+        ].float()
+
+        numerator = (
+            2.0
+            * torch.sum(
+                p
+                * y
+            )
+            + float(
+                eps
+            )
+        )
+
+        denominator = (
+            torch.sum(
+                p
+            )
+            + torch.sum(
+                y
+            )
+            + float(
+                eps
+            )
+        )
+
+        return (
+            1.0
+            - numerator
+            / denominator
+        )
+
+
+def partial_segmentation_loss_n2(
+    logits,
+    target,
+):
+    """COVA-3D N2 sparse objective.
+
+    BCE is unchanged.
+    Only sparse Dice arithmetic is forced to FP32.
+    """
+
+    return (
+        partial_bce(
+            logits,
+            target,
+        )
+        + partial_dice_fp32(
+            logits,
+            target,
+        )
+    )

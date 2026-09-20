@@ -1,0 +1,4 @@
+variant,fp32_dice,manual_gradient_scale,loss_finite,mean_loss,mean_bce,mean_dice,finite,gradient_tensors,nonfinite_tensors,nonfinite_values,first_bad_parameter,maximum_abs_finite_gradient
+OLD_FP16_DICE_SCALE1,False,1.0,True,0.1879357174038887,0.0767323449254036,0.11120337247848511,False,64,64,19166529,encoder0.block.0.block.0.weight,0.0
+N2_FP32_DICE_SCALE1,True,1.0,True,0.19180027395486832,0.0767323449254036,0.11506792902946472,True,64,0,0,,3.1490478515625
+N2_FP32_DICE_SCALE4096,True,4096.0,True,0.19180027395486832,0.0767323449254036,0.11506792902946472,True,64,0,0,,12801.0
