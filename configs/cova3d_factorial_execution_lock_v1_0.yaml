@@ -1,0 +1,70 @@
+project: COVA-3D
+block: 10A-FACTORIAL-PREFLIGHT
+status: FROZEN
+effective_protocol: COVA3D_1.0+A1+A1.1+A1.2+A1.3+N1+N2
+sanity_gate: PASS
+primary_factorial:
+  conditions:
+  - C50_COH
+  - C50_DIS
+  - C50_FRG
+  - C100_COH
+  - C100_DIS
+  - C100_FRG
+  outer_folds:
+  - 0
+  - 1
+  - 2
+  - 3
+  seeds:
+  - 17
+  - 29
+  - 43
+  runs: 72
+  paired_batches: 12
+  runs_per_batch: 6
+pairing:
+  same_initialization_seed_across_conditions: true
+  same_training_cases_across_conditions: true
+  same_heldout_cases_across_conditions: true
+  same_patient_schedule_across_conditions: true
+  same_augmentation_RNG_across_conditions: true
+training:
+  epochs: 40
+  microbatches_per_epoch: 120
+  accumulation_steps: 2
+  optimizer_steps_per_run: 2400
+  checkpoint_selection: FINAL_EPOCH_ONLY
+  performance_based_checkpoint_selection: false
+  dense_training_labels: false
+  heldout_dense_outcomes_during_fit: false
+runtime_cache:
+  cases: 16
+  CT_only: true
+  dtype: float16
+  dense_lesion_masks: false
+  dense_lung_masks: false
+  manifest: data/manifests/cova3d_final16_CT_cache_manifest_v1_0.csv
+sparse_supervision:
+  version: v1.3
+  required_final_case_condition_artifacts: 96
+  verification: PASS
+outcome_firewall:
+  final_outer_cv_dense_outcomes_authorized_during_fit: false
+  threshold_search_during_fit: false
+  method_development: false
+execution_order:
+- fold0_seed17
+- fold0_seed29
+- fold0_seed43
+- fold1_seed17
+- fold1_seed29
+- fold1_seed43
+- fold2_seed17
+- fold2_seed29
+- fold2_seed43
+- fold3_seed17
+- fold3_seed29
+- fold3_seed43
+next_batch: fold0_seed17
+frozen_at_utc: '2026-09-20T11:34:43Z'

@@ -1,0 +1,43 @@
+{
+  "project": "COVA-3D",
+  "block": "10A-FACTORIAL-PREFLIGHT",
+  "status": "PASS",
+  "starting_commit": "07174465d9c51f44a2ab6ac44dd77fa558599dcc",
+  "sanity_gate": "PASS",
+  "registry": {
+    "runs": 72,
+    "conditions": 6,
+    "folds": 4,
+    "seeds": 3,
+    "paired_batches": 12,
+    "runs_per_batch": 6,
+    "paired_design_verification": "PASS"
+  },
+  "sparse_supervision": {
+    "required_artifacts": 96,
+    "SHA_verified": 96,
+    "version": "v1.3"
+  },
+  "CT_cache": {
+    "cases": 16,
+    "CT_only": true,
+    "dense_lesion_masks_accessed": 0,
+    "dense_lung_masks_accessed": 0
+  },
+  "runtime_estimate": {
+    "median_sanity_epoch_seconds": 18.5466132775,
+    "estimated_minutes_per_final_fit": 14.837290622000001,
+    "estimated_hours_per_paired_batch": 1.4837290622000001,
+    "estimated_hours_72_serial": 17.8047487464
+  },
+  "authorization": {
+    "factorial_training": true,
+    "method_development": false,
+    "final_outer_cv_dense_outcomes": false
+  },
+  "optimizer_steps_executed_in_this_block": 0,
+  "next_block": "10B-FACTORIAL-BATCH-01",
+  "next_batch": "fold0_seed17",
+  "generated_at_utc": "2026-09-20T11:34:43Z",
+  "source_capture": "PASS"
+}

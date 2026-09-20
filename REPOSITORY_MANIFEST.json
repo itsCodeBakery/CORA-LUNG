@@ -1,23 +1,15 @@
 {
-  "generated_at_utc": "2026-09-20T10:53:55Z",
-  "completed_scientific_block": "09E-GEOM-OP-REPAIR",
-  "finalization_block": "09E-GEOM-OP-REPAIR-FINALIZE",
+  "generated_at_utc": "2026-09-20T11:34:43Z",
+  "completed_block": "10A-FACTORIAL-PREFLIGHT",
   "active_track": "COVA3D",
   "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2+A1.3+N1+N2",
-  "annotation_artifact_version": "v1.3",
-  "A1_3_status": "FROZEN_PASS",
-  "A1_3_ordering_bug": "FIXED_REPRESENTATION_ONLY",
-  "A1_3_alias_neutral_components": 8,
-  "A1_3_geometry_operational_components": 272,
-  "A1_3_resolution_neutral_components": 28,
-  "post_repair_operational_aliases": 0,
-  "post_repair_informative_whole_case_aliases": 0,
-  "R2_development_exact_artifacts": 24,
-  "R2_retraining_required": false,
-  "R2_model_sha256": "fce56f781cbd4ffd3e733cccb04c81f3b5bb2a664aceed4b8c0688e06ac4891c",
-  "dense_outcomes_opened": false,
-  "factorial_training_authorized": false,
-  "next_block": "09E-SANITY-EVAL",
+  "sanity_gate": "PASS",
+  "factorial_preflight": "PASS",
+  "factorial_runs": 72,
+  "factorial_batches": 12,
+  "factorial_runs_completed": 0,
+  "final_outer_cv_outcome_access": 0,
+  "next_block": "10B-FACTORIAL-BATCH-01",
   "self_included": false,
   "files": [
     {
@@ -27,8 +19,8 @@
     },
     {
       "path": "COVA3D_STATE.json",
-      "bytes": 8887,
-      "sha256": "848987b744dc781820d450bce6dda326251a3de607720f7d24156d6a47cefeb0"
+      "bytes": 9706,
+      "sha256": "8834d085deecd1811ae7b08418f3f957385dcb1cc1299dc1240073f2f84b8139"
     },
     {
       "path": "LICENSE",
@@ -37,8 +29,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 7196,
-      "sha256": "cb3ba6cc94a6da5678a8dbf7b5b01c57a527b038c938cc3e28f91fc1eb493556"
+      "bytes": 7309,
+      "sha256": "04c13d35d38724ed5da68251aa54b8de82f7371c0bc1a82b6d9b88752160d824"
     },
     {
       "path": "README.md",
@@ -69,6 +61,11 @@
       "path": "configs/cova3d_baseline_training_v1_0.yaml",
       "bytes": 6393,
       "sha256": "08e1ef07bc0cba29d0f7c21e0e0db8554321d4944e6f50e86742277478c6d340"
+    },
+    {
+      "path": "configs/cova3d_factorial_execution_lock_v1_0.yaml",
+      "bytes": 1574,
+      "sha256": "36042b4d1e97b5f896119c4fd781f3fe7289af4789f30f75892cc7462311c808"
     },
     {
       "path": "configs/cova3d_geometry_operationality_decision_rule_v1_0.yaml",
@@ -109,6 +106,16 @@
       "path": "configs/cova3d_resolution_aware_amendment_A1_2.yaml",
       "bytes": 3443,
       "sha256": "3c428cbcc6ce12938946956a006fa094a69cda0b3946f4bfc08ccf76370311c1"
+    },
+    {
+      "path": "configs/cova3d_sanity_inference_implementation_lock_v1_0.yaml",
+      "bytes": 509,
+      "sha256": "d4aeda01c1b40bab262210220c9102fa8ac3ab0e2a5fba3f334e1bc370684950"
+    },
+    {
+      "path": "configs/cova3d_sanity_outcome_evaluation_lock_v1_0.yaml",
+      "bytes": 1261,
+      "sha256": "b08103076eb555a138a2503506d24d9c944476dbeb7faca47676d74c12d8dd03"
     },
     {
       "path": "configs/cova3d_secondary_dataset_candidate_v1_0.yaml",
@@ -2166,6 +2173,21 @@
       "sha256": "54bcfac43fecfda1a44b2f3b4c3b393bd50d5cc3c9f30089c8c8713c78fb6cd6"
     },
     {
+      "path": "data/manifests/cova3d_final16_CT_cache_manifest_v1_0.csv",
+      "bytes": 4070,
+      "sha256": "fc8157346745a8c361c29fdcd03f8e34f5d68bc7cfdf206d0e68637d122ae7fa"
+    },
+    {
+      "path": "data/manifests/cova3d_final_factorial_batch_registry_v1_0.csv",
+      "bytes": 5236,
+      "sha256": "141a07b2a8d4ad054ac434e95d4685dfec24862f8db11e40442d3556a722145d"
+    },
+    {
+      "path": "data/manifests/cova3d_final_factorial_execution_registry_v1_0.csv",
+      "bytes": 34480,
+      "sha256": "cfd227c1a13532ebb436beb7e6220395b491c16c77162cf82c721b10778f3c38"
+    },
+    {
       "path": "data/manifests/cova3d_final_factorial_run_registry_v1_0.csv",
       "bytes": 31502,
       "sha256": "73cebfec55c7af52dbaa88c3a36df8582b9f595c2cdeb339099823389468e264"
@@ -2251,9 +2273,19 @@
       "sha256": "488c3bb37a6182947ec77642c88cb6158075878d0db382b750289b6024a1f034"
     },
     {
+      "path": "data/manifests/cova3d_sanity_R2_prediction_freeze_v1_0.csv",
+      "bytes": 1668,
+      "sha256": "cb06651c4c3ad8a7367a2f8dceabbe412bfa8c906eb292cf02f61d023a16348d"
+    },
+    {
       "path": "data/manifests/cova3d_sanity_fit_R2_epoch_log_v1_0.csv",
       "bytes": 5436,
       "sha256": "b5187e5815ea65e2cefaec8d3d25ce3e5e06ad6b52faebd2bd8447d162c1ff1f"
+    },
+    {
+      "path": "data/manifests/cova3d_sanity_gate_case_metrics_v1_0.csv",
+      "bytes": 1508,
+      "sha256": "2ce92b9d2f2c2a656c578c035ccc87720be7c332ba7f62e97087d38e382e4b45"
     },
     {
       "path": "data/manifests/cova3d_training_grid_budget_v1_2.csv",
@@ -2996,6 +3028,21 @@
       "sha256": "ccb3ae380ac44e150979c77d87cdc1b5291e1bb566216af5c94ca10dedbb600f"
     },
     {
+      "path": "experiments/audits/block09e_sanity_gate_close.json",
+      "bytes": 1530,
+      "sha256": "8c078ac1812e8d6d16551d4f420ac158b8e285f0c5fc40d8b4d706ba02add1a1"
+    },
+    {
+      "path": "experiments/audits/block09e_sanity_prediction_freeze.json",
+      "bytes": 363,
+      "sha256": "fde6bf890ad799aac892c3d17eb341f9cec494dca9bc49812a3a3f4cfc58a595"
+    },
+    {
+      "path": "experiments/audits/block10a_factorial_preflight.json",
+      "bytes": 1170,
+      "sha256": "d60cb26529d77fedfdcf024ab56a1c1a686a700ddd8a080e37277ecf85ee9dd3"
+    },
+    {
       "path": "experiments/registry.csv",
       "bytes": 102,
       "sha256": "e6ca868d5995d945d50fdaa6a7dd221f07d0da1f2a93e685af1df738e38b7509"
@@ -3536,6 +3583,11 @@
       "sha256": "345fb2855265f5584dbbf1a6fb56826dc996a059ddb981858c234055ace5de3b"
     },
     {
+      "path": "scripts/code_blocks/block09e_sanity_eval_close_gate.py",
+      "bytes": 43016,
+      "sha256": "1cc42c4f47a306cb30b4192eb1b8746c3330f7ea8b76167ab28060e9e11c3954"
+    },
+    {
       "path": "scripts/code_blocks/block09e_sanity_fit_R2.py",
       "bytes": 41849,
       "sha256": "dfd1b5fd871b60973626f9035d8aa01d2b94de36ef625216444d4ff07163327a"
@@ -3544,6 +3596,11 @@
       "path": "scripts/code_blocks/block09e_sanity_fit_R2_finalize_v2.py",
       "bytes": 51096,
       "sha256": "cc69b70cb4ef456619a723e2c7a2ebac6a7dfeeaf94ed3b73bd5afe9f39b4d11"
+    },
+    {
+      "path": "scripts/code_blocks/block10a_factorial_preflight.py",
+      "bytes": 55463,
+      "sha256": "6af0d0828ebf7975df7d58ddc91c34abbb8b93e38202b5891dac7ac9a37ac919"
     },
     {
       "path": "scripts/resume_project.py",
@@ -3801,6 +3858,11 @@
       "sha256": "e1f94690329fa9875ef7c3ce377fbb5f6fb0c4d32d03ff3d597e99dec878ac2e"
     },
     {
+      "path": "tests/test_cova3d_factorial_preflight.py",
+      "bytes": 2567,
+      "sha256": "fa40b49ffb99110f7bf0385c6f4860c8f0cfddfcf87e8b8ffb686f4aa7b7ab33"
+    },
+    {
       "path": "tests/test_cova3d_final_coordinate_grid_v1_2.py",
       "bytes": 5423,
       "sha256": "0aa15fb4cf2a579cc54eed145cdb045e059ab5f5a66ee00d65eb69eea1d153dd"
@@ -3834,6 +3896,11 @@
       "path": "tests/test_cova3d_sanity_fit_R2.py",
       "bytes": 2477,
       "sha256": "3963e5a31856e6f71652b24edd27279ac642cc9866d870e0099fb80a928317c0"
+    },
+    {
+      "path": "tests/test_cova3d_sanity_gate_close.py",
+      "bytes": 2223,
+      "sha256": "3292f3f650b8b159921e6e43e2706f0fcd605044d866d5d0c6890b831321c42f"
     },
     {
       "path": "tests/test_firewall.py",
