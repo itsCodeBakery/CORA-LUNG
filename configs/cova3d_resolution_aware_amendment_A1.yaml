@@ -1,0 +1,79 @@
+project: COVA-3D
+amendment_id: A1_RESOLUTION_AWARE_GEOMETRY
+amendment_version: '1.0'
+effective_protocol: COVA3D_1.0+A1
+status: PROSPECTIVELY_FROZEN_BEFORE_COVA_TRAINING
+trigger:
+  block: 09D-A
+  strict_grid_feasible_cases: 7
+  strict_grid_failed_cases: 13
+  c100_components: 308
+  completely_lost_components: 0
+  resolution_limited_components: 18
+  cases_with_resolution_limited_components: 11
+  median_volume_resolution_limited_ml: 0.1409235891967576
+scientific_interpretation: The original >=2-voxel per-component geometry constraint
+  is not physically representable for a small subset of lesion instances after mapping
+  to the fixed training resolution. Lesion coverage remains representable because
+  no component has zero mapped foreground support.
+resolution_classification:
+  geometry_resolvable: common mapped geometry capacity across coherent, dispersed
+    and fragmented conditions >= 2
+  resolution_limited: common mapped raw support >=1 but common geometry capacity <2
+  coverage_lost: common mapped raw support == 0
+  coverage_lost_policy: STOP_AND_REVIEW
+  observed_coverage_lost_components: 0
+amended_annotation_rule:
+  geometry_resolvable_component:
+    minimum_quota: 2
+    coherent: retain connected geometry
+    dispersed: retain spatially separated geometry
+    fragmented: retain multi-fragment geometry
+  resolution_limited_component:
+    quota: 1
+    geometry: one identical geometry-neutral shared anchor used in coherent, dispersed
+      and fragmented cells
+    anchor_rule: deterministic shared mapped voxel from the intersection of the three
+      geometry candidate supports; exact deterministic tie-break frozen and verified
+      in Block 09D-B
+    claim: no within-instance geometry manipulation is claimed for resolution-limited
+      lesions
+preserved_factorial_constraints:
+  50pct_component_selection: unchanged
+  100pct_component_selection: unchanged
+  all_selected_components_receive_foreground_supervision: true
+  C50_nested_in_C100: true
+  same_component_set_across_geometry: true
+  same_per_component_quota_across_geometry: true
+  same_total_foreground_budget_across_six_cells: true
+  identical_background_coordinates_across_six_cells: true
+endpoint_policy:
+  primary_endpoint: macro patient lesion recall at <=1 FP/patient
+  primary_endpoint_changed: false
+  new_secondary_analysis:
+  - recall_geometry_resolvable_lesions
+  - recall_resolution_limited_lesions
+  - effect_by_lesion_volume
+hypothesis_policy:
+  coverage_main_effect: unchanged
+  geometry_main_effect: interpreted as geometry manipulation on resolution-resolvable
+    lesion annotations
+  coverage_by_geometry_interaction: unchanged
+  directional_hypothesis: false
+methodological_guardrails:
+  lesions_dropped_due_resolution: false
+  resolution_limited_anchor_selected_using_model_outcomes: false
+  budget_selected_using_model_outcomes: false
+  factorial_training_authorized: false
+  method_development_authorized: false
+required_next_block:
+  block: 09D-B
+  requirements:
+  - shared-anchor intersection audit
+  - all-20-case amended feasibility
+  - exact six-cell FG equality
+  - exact six-cell BG equality
+  - per-component quota equality
+  - geometry preservation on resolvable components
+  - freeze final B_i_train
+frozen_at_utc: '2026-09-20T08:12:16Z'

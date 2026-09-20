@@ -1,0 +1,42 @@
+{
+  "project": "COVA-3D",
+  "block": "09D-A-LOCK",
+  "status": "PASS",
+  "generated_at_utc": "2026-09-20T08:12:16Z",
+  "parent_commit": "04d0ecf0078615a016872562bd1291ba2327a319",
+  "amendment_id": "A1_RESOLUTION_AWARE_GEOMETRY",
+  "effective_protocol": "COVA3D_1.0+A1",
+  "diagnostic": {
+    "cases": 20,
+    "strict_pass_cases": 7,
+    "strict_fail_cases": 13,
+    "c100_components": 308,
+    "zero_mapped_components": 0,
+    "resolution_limited_components": 18,
+    "cases_with_resolution_limitation": 11,
+    "median_problem_volume_ml": 0.1409235891967576
+  },
+  "amendment": {
+    "geometry_resolvable_minimum_quota": 2,
+    "resolution_limited_quota": 1,
+    "resolution_limited_policy": "shared_geometry_neutral_anchor",
+    "lesions_dropped": 0,
+    "primary_endpoint_changed": false,
+    "coverage_factor_changed": false
+  },
+  "firewall": {
+    "ct_arrays_accessed_in_this_block": 0,
+    "dense_lesion_arrays_accessed": 0,
+    "dense_lung_arrays_accessed": 0,
+    "prediction_arrays_accessed": 0,
+    "checkpoint_arrays_accessed": 0,
+    "model_outcomes_accessed": 0,
+    "optimizer_steps": 0
+  },
+  "factorial_training_authorized": false,
+  "method_development_authorized": false,
+  "diagnostic_case_csv_sha256": "2f8c2903bfa3bba34514d12eb9d3c96a2f83c15271ec2ea523dfac427fc81541",
+  "diagnostic_component_csv_sha256": "55199c1c0d754b5209926ba3f3ac06c08e72de895feb6723b47f3a2948d7dd18",
+  "next_block": "09D-B",
+  "source_capture": "PASS"
+}
