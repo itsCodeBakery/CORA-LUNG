@@ -1,20 +1,25 @@
 {
-  "generated_at_utc": "2026-09-20T10:11:05Z",
-  "completed_block": "09E-N2-LOCK",
-  "finalization_block": "09E-N2-FINALIZE",
+  "generated_at_utc": "2026-09-20T10:29:44Z",
+  "completed_scientific_block": "09E-SANITY-FIT-R2",
+  "finalization_block": "09E-SANITY-FIT-R2-FINALIZE-V2",
   "active_track": "COVA3D",
   "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2+N1+N2",
   "numerical_amendments": [
     "N1",
     "N2"
   ],
-  "N2_status": "FROZEN_AND_REGRESSION_VERIFIED",
-  "N2_regression_suite": "PASS",
-  "R1_successful_updates_executed": 233,
+  "R1_successful_updates_executed_nonretained": 233,
   "R1_updates_retained": 0,
-  "clean_R2_retained_optimizer_steps": 0,
+  "R2_successful_optimizer_steps": 1000,
+  "R2_final_model_sha256": "fce56f781cbd4ffd3e733cccb04c81f3b5bb2a664aceed4b8c0688e06ac4891c",
+  "R2_log_semantic_equivalence": "PASS",
+  "R2_regression_suite": "PASS",
+  "training_loss_subcriterion": "PASS",
+  "zero_label_subcriterion": "PASS",
   "dense_outcomes_opened": false,
+  "sanity_gate": "EVALUATION_PENDING",
   "factorial_training_authorized": false,
+  "next_block": "09E-GEOM-OP-DIAG",
   "self_included": false,
   "files": [
     {
@@ -24,8 +29,8 @@
     },
     {
       "path": "COVA3D_STATE.json",
-      "bytes": 6666,
-      "sha256": "aa1fa075081d7515f104770eef7ef82066bd99bc227d8c8868054cd30bf677f0"
+      "bytes": 7452,
+      "sha256": "0716701522bf837e49aaf1d652fba8c81588de78ee879a47e640b813a1eb67d1"
     },
     {
       "path": "LICENSE",
@@ -34,8 +39,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 6815,
-      "sha256": "185100929cf218fdfca388e95bcc4f4eb8a14066c574f3d138193a5305817f4a"
+      "bytes": 7053,
+      "sha256": "a59431ac7b8473a8cdbc5745f00936ecd008150d1e422da70371ae41afee818a"
     },
     {
       "path": "README.md",
@@ -1583,6 +1588,11 @@
       "sha256": "488c3bb37a6182947ec77642c88cb6158075878d0db382b750289b6024a1f034"
     },
     {
+      "path": "data/manifests/cova3d_sanity_fit_R2_epoch_log_v1_0.csv",
+      "bytes": 5436,
+      "sha256": "b5187e5815ea65e2cefaec8d3d25ce3e5e06ad6b52faebd2bd8447d162c1ff1f"
+    },
+    {
       "path": "data/manifests/cova3d_training_grid_budget_v1_2.csv",
       "bytes": 3386,
       "sha256": "437d4ff4573efdb999e8c08d35978242150141188004ce3e24df5201399a27f8"
@@ -2248,6 +2258,16 @@
       "sha256": "488c3bb37a6182947ec77642c88cb6158075878d0db382b750289b6024a1f034"
     },
     {
+      "path": "experiments/audits/block09e_R2_historical_N2_test_scope_fix.json",
+      "bytes": 499,
+      "sha256": "e650d7ad597f5cccf088d0e933dc5ecc6f99fb4189b6cf81bbecd743050a1fbd"
+    },
+    {
+      "path": "experiments/audits/block09e_R2_log_semantic_equivalence.json",
+      "bytes": 1335,
+      "sha256": "df25a0bc53cd25a80457ca7d4172cecc9d1372eb161d92e5cd2060d137bdca73"
+    },
+    {
       "path": "experiments/audits/block09e_lock_baseline_training_protocol.json",
       "bytes": 1970,
       "sha256": "a6c11f2f51c54af708652d176ce8044bf0db1ae0542089c1626dfdd633d5a70b"
@@ -2276,6 +2296,11 @@
       "path": "experiments/audits/block09e_sanity_amp_diagnostic.json",
       "bytes": 1557,
       "sha256": "89e78fd621f79e9078c85540c312035f4ece4cd4e8859012e8017281fe792b21"
+    },
+    {
+      "path": "experiments/audits/block09e_sanity_fit_R2.json",
+      "bytes": 2789,
+      "sha256": "ccb3ae380ac44e150979c77d87cdc1b5291e1bb566216af5c94ca10dedbb600f"
     },
     {
       "path": "experiments/registry.csv",
@@ -2416,6 +2441,26 @@
       "path": "figures/audit/fig13_gate_b_v1_2_training_curves.png",
       "bytes": 834636,
       "sha256": "330d63eda7dac0fc22231c9352d4630d95d43122339857305fd19d743b108022"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_sanity_R2_amp_scale_v1_0.pdf",
+      "bytes": 14095,
+      "sha256": "3c8714ee867eac0d9239f0e0d99e77c2bd91f105120a605bf476fce57397e9b7"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_sanity_R2_amp_scale_v1_0.png",
+      "bytes": 209920,
+      "sha256": "37ab38a561fcf7e0c62e9fbb7843a4f182913f46cc93aaaa0fd6473c3ba2fd72"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_sanity_R2_training_curve_v1_0.pdf",
+      "bytes": 16777,
+      "sha256": "d49c305fedeb4723d2e731bbbd1676c57e3167edc2cdbe339e4824a1c076de0b"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_sanity_R2_training_curve_v1_0.png",
+      "bytes": 442255,
+      "sha256": "8bb5e11df846b40096c228514871a5a3fb7889d5a6806358ffcc6efbf2cc800c"
     },
     {
       "path": "figures/diagnostics/gate_b_failure/fig17_fragmentation_vs_threshold.pdf",
@@ -2763,6 +2808,16 @@
       "sha256": "345fb2855265f5584dbbf1a6fb56826dc996a059ddb981858c234055ace5de3b"
     },
     {
+      "path": "scripts/code_blocks/block09e_sanity_fit_R2.py",
+      "bytes": 41849,
+      "sha256": "dfd1b5fd871b60973626f9035d8aa01d2b94de36ef625216444d4ff07163327a"
+    },
+    {
+      "path": "scripts/code_blocks/block09e_sanity_fit_R2_finalize_v2.py",
+      "bytes": 51096,
+      "sha256": "cc69b70cb4ef456619a723e2c7a2ebac6a7dfeeaf94ed3b73bd5afe9f39b4d11"
+    },
+    {
       "path": "scripts/resume_project.py",
       "bytes": 673,
       "sha256": "4ff28985d05c37f7b896c40c8265ea86cc52f936ff7b5ce36edb05d74d7519ae"
@@ -3029,13 +3084,18 @@
     },
     {
       "path": "tests/test_cova3d_numerical_amendment_n2.py",
-      "bytes": 3631,
-      "sha256": "cff8f0b68aa74c62a421567d54091ae865b080ee4a9022d6bd77e872807c7f50"
+      "bytes": 4294,
+      "sha256": "dfcb50444a3c4c84abede0d5d5c85e13d5fbaf4c58eb8f63c7fdef9a555e6e3f"
     },
     {
       "path": "tests/test_cova3d_protocol_registry.py",
       "bytes": 1816,
       "sha256": "0e7a402313452eb7ee04c54b72327a7b7404dccc87b9c6fb3f6d712634aebe9f"
+    },
+    {
+      "path": "tests/test_cova3d_sanity_fit_R2.py",
+      "bytes": 3162,
+      "sha256": "114f45785fc3a83915264cab1836d2de3f60804fe1e9073156fe4e92c0aba7e7"
     },
     {
       "path": "tests/test_firewall.py",

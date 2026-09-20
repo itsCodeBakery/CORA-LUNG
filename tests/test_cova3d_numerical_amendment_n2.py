@@ -8,6 +8,19 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def load_n2():
+
+    return yaml.safe_load(
+        (
+            ROOT
+            / "configs/"
+            "cova3d_numerical_amendment_N2_fp32_dice.yaml"
+        ).read_text(
+            encoding="utf-8"
+        )
+    )
+
+
 def test_partial_dice_fp32_matches_reference():
 
     from cora_lung.losses.partial import (
@@ -95,21 +108,34 @@ def test_partial_dice_fp32_unknown_only_zero_gradient():
 
 def test_n2_protocol_is_frozen():
 
-    cfg = yaml.safe_load(
-        (
-            ROOT
-            / "configs/"
-            "cova3d_numerical_amendment_N2_fp32_dice.yaml"
-        ).read_text(
-            encoding="utf-8"
-        )
-    )
+    cfg = load_n2()
 
     assert (
         cfg[
             "status"
         ]
         == "PROSPECTIVELY_FROZEN_BEFORE_CLEAN_SANITY_RESTART_R2"
+    )
+
+    assert (
+        cfg[
+            "amendment_id"
+        ]
+        == "N2_FP32_SPARSE_DICE_ARITHMETIC"
+    )
+
+    assert (
+        cfg[
+            "protocol_before"
+        ]
+        == "COVA3D_1.0+A1+A1.1+A1.2+N1"
+    )
+
+    assert (
+        cfg[
+            "protocol_after"
+        ]
+        == "COVA3D_1.0+A1+A1.1+A1.2+N1+N2"
     )
 
     assert (
@@ -165,69 +191,91 @@ def test_n2_protocol_is_frozen():
     )
 
 
-def test_n2_state():
+def test_n2_historical_audit_is_immutable():
 
-    state = json.loads(
+    audit = json.loads(
         (
             ROOT
-            / "COVA3D_STATE.json"
+            / "experiments/audits/"
+            "block09e_n2_lock_fp32_dice.json"
         ).read_text(
             encoding="utf-8"
         )
     )
 
     assert (
-        state[
-            "last_completed_block"
+        audit[
+            "status"
         ]
-        == "09E-N2-LOCK"
+        == "PASS"
     )
 
     assert (
-        state[
-            "effective_protocol"
+        audit[
+            "amendment"
         ]
-        == "COVA3D_1.0+A1+A1.1+A1.2+N1+N2"
+        == "N2_FP32_SPARSE_DICE_ARITHMETIC"
     )
 
     assert (
-        state[
-            "sanity_fit_R1_successful_updates_executed"
+        audit[
+            "R1_successful_updates_executed"
         ]
         == 233
     )
 
     assert (
-        state[
-            "sanity_fit_R1_updates_retained"
+        audit[
+            "R1_successful_updates_retained"
         ]
         == 0
     )
 
     assert (
-        state[
-            "optimizer_steps_retained_for_current_frozen_run"
-        ]
-        == 0
-    )
-
-    assert (
-        state[
-            "sanity_training_authorized"
-        ]
-        is True
-    )
-
-    assert (
-        state[
-            "factorial_training_authorized"
+        audit[
+            "legacy_Dice_scale1_finite"
         ]
         is False
     )
 
     assert (
-        state[
-            "dense_outcomes_opened_in_cova3d"
+        audit[
+            "N2_Dice_scale1_finite"
+        ]
+        is True
+    )
+
+    assert (
+        audit[
+            "Dice_arithmetic_dtype"
+        ]
+        == "FP32"
+    )
+
+    assert (
+        audit[
+            "Dice_formula_changed"
+        ]
+        is False
+    )
+
+    assert (
+        audit[
+            "Dice_epsilon_changed"
+        ]
+        is False
+    )
+
+    assert (
+        audit[
+            "BCE_changed"
+        ]
+        is False
+    )
+
+    assert (
+        audit[
+            "factorial_training_authorized"
         ]
         is False
     )

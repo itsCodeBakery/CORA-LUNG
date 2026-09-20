@@ -1,0 +1,84 @@
+{
+  "project": "COVA-3D",
+  "block": "09E-SANITY-FIT-R2",
+  "status": "FIT_COMPLETE_EVALUATION_PENDING",
+  "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2+N1+N2",
+  "condition": "C100_COH",
+  "seed": 17,
+  "restart": "ORIGINAL_FROZEN_INITIALIZATION",
+  "R1_weights_reused": false,
+  "R1_updates_retained": 0,
+  "R1_updates_executed_nonretained": 233,
+  "epochs": 20,
+  "logical_microbatches_per_epoch": 100,
+  "successful_optimizer_steps": 1000,
+  "N1": {
+    "active": true,
+    "initial_scale": 4096.0,
+    "overflow_events": 1,
+    "epochs_with_overflow": 1,
+    "minimum_scale": 2048.0,
+    "maximum_scale": 4096.0,
+    "final_scale": 2048.0
+  },
+  "N2": {
+    "active": true,
+    "network_forward": "AMP_FP16",
+    "partial_BCE": "UNCHANGED",
+    "partial_Dice_arithmetic": "FP32",
+    "partial_Dice_epsilon": 1e-06
+  },
+  "training_diagnostics": {
+    "first3_mean_loss": 1.1267042817796271,
+    "last3_mean_loss": 0.040640517530028265,
+    "last3_div_first3": 0.0360702610145731,
+    "zero_label_microbatches": 15,
+    "zero_label_fraction": 0.0075,
+    "patch_source_counts": {
+      "foreground": 1035,
+      "background": 475,
+      "uniform": 490
+    },
+    "mean_preclip_grad_norm": 6.792026388017925,
+    "max_preclip_grad_norm": 277.29278564453125,
+    "peak_allocated_gb": 1.766026496887207,
+    "peak_reserved_gb": 1.84375
+  },
+  "final_model_runtime_path": "/kaggle/working/cova3d_sanity_fit_R2_v1_0/final_model.pt",
+  "final_model_sha256": "fce56f781cbd4ffd3e733cccb04c81f3b5bb2a664aceed4b8c0688e06ac4891c",
+  "firewall": {
+    "cached_development_CT_arrays": 4,
+    "dense_lesion_masks_accessed": 0,
+    "dense_lung_masks_accessed": 0,
+    "dense_development_evaluation": false,
+    "final_outer_cv_access": 0
+  },
+  "sanity_gate_applied": false,
+  "sanity_gate_status": "EVALUATION_PENDING",
+  "factorial_training_authorized": false,
+  "next_block": "09E-GEOM-OP-DIAG",
+  "completed_at_utc": "2026-09-20T10:22:16Z",
+  "log_semantic_equivalence": {
+    "status": "PASS",
+    "comparison": "numeric tolerance plus exact categorical/integer semantics",
+    "rtol": 1e-12,
+    "atol": 1e-12,
+    "max_absolute_difference": 3.552713678800501e-15
+  },
+  "regression_suite_status": "PASS",
+  "historical_N2_test_scope_fix": "PASS",
+  "training_loss_subcriterion": {
+    "criterion": "last3_first3_ratio <= 0.95",
+    "observed": 0.0360702610145731,
+    "pass": true
+  },
+  "zero_label_subcriterion": {
+    "criterion": "zero_label_fraction <= 0.30",
+    "observed": 0.0075,
+    "pass": true
+  },
+  "source_capture": "PASS",
+  "dense_sanity_evaluation_deferred": true,
+  "dense_sanity_evaluation_deferral_reason": "Close the pre-outcome geometry-operationality audit for DIS versus FRG before opening dense development outcomes.",
+  "finalized_at_utc": "2026-09-20T10:29:44Z"
+}
