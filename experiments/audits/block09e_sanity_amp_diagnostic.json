@@ -1,0 +1,62 @@
+{
+  "project": "COVA-3D",
+  "block": "09E-SANITY-AMP-DIAG",
+  "status": "DIAGNOSIS_COMPLETE",
+  "diagnosis": "TRANSIENT_AMP_LOSS_SCALE_OVERFLOW",
+  "repository_modified_during_original_diagnostic": false,
+  "optimizer_step_calls_during_diagnostic": 0,
+  "dense_masks_accessed": 0,
+  "final_outer_cv_access": 0,
+  "failed_runtime": {
+    "persisted_completed_epochs": 0,
+    "persisted_optimizer_steps": 0,
+    "scientific_updates_to_retain": 0
+  },
+  "reported_full_scale_ladder": {
+    "65536": false,
+    "32768": false,
+    "16384": false,
+    "8192": false,
+    "4096": true,
+    "2048": true,
+    "1024": true,
+    "512": true,
+    "256": true,
+    "128": true,
+    "64": true,
+    "32": true,
+    "16": true,
+    "8": true,
+    "4": true,
+    "2": true,
+    "1": true
+  },
+  "lock_block_reproduction": [
+    {
+      "scale": 65536.0,
+      "mean_loss": 2.694619357585907,
+      "finite": false,
+      "gradient_tensors": 64,
+      "nonfinite_tensors": 1,
+      "nonfinite_values": 104
+    },
+    {
+      "scale": 4096.0,
+      "mean_loss": 2.694619357585907,
+      "finite": true,
+      "gradient_tensors": 64,
+      "nonfinite_tensors": 0,
+      "nonfinite_values": 0
+    },
+    {
+      "scale": 1.0,
+      "mean_loss": 2.694619357585907,
+      "finite": true,
+      "gradient_tensors": 64,
+      "nonfinite_tensors": 0,
+      "nonfinite_values": 0
+    }
+  ],
+  "conclusion": "Forward loss and unscaled gradients are finite. Default AMP loss scaling is too large for the frozen first accumulation pair.",
+  "created_at_utc": "2026-09-20T09:38:01Z"
+}

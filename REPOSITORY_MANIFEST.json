@@ -1,13 +1,14 @@
 {
-  "generated_at_utc": "2026-09-20T08:55:24Z",
-  "completed_block": "09D-B2",
+  "generated_at_utc": "2026-09-20T09:38:01Z",
+  "completed_block": "09E-N1-LOCK",
   "active_track": "COVA3D",
-  "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2",
-  "annotation_methodology_structurally_ready": true,
-  "coordinate_level_feasibility": "PASS_20_OF_20",
-  "neutral_anchor_banks": 28,
-  "final_sparse_trainer_candidates": 120,
-  "train_budget": "FROZEN",
+  "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2+N1",
+  "numerical_amendment": "N1",
+  "amp_initial_scale": 4096.0,
+  "sanity_training_authorized": true,
+  "sanity_gate": "NOT_RUN",
+  "cova_optimizer_steps": 0,
+  "dense_outcomes_opened": false,
   "factorial_training_authorized": false,
   "self_included": false,
   "files": [
@@ -18,8 +19,8 @@
     },
     {
       "path": "COVA3D_STATE.json",
-      "bytes": 4725,
-      "sha256": "8c12847aa5ccb7fb8e2aef3213dd28e952f65c7689315842ae2185d40a18d449"
+      "bytes": 5963,
+      "sha256": "a981bfcf3c7c8572fded2c0f8cd02bcb131b756e9ae752b4e53c6499bc41e445"
     },
     {
       "path": "LICENSE",
@@ -28,8 +29,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 6519,
-      "sha256": "e3b76f82d5c23e6b096f57c5de49ae1d2e00c334dc55b3c08b7090640cfeade0"
+      "bytes": 6629,
+      "sha256": "50285a3439137719886dd9a6d356be5ff2b8ca7dd18709831ba2288a05fb07f7"
     },
     {
       "path": "README.md",
@@ -55,6 +56,16 @@
       "path": "configs/cova3d_annotation_simulator_v2.yaml",
       "bytes": 1828,
       "sha256": "9d6070d140c8d63ea16d7d1141de15f0a9bfaed84b2eb4226fdbe97f0ce080d7"
+    },
+    {
+      "path": "configs/cova3d_baseline_training_v1_0.yaml",
+      "bytes": 6393,
+      "sha256": "08e1ef07bc0cba29d0f7c21e0e0db8554321d4944e6f50e86742277478c6d340"
+    },
+    {
+      "path": "configs/cova3d_numerical_amendment_N1_amp.yaml",
+      "bytes": 2806,
+      "sha256": "0407929a818bcd9a5e7d4836855d8bb4e316c6a7865284906a564f769bf85b28"
     },
     {
       "path": "configs/cova3d_protocol_v1_0.yaml",
@@ -1492,6 +1503,11 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "data/manifests/cova3d_amp_N1_lock_probe.csv",
+      "bytes": 187,
+      "sha256": "eafa58b5c52cd7d0972313d2c00db0a69183bd5828184cbc5da7efd5c1ff06d5"
+    },
+    {
       "path": "data/manifests/cova3d_dataset_register_v1_0.csv",
       "bytes": 1052,
       "sha256": "41362e6995ac50e97c9df98a48144a36b16f4a9926ec75f95eb283f4b11b4cf0"
@@ -1500,6 +1516,11 @@
       "path": "data/manifests/cova3d_factorial_register_v1_0.csv",
       "bytes": 2219,
       "sha256": "54bcfac43fecfda1a44b2f3b4c3b393bd50d5cc3c9f30089c8c8713c78fb6cd6"
+    },
+    {
+      "path": "data/manifests/cova3d_final_factorial_run_registry_v1_0.csv",
+      "bytes": 31502,
+      "sha256": "73cebfec55c7af52dbaa88c3a36df8582b9f595c2cdeb339099823389468e264"
     },
     {
       "path": "data/manifests/cova3d_global_resolution_class_v1_0.csv",
@@ -1942,9 +1963,19 @@
       "sha256": "47c75ead3db456c78a6e7915e4f9ef5cf514e560a1f020b29c0465f6644548cd"
     },
     {
+      "path": "docs/cova3d_baseline_training_protocol_v1_0.md",
+      "bytes": 3317,
+      "sha256": "17ac16648b262604d3f5085c3422e52c18a6fad19af7a9b65c2f0bf36b44a572"
+    },
+    {
       "path": "docs/cova3d_dataset_feasibility_v1_0.md",
       "bytes": 2792,
       "sha256": "0504a64003409eeb24e430dd3d685085e1add0c394aab96866ff0f03e7a5b32f"
+    },
+    {
+      "path": "docs/cova3d_numerical_amendment_N1_amp.md",
+      "bytes": 1615,
+      "sha256": "b6556d0954176d9de18da4a701f4d8e86aa7398bfd593db21af1c0956910b3b8"
     },
     {
       "path": "docs/cova3d_prospective_protocol_v1_0.md",
@@ -2195,6 +2226,21 @@
       "path": "experiments/audits/block09d_b_neutral_bank_diagnostic/limited_component_physical_capacity.csv",
       "bytes": 1690,
       "sha256": "488c3bb37a6182947ec77642c88cb6158075878d0db382b750289b6024a1f034"
+    },
+    {
+      "path": "experiments/audits/block09e_lock_baseline_training_protocol.json",
+      "bytes": 1970,
+      "sha256": "a6c11f2f51c54af708652d176ce8044bf0db1ae0542089c1626dfdd633d5a70b"
+    },
+    {
+      "path": "experiments/audits/block09e_n1_lock_amp_numerics.json",
+      "bytes": 711,
+      "sha256": "1924856b33d8fa8239c396ec7f572fcfc3c9bcdd3b1a78bbb932c9a56971c7f0"
+    },
+    {
+      "path": "experiments/audits/block09e_sanity_amp_diagnostic.json",
+      "bytes": 1557,
+      "sha256": "89e78fd621f79e9078c85540c312035f4ece4cd4e8859012e8017281fe792b21"
     },
     {
       "path": "experiments/registry.csv",
@@ -2657,6 +2703,16 @@
       "sha256": "8663f41b9a4be75f35803d254d04cae1b8e5737f3963a0d4beb5944e16b79272"
     },
     {
+      "path": "scripts/code_blocks/block09e_lock_baseline_training_protocol.py",
+      "bytes": 78604,
+      "sha256": "16ca6cb7bb6025c9e261e1af260d19c31e8670aae9c73d2f0a22d48ebef6ce79"
+    },
+    {
+      "path": "scripts/code_blocks/block09e_n1_lock_amp_numerics.py",
+      "bytes": 52725,
+      "sha256": "0441045895069d8459d84b346452679735f38b53ae4a00455c4dfd119dcc823b"
+    },
+    {
       "path": "scripts/resume_project.py",
       "bytes": 673,
       "sha256": "4ff28985d05c37f7b896c40c8265ea86cc52f936ff7b5ce36edb05d74d7519ae"
@@ -2837,6 +2893,11 @@
       "sha256": "b8474588f8ace7354ce59068b194b34d903ac10e8430d84cd98cec75b303dfc5"
     },
     {
+      "path": "src/cora_lung/models/cova3d_nnunet_style.py",
+      "bytes": 10226,
+      "sha256": "9b689cffcebde765ba7ec722744b183bc926f34acb241b4f5487a92756aadd3f"
+    },
+    {
       "path": "src/cora_lung/models/prototypes.py",
       "bytes": 39,
       "sha256": "a865b6d74ed9d969af1c5368530a10c7ba5a7235ff9f1bd686810fdc763df3bd"
@@ -2897,6 +2958,11 @@
       "sha256": "4301131b54ddb0180bb8a77f49385136a2a918cec43ac677b4784fb5d17c9935"
     },
     {
+      "path": "tests/test_cova3d_baseline_lock.py",
+      "bytes": 3099,
+      "sha256": "18e7d521ea28fe438a78cebd02b04795bf33b1259587db40cd958704d924b1e3"
+    },
+    {
       "path": "tests/test_cova3d_dataset_feasibility.py",
       "bytes": 2366,
       "sha256": "e1f94690329fa9875ef7c3ce377fbb5f6fb0c4d32d03ff3d597e99dec878ac2e"
@@ -2905,6 +2971,11 @@
       "path": "tests/test_cova3d_final_coordinate_grid_v1_2.py",
       "bytes": 5423,
       "sha256": "0aa15fb4cf2a579cc54eed145cdb045e059ab5f5a66ee00d65eb69eea1d153dd"
+    },
+    {
+      "path": "tests/test_cova3d_numerical_amendment_n1.py",
+      "bytes": 1927,
+      "sha256": "50e483155971b7814e497ee62d57c4d4f60266dd60b3dd24407e21e887c0364b"
     },
     {
       "path": "tests/test_cova3d_protocol_registry.py",

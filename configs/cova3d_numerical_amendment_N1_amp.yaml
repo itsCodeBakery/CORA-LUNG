@@ -1,0 +1,87 @@
+project: COVA-3D
+amendment_id: N1_FP16_STABLE_LOSS_SCALING
+status: PROSPECTIVELY_FROZEN_BEFORE_FIRST_SUCCESSFUL_COVA_OPTIMIZER_STEP
+parent_commit: a4db51c79ecfdb3f22cf4bdbcd6ff224ea077bd1
+parent_baseline: COVA3D_NNUNET_STYLE_PARTIAL_V1
+protocol_before: COVA3D_1.0+A1+A1.1+A1.2
+protocol_after: COVA3D_1.0+A1+A1.1+A1.2+N1
+trigger:
+  block: 09E-SANITY-FIT_ATTEMPT_1
+  failure: FP16_SCALED_GRADIENT_OVERFLOW_BEFORE_FIRST_OPTIMIZER_STEP
+  persisted_optimizer_steps: 0
+  persisted_completed_epochs: 0
+  dense_outcomes_accessed: false
+  first_accumulation_pair:
+  - 0
+  - 1
+  forward_loss_finite: true
+diagnostic:
+  full_observed_scale_ladder:
+    '65536': NONFINITE
+    '32768': NONFINITE
+    '16384': NONFINITE
+    '8192': NONFINITE
+    '4096': FINITE
+    '2048': FINITE
+    '1024': FINITE
+    '512': FINITE
+    '256': FINITE
+    '128': FINITE
+    '64': FINITE
+    '32': FINITE
+    '16': FINITE
+    '8': FINITE
+    '4': FINITE
+    '2': FINITE
+    '1': FINITE
+  independent_lock_reproduction:
+    '65536': NONFINITE
+    '4096': FINITE
+    '1': FINITE
+  largest_observed_finite_scale: 4096.0
+  scale_1_finite: true
+  diagnosis: TRANSIENT_FP16_LOSS_SCALE_OVERFLOW
+amp_policy:
+  autocast: true
+  dtype: float16
+  initial_scale: 4096.0
+  growth_factor: 2.0
+  backoff_factor: 0.5
+  growth_interval_successful_steps: 1000000
+  effective_upward_growth_during_frozen_runs: false
+  minimum_permitted_scale: 1.0
+  overflow_detection: After scaler.unscale_(optimizer), inspect all parameter gradients
+    for finite values before gradient clipping.
+  overflow_action: Call scaler.step(optimizer), allowing GradScaler to skip the weight
+    update; call scaler.update() to back off the scale; zero gradients; recompute
+    the exact same logical accumulation pair.
+  successful_optimizer_step_definition: A logical update is counted only when gradients
+    are finite after unscale and the optimizer weight update actually occurs.
+  retry_same_logical_pair: true
+  max_retries_per_logical_step: 16
+  abort_condition: If non-finite gradients persist at scale <=1 or retry limit is
+    exceeded, stop as genuine numerical instability.
+  gradient_clip_only_after_finite_unscale: true
+  gradient_clip_norm: 12.0
+scientifically_unchanged:
+  architecture: true
+  model_parameters: true
+  loss: true
+  optimizer: true
+  base_learning_rate: true
+  learning_rate_schedule: true
+  weight_decay: true
+  gradient_clip_threshold: true
+  patch_size: true
+  annotation_protocol: true
+  patient_schedule: true
+  augmentation: true
+  gradient_accumulation: true
+  sanity_epochs: true
+  sanity_microbatches: true
+  successful_sanity_optimizer_step_target: 1000
+  final_factorial_protocol: true
+factorial_training_authorized: false
+dense_outcome_evaluation_authorized: false
+next_block: 09E-SANITY-FIT-R1
+frozen_at_utc: '2026-09-20T09:38:01Z'

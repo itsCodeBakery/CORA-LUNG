@@ -1,0 +1,23 @@
+{
+  "project": "COVA-3D",
+  "block": "09E-N1-LOCK",
+  "status": "PASS",
+  "amendment_id": "N1_FP16_STABLE_LOSS_SCALING",
+  "parent_commit": "a4db51c79ecfdb3f22cf4bdbcd6ff224ea077bd1",
+  "protocol_after": "COVA3D_1.0+A1+A1.1+A1.2+N1",
+  "failed_attempt_retained_optimizer_steps": 0,
+  "dense_outcomes_accessed_before_amendment": false,
+  "probe": {
+    "65536": false,
+    "4096": true,
+    "1": true
+  },
+  "amp_initial_scale": 4096.0,
+  "amp_growth_interval": 1000000,
+  "overflow_same_pair_retry": true,
+  "successful_sanity_optimizer_step_target": 1000,
+  "factorial_training_authorized": false,
+  "source_capture": "PASS",
+  "next_block": "09E-SANITY-FIT-R1",
+  "generated_at_utc": "2026-09-20T09:38:01Z"
+}

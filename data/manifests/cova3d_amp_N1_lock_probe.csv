@@ -1,0 +1,4 @@
+scale,mean_loss,finite,gradient_tensors,nonfinite_tensors,nonfinite_values
+65536.0,2.694619357585907,False,64,1,104
+4096.0,2.694619357585907,True,64,0,0
+1.0,2.694619357585907,True,64,0,0
