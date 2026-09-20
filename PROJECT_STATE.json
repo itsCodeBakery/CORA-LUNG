@@ -3,9 +3,9 @@
   "title": "CORA-Lung: Component-Omission Replay for Incomplete Scribble-Supervised Lung Lesion Segmentation",
   "repository": "https://github.com/itsCodeBakery/CORA-LUNG",
   "workflow_version": "1.0",
-  "last_completed_block": "09E-SANITY-FIT-R2",
-  "last_completed_block_name": "cova3d_sanity_fit_R2",
-  "current_stage": "cova3d_geometry_operationality_audit_pending",
+  "last_completed_block": "09E-GEOM-OP-DIAG",
+  "last_completed_block_name": "cova3d_geometry_operationality_diagnostic",
+  "current_stage": "cova3d_geometry_operationality_repair_required",
   "current_gate": "COVA_SANITY_GATE",
   "gate_a": "PASS",
   "gate_b": "NO_GO",
@@ -15,8 +15,8 @@
   "gate_f": "NOT_RUN",
   "dense_label_firewall": "PASS",
   "primary_dataset_audit": "NOT_RUN",
-  "next_action": "Run 09E-GEOM-OP-DIAG before dense sanity evaluation.",
-  "updated_at_utc": "2026-09-20T10:29:44Z",
+  "next_action": "Keep all dense outcomes sealed. Diagnose and prospectively repair the frozen geometry intervention using only sparse annotation structure. Do not use segmentation outcomes.",
+  "updated_at_utc": "2026-09-20T10:36:16Z",
   "last_attempted_block": "09E-SANITY-FIT-R2",
   "primary_dataset_discovery": "PASS",
   "primary_dataset_pairing": "PASS",
@@ -151,5 +151,6 @@
   "cova3d_sanity_fit": "COMPLETE_R2",
   "last_finalization_block": "09E-SANITY-FIT-R2-FINALIZE-V2",
   "cova3d_R2_regression_tests": "PASS",
-  "cova3d_R2_log_semantic_equivalence": "PASS"
+  "cova3d_R2_log_semantic_equivalence": "PASS",
+  "cova3d_geometry_operationality": "REQUIRES_PROSPECTIVE_GEOMETRY_AMENDMENT"
 }

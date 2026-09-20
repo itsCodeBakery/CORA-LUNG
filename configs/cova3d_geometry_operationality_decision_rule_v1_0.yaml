@@ -1,0 +1,24 @@
+rule_id: COVA3D_GEOMETRY_OPERATIONALITY_V1
+timing: PRE_DENSE_OUTCOME_OPENING
+population: All final training-grid sparse annotations from the 20-volume primary
+  dataset.
+unit: case_x_coverage_x_selected_component
+strict_pass_requirements:
+  artifact_integrity: 120_of_120
+  same_case_budget_across_six_cells: true
+  same_background_across_six_cells: true
+  same_component_set_across_geometry_within_coverage: true
+  same_component_quota_across_geometry_within_coverage: true
+  resolution_limited_geometry_identity: true
+  resolution_limited_geometry_claim_allowed: false
+  resolvable_COH_connected_sets: 1
+  resolvable_DIS_min_connected_sets: 2
+  resolvable_FRG_min_connected_sets: 2
+  resolvable_COH_equals_DIS: 0
+  resolvable_COH_equals_FRG: 0
+  resolvable_DIS_equals_FRG: 0
+  whole_case_geometry_aliases: 0
+failure_action: Keep dense outcomes sealed and freeze a prospective annotation repair
+  before any factorial comparison.
+pass_action: Proceed to the already-planned dense development sanity evaluation.
+minimum_quota_3_screen: Advisory only. It does not modify the current protocol.

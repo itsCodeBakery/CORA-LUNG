@@ -1,0 +1,107 @@
+{
+  "project": "COVA-3D",
+  "block": "09E-GEOM-OP-DIAG",
+  "parent_commit": "09822ec327f6df49b5134a076ebe2f0414218e1e",
+  "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2+N1+N2",
+  "timing": "AFTER_R2_TRAINING_BEFORE_ANY_DENSE_COVA_OUTCOME",
+  "classification": "REQUIRES_PROSPECTIVE_GEOMETRY_AMENDMENT",
+  "decision_rule": {
+    "rule_id": "COVA3D_GEOMETRY_OPERATIONALITY_V1",
+    "timing": "PRE_DENSE_OUTCOME_OPENING",
+    "population": "All final training-grid sparse annotations from the 20-volume primary dataset.",
+    "unit": "case_x_coverage_x_selected_component",
+    "strict_pass_requirements": {
+      "artifact_integrity": "120_of_120",
+      "same_case_budget_across_six_cells": true,
+      "same_background_across_six_cells": true,
+      "same_component_set_across_geometry_within_coverage": true,
+      "same_component_quota_across_geometry_within_coverage": true,
+      "resolution_limited_geometry_identity": true,
+      "resolution_limited_geometry_claim_allowed": false,
+      "resolvable_COH_connected_sets": 1,
+      "resolvable_DIS_min_connected_sets": 2,
+      "resolvable_FRG_min_connected_sets": 2,
+      "resolvable_COH_equals_DIS": 0,
+      "resolvable_COH_equals_FRG": 0,
+      "resolvable_DIS_equals_FRG": 0,
+      "whole_case_geometry_aliases": 0
+    },
+    "failure_action": "Keep dense outcomes sealed and freeze a prospective annotation repair before any factorial comparison.",
+    "pass_action": "Proceed to the already-planned dense development sanity evaluation.",
+    "minimum_quota_3_screen": "Advisory only. It does not modify the current protocol."
+  },
+  "population": {
+    "cases": 20,
+    "development_cases": 4,
+    "final_outer_cv_cases": 16,
+    "sparse_artifacts": 120,
+    "component_instances": 467,
+    "resolvable_component_instances": 419,
+    "limited_component_instances": 48
+  },
+  "integrity": {
+    "artifact_hashes": "PASS_120_OF_120",
+    "same_budget_across_six_cells": true,
+    "same_background_across_six_cells": true,
+    "same_component_set_across_geometry": true,
+    "same_component_quota_across_geometry": true
+  },
+  "resolvable_aliases": {
+    "COH_equals_DIS": 0,
+    "COH_equals_FRG": 0,
+    "DIS_equals_FRG": 8,
+    "any_pairwise_alias": 8,
+    "quota2_instances": 20,
+    "quota2_DIS_equals_FRG": 0
+  },
+  "case_level": {
+    "case_coverage_units": 40,
+    "whole_case_geometry_aliases": 2
+  },
+  "structural_checks": {
+    "limited_identity_failures": 0,
+    "resolvable_topology_failures": 0,
+    "geometry_claim_flag_failures": 0
+  },
+  "jaccard_medians": {
+    "COH_vs_DIS_median": 0.0,
+    "COH_vs_FRG_median": 0.2,
+    "DIS_vs_FRG_median": 0.2
+  },
+  "mean_nearest_neighbor_medians_mm": {
+    "COH_median_mm": 1.5,
+    "DIS_median_mm": 8.377260792952907,
+    "FRG_median_mm": 3.7791327114238387
+  },
+  "minimum_quota_3_screen": {
+    "case_coverage_units": 40,
+    "simple_feasible": 34,
+    "simple_infeasible": 6,
+    "binding": false
+  },
+  "R2": {
+    "already_completed": true,
+    "retained_optimizer_steps": 1000,
+    "final_model_sha256": "fce56f781cbd4ffd3e733cccb04c81f3b5bb2a664aceed4b8c0688e06ac4891c",
+    "model_loaded_in_this_diagnostic": false,
+    "retraining_performed": false
+  },
+  "firewall": {
+    "CT_arrays_accessed": 0,
+    "dense_lesion_masks_accessed": 0,
+    "dense_lung_masks_accessed": 0,
+    "predictions_accessed": 0,
+    "checkpoints_accessed": 0,
+    "optimizer_steps": 0,
+    "final_outer_cv_outcome_access": 0
+  },
+  "authorization_after_diagnostic": {
+    "dense_sanity_evaluation": false,
+    "factorial_training": false,
+    "method_development": false,
+    "final_outer_cv_outcomes": false
+  },
+  "next_block": "09E-GEOM-OP-REPAIR",
+  "generated_at_utc": "2026-09-20T10:36:16Z",
+  "source_capture": "PASS"
+}

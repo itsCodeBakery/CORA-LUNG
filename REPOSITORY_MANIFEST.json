@@ -1,25 +1,15 @@
 {
-  "generated_at_utc": "2026-09-20T10:29:44Z",
-  "completed_scientific_block": "09E-SANITY-FIT-R2",
-  "finalization_block": "09E-SANITY-FIT-R2-FINALIZE-V2",
+  "generated_at_utc": "2026-09-20T10:36:16Z",
+  "completed_block": "09E-GEOM-OP-DIAG",
   "active_track": "COVA3D",
   "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2+N1+N2",
-  "numerical_amendments": [
-    "N1",
-    "N2"
-  ],
-  "R1_successful_updates_executed_nonretained": 233,
-  "R1_updates_retained": 0,
-  "R2_successful_optimizer_steps": 1000,
-  "R2_final_model_sha256": "fce56f781cbd4ffd3e733cccb04c81f3b5bb2a664aceed4b8c0688e06ac4891c",
-  "R2_log_semantic_equivalence": "PASS",
-  "R2_regression_suite": "PASS",
-  "training_loss_subcriterion": "PASS",
-  "zero_label_subcriterion": "PASS",
+  "geometry_operationality": "REQUIRES_PROSPECTIVE_GEOMETRY_AMENDMENT",
+  "resolvable_component_aliases": 8,
+  "quota2_DIS_FRG_aliases": 0,
+  "whole_case_geometry_aliases": 2,
   "dense_outcomes_opened": false,
-  "sanity_gate": "EVALUATION_PENDING",
   "factorial_training_authorized": false,
-  "next_block": "09E-GEOM-OP-DIAG",
+  "next_block": "09E-GEOM-OP-REPAIR",
   "self_included": false,
   "files": [
     {
@@ -29,8 +19,8 @@
     },
     {
       "path": "COVA3D_STATE.json",
-      "bytes": 7452,
-      "sha256": "0716701522bf837e49aaf1d652fba8c81588de78ee879a47e640b813a1eb67d1"
+      "bytes": 8205,
+      "sha256": "3dee7216f4a3d74140ac1ef70ed26cf74da1de468f146066f157610be2e25f3a"
     },
     {
       "path": "LICENSE",
@@ -39,8 +29,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 7053,
-      "sha256": "a59431ac7b8473a8cdbc5745f00936ecd008150d1e422da70371ae41afee818a"
+      "bytes": 7274,
+      "sha256": "048db17567bcaff363f4a9687b8b2938d38a5fea76d17b60feb0031720340d1c"
     },
     {
       "path": "README.md",
@@ -71,6 +61,11 @@
       "path": "configs/cova3d_baseline_training_v1_0.yaml",
       "bytes": 6393,
       "sha256": "08e1ef07bc0cba29d0f7c21e0e0db8554321d4944e6f50e86742277478c6d340"
+    },
+    {
+      "path": "configs/cova3d_geometry_operationality_decision_rule_v1_0.yaml",
+      "bytes": 1092,
+      "sha256": "44a1383705d46d8e05ae6bf8ec682ac1add40c23d3c515c5073590dbaf149374"
     },
     {
       "path": "configs/cova3d_numerical_amendment_N1_amp.yaml",
@@ -1543,6 +1538,36 @@
       "sha256": "73cebfec55c7af52dbaa88c3a36df8582b9f595c2cdeb339099823389468e264"
     },
     {
+      "path": "data/manifests/cova3d_geometry_causal_matching_audit_v1_0.csv",
+      "bytes": 2540,
+      "sha256": "be70c5d21edd3a3c4717e4446639679c6db6cdeb1f226943dc6b39895efd3d8a"
+    },
+    {
+      "path": "data/manifests/cova3d_geometry_min3_feasibility_screen_v1_0.csv",
+      "bytes": 3312,
+      "sha256": "22559a383f9ef329239d1fc21b796ff26ec2542c988022a67b2ecdab1bc8b31f"
+    },
+    {
+      "path": "data/manifests/cova3d_geometry_operationality_case_audit_v1_0.csv",
+      "bytes": 2889,
+      "sha256": "cdadb4472c755f14015f910214bbde29be18624b54adf251d6d628a2731ae626"
+    },
+    {
+      "path": "data/manifests/cova3d_geometry_operationality_component_audit_v1_0.csv",
+      "bytes": 105202,
+      "sha256": "1b9fefdf71c4ea3f607dbb897ef6d3b2d08bf1479238be5873ff800f04c3169f"
+    },
+    {
+      "path": "data/manifests/cova3d_geometry_operationality_quota_summary_v1_0.csv",
+      "bytes": 314,
+      "sha256": "ce1162ca447ff7d3d4b97a1f5c83a96972b768af9076ed3fc377ae86acd9b1c2"
+    },
+    {
+      "path": "data/manifests/cova3d_geometry_operationality_role_summary_v1_0.csv",
+      "bytes": 201,
+      "sha256": "14f85e839427cf8b797020a7b87596eeb1c369ce8e2ed5480a845fd85cdb09e4"
+    },
+    {
       "path": "data/manifests/cova3d_global_resolution_class_v1_0.csv",
       "bytes": 40726,
       "sha256": "6aa00e9f3c9eee4aaea51742e050b7234d6c9673e770d1a2a59415832a05e027"
@@ -2268,6 +2293,11 @@
       "sha256": "df25a0bc53cd25a80457ca7d4172cecc9d1372eb161d92e5cd2060d137bdca73"
     },
     {
+      "path": "experiments/audits/block09e_geometry_operationality_diagnostic.json",
+      "bytes": 3728,
+      "sha256": "671b7cf814bc3ba1417a364d6161d59e830c819269c0afad8577791325cc336a"
+    },
+    {
       "path": "experiments/audits/block09e_lock_baseline_training_protocol.json",
       "bytes": 1970,
       "sha256": "a6c11f2f51c54af708652d176ce8044bf0db1ae0542089c1626dfdd633d5a70b"
@@ -2441,6 +2471,26 @@
       "path": "figures/audit/fig13_gate_b_v1_2_training_curves.png",
       "bytes": 834636,
       "sha256": "330d63eda7dac0fc22231c9352d4630d95d43122339857305fd19d743b108022"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_geometry_alias_by_quota_v1_0.pdf",
+      "bytes": 17863,
+      "sha256": "07c9fd9b36ac01d1beeb5812edf077236ea4d6b15b4fb7a968e0318c622301d9"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_geometry_alias_by_quota_v1_0.png",
+      "bytes": 274041,
+      "sha256": "ff00938c511953a6ca31e5b91c1792f0032298d2869710e953619929d379d82b"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_geometry_operationality_jaccard_v1_0.pdf",
+      "bytes": 17020,
+      "sha256": "69f56d097426d2b93affa24760a9be5cf0250fdb40b993e24c0ceec15a1a5bfd"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_geometry_operationality_jaccard_v1_0.png",
+      "bytes": 305068,
+      "sha256": "147628dbcf201ab611acecfe254c093de50eadde0bdc2307658a36707cd6757f"
     },
     {
       "path": "figures/audit/fig_cova3d_sanity_R2_amp_scale_v1_0.pdf",
@@ -2783,6 +2833,11 @@
       "sha256": "8663f41b9a4be75f35803d254d04cae1b8e5737f3963a0d4beb5944e16b79272"
     },
     {
+      "path": "scripts/code_blocks/block09e_geometry_operationality_diagnostic.py",
+      "bytes": 90563,
+      "sha256": "4a7613a960d7fb315ecb00d4cd6cd5dc744672c9399889554c8e66e8b377da9c"
+    },
+    {
       "path": "scripts/code_blocks/block09e_lock_baseline_training_protocol.py",
       "bytes": 78604,
       "sha256": "16ca6cb7bb6025c9e261e1af260d19c31e8670aae9c73d2f0a22d48ebef6ce79"
@@ -3076,6 +3131,11 @@
       "path": "tests/test_cova3d_final_coordinate_grid_v1_2.py",
       "bytes": 5423,
       "sha256": "0aa15fb4cf2a579cc54eed145cdb045e059ab5f5a66ee00d65eb69eea1d153dd"
+    },
+    {
+      "path": "tests/test_cova3d_geometry_operationality.py",
+      "bytes": 4686,
+      "sha256": "388d4ad481a6eba728e1d79270dd34f03c78077b036a10460d399c7ee71daab2"
     },
     {
       "path": "tests/test_cova3d_numerical_amendment_n1.py",
