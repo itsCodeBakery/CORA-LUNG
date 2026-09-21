@@ -1,0 +1,42 @@
+{
+  "project": "COVA-3D",
+  "block": "10B-FACTORIAL-BATCH-01",
+  "status": "FIT_COMPLETE",
+  "batch_id": "fold0_seed17",
+  "outer_fold": 0,
+  "seed": 17,
+  "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2+A1.3+N1+N2",
+  "conditions": [
+    "C50_COH",
+    "C50_DIS",
+    "C50_FRG",
+    "C100_COH",
+    "C100_DIS",
+    "C100_FRG"
+  ],
+  "fits_completed": 6,
+  "optimizer_steps_per_fit": 2400,
+  "optimizer_steps_batch": 14400,
+  "shared_initialization_sha256": "5b009bcbfb754a4428b83e34af6786ee8cfef7c748a8855ca8449d5d73480671",
+  "paired_plan_sha256": "765e18dc4cc7874a772e9a4238ee5292985f2501b8e8b829f1274ff767956ad6",
+  "pairing": {
+    "model_initialization": "PASS",
+    "patient_schedule": "PASS",
+    "sampling_randomization": "PASS",
+    "augmentation_randomization": "PASS"
+  },
+  "checkpoint_policy": "FINAL_EPOCH_ONLY",
+  "final_model_SHA_verified": 6,
+  "runtime_minutes_total": 100.32179238204999,
+  "AMP_overflow_events_total": 12,
+  "firewall": {
+    "dense_training_masks_accessed": 0,
+    "heldout_dense_outcomes_accessed": 0,
+    "final_outer_cv_outcome_access": 0,
+    "threshold_search": false,
+    "performance_based_checkpoint_selection": false
+  },
+  "next_block": "10C-FACTORIAL-BATCH-01-PRED-FREEZE",
+  "generated_at_utc": "2026-09-21T05:31:37Z",
+  "source_capture": "PASS"
+}
