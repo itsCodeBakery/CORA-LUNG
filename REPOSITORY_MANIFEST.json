@@ -1,12 +1,15 @@
 {
-  "generated_at_utc": "2026-09-22T09:19:18Z",
-  "completed_block": "10B-FACTORIAL-BATCH-05",
+  "generated_at_utc": "2026-09-22T09:26:21Z",
+  "completed_block": "10C-FACTORIAL-BATCH-05-PRED-FREEZE",
   "active_track": "COVA3D",
   "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2+A1.3+N1+N2",
   "factorial_runs_completed": 24,
+  "factorial_prediction_runs_frozen": 24,
+  "factorial_prediction_maps_frozen": 96,
   "factorial_batches_completed": 4,
   "final_outer_cv_outcome_access": 0,
-  "next_block": "10C-FACTORIAL-BATCH-05-PRED-FREEZE",
+  "next_batch": "fold1_seed43",
+  "next_block": "10B-FACTORIAL-BATCH-06",
   "self_included": false,
   "files": [
     {
@@ -16,8 +19,8 @@
     },
     {
       "path": "COVA3D_STATE.json",
-      "bytes": 11804,
-      "sha256": "165301a6c465ebe73ea3ee04f6bfd054bd523a637777c980a2655d8819b35ef8"
+      "bytes": 11950,
+      "sha256": "413dd0f90a4c7fc6baf29b357a4b5ac1b67cb0ecdef14309fadea2fd5f9e9671"
     },
     {
       "path": "LICENSE",
@@ -26,8 +29,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 7472,
-      "sha256": "fa88eb166f05b25b49d7511a1f14163918dd88f253dda59eb74ad60f5f2adfa3"
+      "bytes": 7454,
+      "sha256": "884fa886b4d05de6a78a7971463a107c31d930a8248420324a5a7142b4ef5c0b"
     },
     {
       "path": "README.md",
@@ -67,7 +70,7 @@
     {
       "path": "configs/cova3d_factorial_inference_implementation_lock_v1_0.yaml",
       "bytes": 616,
-      "sha256": "862a45b4da9282ed65061efcad13302b963cf6125ea713ad29b51b25721c05ca"
+      "sha256": "2f12e5e139d4d19b31e3bf838f43c58d610e694a177499dea1711a4dd2050808"
     },
     {
       "path": "configs/cova3d_geometry_operationality_decision_rule_v1_0.yaml",
@@ -2225,6 +2228,11 @@
       "sha256": "a281e1d7166b7fc4f0206b4007313da1b7e64ce480003b4385b5c4a4176c2066"
     },
     {
+      "path": "data/manifests/cova3d_factorial_batch05_prediction_freeze_v1_0.csv",
+      "bytes": 11277,
+      "sha256": "4c353eea0f3ef330c5db2601990b2c67db0ed965234fbfa223f0e1cc517fe102"
+    },
+    {
       "path": "data/manifests/cova3d_factorial_register_v1_0.csv",
       "bytes": 2219,
       "sha256": "54bcfac43fecfda1a44b2f3b4c3b393bd50d5cc3c9f30089c8c8713c78fb6cd6"
@@ -2236,13 +2244,13 @@
     },
     {
       "path": "data/manifests/cova3d_final_factorial_batch_registry_v1_0.csv",
-      "bytes": 5269,
-      "sha256": "80be9cc12b55c870723153d325624f66bfe363f836f53aabeef8a04309ebb179"
+      "bytes": 5280,
+      "sha256": "eaa0d6195dff02b20d0df9a729d348fecdefc07022d5b0e04f84d829b836e2a7"
     },
     {
       "path": "data/manifests/cova3d_final_factorial_execution_registry_v1_0.csv",
-      "bytes": 34678,
-      "sha256": "a31719631009ddec340389c937b8751168f6f2fb6611acf0e4c0271906de7fe4"
+      "bytes": 34744,
+      "sha256": "e537af1794a71dcdbd50f39298581cb8b18719410cb1c87eb4c1b9c97d703c21"
     },
     {
       "path": "data/manifests/cova3d_final_factorial_run_registry_v1_0.csv",
@@ -3135,6 +3143,11 @@
       "sha256": "5f39501f9c6667541e092f789dd49bcba658715d42ea6e54902f2a39895a97e3"
     },
     {
+      "path": "experiments/audits/block10c_factorial_batch05_prediction_freeze.json",
+      "bytes": 1344,
+      "sha256": "d735df31652f1d8b7b6b130f74b4ea90d0de60ee6cf05ebe918941e524baa86e"
+    },
+    {
       "path": "experiments/registry.csv",
       "bytes": 102,
       "sha256": "e6ca868d5995d945d50fdaa6a7dd221f07d0da1f2a93e685af1df738e38b7509"
@@ -3770,6 +3783,11 @@
       "sha256": "5e15d3385da63d45d3fca85a240a3663fb207878f7804d258ca6f12f51094812"
     },
     {
+      "path": "scripts/code_blocks/block10c_factorial_batch05_prediction_freeze.py",
+      "bytes": 55904,
+      "sha256": "51343cfcb324537f47451956a28b26a070584ed29eb72567ac499c6b450f258d"
+    },
+    {
       "path": "scripts/resume_project.py",
       "bytes": 673,
       "sha256": "4ff28985d05c37f7b896c40c8265ea86cc52f936ff7b5ce36edb05d74d7519ae"
@@ -4058,6 +4076,11 @@
       "path": "tests/test_cova3d_factorial_batch05_fit.py",
       "bytes": 2718,
       "sha256": "e73a6a16a18e76c3af40c5ff2f5a0304ae833f227ce18e79aa73b4d2e5cb8ab0"
+    },
+    {
+      "path": "tests/test_cova3d_factorial_batch05_prediction_freeze.py",
+      "bytes": 3670,
+      "sha256": "b5561b5d116c557fcec33e8a2c607993119f005aaabc00a5538c00da6c4ac05d"
     },
     {
       "path": "tests/test_cova3d_factorial_preflight.py",
