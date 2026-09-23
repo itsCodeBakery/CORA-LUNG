@@ -3,9 +3,9 @@
   "title": "CORA-Lung: Component-Omission Replay for Incomplete Scribble-Supervised Lung Lesion Segmentation",
   "repository": "https://github.com/itsCodeBakery/CORA-LUNG",
   "workflow_version": "1.0",
-  "last_completed_block": "10B-FACTORIAL-BATCH-07",
+  "last_completed_block": "10C-FACTORIAL-BATCH-07-PRED-FREEZE",
   "last_completed_block_name": "cova3d_A1_3_operational_geometry_neutralization",
-  "current_stage": "cova3d_factorial_batch07_prediction_freeze_pending",
+  "current_stage": "cova3d_factorial_batch08_pending",
   "current_gate": "COVA_SANITY_GATE",
   "gate_a": "PASS",
   "gate_b": "NO_GO",
@@ -15,8 +15,8 @@
   "gate_f": "NOT_RUN",
   "dense_label_firewall": "PASS",
   "primary_dataset_audit": "NOT_RUN",
-  "next_action": "Run 10C-FACTORIAL-BATCH-07-PRED-FREEZE.",
-  "updated_at_utc": "2026-09-23T06:23:30Z",
+  "next_action": "Run 10B-FACTORIAL-BATCH-08.",
+  "updated_at_utc": "2026-09-23T06:34:45Z",
   "last_attempted_block": "09E-SANITY-FIT-R2",
   "primary_dataset_discovery": "PASS",
   "primary_dataset_pairing": "PASS",
@@ -159,6 +159,6 @@
   "cova3d_factorial_batches_total": 12,
   "cova3d_factorial_batches_completed": 4,
   "cova3d_factorial_runs_completed": 24,
-  "cova3d_factorial_prediction_runs_frozen": 18,
-  "cova3d_factorial_prediction_maps_frozen": 72
+  "cova3d_factorial_prediction_runs_frozen": 24,
+  "cova3d_factorial_prediction_maps_frozen": 96
 }
