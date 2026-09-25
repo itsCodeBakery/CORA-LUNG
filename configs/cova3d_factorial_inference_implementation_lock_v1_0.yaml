@@ -18,4 +18,4 @@ inference:
   output_storage_dtype: float32
 dense_outcomes_opened_at_freeze: false
 final_outer_cv_outcome_access_at_freeze: 0
-frozen_at_utc: '2026-09-25T02:22:15Z'
+frozen_at_utc: '2026-09-25T06:44:27Z'
