@@ -1,0 +1,61 @@
+{
+  "project": "COVA-3D",
+  "block": "14B1-FINAL-OUTCOME-UNSEAL-AUTHORIZATION",
+  "status": "AUTHORIZED",
+  "authorized_at_utc": "2026-09-28T15:13:31Z",
+  "authorization_scope": "One-time access to the 16 frozen final outer-CV dense infection references solely for execution of the evaluator frozen in Block 14A.",
+  "frozen_evaluator_commit": "c576c260d25ac1d0985e3ee9ca4719a81f05675f",
+  "frozen_evaluator_sha256": "c727b01a48a7ab08c2019f1df04ab1fb21a36dd7e8d6f7690c729593479b5f4f",
+  "frozen_evaluation_lock_sha256": "3a67a98dfa6d0d718b285cf7d0df1ea627c4b34ba8b6c5f4c54c7bb159a56620",
+  "prediction_payload": {
+    "maps": 288,
+    "physical_integrity": "PASS_288_OF_288_EXACT",
+    "github_integrity": "PASS_288_OF_288_EXACT"
+  },
+  "final_population": {
+    "volumes": 16,
+    "outer_folds": 4,
+    "model_seeds": [
+      17,
+      29,
+      43
+    ],
+    "conditions": 6,
+    "cluster_unit": "source_subject_key"
+  },
+  "permitted_operations_after_this_commit": [
+    "verify final infection-mask source SHA256",
+    "reconstruct final references using frozen resampling and crop geometry",
+    "compute the already-frozen primary R@1 endpoint",
+    "compute already-frozen secondary endpoints",
+    "compute already-frozen paired factorial estimands",
+    "execute 10000-replicate source_subject_key cluster bootstrap",
+    "execute exact two-sided cluster sign-flip tests",
+    "apply Holm correction to the two primary interaction tests"
+  ],
+  "prohibited_operations": [
+    "change evaluator code after viewing final outcomes",
+    "change threshold grid",
+    "change matching IoU",
+    "change connectivity",
+    "change small-reference policy",
+    "change primary endpoint",
+    "change secondary fixed threshold",
+    "change factorial contrast definitions",
+    "change bootstrap seed",
+    "change bootstrap replicate count",
+    "change multiple-comparison policy",
+    "condition-specific postprocessing",
+    "performance-based model or checkpoint selection"
+  ],
+  "access_state_at_authorization": {
+    "final_dense_mask_files_opened": 0,
+    "final_dense_mask_bytes_read": 0,
+    "final_outer_cv_outcome_access_count": 0,
+    "dice_computed": false,
+    "iou_computed": false,
+    "froc_computed": false
+  },
+  "next_block": "14B2-FINAL-OUTCOME-EVALUATION",
+  "authorization_is_irreversible_for_analysis_history": true
+}

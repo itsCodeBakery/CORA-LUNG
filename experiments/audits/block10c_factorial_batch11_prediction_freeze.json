@@ -1,0 +1,51 @@
+{
+  "project": "COVA-3D",
+  "block": "10C-FACTORIAL-BATCH-11-PRED-FREEZE",
+  "status": "PREDICTIONS_FROZEN",
+  "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2+A1.3+N1+N2",
+  "batch_id": "fold3_seed29",
+  "outer_fold": 3,
+  "seed": 29,
+  "models": 6,
+  "heldout_cases_per_model": 4,
+  "prediction_maps": 24,
+  "inference": {
+    "patch_zyx": [
+      48,
+      128,
+      128
+    ],
+    "overlap": 0.5,
+    "window_weighting": "gaussian",
+    "gaussian_sigma_scale": 0.125,
+    "minimum_gaussian_weight": 0.001,
+    "blend_domain": "logits",
+    "probability": "stable_sigmoid_after_merged_logits",
+    "TTA": false,
+    "output_storage_dtype": "float32"
+  },
+  "prediction_SHA_verified": 24,
+  "firewall": {
+    "infection_masks_accessed": 0,
+    "lung_masks_accessed": 0,
+    "final_dense_outcomes_accessed": 0,
+    "optimizer_steps": 0,
+    "training": false,
+    "threshold_search": false,
+    "Dice_computed": false,
+    "IoU_computed": false,
+    "FROC_computed": false
+  },
+  "factorial_progress": {
+    "fits_completed": 36,
+    "fits_total": 72,
+    "prediction_frozen_runs": 36,
+    "prediction_maps_frozen": 144,
+    "training_batches_completed": 6,
+    "training_batches_total": 12
+  },
+  "next_batch": "fold3_seed43",
+  "next_block": "10B-FACTORIAL-BATCH-12",
+  "generated_at_utc": "2026-09-25T06:44:27Z",
+  "source_capture": "PASS"
+}

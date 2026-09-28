@@ -1,0 +1,145 @@
+{
+  "project": "COVA-3D",
+  "block": "15A-PUBLICATION-TABLES-AND-FIGURES",
+  "version": "1.0",
+  "status": "PASS",
+  "source_statistical_commit": "6077ec3823e4401f4f2fc6288bab0ad81184eb13",
+  "tables": 5,
+  "figures": 6,
+  "figure_formats": [
+    "PNG_600_DPI",
+    "PDF_VECTOR"
+  ],
+  "primary_result": "R@1=0 for all six conditions with 95% cluster-bootstrap CI [0,0]",
+  "primary_interactions": {
+    "interaction_disperse": {
+      "estimate": 0.0,
+      "raw_p": 1.0,
+      "holm_p": 1.0
+    },
+    "interaction_fragmented": {
+      "estimate": 0.0,
+      "raw_p": 1.0,
+      "holm_p": 1.0
+    }
+  },
+  "secondary_outputs_are_descriptive": true,
+  "artifacts": [
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/README.txt",
+      "bytes": 2122,
+      "sha256": "66f643dbb6baa4b1de971989875ddab57c619d910e01f5d3c2b3724788b7b975"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/figures/Figure_1_FROC_False_Positive_Burden.pdf",
+      "bytes": 28352,
+      "sha256": "b76d39bb8d839e0d5a36941319a49b3a6054f0291296549d2afdd8d300564e8e"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/figures/Figure_1_FROC_False_Positive_Burden.png",
+      "bytes": 437808,
+      "sha256": "a28d446a700387fea11fc6394cc30e7f6a1c7bf76c11ec61776f6177380ef9a4"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/figures/Figure_2_Dice_IoU_Fixed_Threshold.pdf",
+      "bytes": 21597,
+      "sha256": "09be6b8b006a6987cd549bb74cc2a782c7467eea8047f407cb92ef2170887cce"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/figures/Figure_2_Dice_IoU_Fixed_Threshold.png",
+      "bytes": 314455,
+      "sha256": "c4da22ccdac34f1793d363b8a02b5c46ee710ac8c205bfb04c5ca3f3240d577d"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/figures/Figure_3_Lesion_Recall_Tolerance_Gap.pdf",
+      "bytes": 24420,
+      "sha256": "24fb5945f57523167da2baf9de821d2b783b0f62683ad093cb3274be45a1aa23"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/figures/Figure_3_Lesion_Recall_Tolerance_Gap.png",
+      "bytes": 326684,
+      "sha256": "113978a18554e251ab5f290dac3e6e6027d97a33d7d95847261c115bef8ef1fe"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/figures/Figure_4_Component_Burden_vs_FP_Volume.pdf",
+      "bytes": 20623,
+      "sha256": "e735d89d208541db3e0eb1f87f49023a91b1a2a21167edd29464fae03b23f3a0"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/figures/Figure_4_Component_Burden_vs_FP_Volume.png",
+      "bytes": 290731,
+      "sha256": "563e20ec37406c558a699087940eeccd85d859a1eee17b50f2b9e38d50999b28"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/figures/Figure_5_Seed_Fragmentation_Robustness.pdf",
+      "bytes": 21177,
+      "sha256": "c23279c3cf222aa11ef73f24faab0bf275150118321b1631dd1f6d5b1b8c0941"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/figures/Figure_5_Seed_Fragmentation_Robustness.png",
+      "bytes": 351979,
+      "sha256": "7ad27c88617b2a9c880186514027ccb14a2752e679188a718e93c7e1b91fcf4c"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/figures/Figure_6_Coverage_Geometry_Descriptive_Profile.pdf",
+      "bytes": 23682,
+      "sha256": "0dbe49256a6817e7e35a45627af806f37cdcc17beba0f41bb3aa5510fc9db2c4"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/figures/Figure_6_Coverage_Geometry_Descriptive_Profile.png",
+      "bytes": 325879,
+      "sha256": "332aec9e7e430e0a451a47eb26ba83e9edd9c7613dfa4dda50da4b0c7414862c"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/tables/Table_1_Primary_FROC_Endpoints.csv",
+      "bytes": 348,
+      "sha256": "51b760565bdadf7b5941d24c5e4c3ac895a261efcbb6a36dd1af6b300f5bfbe7"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/tables/Table_1_Primary_FROC_Endpoints.tex",
+      "bytes": 761,
+      "sha256": "43ccd451b4148a89aad5d92dcf6a4cdc8f14b3616f913d0272344d0f03a64b00"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/tables/Table_2_Fixed_Threshold_Secondary_Performance.csv",
+      "bytes": 818,
+      "sha256": "55c100ef884c152de12f82f42bfa0cb4abf4c87569934fee9f730afbdb04926a"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/tables/Table_2_Fixed_Threshold_Secondary_Performance.tex",
+      "bytes": 1260,
+      "sha256": "1957e4a007d8fd511610ee80bcb654726093303af386e649255fcfca67abf62a"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/tables/Table_3_Seed_Robustness.csv",
+      "bytes": 1245,
+      "sha256": "67386582f4416b2bbf4005a4784c41dd98424d2f4999b36fed3285bade8f0bf8"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/tables/Table_3_Seed_Robustness.tex",
+      "bytes": 1847,
+      "sha256": "2ba63dc199696ad66c09124f13f10d5eb20604ff436b5faf4d5b2308d71bddce"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/tables/Table_4_Primary_Factorial_Inference.csv",
+      "bytes": 233,
+      "sha256": "db971d1a60558261d23d89ec7daf2c1cdf4193e2dae67b2df5ada537a2c03f87"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/tables/Table_4_Primary_Factorial_Inference.tex",
+      "bytes": 653,
+      "sha256": "d9dab4f39c5212daeedbbdad2dafcc83b8d1867ed29e670b10977c8d9519a837"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/tables/Table_5_Lesion_Size_Primary_Operating_Point.csv",
+      "bytes": 221,
+      "sha256": "9c186dbdfd04226140c19d1ff7a5bc71888b2aca1a42df52cea93e19a3a125e3"
+    },
+    {
+      "path": "paper_outputs/cova3d_final_v1_0/tables/Table_5_Lesion_Size_Primary_Operating_Point.tex",
+      "bytes": 663,
+      "sha256": "26f1113d14f83ae33b05594f5691e3f5477cff7aa866948f8df64602e7c817b3"
+    }
+  ],
+  "created_at_utc": "2026-09-28T16:09:49Z"
+}

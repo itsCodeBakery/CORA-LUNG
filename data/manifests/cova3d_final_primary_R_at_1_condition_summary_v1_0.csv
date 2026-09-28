@@ -1,0 +1,7 @@
+condition,fp_budget,macro_recall_mean_across_seeds,macro_recall_seed_sd,pooled_recall_mean_across_seeds,selected_threshold_mean
+C100_COH,1.0,0.0,0.0,0.0,1.000001
+C100_DIS,1.0,0.0,0.0,0.0,1.000001
+C100_FRG,1.0,0.0,0.0,0.0,1.000001
+C50_COH,1.0,0.0,0.0,0.0,1.000001
+C50_DIS,1.0,0.0,0.0,0.0,1.000001
+C50_FRG,1.0,0.0,0.0,0.0,1.000001

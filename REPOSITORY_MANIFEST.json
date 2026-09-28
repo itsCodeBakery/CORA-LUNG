@@ -1,15 +1,15 @@
 {
-  "generated_at_utc": "2026-09-22T07:16:31Z",
-  "completed_block": "10C-FACTORIAL-BATCH-03-PRED-FREEZE",
+  "generated_at_utc": "2026-09-25T09:27:20Z",
+  "completed_block": "10C-FACTORIAL-BATCH-12-PRED-FREEZE",
   "active_track": "COVA3D",
   "effective_protocol": "COVA3D_1.0+A1+A1.1+A1.2+A1.3+N1+N2",
-  "factorial_runs_completed": 18,
-  "factorial_prediction_runs_frozen": 18,
-  "factorial_prediction_maps_frozen": 72,
-  "factorial_batches_completed": 3,
+  "factorial_runs_completed": 42,
+  "factorial_prediction_runs_frozen": 42,
+  "factorial_prediction_maps_frozen": 168,
+  "factorial_batches_completed": 7,
   "final_outer_cv_outcome_access": 0,
-  "next_batch": "fold1_seed17",
-  "next_block": "10B-FACTORIAL-BATCH-04",
+  "next_batch": "NONE",
+  "next_block": "FINAL_FACTORIAL_BRANCH_INTEGRATION_PENDING",
   "self_included": false,
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "COVA3D_STATE.json",
-      "bytes": 11408,
-      "sha256": "4608c7f40759dfd251a1f6b971cd8a81d09e2b1222f03b2c58d39c82796dd90a"
+      "bytes": 13583,
+      "sha256": "7e4419a5ad6cdc437b2216a40031859c4350646c7d757f80b55cf6442444bd0e"
     },
     {
       "path": "LICENSE",
@@ -29,8 +29,8 @@
     },
     {
       "path": "PROJECT_STATE.json",
-      "bytes": 7454,
-      "sha256": "272a4ee5eb9ad04437570d5f057b9a22f0601f6b82b1b834f9a75980b0f68a20"
+      "bytes": 7522,
+      "sha256": "1e35d7e1f4f2c22a41534a06a53c38bb258277678ae194100c28808765e2c07c"
     },
     {
       "path": "README.md",
@@ -70,7 +70,7 @@
     {
       "path": "configs/cova3d_factorial_inference_implementation_lock_v1_0.yaml",
       "bytes": 616,
-      "sha256": "862a45b4da9282ed65061efcad13302b963cf6125ea713ad29b51b25721c05ca"
+      "sha256": "03e22e1647578b308fbc340efb0a1694900a671d92ef140b06bce3d556133617"
     },
     {
       "path": "configs/cova3d_geometry_operationality_decision_rule_v1_0.yaml",
@@ -2218,6 +2218,66 @@
       "sha256": "0d4fc8ec79f1506112ea52a4a17b8ddec680fee612cbaf18aea6adbb9233cb4b"
     },
     {
+      "path": "data/manifests/cova3d_factorial_batch08_epoch_log_v1_0.csv",
+      "bytes": 101832,
+      "sha256": "186fb4a8b49e74f0f69d8fb6e11d8baaa97f949bc765b93f9e1237bf0f1a4914"
+    },
+    {
+      "path": "data/manifests/cova3d_factorial_batch08_fit_summary_v1_0.csv",
+      "bytes": 3371,
+      "sha256": "d4fd3d0a0cbb4ea0a91fed5e83c6d1777cbacd178116a43c9b6d530281dec2af"
+    },
+    {
+      "path": "data/manifests/cova3d_factorial_batch08_prediction_freeze_v1_0.csv",
+      "bytes": 11200,
+      "sha256": "cdaf00774055057c312030f1f6f89899ef02831c680f87d04bfcf94ee2a4cf2c"
+    },
+    {
+      "path": "data/manifests/cova3d_factorial_batch10_epoch_log_v1_0.csv",
+      "bytes": 102123,
+      "sha256": "671101981765e2f0e6ed389b7b2531d5c4f2dd4892a74fadb6e1123457195242"
+    },
+    {
+      "path": "data/manifests/cova3d_factorial_batch10_fit_summary_v1_0.csv",
+      "bytes": 3372,
+      "sha256": "bfa763a881e121fc9e965b67a675951a75aa5f6be0ba9359172f0344b77ba8eb"
+    },
+    {
+      "path": "data/manifests/cova3d_factorial_batch10_prediction_freeze_v1_0.csv",
+      "bytes": 11117,
+      "sha256": "c584700c75a7e6b35e6d26e90958df6ef72f0273b4a0b55a2bf136780b7c26ce"
+    },
+    {
+      "path": "data/manifests/cova3d_factorial_batch11_epoch_log_v1_0.csv",
+      "bytes": 101940,
+      "sha256": "9ca4ebf251e9604c4fd722ff5d51ba344a4459ac0f4811786f9c5209a767c320"
+    },
+    {
+      "path": "data/manifests/cova3d_factorial_batch11_fit_summary_v1_0.csv",
+      "bytes": 3372,
+      "sha256": "45493d971c6ea491254ee2837810d0bef9c173ff714faf0f7e7d9fe42ae3f6d4"
+    },
+    {
+      "path": "data/manifests/cova3d_factorial_batch11_prediction_freeze_v1_0.csv",
+      "bytes": 11127,
+      "sha256": "60f05e98a406ed10b1b14dfd2b2f6bfba8a138179f9737dbc29ebe062828d068"
+    },
+    {
+      "path": "data/manifests/cova3d_factorial_batch12_epoch_log_v1_0.csv",
+      "bytes": 100965,
+      "sha256": "1fbc21b304ed86ddc1b6c401d11f49ca7f040c6dfcdb762e48fcb3f36364962e"
+    },
+    {
+      "path": "data/manifests/cova3d_factorial_batch12_fit_summary_v1_0.csv",
+      "bytes": 3365,
+      "sha256": "b2c9fc89d624f4cdbf2222fe40032ae260082d678b4ee1a619ff06c3f954f7ae"
+    },
+    {
+      "path": "data/manifests/cova3d_factorial_batch12_prediction_freeze_v1_0.csv",
+      "bytes": 11117,
+      "sha256": "32b1726286841d1be9bf50b8e6fcbd7771a83472dbbcaad2ea64ca158a7eb87d"
+    },
+    {
       "path": "data/manifests/cova3d_factorial_register_v1_0.csv",
       "bytes": 2219,
       "sha256": "54bcfac43fecfda1a44b2f3b4c3b393bd50d5cc3c9f30089c8c8713c78fb6cd6"
@@ -2229,13 +2289,13 @@
     },
     {
       "path": "data/manifests/cova3d_final_factorial_batch_registry_v1_0.csv",
-      "bytes": 5269,
-      "sha256": "80be9cc12b55c870723153d325624f66bfe363f836f53aabeef8a04309ebb179"
+      "bytes": 5313,
+      "sha256": "77ef9e2b5f8e14b7160c146d2fcfb0c3b2ae19da26512713c0c4e95362e024e0"
     },
     {
       "path": "data/manifests/cova3d_final_factorial_execution_registry_v1_0.csv",
-      "bytes": 34678,
-      "sha256": "a31719631009ddec340389c937b8751168f6f2fb6611acf0e4c0271906de7fe4"
+      "bytes": 34942,
+      "sha256": "a949725499c634d998c3e69e8cd31893584a6029b64772f4c8bfaf42a73830d8"
     },
     {
       "path": "data/manifests/cova3d_final_factorial_run_registry_v1_0.csv",
@@ -3108,6 +3168,26 @@
       "sha256": "83e740d5e37a200af5590c0994db6efa2dac899ae8eb7260e3769056bff02b8c"
     },
     {
+      "path": "experiments/audits/block10b_factorial_batch08_fit.json",
+      "bytes": 1297,
+      "sha256": "c8cea99acfee6546c0baf71665519825d573ac8f7c473096cb1ba1a72e5afd55"
+    },
+    {
+      "path": "experiments/audits/block10b_factorial_batch10_fit.json",
+      "bytes": 1295,
+      "sha256": "0041bd42828cef1a0e25ae1aaefcfb8f693da81ac2ecf9c45ee0f7a228a86711"
+    },
+    {
+      "path": "experiments/audits/block10b_factorial_batch11_fit.json",
+      "bytes": 1297,
+      "sha256": "51ffa2b80aa15a7d1448ced70c7e314374c2dc42910c66e1e6b972b452da6190"
+    },
+    {
+      "path": "experiments/audits/block10b_factorial_batch12_fit.json",
+      "bytes": 1296,
+      "sha256": "f34182263d87b5a6d707e7a47e6be181bcce44f19d79aa7aa543b203dde07f3c"
+    },
+    {
       "path": "experiments/audits/block10c_factorial_batch01_prediction_freeze.json",
       "bytes": 1342,
       "sha256": "5734ab63bf101db65cd6d108a5a5da4b8c9e021bbd16897d1c448c94614ed679"
@@ -3121,6 +3201,26 @@
       "path": "experiments/audits/block10c_factorial_batch03_prediction_freeze.json",
       "bytes": 1344,
       "sha256": "5f39501f9c6667541e092f789dd49bcba658715d42ea6e54902f2a39895a97e3"
+    },
+    {
+      "path": "experiments/audits/block10c_factorial_batch08_prediction_freeze.json",
+      "bytes": 1344,
+      "sha256": "9d77561d4d7a83134c4fc89549cbf6d1476a4aad7bd3f952697861aaf4ae939d"
+    },
+    {
+      "path": "experiments/audits/block10c_factorial_batch10_prediction_freeze.json",
+      "bytes": 1345,
+      "sha256": "772ca890c868c16775f1678d803d9f9683e4a9fd1512ee9eadf63864a795b97c"
+    },
+    {
+      "path": "experiments/audits/block10c_factorial_batch11_prediction_freeze.json",
+      "bytes": 1345,
+      "sha256": "fc03df57b3e490d3fa47501bfd7ebed8c410ced11438cd03e0b6e16c157517c0"
+    },
+    {
+      "path": "experiments/audits/block10c_factorial_batch12_prediction_freeze.json",
+      "bytes": 1357,
+      "sha256": "6558c1d9da40bc488dda2bb107fbad7e2ce5422536d0d5def3d03afd1b00bff3"
     },
     {
       "path": "experiments/registry.csv",
@@ -3291,6 +3391,46 @@
       "path": "figures/audit/fig_cova3d_factorial_batch03_training_curves.png",
       "bytes": 278792,
       "sha256": "ead723aeb63527d84ec03359834e4862b14a7b2d4e8e1373b7b9d39e22973a58"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_factorial_batch08_training_curves.pdf",
+      "bytes": 17576,
+      "sha256": "536ae0a47c379297a1ef1a684e2966c3f6d8aa689415be267e9a0a08b90c0b8c"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_factorial_batch08_training_curves.png",
+      "bytes": 222143,
+      "sha256": "9c218c03e57a20d246d15bb9b6a1e7f900b25ee31eacbae66b99bd29b260a470"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_factorial_batch10_training_curves.pdf",
+      "bytes": 17517,
+      "sha256": "722d294ba4c179e906b2e3f98677ee23748d04fa1b7cf43606af8005d17ded6a"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_factorial_batch10_training_curves.png",
+      "bytes": 275612,
+      "sha256": "43a65580f52ab52431b029e29aa1dc8d4631450a2095c398a91cfd5fb310f5e3"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_factorial_batch11_training_curves.pdf",
+      "bytes": 17579,
+      "sha256": "3f6429babc04c98a1dd5f603bd29bd997285630c10a934d6169290b82e51b41a"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_factorial_batch11_training_curves.png",
+      "bytes": 262902,
+      "sha256": "d1fdb75093f5355f44e83ac1e4c8363fd6faab9d3e547c59785605ea3703ae1a"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_factorial_batch12_training_curves.pdf",
+      "bytes": 17550,
+      "sha256": "b6fdde6a4e9b1f371a35e22bf15566259832412a7bb16d6ffa4cd2e93e7b0815"
+    },
+    {
+      "path": "figures/audit/fig_cova3d_factorial_batch12_training_curves.png",
+      "bytes": 262344,
+      "sha256": "bb2abca05c31113c61bac3caab34eec8333c1519a774b55b83b23458d761e2b6"
     },
     {
       "path": "figures/audit/fig_cova3d_geometry_alias_by_quota_v1_0.pdf",
@@ -3728,6 +3868,26 @@
       "sha256": "dbaadb7f54cd9da9686189ba05d4f06fe05ec84b29105da32826fb050320432b"
     },
     {
+      "path": "scripts/code_blocks/block10b_factorial_batch08_fit.py",
+      "bytes": 83067,
+      "sha256": "3ac1c6d5ee274ec4c947c8eae4a9bfaf51ec6774daa87ce160d16d07151f3975"
+    },
+    {
+      "path": "scripts/code_blocks/block10b_factorial_batch10_fit.py",
+      "bytes": 83067,
+      "sha256": "6c327233b223e253ba621ca60b6bc154f92f62e512609a1afea16cc6fc278ccd"
+    },
+    {
+      "path": "scripts/code_blocks/block10b_factorial_batch11_fit.py",
+      "bytes": 83067,
+      "sha256": "674be867d295a2c925585a8ecd8477762cb03f511bf9f9bf4915ab8daea4852e"
+    },
+    {
+      "path": "scripts/code_blocks/block10b_factorial_batch12_fit.py",
+      "bytes": 83134,
+      "sha256": "d792054086c59db6611b6644f6b0ad8370625d476c771de222395fb1d0f9ca0d"
+    },
+    {
       "path": "scripts/code_blocks/block10c_factorial_batch01_prediction_freeze.py",
       "bytes": 56214,
       "sha256": "df415a994cebb910af359e55e65369f42113c51120dcb4e90c1b3c102d3def01"
@@ -3741,6 +3901,26 @@
       "path": "scripts/code_blocks/block10c_factorial_batch03_prediction_freeze.py",
       "bytes": 55867,
       "sha256": "5e15d3385da63d45d3fca85a240a3663fb207878f7804d258ca6f12f51094812"
+    },
+    {
+      "path": "scripts/code_blocks/block10c_factorial_batch08_prediction_freeze.py",
+      "bytes": 55904,
+      "sha256": "6d7fba272e9b92444ca2277e8b7bc0b40ca3d9dd7946eff57e6eaf59157511fc"
+    },
+    {
+      "path": "scripts/code_blocks/block10c_factorial_batch10_prediction_freeze.py",
+      "bytes": 55911,
+      "sha256": "f58d09a8e7ec62366a715ea9b700c757be6604747465398d0233eacf6e720e82"
+    },
+    {
+      "path": "scripts/code_blocks/block10c_factorial_batch11_prediction_freeze.py",
+      "bytes": 55911,
+      "sha256": "a9330a7e09cde96e1e43407a1a8d9bad033e859464e21ea47d39fe5008b04407"
+    },
+    {
+      "path": "scripts/code_blocks/block10c_factorial_batch12_prediction_freeze.py",
+      "bytes": 55973,
+      "sha256": "316f44552654cd73cc363e9b00cd83cab4c84fb00ebd0a02f5ed8b5840e51f3f"
     },
     {
       "path": "scripts/resume_project.py",
@@ -4026,6 +4206,46 @@
       "path": "tests/test_cova3d_factorial_batch03_prediction_freeze.py",
       "bytes": 3670,
       "sha256": "025709683fb9207d3d111183b21e793f81f9ffdc6aaa9f86283915610687b5ab"
+    },
+    {
+      "path": "tests/test_cova3d_factorial_batch08_fit.py",
+      "bytes": 2718,
+      "sha256": "7e0dfc902abc1c97d3440b9487c58f7a4c3ccc0446ae3730108c7985fc293b0a"
+    },
+    {
+      "path": "tests/test_cova3d_factorial_batch08_prediction_freeze.py",
+      "bytes": 3670,
+      "sha256": "d071e3fc4b07fb62c32da30d88a3a1999c0221e0b513c09e440da7699d3b9f73"
+    },
+    {
+      "path": "tests/test_cova3d_factorial_batch10_fit.py",
+      "bytes": 2718,
+      "sha256": "213e06343937a243e95125965531e4b1228c81e82b3320786980668ab41e4316"
+    },
+    {
+      "path": "tests/test_cova3d_factorial_batch10_prediction_freeze.py",
+      "bytes": 3671,
+      "sha256": "9a8e0af5ec14202cf39c45a3f1e8aacd7a028c25b9f700e37f780173e83cdc46"
+    },
+    {
+      "path": "tests/test_cova3d_factorial_batch11_fit.py",
+      "bytes": 2718,
+      "sha256": "71c280faaf1895eb604e2242c8bbed363e4e5cf0d504c4a3f305c8f01ad16160"
+    },
+    {
+      "path": "tests/test_cova3d_factorial_batch11_prediction_freeze.py",
+      "bytes": 3671,
+      "sha256": "57a6518c5f56c862503fe175becc1fd0bad61c5ab743a29268e909496f67d3bd"
+    },
+    {
+      "path": "tests/test_cova3d_factorial_batch12_fit.py",
+      "bytes": 2718,
+      "sha256": "97bb97abbc0b2c18c156435b4ba08549306c088f7ae298a4b2db158a8752e6d4"
+    },
+    {
+      "path": "tests/test_cova3d_factorial_batch12_prediction_freeze.py",
+      "bytes": 3683,
+      "sha256": "8d7505e80391710e16a42b17693a5497fc750f7c4e0641bff728051ed31de797"
     },
     {
       "path": "tests/test_cova3d_factorial_preflight.py",

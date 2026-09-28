@@ -1,0 +1,171 @@
+project: COVA-3D
+block: 14A-FINAL-OUTCOME-EVALUATION-LOCK
+version: '1.0'
+status: FROZEN_BEFORE_FIRST_FINAL_OUTER_CV_OUTCOME_ACCESS
+effective_protocol: COVA3D_1.0+A1+A1.1+A1.2+A1.3+N1+N2
+starting_integration_commit: be4638fa51a85acd3a16ad48c12a78ac32eb1092
+population:
+  role: final_outer_cv
+  volumes: 16
+  outer_folds: 4
+  model_seeds:
+  - 17
+  - 29
+  - 43
+  factorial_conditions:
+  - C50_COH
+  - C50_DIS
+  - C50_FRG
+  - C100_COH
+  - C100_DIS
+  - C100_FRG
+  prediction_maps: 288
+  cluster_unit: source_subject_key
+reference_reconstruction:
+  source: frozen infection_mask path from primary_volume_split_registry.csv
+  verify_source_sha256: true
+  canonicalization: nibabel.as_closest_canonical
+  resampling: nibabel.processing.resample_to_output
+  target_spacing_xyz_mm:
+  - 1.5
+  - 1.5
+  - 3.0
+  interpolation_order: 0
+  constant_value: 0
+  foreground_definition: resampled_mask > 0
+  transpose: XYZ_to_ZYX
+  crop_geometry: frozen cova3d_training_grid_geometry_v1_2.csv
+  evaluation_space: same cropped ZYX training grid as frozen probability maps
+  voxel_volume_ml: 0.00675
+reference_components:
+  connectivity: 26
+  eligible_minimum_volume_ml: 0.1
+  eligible_rule: volume_ml >= 0.10
+  small_reference_rule: volume_ml < 0.10
+froc:
+  topology: recompute_prediction_components_independently_at_every_voxel_threshold
+  prediction_connectivity: 26
+  prediction_size_filtering: false
+  voxel_probability_thresholds:
+  - 0.05
+  - 0.1
+  - 0.15
+  - 0.2
+  - 0.25
+  - 0.3
+  - 0.35
+  - 0.4
+  - 0.45
+  - 0.5
+  - 0.55
+  - 0.6
+  - 0.65
+  - 0.7
+  - 0.75
+  - 0.8
+  - 0.85
+  - 0.9
+  - 0.95
+  - 0.975
+  - 0.99
+  - 0.995
+  - 1.000001
+  primary_matching_iou: 0.1
+  matching_algorithm: maximum_cardinality_then_maximum_total_iou
+  small_reference_policy: after eligible-reference matching, an unmatched prediction having IoU >= 0.10 with any
+    small reference is neutral, not FP
+  fp_budgets_per_patient:
+  - 0.5
+  - 1.0
+  - 2.0
+  - 4.0
+  primary_fp_budget: 1.0
+  sensitivity: macro_patient_eligible_lesion_recall
+  supporting_sensitivity: pooled_eligible_lesion_recall
+  operating_threshold_scope: "one common voxel threshold per condition\xD7seed across all 16 out-of-fold final predictions"
+  operating_point_selection:
+  - maximum_macro_patient_recall_with_FP_per_patient_at_or_below_budget
+  - then_maximum_pooled_lesion_recall
+  - then_minimum_FP_per_patient
+  - then_higher_voxel_probability_threshold
+  threshold_search_outside_frozen_grid: false
+primary_endpoint:
+  name: macro_patient_lesion_recall_at_1_fp_per_patient
+  short_name: R@1
+  condition_estimate: mean of the three seed-specific 16-case out-of-fold R@1 estimates
+secondary_endpoints:
+  froc:
+  - R@0.5_FP_per_patient
+  - R@2_FP_per_patient
+  - R@4_FP_per_patient
+  fixed_probability_threshold: 0.5
+  fixed_threshold_metrics:
+  - Dice
+  - IoU
+  - any_overlap_lesion_recall
+  - IoU_0.25_lesion_recall
+  - false_positive_volume_ml
+  - prediction_component_count
+  - component_to_reference_fragmentation_ratio
+  fragmentation_ratio_definition: mean number of thresholded prediction components with positive voxel overlap per
+    eligible reference lesion
+  false_positive_volume_definition: thresholded predicted voxels outside the complete dense infection reference,
+    multiplied by voxel volume
+  lesion_size_stratification:
+    eligible_references_only: true
+    rule: pooled eligible reference-lesion volume tertiles computed once across the 16 final cases, independent
+      of predictions and shared by every condition and seed
+    number_of_strata: 3
+    labels:
+    - small
+    - medium
+    - large
+    prediction_dependent_cutpoints: false
+factorial_estimands:
+  coverage_effect_within_geometry: R(100%,g)-R(50%,g)
+  dispersed_vs_coherent_within_coverage: R(c,DIS)-R(c,COH)
+  fragmented_vs_coherent_within_coverage: R(c,FRG)-R(c,COH)
+  interaction_disperse: '[R(100%,DIS)-R(100%,COH)]-[R(50%,DIS)-R(50%,COH)]'
+  interaction_fragmented: '[R(100%,FRG)-R(100%,COH)]-[R(50%,FRG)-R(50%,COH)]'
+  direction: two_sided
+statistics:
+  independent_sampling_unit: source_subject_key
+  volumes_are_not_independent_replicates: true
+  folds_are_not_independent_replicates: true
+  seeds_are_not_independent_patient_replicates: true
+  bootstrap:
+    method: paired_source_subject_cluster_bootstrap
+    replicates: 10000
+    seed: 20260914
+    confidence_interval: percentile_95
+    resample_clusters_with_replacement: true
+    retain_all_volumes_and_all_seed_predictions_within_sampled_cluster: true
+    recompute_froc_operating_point_within_each_bootstrap_replicate: true
+  primary_interaction_tests:
+    method: exact_two_sided_cluster_sign_flip
+    cluster: source_subject_key
+    contrasts:
+    - interaction_disperse
+    - interaction_fragmented
+    multiple_testing: Holm
+    family_size: 2
+    alpha: 0.05
+prohibited_after_unsealing:
+- changing_threshold_grid
+- changing_primary_endpoint
+- changing_matching_iou
+- changing_connectivity
+- changing_small_reference_policy
+- changing_fixed_secondary_threshold
+- changing_bootstrap_seed
+- changing_bootstrap_replicates
+- changing_primary_interaction_definitions
+- changing_multiple_testing_policy
+- performance_based_checkpoint_selection
+- condition_specific_postprocessing
+outcome_firewall_at_freeze:
+  final_outer_cv_dense_outcomes_accessed: 0
+  final_outcomes_authorized: false
+  real_final_masks_used_in_block14a: false
+  synthetic_regression_tests_only: true
+frozen_at_utc: '2026-09-28T15:03:42Z'
