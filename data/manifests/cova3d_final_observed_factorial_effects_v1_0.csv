@@ -1,0 +1,10 @@
+estimand,estimate
+coverage_effect_COH,0.0
+coverage_effect_DIS,0.0
+coverage_effect_FRG,0.0
+DIS_vs_COH_at_C50,0.0
+DIS_vs_COH_at_C100,0.0
+FRG_vs_COH_at_C50,0.0
+FRG_vs_COH_at_C100,0.0
+interaction_disperse,0.0
+interaction_fragmented,0.0

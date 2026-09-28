@@ -1,0 +1,128 @@
+{
+  "project": "COVA-3D",
+  "block": "14B2-FINAL-OUTCOME-EVALUATION",
+  "status": "PASS",
+  "authorization_commit": "30faa541080893710ea92732ac12fa416fa6ab1d",
+  "access_start_commit": "757cd8c0feaa85204273327923471031e47d50d3",
+  "frozen_evaluator_commit": "c576c260d25ac1d0985e3ee9ca4719a81f05675f",
+  "frozen_evaluator_sha256": "c727b01a48a7ab08c2019f1df04ab1fb21a36dd7e8d6f7690c729593479b5f4f",
+  "final_references_accessed": 16,
+  "reference_source_sha256_verified": 16,
+  "prediction_maps_evaluated": 288,
+  "dynamic_froc_thresholds": 23,
+  "condition_seed_cohorts": 18,
+  "operating_points": 72,
+  "size_tertiles_ml": {
+    "q1": 0.4725,
+    "q2": 2.8304999999999993
+  },
+  "primary_condition_results": [
+    {
+      "condition": "C100_COH",
+      "fp_budget": 1.0,
+      "macro_recall_mean_across_seeds": 0.0,
+      "macro_recall_seed_sd": 0.0,
+      "pooled_recall_mean_across_seeds": 0.0,
+      "selected_threshold_mean": 1.000001
+    },
+    {
+      "condition": "C100_DIS",
+      "fp_budget": 1.0,
+      "macro_recall_mean_across_seeds": 0.0,
+      "macro_recall_seed_sd": 0.0,
+      "pooled_recall_mean_across_seeds": 0.0,
+      "selected_threshold_mean": 1.000001
+    },
+    {
+      "condition": "C100_FRG",
+      "fp_budget": 1.0,
+      "macro_recall_mean_across_seeds": 0.0,
+      "macro_recall_seed_sd": 0.0,
+      "pooled_recall_mean_across_seeds": 0.0,
+      "selected_threshold_mean": 1.000001
+    },
+    {
+      "condition": "C50_COH",
+      "fp_budget": 1.0,
+      "macro_recall_mean_across_seeds": 0.0,
+      "macro_recall_seed_sd": 0.0,
+      "pooled_recall_mean_across_seeds": 0.0,
+      "selected_threshold_mean": 1.000001
+    },
+    {
+      "condition": "C50_DIS",
+      "fp_budget": 1.0,
+      "macro_recall_mean_across_seeds": 0.0,
+      "macro_recall_seed_sd": 0.0,
+      "pooled_recall_mean_across_seeds": 0.0,
+      "selected_threshold_mean": 1.000001
+    },
+    {
+      "condition": "C50_FRG",
+      "fp_budget": 1.0,
+      "macro_recall_mean_across_seeds": 0.0,
+      "macro_recall_seed_sd": 0.0,
+      "pooled_recall_mean_across_seeds": 0.0,
+      "selected_threshold_mean": 1.000001
+    }
+  ],
+  "observed_factorial_effects": [
+    {
+      "estimand": "coverage_effect_COH",
+      "estimate": 0.0
+    },
+    {
+      "estimand": "coverage_effect_DIS",
+      "estimate": 0.0
+    },
+    {
+      "estimand": "coverage_effect_FRG",
+      "estimate": 0.0
+    },
+    {
+      "estimand": "DIS_vs_COH_at_C50",
+      "estimate": 0.0
+    },
+    {
+      "estimand": "DIS_vs_COH_at_C100",
+      "estimate": 0.0
+    },
+    {
+      "estimand": "FRG_vs_COH_at_C50",
+      "estimate": 0.0
+    },
+    {
+      "estimand": "FRG_vs_COH_at_C100",
+      "estimate": 0.0
+    },
+    {
+      "estimand": "interaction_disperse",
+      "estimate": 0.0
+    },
+    {
+      "estimand": "interaction_fragmented",
+      "estimate": 0.0
+    }
+  ],
+  "inferential_statistics_completed": false,
+  "bootstrap_replicates_completed": 0,
+  "next_block": "14C-FINAL-STATISTICAL-INFERENCE",
+  "artifact_sha256": {
+    "reference_audit": "16f3ec8f2f8dca70a8158b464027cb83dbe2231d5fe4a7dc18334d15f4b4b633",
+    "case_threshold": "6676242412eb489185b7c20ac87f00761417136bdd093d11f72684f6b89ce6c7",
+    "froc_curve": "2be680da3d9a0706834837a9b18e1b051310353c675ee8eb4f60fef654e48112",
+    "operating_points": "f5df8681b37257ef45029bb35b936d4df60efb7c3ba66d5295058f8b9e22c154",
+    "fixed_case_metrics": "768ae1b7455d50fd33eede2dfa6ec2d8cdf5aa44fa7470657c7e5fdffe4a0cb4",
+    "fixed_seed_summary": "9ddbe2d85182ea8282428f2b232bff1933ac493cf89e96dd91b6f9b59036b105",
+    "fixed_condition_summary": "758dfc547b0817c4e8192622e3830902e51ef5a4f10118fe8195bee8551969c4",
+    "primary_seed": "b829a1d860cf48050738cd264fc571a2db42acc467ce526ecf93c08f7f7276e5",
+    "froc_condition": "8eb6dfaec84610a720e4f2afaf6b2e5c99aaf0a130a90628052ad1133ff30945",
+    "primary_condition": "d74a596b8eeeebd88c64498b4e62a6eee1988940105abfa36fec3d1b8ac623fc",
+    "lesion_size_records": "c7479b6c0f313d916c917e5e7fb5d30b74b435e9be47202206f47bb7aaf411ad",
+    "lesion_size_seed": "eb7fc6b3f7ff8b0ac43ddf726cde5cdd8e0d43288037f234efa250fe5bf38e62",
+    "lesion_size_condition": "f0aa15e99ab61da1e5d6882de163a856016062c5bcf2ab0c8f4b3ad2ec904528",
+    "effects": "445b49921f9f1addab298234b903c64c7f1562fe425de5eb33714e1089aa514e",
+    "seed_effects": "47bf70b383f8a5928d929a0953733dba7a8e4fb1e4b98c502074320f2c542a00"
+  },
+  "completed_at_utc": "2026-09-28T15:53:38Z"
+}
