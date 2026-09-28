@@ -1,0 +1,49 @@
+{
+  "project": "COVA-3D",
+  "block": "13C-FACTORIAL-INTEGRATION",
+  "status": "PASS",
+  "integrated_at_utc": "2026-09-28T14:55:09Z",
+  "base_commit": "5884ec956aed30ece91be3f5c6d0b8dafbce151e",
+  "integration_branch": "cova-factorial-integration-v1",
+  "design": {
+    "outer_folds": 4,
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "conditions": [
+      "C100_COH",
+      "C100_DIS",
+      "C100_FRG",
+      "C50_COH",
+      "C50_DIS",
+      "C50_FRG"
+    ],
+    "paired_batches": 12,
+    "model_runs": 72,
+    "prediction_maps": 288,
+    "heldout_cases_per_model": 4
+  },
+  "physical_payload": {
+    "verified_predictions": 288,
+    "sha256_exact": 288,
+    "status": "COVA3D_PHYSICAL_PREDICTIONS_MATCH_FROZEN_GITHUB_288_OF_288"
+  },
+  "firewall": {
+    "final_outer_cv_dense_outcomes_accessed_during_fit": 0,
+    "final_outer_cv_dense_outcomes_accessed_during_prediction": 0,
+    "final_outer_cv_dense_outcomes_accessed_during_integration": 0,
+    "dice_computed": false,
+    "iou_computed": false,
+    "froc_computed": false
+  },
+  "artifact_sha256": {
+    "master_fit_inventory": "fe3142f002b06879daa55234a9d2d889a8c2a1a80115ad09191c8d06afb01fce",
+    "master_prediction_inventory": "1e9a671b9bd58b5ea862beb19f2fe097b942b1b440026c736cc3b5c40a949683",
+    "branch_provenance": "a8486c53c1c22761ddf399a0847ba61c83568a00eeb01c77d6f336b9936160ad",
+    "physical_prediction_integrity": "1727a3e34a76bf402044d06347ed4bb7855fe7352f6f753c2ea12bbaf8693f6e"
+  },
+  "next_block": "14A-FINAL-OUTCOME-EVALUATION-LOCK",
+  "next_action": "Freeze and regression-test the final dense-outcome evaluation implementation before unsealing final outer-CV labels."
+}
