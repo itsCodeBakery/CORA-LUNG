@@ -1,0 +1,7 @@
+condition,observed_R_at_1,bootstrap_mean,ci95_lower,ci95_upper,bootstrap_replicates,cluster_unit
+C50_COH,0.0,0.0,0.0,0.0,10000,source_subject_key
+C50_DIS,0.0,0.0,0.0,0.0,10000,source_subject_key
+C50_FRG,0.0,0.0,0.0,0.0,10000,source_subject_key
+C100_COH,0.0,0.0,0.0,0.0,10000,source_subject_key
+C100_DIS,0.0,0.0,0.0,0.0,10000,source_subject_key
+C100_FRG,0.0,0.0,0.0,0.0,10000,source_subject_key

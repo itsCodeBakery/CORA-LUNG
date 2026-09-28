@@ -1,0 +1,199 @@
+{
+  "project": "COVA-3D",
+  "block": "14C-FINAL-STATISTICAL-INFERENCE",
+  "status": "PASS",
+  "input_point_result_commit": "b2e5aa79e8fd6bc4e2f326dc962c172bd7cff27b",
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260914,
+    "cluster_unit": "source_subject_key",
+    "clusters": 14,
+    "final_volumes": 16,
+    "paired_resampling": true,
+    "retain_all_volumes_within_sampled_cluster": true,
+    "retain_all_seed_predictions": true,
+    "recompute_R_at_1_operating_point_each_replicate": true,
+    "confidence_interval": "percentile_95"
+  },
+  "primary_interaction_tests": {
+    "method": "exact_two_sided_cluster_sign_flip",
+    "cluster_unit": "source_subject_key",
+    "clusters": 14,
+    "sign_patterns_per_contrast": 16384,
+    "multiple_testing": "Holm",
+    "family_size": 2,
+    "alpha": 0.05
+  },
+  "condition_results": [
+    {
+      "condition": "C50_COH",
+      "observed_R_at_1": 0.0,
+      "bootstrap_mean": 0.0,
+      "ci95_lower": 0.0,
+      "ci95_upper": 0.0,
+      "bootstrap_replicates": 10000,
+      "cluster_unit": "source_subject_key"
+    },
+    {
+      "condition": "C50_DIS",
+      "observed_R_at_1": 0.0,
+      "bootstrap_mean": 0.0,
+      "ci95_lower": 0.0,
+      "ci95_upper": 0.0,
+      "bootstrap_replicates": 10000,
+      "cluster_unit": "source_subject_key"
+    },
+    {
+      "condition": "C50_FRG",
+      "observed_R_at_1": 0.0,
+      "bootstrap_mean": 0.0,
+      "ci95_lower": 0.0,
+      "ci95_upper": 0.0,
+      "bootstrap_replicates": 10000,
+      "cluster_unit": "source_subject_key"
+    },
+    {
+      "condition": "C100_COH",
+      "observed_R_at_1": 0.0,
+      "bootstrap_mean": 0.0,
+      "ci95_lower": 0.0,
+      "ci95_upper": 0.0,
+      "bootstrap_replicates": 10000,
+      "cluster_unit": "source_subject_key"
+    },
+    {
+      "condition": "C100_DIS",
+      "observed_R_at_1": 0.0,
+      "bootstrap_mean": 0.0,
+      "ci95_lower": 0.0,
+      "ci95_upper": 0.0,
+      "bootstrap_replicates": 10000,
+      "cluster_unit": "source_subject_key"
+    },
+    {
+      "condition": "C100_FRG",
+      "observed_R_at_1": 0.0,
+      "bootstrap_mean": 0.0,
+      "ci95_lower": 0.0,
+      "ci95_upper": 0.0,
+      "bootstrap_replicates": 10000,
+      "cluster_unit": "source_subject_key"
+    }
+  ],
+  "factorial_effect_results": [
+    {
+      "estimand": "coverage_effect_COH",
+      "observed_estimate": 0.0,
+      "bootstrap_mean": 0.0,
+      "ci95_lower": 0.0,
+      "ci95_upper": 0.0,
+      "bootstrap_replicates": 10000,
+      "cluster_unit": "source_subject_key"
+    },
+    {
+      "estimand": "coverage_effect_DIS",
+      "observed_estimate": 0.0,
+      "bootstrap_mean": 0.0,
+      "ci95_lower": 0.0,
+      "ci95_upper": 0.0,
+      "bootstrap_replicates": 10000,
+      "cluster_unit": "source_subject_key"
+    },
+    {
+      "estimand": "coverage_effect_FRG",
+      "observed_estimate": 0.0,
+      "bootstrap_mean": 0.0,
+      "ci95_lower": 0.0,
+      "ci95_upper": 0.0,
+      "bootstrap_replicates": 10000,
+      "cluster_unit": "source_subject_key"
+    },
+    {
+      "estimand": "DIS_vs_COH_at_C50",
+      "observed_estimate": 0.0,
+      "bootstrap_mean": 0.0,
+      "ci95_lower": 0.0,
+      "ci95_upper": 0.0,
+      "bootstrap_replicates": 10000,
+      "cluster_unit": "source_subject_key"
+    },
+    {
+      "estimand": "DIS_vs_COH_at_C100",
+      "observed_estimate": 0.0,
+      "bootstrap_mean": 0.0,
+      "ci95_lower": 0.0,
+      "ci95_upper": 0.0,
+      "bootstrap_replicates": 10000,
+      "cluster_unit": "source_subject_key"
+    },
+    {
+      "estimand": "FRG_vs_COH_at_C50",
+      "observed_estimate": 0.0,
+      "bootstrap_mean": 0.0,
+      "ci95_lower": 0.0,
+      "ci95_upper": 0.0,
+      "bootstrap_replicates": 10000,
+      "cluster_unit": "source_subject_key"
+    },
+    {
+      "estimand": "FRG_vs_COH_at_C100",
+      "observed_estimate": 0.0,
+      "bootstrap_mean": 0.0,
+      "ci95_lower": 0.0,
+      "ci95_upper": 0.0,
+      "bootstrap_replicates": 10000,
+      "cluster_unit": "source_subject_key"
+    },
+    {
+      "estimand": "interaction_disperse",
+      "observed_estimate": 0.0,
+      "bootstrap_mean": 0.0,
+      "ci95_lower": 0.0,
+      "ci95_upper": 0.0,
+      "bootstrap_replicates": 10000,
+      "cluster_unit": "source_subject_key"
+    },
+    {
+      "estimand": "interaction_fragmented",
+      "observed_estimate": 0.0,
+      "bootstrap_mean": 0.0,
+      "ci95_lower": 0.0,
+      "ci95_upper": 0.0,
+      "bootstrap_replicates": 10000,
+      "cluster_unit": "source_subject_key"
+    }
+  ],
+  "interaction_tests": [
+    {
+      "estimand": "interaction_disperse",
+      "observed_estimate": 0.0,
+      "absolute_test_statistic": 0.0,
+      "source_subject_clusters": 14,
+      "exact_sign_patterns": 16384,
+      "extreme_sign_patterns": 16384,
+      "raw_two_sided_p": 1.0,
+      "holm_adjusted_p": 1.0,
+      "holm_reject_alpha_0p05": false
+    },
+    {
+      "estimand": "interaction_fragmented",
+      "observed_estimate": 0.0,
+      "absolute_test_statistic": 0.0,
+      "source_subject_clusters": 14,
+      "exact_sign_patterns": 16384,
+      "extreme_sign_patterns": 16384,
+      "raw_two_sided_p": 1.0,
+      "holm_adjusted_p": 1.0,
+      "holm_reject_alpha_0p05": false
+    }
+  ],
+  "artifact_sha256": {
+    "condition_bootstrap_ci": "0e7894b6bf05c9e03761260045dc3acc5523ee118625525cc67d94ebd5473f0f",
+    "factorial_bootstrap_ci": "a96b1f98e36caa641dcbde78ad891eb35a080d5d881f9140de22f5a3c3bd07ce",
+    "bootstrap_distribution": "322852958b908d2a573f9953167f68f99fee19f46641df6e0a61aa4f41a80ec9",
+    "interaction_cluster_contributions": "d9981dcc0428ac5663eb37a712e7317e298eed9b475a35a766cea957c9f776e8",
+    "interaction_exact_tests": "e4465fea2658691548d62ef38ccc94623f03f66d147fc089291905eb6c55b63f"
+  },
+  "completed_at_utc": "2026-09-28T16:04:45Z",
+  "next_block": "15A-PUBLICATION-TABLES-AND-FIGURES"
+}

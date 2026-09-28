@@ -1,0 +1,10 @@
+estimand,observed_estimate,bootstrap_mean,ci95_lower,ci95_upper,bootstrap_replicates,cluster_unit
+coverage_effect_COH,0.0,0.0,0.0,0.0,10000,source_subject_key
+coverage_effect_DIS,0.0,0.0,0.0,0.0,10000,source_subject_key
+coverage_effect_FRG,0.0,0.0,0.0,0.0,10000,source_subject_key
+DIS_vs_COH_at_C50,0.0,0.0,0.0,0.0,10000,source_subject_key
+DIS_vs_COH_at_C100,0.0,0.0,0.0,0.0,10000,source_subject_key
+FRG_vs_COH_at_C50,0.0,0.0,0.0,0.0,10000,source_subject_key
+FRG_vs_COH_at_C100,0.0,0.0,0.0,0.0,10000,source_subject_key
+interaction_disperse,0.0,0.0,0.0,0.0,10000,source_subject_key
+interaction_fragmented,0.0,0.0,0.0,0.0,10000,source_subject_key

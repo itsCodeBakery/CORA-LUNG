@@ -1,0 +1,3 @@
+estimand,observed_estimate,absolute_test_statistic,source_subject_clusters,exact_sign_patterns,extreme_sign_patterns,raw_two_sided_p,holm_adjusted_p,holm_reject_alpha_0p05
+interaction_disperse,0.0,0.0,14,16384,16384,1.0,1.0,False
+interaction_fragmented,0.0,0.0,14,16384,16384,1.0,1.0,False
