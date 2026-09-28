@@ -1,0 +1,25 @@
+{
+  "project": "COVA-3D",
+  "block": "14A-FINAL-OUTCOME-EVALUATION-LOCK",
+  "status": "PASS",
+  "starting_commit": "be4638fa51a85acd3a16ad48c12a78ac32eb1092",
+  "evaluation_lock": "configs/cova3d_final_outcome_evaluation_lock_v1_0.yaml",
+  "evaluator_module": "src/cora_lung/eval/cova3d_final.py",
+  "regression_test": "tests/test_cova3d_final_evaluator.py",
+  "sha256": {
+    "evaluation_lock": "3a67a98dfa6d0d718b285cf7d0df1ea627c4b34ba8b6c5f4c54c7bb159a56620",
+    "evaluator_module": "c727b01a48a7ab08c2019f1df04ab1fb21a36dd7e8d6f7690c729593479b5f4f",
+    "regression_test": "be1dcb477393ff4b69153a7e7ed6742b4c4c638be35ea6f7d3d60576d9f3444a"
+  },
+  "synthetic_regression_tests": "PASS",
+  "final_outer_cv_dense_outcomes_accessed": 0,
+  "real_final_masks_used": false,
+  "experimental_metrics_computed": false,
+  "primary_endpoint": "macro_patient_lesion_recall_at_1_fp_per_patient",
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260914,
+  "primary_interaction_contrasts": 2,
+  "multiple_testing": "Holm",
+  "next_block": "14B-FINAL-OUTCOME-UNSEAL-AND-EVALUATE",
+  "created_at_utc": "2026-09-28T15:03:42Z"
+}
