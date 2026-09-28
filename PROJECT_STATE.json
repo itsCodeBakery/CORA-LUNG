@@ -3,9 +3,9 @@
   "title": "CORA-Lung: Component-Omission Replay for Incomplete Scribble-Supervised Lung Lesion Segmentation",
   "repository": "https://github.com/itsCodeBakery/CORA-LUNG",
   "workflow_version": "1.0",
-  "last_completed_block": "14A-FINAL-OUTCOME-EVALUATION-LOCK",
+  "last_completed_block": "14B1-FINAL-OUTCOME-UNSEAL-AUTHORIZATION",
   "last_completed_block_name": "cova3d_A1_3_operational_geometry_neutralization",
-  "current_stage": "cova3d_final_evaluator_frozen_outcome_unseal_pending",
+  "current_stage": "cova3d_final_outcome_authorized_execution_pending",
   "current_gate": "COVA_SANITY_GATE",
   "gate_a": "PASS",
   "gate_b": "NO_GO",
@@ -15,8 +15,8 @@
   "gate_f": "NOT_RUN",
   "dense_label_firewall": "PASS",
   "primary_dataset_audit": "NOT_RUN",
-  "next_action": "Authorize and execute frozen COVA-3D final outer-CV evaluator.",
-  "updated_at_utc": "2026-09-28T15:03:42Z",
+  "next_action": "Execute frozen final outer-CV evaluator without modifying the locked analysis protocol.",
+  "updated_at_utc": "2026-09-28T15:13:31Z",
   "last_attempted_block": "09E-SANITY-FIT-R2",
   "primary_dataset_discovery": "PASS",
   "primary_dataset_pairing": "PASS",
@@ -164,5 +164,6 @@
   "cova3d_factorial_integration": "PASS",
   "cova3d_physical_prediction_integrity": "PASS_288_OF_288_EXACT",
   "cova3d_final_evaluator_lock": "FROZEN_PASS",
-  "cova3d_final_evaluator_synthetic_tests": "PASS"
+  "cova3d_final_evaluator_synthetic_tests": "PASS",
+  "cova3d_final_outer_cv_outcomes_authorized": true
 }
