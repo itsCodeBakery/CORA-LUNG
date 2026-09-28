@@ -1,0 +1,11 @@
+{
+  "project": "COVA-3D",
+  "block": "14B2-ACCESS-INITIATED",
+  "status": "FINAL_REFERENCE_ACCESS_COMMITTED_BEFORE_FIRST_MASK_BYTE_READ",
+  "authorization_commit": "30faa541080893710ea92732ac12fa416fa6ab1d",
+  "frozen_evaluator_commit": "c576c260d25ac1d0985e3ee9ca4719a81f05675f",
+  "frozen_evaluator_sha256": "c727b01a48a7ab08c2019f1df04ab1fb21a36dd7e8d6f7690c729593479b5f4f",
+  "unique_final_references": 16,
+  "mask_bytes_read_before_commit": 0,
+  "initiated_at_utc": "2026-09-28T15:24:04Z"
+}

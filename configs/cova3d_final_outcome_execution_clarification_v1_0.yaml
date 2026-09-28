@@ -1,0 +1,33 @@
+project: COVA-3D
+block: 14B2-PRE-OUTCOME-EXECUTION-CLARIFICATION
+status: FROZEN_BEFORE_FIRST_FINAL_MASK_BYTE_ACCESS
+parent_evaluation_lock: configs/cova3d_final_outcome_evaluation_lock_v1_0.yaml
+parent_evaluator_sha256: c727b01a48a7ab08c2019f1df04ab1fb21a36dd7e8d6f7690c729593479b5f4f
+clarifications_only: true
+primary_endpoint_unchanged: true
+dynamic_froc:
+  operating_threshold_scope: "one common voxel-probability threshold per condition\xD7seed across all 16 out-of-fold\
+    \ final volumes"
+  condition_estimate: arithmetic mean of the three seed-specific macro-patient operating-point recalls
+fixed_threshold_secondary_aggregation:
+  threshold: 0.5
+  within_seed: macro arithmetic mean over the 16 final volumes
+  condition_estimate: arithmetic mean of the three seed-level macro estimates
+lesion_size_stratified_recall:
+  threshold: "the condition\xD7seed voxel threshold selected for the primary R@1 operating point"
+  matching_iou: 0.1
+  eligible_references_only: true
+  tertile_population: all eligible reference lesions pooled across the 16 final volumes
+  quantile_method: numpy_default_linear
+  small: volume <= first_tertile
+  medium: first_tertile < volume <= second_tertile
+  large: volume > second_tertile
+  within_seed_estimate: pooled lesion recall within stratum across all 16 final volumes
+  condition_estimate: arithmetic mean of the three seed-level stratum recalls
+repeated_series:
+  endpoint_unit: final volume/case
+  inferential_cluster_unit: source_subject_key
+  note: Repeated series remain separate volume-level endpoint observations but are never treated as independent
+    clusters in inferential analysis.
+final_mask_bytes_accessed_before_this_clarification: 0
+created_at_utc: '2026-09-28T15:24:04Z'
