@@ -1,0 +1,3 @@
+Primary Interaction,Estimate,95% Cluster-Bootstrap CI,Exact p,Holm-adjusted p,Reject H0
+Coverage × dispersed geometry,+0.000,"[+0.000, +0.000]",1.000,1.000,No
+Coverage × fragmented geometry,+0.000,"[+0.000, +0.000]",1.000,1.000,No
