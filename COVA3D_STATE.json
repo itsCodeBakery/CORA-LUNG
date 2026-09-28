@@ -1,6 +1,6 @@
 {
   "project": "COVA-3D",
-  "working_title": "COVA-3D: Coverage\u2013Coherence Trade-offs in Fixed-Budget Sparse Supervision for 3-D Multi-Lesion Segmentation",
+  "working_title": "COVA-3D: Coverage–Coherence Trade-offs in Fixed-Budget Sparse Supervision for 3-D Multi-Lesion Segmentation",
   "track_id": "COVA3D",
   "protocol_version": "1.0",
   "protocol_status": "FROZEN",
@@ -23,10 +23,10 @@
   "factorial_training_authorized": true,
   "method_development_authorized": false,
   "final_outer_cv_outcomes_authorized": true,
-  "current_stage": "PUBLICATION_TABLES_AND_FIGURES_COMPLETE",
-  "last_completed_block": "15A-PUBLICATION-TABLES-AND-FIGURES",
-  "next_block": "15B-SCIENTIFIC-RESULT-REVIEW",
-  "next_action": "Review frozen primary failure and mechanistic secondary findings, then integrate defensible results into manuscript.",
+  "current_stage": "SCIENTIFIC_RESULT_REVIEW_COMPLETE",
+  "last_completed_block": "15B-SCIENTIFIC-RESULT-REVIEW",
+  "next_block": "15C-MANUSCRIPT-REVISION-DECISION",
+  "next_action": "Decide whether to publish the controlled negative factorial result as-is or prospectively start a separate method-development track.",
   "protocol_config_sha256": "50bfbe77e5cc307a59652fdb8c766da5fc0ebcd268f3d4f011e3e760604a82dc",
   "factorial_registry_sha256": "54bcfac43fecfda1a44b2f3b4c3b393bd50d5cc3c9f30089c8c8713c78fb6cd6",
   "prospective_protocol_sha256": "f030fda71ace13577712e8b475c3200683f71817f477ca7ed88887307212e696",
@@ -46,7 +46,7 @@
   "development_selected_components_nominal_50": 42,
   "secondary_dataset_candidate": "MSD_Task03_Liver",
   "secondary_dataset_status": "PRIORITY_CANDIDATE_PENDING_LOCAL_AUDIT",
-  "updated_at_utc": "2026-09-28T16:09:49Z",
+  "updated_at_utc": "2026-09-28T16:18:11Z",
   "annotation_simulator_version": "2.0-native-candidate",
   "native_annotation_geometry_feasibility": "PASS",
   "native_six_cell_feasible_cases": 20,
@@ -299,5 +299,9 @@
   "publication_tables_status": "PASS_5_TABLES",
   "publication_figures_status": "PASS_6_FIGURES",
   "publication_output_root": "paper_outputs/cova3d_final_v1_0",
-  "publication_output_manifest": "paper_outputs/cova3d_final_v1_0/publication_output_manifest.json"
+  "publication_output_manifest": "paper_outputs/cova3d_final_v1_0/publication_output_manifest.json",
+  "primary_factorial_hypothesis_supported": false,
+  "sota_superiority_supported": false,
+  "secondary_results_status": "DESCRIPTIVE_ONLY",
+  "scientific_result_review": "paper_outputs/cova3d_manuscript_integration_v1_0/audits/Scientific_Result_Review_v1_0.json"
 }

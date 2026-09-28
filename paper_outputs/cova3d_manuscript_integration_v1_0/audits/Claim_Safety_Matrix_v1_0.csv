@@ -1,0 +1,9 @@
+Claim,Evidence level,Supported,Allowed wording,Prohibited wording
+All six conditions achieved zero R@1.,Primary confirmatory,YES,All six factorial conditions exhibited a floor effect at the prospectively defined R@1 endpoint.,COVA-3D achieved competitive low-FP lesion detection.
+Coverage improved primary lesion detection.,Primary confirmatory,NO,No coverage effect was observable under the frozen primary endpoint because all conditions collapsed to zero.,Increasing lesion coverage significantly improved R@1.
+Geometry interacted with coverage.,Primary confirmatory,NO,Neither predeclared coverage-by-geometry interaction was supported under the primary endpoint.,Annotation geometry significantly interacted with coverage.
+The models retained lesion-related spatial signal.,Descriptive secondary,YES,Non-zero any-overlap lesion recall indicates that the predictions retained lesion-related spatial signal.,The models achieved clinically useful lesion detection.
+Fragmentation contributed to low-FP failure.,Mechanistic descriptive,SUPPORTED AS INTERPRETATION,The high component burden and false-positive volume are consistent with fragmentation contributing to the low-FP failure.,Fragmentation was proven to cause the primary endpoint failure.
+C100-FRG was the best method.,Descriptive secondary,NO AS OVERALL CLAIM,C100-FRG had the highest descriptive mean Dice and IoU among the six tested cells.,C100-FRG significantly outperformed all alternatives.
+C50-COH was the best lesion detector.,Descriptive secondary,NO AS OVERALL CLAIM,C50-COH had the highest descriptive any-overlap and IoU>=0.25 lesion recall.,C50-COH was statistically superior for lesion detection.
+COVA-3D outperformed SOTA.,External comparative claim,NO,No SOTA superiority claim is supported by the current results.,COVA-3D establishes new state-of-the-art segmentation performance.

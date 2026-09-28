@@ -1,0 +1,12 @@
+Artifact,Scientific role,Use in manuscript
+Table 1,Primary endpoint,"Report the complete floor effect at R@0.5, R@1, R@2 and R@4."
+Table 2,Descriptive secondary,"Describe volumetric overlap, lesion-contact recall, FP volume and fragmentation. Do not claim significance."
+Table 3,Seed robustness,Show that secondary behaviour varies across independently trained seeds.
+Table 4,Primary confirmatory inference,"Report both interaction estimates, bootstrap CIs, exact p-values and Holm-adjusted p-values."
+Table 5,Primary operating-point floor,Demonstrate that lesion-size stratification cannot rescue the primary endpoint because all selected R@1 thresholds produce no detections.
+Figure 1,Primary failure-mechanism visualization,Show that lesion recall appears only with extremely high false-positive burden.
+Figure 2,Descriptive overlap,Show low absolute Dice and IoU across all six cells.
+Figure 3,Mechanistic lesion-recovery visualization,Highlight the gap between touching lesions and producing geometrically valid lesion instances.
+Figure 4,False-positive mechanism,Relate component proliferation to false-positive volume.
+Figure 5,Seed sensitivity,Show variability in fragmentation across training seeds.
+Figure 6,Descriptive factorial profile,Use only as exploratory/descriptive secondary evidence. Do not call it a significant interaction.

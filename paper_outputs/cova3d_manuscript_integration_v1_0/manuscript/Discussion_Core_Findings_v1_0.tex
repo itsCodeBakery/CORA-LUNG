@@ -1,0 +1,40 @@
+\subsection{Interpretation of the Final Factorial Experiment}
+
+The most important finding of the final COVA-3D experiment is negative but
+informative. None of the six sparse-supervision configurations achieved a
+non-zero lesion recall at the prospectively specified low-false-positive
+operating points. This result was consistent across three independently trained
+seeds and remained unchanged when the allowed false-positive burden was
+increased from 0.5 to 4 false positives per patient.
+
+The failure of the primary endpoint should not be interpreted as an absence of
+all lesion-related information in the model outputs. The secondary analysis
+showed substantially higher any-overlap lesion recall than geometrically stricter
+IoU-based lesion recall. This indicates that predicted regions frequently reached
+true lesions but did not form sufficiently coherent lesion instances. The very
+large number of connected prediction components and high false-positive volume
+provide a complementary explanation for the failure of the FROC operating
+points: lesion-contact information was present, but it was accompanied by severe
+topological fragmentation and background activation.
+
+The primary factorial hypothesis was therefore not supported. Under the tested
+baseline architecture, training schedule, fixed sparse annotation budgets, and
+frozen low-FP evaluation protocol, changing lesion-instance coverage or
+within-lesion scribble geometry was insufficient to produce reliable
+low-false-positive lesion recovery. In particular, the two prospectively defined
+coverage-by-geometry interactions were exactly zero under the primary endpoint.
+
+The descriptive secondary measures nevertheless suggest that annotation geometry
+can alter the character of the prediction error. Coherent supervision produced
+comparatively high lesion-contact recall, while fragmented and dispersed
+conditions showed different overlap, component-count, and false-positive
+profiles. Because these analyses were not accompanied by prospectively defined
+confirmatory secondary tests, they should be interpreted as mechanistic
+observations rather than evidence of superiority between factorial cells.
+
+These findings identify a practical limitation of the present sparse-supervision
+baseline. Future method development should focus on controlling component
+proliferation, suppressing false-positive regions, and improving lesion-instance
+coherence rather than merely reallocating the same sparse annotation budget.
+Such follow-up development should be treated as a new prospective experiment and
+must not alter or replace the frozen results reported here.

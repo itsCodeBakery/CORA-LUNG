@@ -1,0 +1,57 @@
+\subsection{Final Factorial Evaluation}
+
+The final evaluation comprised 16 held-out CT volumes representing 14 independent
+source-subject clusters. Across the four outer folds, six sparse-supervision
+conditions were evaluated using three independently trained seeds, yielding 288
+frozen probability maps. The final evaluator and all operating-point rules were
+prospectively frozen before the dense outer-CV references were accessed.
+
+\subsubsection{Primary Low-False-Positive Endpoint}
+
+The prospectively defined primary endpoint was macro-patient lesion recall at
+no more than one false positive per patient (R@1). All six factorial conditions
+obtained an R@1 of 0.000. The 10,000-replicate paired source-subject cluster
+bootstrap yielded a 95\% confidence interval of [0.000, 0.000] for every
+condition. The same floor effect was observed at the additional predeclared
+budgets of 0.5, 2, and 4 false positives per patient.
+
+The selected operating threshold for every condition and seed was the predefined
+zero-prediction fallback threshold. Consequently, none of the tested sparse
+annotation configurations achieved non-zero lesion recall while satisfying the
+prospectively specified low-false-positive operating constraints.
+
+\subsubsection{Primary Factorial Interactions}
+
+The two predeclared coverage-by-geometry interactions were therefore also
+identically zero. The dispersed-geometry interaction estimate was 0.000 and the
+fragmented-geometry interaction estimate was 0.000. Exact two-sided
+source-subject cluster sign-flip tests produced raw $p$-values of 1.000 for both
+contrasts. After Holm correction across the two primary interaction tests, both
+adjusted $p$-values remained 1.000. Thus, the primary endpoint provided no
+evidence of a coverage-by-geometry interaction under the frozen low-FP criterion.
+
+\subsubsection{Descriptive Secondary Segmentation Behaviour}
+
+Although the primary lesion-level operating point collapsed to zero, the
+fixed-threshold secondary analysis showed that the probability maps retained
+lesion-related spatial signal. At a prospectively fixed probability threshold of
+0.50, any-overlap lesion recall ranged from approximately 0.486 to 0.664 across
+conditions. In contrast, recall requiring an IoU of at least 0.25 ranged only
+from approximately 0.026 to 0.212. Mean Dice remained between approximately
+0.034 and 0.059, and mean IoU remained between approximately 0.018 and 0.031.
+
+The divergence between lesion contact and geometrically valid lesion recovery
+was accompanied by substantial prediction fragmentation and false-positive
+burden. Mean prediction-component counts ranged from approximately 2,677 to
+8,051 components per evaluated volume, while mean false-positive volume exceeded
+11,600~mL in every condition. These secondary endpoints are reported as
+descriptive mechanistic analyses and were not substituted for the prospectively
+defined primary endpoint.
+
+Among the descriptive secondary measures, C50--COH exhibited the highest
+any-overlap lesion recall and the highest IoU$\geq$0.25 lesion recall. C100--FRG
+showed the highest mean Dice and IoU and the lowest mean false-positive volume,
+whereas C100--COH showed the lowest mean fragmentation ratio. These observations
+describe the behaviour of the tested conditions but are not interpreted as
+statistically established superiority because no confirmatory secondary
+hypothesis-testing procedure was prospectively defined.

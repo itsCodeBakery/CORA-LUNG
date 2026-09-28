@@ -1,0 +1,39 @@
+{
+  "project": "COVA-3D",
+  "block": "15B-SCIENTIFIC-RESULT-REVIEW",
+  "source_commit": "381895b0e19562667a8ba5843c7a455e26531d2c",
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "path": "paper_outputs/cova3d_manuscript_integration_v1_0/manuscript/Results_Section_v1_0.tex",
+      "bytes": 3431,
+      "sha256": "c26f12f469464614f1ba17ef7a2494431c6018fcc9d492b3fb767d333ee53c54"
+    },
+    {
+      "path": "paper_outputs/cova3d_manuscript_integration_v1_0/manuscript/Discussion_Core_Findings_v1_0.tex",
+      "bytes": 2624,
+      "sha256": "33916dbed31adeb3d8ec175be1d3150630147f53e84400579117cef0a9b17b2f"
+    },
+    {
+      "path": "paper_outputs/cova3d_manuscript_integration_v1_0/audits/Claim_Safety_Matrix_v1_0.csv",
+      "bytes": 1859,
+      "sha256": "7d58fe7218ec1e8eedd2434216b6da90ad44b0aab1258392ca5e3b6e6ee0edb7"
+    },
+    {
+      "path": "paper_outputs/cova3d_manuscript_integration_v1_0/audits/Figure_Table_Interpretation_Guide_v1_0.csv",
+      "bytes": 1346,
+      "sha256": "0743ce2b5a538fc5de5a015fa2f6df515a4add83e88d3e6d7fb53cba27f6ca5a"
+    },
+    {
+      "path": "paper_outputs/cova3d_manuscript_integration_v1_0/manuscript/Manuscript_Integration_Notes_v1_0.md",
+      "bytes": 1789,
+      "sha256": "b7cd6e7fa72e3e469ea4a1ed146383ee51c05c4d028f3d03c545c74cfc08f181"
+    },
+    {
+      "path": "paper_outputs/cova3d_manuscript_integration_v1_0/audits/Scientific_Result_Review_v1_0.json",
+      "bytes": 1247,
+      "sha256": "f9eee0b2409be34d73b14486b6b4abbe834a8b35e2f0a2ad5b0584030eff8083"
+    }
+  ],
+  "created_at_utc": "2026-09-28T16:18:11Z"
+}

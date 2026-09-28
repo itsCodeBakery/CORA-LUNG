@@ -1,0 +1,40 @@
+{
+  "project": "COVA-3D",
+  "block": "15B-SCIENTIFIC-RESULT-REVIEW",
+  "status": "PASS",
+  "source_publication_commit": "381895b0e19562667a8ba5843c7a455e26531d2c",
+  "primary_endpoint": {
+    "R_at_1_all_conditions": 0.0,
+    "ci95_all_conditions": [
+      0.0,
+      0.0
+    ],
+    "interpretation": "PRIMARY_ENDPOINT_FLOOR_EFFECT"
+  },
+  "primary_interactions": {
+    "interaction_disperse": {
+      "estimate": 0.0,
+      "holm_p": 1.0,
+      "supported": false
+    },
+    "interaction_fragmented": {
+      "estimate": 0.0,
+      "holm_p": 1.0,
+      "supported": false
+    }
+  },
+  "secondary_interpretation": {
+    "status": "DESCRIPTIVE_ONLY",
+    "best_dice_condition": "C100_FRG",
+    "best_iou_condition": "C100_FRG",
+    "best_any_overlap_condition": "C50_COH",
+    "best_iou_0p25_condition": "C50_COH",
+    "lowest_fp_volume_condition": "C100_FRG",
+    "lowest_fragmentation_condition": "C100_COH"
+  },
+  "sota_superiority_supported": false,
+  "primary_factorial_hypothesis_supported": false,
+  "method_development_authorized": false,
+  "recommended_current_contribution": "Controlled negative factorial result plus mechanistic characterization of fragmentation and false-positive burden.",
+  "created_at_utc": "2026-09-28T16:18:11Z"
+}
